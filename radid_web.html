@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Welcome to radid.cyou | Real Instagram Profile & Reels Explorer</title>
+  <meta name="description" content="Welcome to radid.cyou - Official digital presence featuring real-time Instagram profile, photos, and reels player.">
+  <meta name="keywords" content="radid, radid.cyou, instagram viewer, real reels, photos">
+  <meta name="author" content="Radid">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="radid.cyou - Welcome & Real Instagram Explorer">
+  <meta property="og:description" content="Explore real Instagram profiles, photos, and reels directly on radid.cyou.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://radid.cyou">
+
+  <!-- Favicon (SVG Glowing Icon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%238b5cf6'/%3E%3Cstop offset='100%25' stop-color='%23ec4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='46' fill='%230f172a' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50' y='64' font-family='sans-serif' font-weight='900' font-size='42' fill='url(%23g)' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          },
+          animation: {
+            'blob': 'blob 10s infinite alternate',
+            'heart-burst': 'heartBurst 0.8s ease-out forwards',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -40px) scale(1.08)' },
+              '66%': { transform: 'translate(-25px, 25px) scale(0.95)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            heartBurst: {
+              '0%': { transform: 'scale(0)', opacity: '0' },
+              '50%': { transform: 'scale(1.3)', opacity: '1' },
+              '100%': { transform: 'scale(1)', opacity: '0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.8);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.4);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(99, 102, 241, 0.8);
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(17, 24, 39, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .light .glass {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(23, 31, 51, 0.6);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: all 0.3s ease;
+    }
+    .light .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Instagram Gradient Ring */
+    .ig-ring {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      padding: 3px;
+      border-radius: 9999px;
+    }
+
+    .ig-btn-gradient {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .ig-gradient-text {
+      background: linear-gradient(45deg, #f09433 0%, #dc2743 50%, #bc1888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #particle-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-body antialiased min-h-screen selection:bg-pink-500 selection:text-white transition-colors duration-300 relative overflow-x-hidden flex flex-col justify-between">
+
+  <!-- Interactive Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl animate-blob"></div>
+    <div class="absolute top-1/3 -right-32 w-96 h-96 bg-pink-600/15 rounded-full blur-3xl animate-blob" style="animation-delay: 3s;"></div>
+    <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl animate-blob" style="animation-delay: 6s;"></div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- Top Navigation Bar -->
+    <header class="w-full px-4 sm:px-8 py-5 sticky top-0 z-40">
+      <div class="max-w-6xl mx-auto glass rounded-2xl px-5 py-3.5 flex items-center justify-between shadow-2xl shadow-black/20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center font-heading font-black text-white text-xl shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+            R
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-bold text-lg tracking-tight text-white group-hover:text-indigo-300 transition-colors">radid<span class="text-indigo-400">.cyou</span></span>
+            <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Live Space</span>
+          </div>
+        </a>
+
+        <!-- Middle Nav -->
+        <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+          <a href="#welcome" class="hover:text-white transition-colors">Home</a>
+          <a href="#ig-viewer" class="flex items-center space-x-1.5 text-pink-400 hover:text-pink-300 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Real Instagram Feed</span>
+          </a>
+          <a href="#connect" class="hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <!-- Right Side Nav Actions -->
+        <div class="flex items-center space-x-3">
+          <!-- Domain Status Pill -->
+          <div class="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span>radid.cyou is live</span>
+          </div>
+
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-700/60 border border-slate-700/50 text-slate-300 hover:text-white transition-all focus:outline-none" aria-label="Toggle theme">
+            <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+            <svg id="theme-icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+          </button>
+
+          <!-- API Settings Toggle -->
+          <button id="api-settings-btn" class="p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-700/60 border border-slate-700/50 text-slate-300 hover:text-pink-400 transition-all" title="RapidAPI Settings">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="welcome" class="px-4 sm:px-6 pt-10 pb-16">
+      <div class="max-w-4xl mx-auto w-full text-center">
+
+        <div class="inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full glass border border-indigo-500/30 text-indigo-300 text-xs sm:text-sm font-medium mb-6 shadow-inner hover:border-indigo-400/60 transition-all">
+          <span class="text-base">✨</span>
+          <span>Welcome to the Official Home</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-purple-400 font-semibold tracking-wide">radid.cyou</span>
+        </div>
+
+        <h1 class="font-heading font-extrabold text-4xl sm:text-6xl md:text-7xl tracking-tight leading-[1.1] mb-6">
+          Welcome to <br class="sm:hidden" />
+          <span class="gradient-text">radid.cyou</span>
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-slate-300/90 leading-relaxed font-light mb-8">
+          Connected directly with RapidAPI to fetch <strong>real Instagram photos, stories, and actual reels (.mp4 videos)</strong> inside your own webpage without redirecting!
+        </p>
+
+        <div class="inline-flex items-center space-x-3 px-5 py-2.5 rounded-2xl glass-card border border-emerald-500/30 text-xs sm:text-sm text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Official Domain: <strong class="text-white">radid.cyou</strong></span>
+          <span class="text-slate-500">|</span>
+          <a href="#ig-viewer" class="text-pink-400 hover:text-pink-300 font-semibold flex items-center space-x-1">
+            <span>Try Instagram Viewer Below</span>
+            <span>&darr;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- REAL INSTAGRAM PROFILE & MEDIA VIEWER SECTION -->
+    <!-- ============================================== -->
+    <section id="ig-viewer" class="px-4 sm:px-6 py-8">
+      <div class="max-w-4xl mx-auto w-full">
+
+        <!-- Section Title Header -->
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs font-semibold uppercase tracking-wider mb-3">
+            <span class="w-2 h-2 rounded-full bg-pink-500 animate-ping"></span>
+            <span>Live Scraper API Connected</span>
+          </div>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">
+            Real Instagram <span class="ig-gradient-text">Profile, Photos &amp; Reels</span>
+          </h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-lg mx-auto">
+            Type any public Instagram username below. The system connects to the Instagram Scraper API to load their real photos and playable reels directly on this page.
+          </p>
+        </div>
+
+        <!-- Search Bar Component -->
+        <div class="glass-card p-4 sm:p-5 rounded-2xl mb-8 border border-pink-500/25 shadow-xl">
+          <form id="ig-search-form" class="flex flex-col sm:flex-row gap-3">
+            <div class="relative flex-grow flex items-center">
+              <span class="absolute left-4 text-slate-400 text-sm font-medium flex items-center pointer-events-none">
+                <svg class="w-4 h-4 text-pink-500 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                instagram.com/
+              </span>
+              <input 
+                type="text" 
+                id="ig-username-input" 
+                value="" 
+                placeholder="Type any Instagram username..." 
+                required
+                class="w-full pl-40 pr-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all font-mono"
+              >
+            </div>
+            <button 
+              type="submit" 
+              id="search-submit-btn"
+              class="px-6 py-3 rounded-xl ig-btn-gradient hover:opacity-95 text-white font-semibold text-sm shadow-lg shadow-pink-600/30 transition-all flex items-center justify-center space-x-2 flex-shrink-0"
+            >
+              <svg id="search-spinner" class="w-4 h-4 hidden animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+              <span id="search-btn-text">Fetch Real Media</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Error / Status Notice -->
+        <div id="api-status-notice" class="hidden mb-6 p-4 rounded-2xl text-xs sm:text-sm font-medium border"></div>
+
+        <!-- Empty Initial State (Shows until an account is searched) -->
+        <div id="empty-state" class="glass-card rounded-3xl p-10 sm:p-14 text-center border border-slate-800 shadow-2xl mb-8">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-pink-500/20 via-purple-500/20 to-indigo-500/20 border border-pink-500/30 flex items-center justify-center text-pink-400 shadow-lg shadow-pink-500/10">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-white mb-2">No Profile Loaded</h3>
+          <p class="text-sm text-slate-400 max-w-md mx-auto">
+            Type any Instagram username in the box above and click <span class="text-pink-400 font-semibold">"Fetch Real Media"</span> to display their real photos and reels on this page.
+          </p>
+        </div>
+
+        <!-- Instagram Profile Display Card -->
+        <div id="profile-container" class="hidden glass-card rounded-3xl p-6 sm:p-8 mb-8 border border-slate-700/60 shadow-2xl transition-all">
+          
+          <!-- Top Profile Header -->
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 pb-6 border-b border-slate-800">
+            <!-- Avatar with Instagram Story Ring -->
+            <div class="relative flex-shrink-0">
+              <div class="ig-ring">
+                <div class="p-1 bg-slate-950 rounded-full">
+                  <img 
+                    id="profile-avatar" 
+                    referrerpolicy="no-referrer"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" 
+                    alt="Profile Avatar" 
+                    class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover"
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Profile Details -->
+            <div class="flex-grow text-center sm:text-left">
+              <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4">
+                <div class="flex items-center justify-center sm:justify-start space-x-2">
+                  <h3 id="profile-username" class="font-heading font-bold text-2xl text-white">cristiano</h3>
+                  <svg id="profile-verified" class="w-5 h-5 text-sky-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                
+                <div class="flex items-center justify-center space-x-2.5">
+                  <a 
+                    id="ig-external-link" 
+                    href="https://www.instagram.com/cristiano" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white font-medium text-xs transition-all flex items-center space-x-1"
+                  >
+                    <span>View on Instagram</span>
+                    <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Real Name & Info -->
+              <div>
+                <h4 id="profile-fullname" class="font-bold text-base text-slate-100">Cristiano Ronaldo</h4>
+                <p id="profile-bio" class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+                  Real posts &amp; reels loaded live via API directly on <span class="text-pink-400 font-semibold">radid.cyou</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Tabs: Posts vs Reels -->
+          <div class="flex items-center justify-center space-x-12 border-b border-slate-800 mb-6 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+            <button id="tab-all" class="tab-btn active py-4 border-b-2 border-pink-500 text-white flex items-center space-x-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+              <span>All Real Media (<span id="count-all">0</span>)</span>
+            </button>
+
+            <button id="tab-reels" class="tab-btn py-4 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center space-x-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+              <span>Reels &amp; Videos (<span id="count-reels">0</span>)</span>
+            </button>
+
+            <button id="tab-photos" class="tab-btn py-4 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center space-x-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+              <span>Photos Only (<span id="count-photos">0</span>)</span>
+            </button>
+          </div>
+
+          <!-- Loading Skeleton -->
+          <div id="media-loader" class="hidden grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5">
+            <div class="aspect-square bg-slate-800/60 rounded-xl animate-pulse"></div>
+            <div class="aspect-square bg-slate-800/60 rounded-xl animate-pulse"></div>
+            <div class="aspect-square bg-slate-800/60 rounded-xl animate-pulse"></div>
+            <div class="aspect-square bg-slate-800/60 rounded-xl animate-pulse"></div>
+            <div class="aspect-square bg-slate-800/60 rounded-xl animate-pulse"></div>
+            <div class="aspect-square bg-slate-800/60 rounded-xl animate-pulse"></div>
+          </div>
+
+          <!-- Real Media Grid -->
+          <div id="media-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5"></div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modal Lightbox / Real Video Player -->
+    <div id="media-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-6">
+      <div class="relative w-full max-w-4xl max-h-[92vh] glass rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-2xl border border-slate-700/80">
+        
+        <button id="modal-close" class="absolute top-3 right-3 z-30 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+
+        <!-- Media Display (Left side) -->
+        <div class="md:w-3/5 bg-black flex items-center justify-center relative overflow-hidden min-h-[320px] md:min-h-[500px]">
+          <!-- Real HTML5 Video Player -->
+          <video 
+            id="modal-video" 
+            referrerpolicy="no-referrer"
+            class="w-full h-full max-h-[70vh] object-contain hidden" 
+            loop 
+            playsinline 
+            controls
+          ></video>
+          <!-- Real Image Container -->
+          <img 
+            id="modal-image" 
+            referrerpolicy="no-referrer"
+            src="" 
+            alt="Instagram Real Photo" 
+            class="w-full h-full max-h-[70vh] object-contain"
+          >
+          <div id="floating-heart" class="absolute pointer-events-none opacity-0">
+            <svg class="w-24 h-24 text-red-500 fill-current drop-shadow-2xl" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+        </div>
+
+        <!-- Details & Caption (Right side) -->
+        <div class="md:w-2/5 p-5 sm:p-6 flex flex-col justify-between bg-slate-900/90 text-slate-100">
+          <div>
+            <div class="flex items-center space-x-3 pb-4 border-b border-slate-800">
+              <img id="modal-avatar" referrerpolicy="no-referrer" src="" class="w-10 h-10 rounded-full object-cover border border-pink-500/40">
+              <div class="flex-grow truncate">
+                <h4 id="modal-username" class="font-bold text-sm text-white truncate">username</h4>
+                <p class="text-[11px] text-emerald-400 font-medium">Real Instagram Post</p>
+              </div>
+            </div>
+
+            <div class="py-4 text-xs sm:text-sm text-slate-300 space-y-2 max-h-56 overflow-y-auto">
+              <p id="modal-caption" class="whitespace-pre-line leading-relaxed">Caption text</p>
+              <p class="text-[11px] text-slate-500 font-mono" id="modal-timestamp">2 HOURS AGO</p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800">
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center space-x-4">
+                <button id="modal-like-btn" class="text-slate-300 hover:text-red-500 transition-colors">
+                  <svg id="modal-like-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </button>
+              </div>
+              <a id="modal-ig-link" href="https://instagram.com" target="_blank" class="text-xs text-pink-400 hover:underline font-semibold flex items-center space-x-1">
+                <span>View on Instagram</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+            <p id="modal-likes-count" class="font-bold text-xs text-white">0 likes</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- API Key Settings Modal -->
+    <div id="api-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+      <div class="max-w-md w-full glass rounded-2xl p-6 border border-slate-700 shadow-2xl">
+        <h3 class="font-heading font-bold text-xl text-white mb-2">RapidAPI Configuration</h3>
+        <p class="text-xs text-slate-400 mb-4">
+          The API key configured below enables real-time fetching of Instagram photos and videos directly to <strong class="text-white">radid.cyou</strong>.
+        </p>
+        <label class="block text-xs text-slate-300 font-semibold mb-1">X-RapidAPI-Key:</label>
+        <input 
+          type="text" 
+          id="custom-api-key-input" 
+          class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-mono text-pink-400 outline-none focus:border-pink-500 mb-4"
+        >
+        <div class="flex items-center justify-end space-x-3">
+          <button id="close-api-modal" class="px-4 py-2 rounded-xl bg-slate-800 text-xs font-medium text-slate-300 hover:text-white">Close</button>
+          <button id="save-api-key" class="px-5 py-2 rounded-xl ig-btn-gradient text-xs font-semibold text-white shadow">Save Key</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & Lead Section -->
+    <section id="connect" class="max-w-xl mx-auto px-4 sm:px-6 py-12 text-center w-full">
+      <div class="glass-card p-8 rounded-3xl border border-indigo-500/20 relative overflow-hidden shadow-2xl">
+        <h2 class="font-heading font-bold text-2xl text-white mb-2">Connect with Radid</h2>
+        <p class="text-sm text-slate-300/80 mb-6">Stay updated with newly launched projects, creative feeds, and digital ideas on <span class="text-indigo-400 font-semibold">radid.cyou</span>.</p>
+
+        <form id="subscribe-form" class="flex flex-col sm:flex-row gap-3">
+          <input 
+            type="email" 
+            id="email-input" 
+            required 
+            placeholder="Enter your email address..." 
+            class="flex-grow px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700/70 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-slate-200 placeholder-slate-500 text-sm outline-none transition-all"
+          >
+          <button 
+            type="submit" 
+            class="px-6 py-3 rounded-xl ig-btn-gradient hover:opacity-90 text-white font-semibold text-sm shadow-lg shadow-pink-600/30 transition-all flex items-center justify-center space-x-2"
+          >
+            <span>Stay in Touch</span>
+          </button>
+        </form>
+
+        <div id="notification-message" class="hidden mt-4 p-3 rounded-xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-sm font-medium">
+          🎉 Thank you! You're on the priority notification list for radid.cyou.
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full px-4 sm:px-8 py-6">
+      <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
+        <div class="flex items-center space-x-2">
+          <span>&copy; <span id="current-year"></span> <strong class="text-slate-200">radid.cyou</strong>. All rights reserved.</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <span class="inline-flex items-center text-slate-500">
+            Powered by RapidAPI • Instagram Scraper Stable
+          </span>
+          <span class="text-slate-700">|</span>
+          <a href="#" class="text-pink-400 hover:text-pink-300 transition-colors">Back to top &uarr;</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive JavaScript Engine -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Theme Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('theme-icon-sun');
+    const moonIcon = document.getElementById('theme-icon-moon');
+    const htmlElem = document.documentElement;
+
+    function applyTheme(isDark) {
+      if (isDark) {
+        htmlElem.classList.add('dark');
+        htmlElem.classList.remove('light');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      } else {
+        htmlElem.classList.remove('dark');
+        htmlElem.classList.add('light');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      }
+    }
+    applyTheme(true);
+    themeToggleBtn.addEventListener('click', () => {
+      applyTheme(!htmlElem.classList.contains('dark'));
+    });
+
+    // Form Notification Handler
+    const subscribeForm = document.getElementById('subscribe-form');
+    const emailInput = document.getElementById('email-input');
+    const notificationMsg = document.getElementById('notification-message');
+    if (subscribeForm) {
+      subscribeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (emailInput.value.trim()) {
+          notificationMsg.classList.remove('hidden');
+          emailInput.value = '';
+          setTimeout(() => notificationMsg.classList.add('hidden'), 5000);
+        }
+      });
+    }
+
+    // ==========================================
+    // RAPIDAPI INSTAGRAM REAL MEDIA ENGINE
+    // ==========================================
+    const DEFAULT_API_KEY = '6edb1a5529msh0d40e745548c2f7p1351fcjsn9be2f2a5c0c1';
+    const API_HOST = 'instagram-scraper-stable-api.p.rapidapi.com';
+
+    function getApiKey() {
+      return localStorage.getItem('user_rapidapi_key') || DEFAULT_API_KEY;
+    }
+
+    // Settings Modal
+    const apiSettingsBtn = document.getElementById('api-settings-btn');
+    const apiModal = document.getElementById('api-modal');
+    const closeApiModal = document.getElementById('close-api-modal');
+    const saveApiKeyBtn = document.getElementById('save-api-key');
+    const customApiKeyInput = document.getElementById('custom-api-key-input');
+
+    apiSettingsBtn.addEventListener('click', () => {
+      customApiKeyInput.value = getApiKey();
+      apiModal.classList.remove('hidden');
+    });
+    closeApiModal.addEventListener('click', () => apiModal.classList.add('hidden'));
+    saveApiKeyBtn.addEventListener('click', () => {
+      const val = customApiKeyInput.value.trim();
+      if (val) {
+        localStorage.setItem('user_rapidapi_key', val);
+        alert('API Key updated successfully!');
+      }
+      apiModal.classList.add('hidden');
+    });
+
+    let currentPostsData = [];
+    let currentFilter = 'all';
+
+    async function fetchRealInstagramData(username) {
+      const cleanUser = username.replace('@', '').trim().toLowerCase();
+      if (!cleanUser) return;
+
+      const loader = document.getElementById('media-loader');
+      const grid = document.getElementById('media-grid');
+      const notice = document.getElementById('api-status-notice');
+      const spinner = document.getElementById('search-spinner');
+      const btnText = document.getElementById('search-btn-text');
+
+      // Check SessionStorage Cache to preserve API quota
+      const cacheKey = `ig_cache_${cleanUser}`;
+      const cached = sessionStorage.getItem(cacheKey);
+      if (cached) {
+        try {
+          const parsed = JSON.parse(cached);
+          displayFetchedData(parsed, cleanUser);
+          showNotice(`Showing cached media for @${cleanUser}`, 'bg-emerald-950/60 border-emerald-500/30 text-emerald-300');
+          return;
+        } catch(e) {}
+      }
+
+      loader.classList.remove('hidden');
+      grid.classList.add('hidden');
+      notice.classList.add('hidden');
+      spinner.classList.remove('hidden');
+      btnText.textContent = 'Fetching...';
+
+      try {
+        const bodyData = new URLSearchParams({
+          username_or_url: cleanUser
+        });
+
+        const response = await fetch(`https://${API_HOST}/get_ig_user_posts.php`, {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'x-rapidapi-key': getApiKey(),
+            'x-rapidapi-host': API_HOST
+          },
+          body: bodyData.toString()
+        });
+
+        if (!response.ok) {
+          throw new Error(`API returned status ${response.status} (${response.statusText})`);
+        }
+
+        const data = await response.json();
+        if (!data || !data.posts || !Array.isArray(data.posts) || data.posts.length === 0) {
+          throw new Error(`No public posts found for @${cleanUser}. The account might be private or does not exist.`);
+        }
+
+        // Cache in sessionStorage
+        sessionStorage.setItem(cacheKey, JSON.stringify(data));
+        displayFetchedData(data, cleanUser);
+        showNotice(`✅ Successfully loaded ${data.posts.length} real Instagram posts & reels for @${cleanUser}!`, 'bg-emerald-950/60 border-emerald-500/30 text-emerald-300');
+      } catch (err) {
+        console.error('Fetch error:', err);
+        showNotice(`⚠️ ${err.message}`, 'bg-amber-950/80 border-amber-500/40 text-amber-300');
+      } finally {
+        loader.classList.add('hidden');
+        grid.classList.remove('hidden');
+        spinner.classList.add('hidden');
+        btnText.textContent = 'Fetch Real Media';
+      }
+    }
+
+    function showNotice(msg, classes) {
+      const notice = document.getElementById('api-status-notice');
+      notice.textContent = msg;
+      notice.className = `mb-6 p-4 rounded-2xl text-xs sm:text-sm font-medium border ${classes}`;
+      notice.classList.remove('hidden');
+    }
+
+    function displayFetchedData(data, searchedUser) {
+      currentPostsData = [];
+
+      // Extract user info from the first available post node
+      let userObj = null;
+      data.posts.forEach(p => {
+        const node = p.node || p;
+        if (node.user && !userObj) {
+          userObj = node.user;
+        }
+
+        const isVideo = Boolean(node.video_versions && node.video_versions.length > 0);
+        const imageUrl = node.image_versions2?.candidates?.[0]?.url || node.display_url || '';
+        const videoUrl = isVideo ? node.video_versions[0].url : null;
+        const captionText = node.caption?.text || node.title || '';
+        const likeCount = node.like_count || node.fb_like_count || 0;
+        const commentCount = node.comment_count || node.fb_comment_count || 0;
+        const isReel = node.product_type === 'clips' || isVideo;
+        const code = node.code || '';
+
+        if (imageUrl || videoUrl) {
+          currentPostsData.push({
+            isReel,
+            isVideo,
+            imageUrl,
+            videoUrl,
+            caption: captionText,
+            likes: likeCount,
+            comments: commentCount,
+            code,
+            date: node.taken_at ? new Date(node.taken_at * 1000).toLocaleDateString() : 'Recent'
+          });
+        }
+      });
+
+      // Unhide profile container and hide empty state placeholder
+      const emptyState = document.getElementById('empty-state');
+      if (emptyState) emptyState.classList.add('hidden');
+      const profileContainer = document.getElementById('profile-container');
+      if (profileContainer) profileContainer.classList.remove('hidden');
+
+      // Update Profile Details
+      const avatarElem = document.getElementById('profile-avatar');
+      const userElem = document.getElementById('profile-username');
+      const nameElem = document.getElementById('profile-fullname');
+      const extLink = document.getElementById('ig-external-link');
+      const verifiedElem = document.getElementById('profile-verified');
+
+      userElem.textContent = userObj?.username || searchedUser;
+      nameElem.textContent = userObj?.full_name || searchedUser;
+      extLink.href = `https://www.instagram.com/${userObj?.username || searchedUser}/`;
+
+      if (userObj?.profile_pic_url) {
+        avatarElem.src = userObj.profile_pic_url;
+      }
+      if (userObj?.is_verified) {
+        verifiedElem.classList.remove('hidden');
+      } else {
+        verifiedElem.classList.add('hidden');
+      }
+
+      // Update counters
+      const reelsCount = currentPostsData.filter(i => i.isReel).length;
+      const photosCount = currentPostsData.filter(i => !i.isReel).length;
+
+      document.getElementById('count-all').textContent = currentPostsData.length;
+      document.getElementById('count-reels').textContent = reelsCount;
+      document.getElementById('count-photos').textContent = photosCount;
+
+      renderMediaGrid();
+    }
+
+    function renderMediaGrid() {
+      const grid = document.getElementById('media-grid');
+      grid.innerHTML = '';
+
+      let items = currentPostsData;
+      if (currentFilter === 'reels') {
+        items = currentPostsData.filter(i => i.isReel);
+      } else if (currentFilter === 'photos') {
+        items = currentPostsData.filter(i => !i.isReel);
+      }
+
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-400">
+            <p class="text-sm">No media found for this category.</p>
+          </div>
+        `;
+        return;
+      }
+
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "group relative aspect-square bg-slate-900 rounded-2xl overflow-hidden cursor-pointer border border-slate-800 shadow-md transform hover:-translate-y-1 transition-all";
+
+        card.innerHTML = `
+          <img 
+            referrerpolicy="no-referrer"
+            src="${item.imageUrl}" 
+            alt="Instagram Real Photo" 
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          >
+          
+          ${item.isReel ? `
+            <div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md text-white text-[11px] font-semibold flex items-center space-x-1 shadow">
+              <svg class="w-3.5 h-3.5 fill-current text-pink-400" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              <span>Reel</span>
+            </div>
+          ` : ''}
+
+          <!-- Hover Overlay -->
+          <div class="absolute inset-0 bg-black/55 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-5 text-white font-bold text-sm">
+            <div class="flex items-center space-x-1.5">
+              <svg class="w-5 h-5 fill-current text-pink-500" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              <span>${item.likes > 999 ? (item.likes / 1000).toFixed(1) + 'K' : item.likes}</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>${item.comments}</span>
+            </div>
+          </div>
+        `;
+
+        card.addEventListener('click', () => openModal(item));
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter Tabs
+    const tabAll = document.getElementById('tab-all');
+    const tabReels = document.getElementById('tab-reels');
+    const tabPhotos = document.getElementById('tab-photos');
+
+    function setFilter(filter) {
+      currentFilter = filter;
+      [tabAll, tabReels, tabPhotos].forEach(b => {
+        b.classList.remove('active', 'border-pink-500', 'text-white');
+        b.classList.add('border-transparent', 'text-slate-400');
+      });
+
+      if (filter === 'all') {
+        tabAll.classList.add('active', 'border-pink-500', 'text-white');
+        tabAll.classList.remove('border-transparent', 'text-slate-400');
+      } else if (filter === 'reels') {
+        tabReels.classList.add('active', 'border-pink-500', 'text-white');
+        tabReels.classList.remove('border-transparent', 'text-slate-400');
+      } else {
+        tabPhotos.classList.add('active', 'border-pink-500', 'text-white');
+        tabPhotos.classList.remove('border-transparent', 'text-slate-400');
+      }
+      renderMediaGrid();
+    }
+
+    tabAll.addEventListener('click', () => setFilter('all'));
+    tabReels.addEventListener('click', () => setFilter('reels'));
+    tabPhotos.addEventListener('click', () => setFilter('photos'));
+
+    // Modal Lightbox & Video Player
+    const modal = document.getElementById('media-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalVideo = document.getElementById('modal-video');
+    const modalClose = document.getElementById('modal-close');
+    const modalAvatar = document.getElementById('modal-avatar');
+    const modalUsername = document.getElementById('modal-username');
+    const modalCaption = document.getElementById('modal-caption');
+    const modalTimestamp = document.getElementById('modal-timestamp');
+    const modalLikesCount = document.getElementById('modal-likes-count');
+    const modalLikeBtn = document.getElementById('modal-like-btn');
+    const modalLikeIcon = document.getElementById('modal-like-icon');
+    const modalIgLink = document.getElementById('modal-ig-link');
+
+    let currentItemLikes = 0;
+    let isLikedCurrent = false;
+
+    function openModal(item) {
+      modalAvatar.src = document.getElementById('profile-avatar').src;
+      modalUsername.textContent = document.getElementById('profile-username').textContent;
+      modalCaption.textContent = item.caption || 'No caption available.';
+      modalTimestamp.textContent = item.date;
+      currentItemLikes = item.likes;
+      isLikedCurrent = false;
+      modalLikesCount.textContent = currentItemLikes.toLocaleString() + ' likes';
+      modalLikeIcon.classList.remove('fill-red-500', 'text-red-500');
+      modalLikeIcon.classList.add('text-slate-300');
+
+      if (item.code) {
+        modalIgLink.href = `https://www.instagram.com/p/${item.code}/`;
+      } else {
+        modalIgLink.href = `https://www.instagram.com/${document.getElementById('profile-username').textContent}/`;
+      }
+
+      if (item.videoUrl) {
+        modalImage.classList.add('hidden');
+        modalVideo.classList.remove('hidden');
+        modalVideo.src = item.videoUrl;
+        modalVideo.play().catch(() => {});
+      } else {
+        modalVideo.pause();
+        modalVideo.classList.add('hidden');
+        modalImage.classList.remove('hidden');
+        modalImage.src = item.imageUrl;
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      modalVideo.pause();
+      modalVideo.src = '';
+      modal.classList.add('hidden');
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    modalImage.addEventListener('dblclick', () => {
+      toggleLike();
+      const heart = document.getElementById('floating-heart');
+      heart.classList.remove('opacity-0', 'animate-heart-burst');
+      void heart.offsetWidth;
+      heart.classList.add('animate-heart-burst');
+    });
+
+    function toggleLike() {
+      isLikedCurrent = !isLikedCurrent;
+      if (isLikedCurrent) {
+        currentItemLikes++;
+        modalLikeIcon.classList.remove('text-slate-300');
+        modalLikeIcon.classList.add('fill-red-500', 'text-red-500');
+      } else {
+        currentItemLikes--;
+        modalLikeIcon.classList.remove('fill-red-500', 'text-red-500');
+        modalLikeIcon.classList.add('text-slate-300');
+      }
+      modalLikesCount.textContent = currentItemLikes.toLocaleString() + ' likes';
+    }
+    modalLikeBtn.addEventListener('click', toggleLike);
+
+    // Search Form Submit
+    const searchForm = document.getElementById('ig-search-form');
+    const usernameInput = document.getElementById('ig-username-input');
+
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      fetchRealInstagramData(usernameInput.value);
+    });
+
+    // ==========================================
+    // CANVAS PARTICLE ANIMATION
+    // ==========================================
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.4 + 0.1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.fillStyle = `rgba(236, 72, 153, ${this.alpha})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    const particleCount = Math.min(window.innerWidth < 768 ? 30 : 65, 80);
+    for (let i = 0; i < particleCount; i++) particles.push(new Particle());
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        p.update();
+        p.draw();
+      }
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  </script>
+</body>
+</html>

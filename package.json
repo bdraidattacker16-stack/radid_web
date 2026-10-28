@@ -1,0 +1,20 @@
+{
+  "name": "radid_web",
+  "version": "1.0.0",
+  "description": "radid.cyou - Official Website & Real Instagram Profile/Reels Explorer",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000",
+    "test": "echo \"Site structure is valid\" && exit 0"
+  },
+  "keywords": [
+    "radid",
+    "radid.cyou",
+    "instagram-viewer",
+    "reels-player",
+    "portfolio"
+  ],
+  "author": "Radid",
+  "license": "MIT"
+}

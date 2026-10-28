@@ -1,80 +1,50 @@
-# radid.cyou — Official Welcome Website
+# radid.cyou — Official Website & Instagram Explorer
 
-A clean, modern, responsive single-page landing website configured for **[radid.cyou](https://radid.cyou)**.
+A clean, modern, responsive website published live on **[radid.cyou](https://radid.cyou)** with HTTPS SSL enabled.
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 radid_web/
-├── index.html        # Main landing page (HTML5, Tailwind CSS, dark/light theme, ambient canvas animation)
-├── CNAME             # Domain definition for GitHub Pages / Cloudflare Pages
-└── README.md         # Deployment & DNS setup guide
+├── assets/
+│   └── favicon.svg       # Glowing SVG Brand Favicon
+├── .gitignore            # Git ignore configuration
+├── CNAME                 # Custom domain configuration for GitHub Pages (radid.cyou)
+├── index.html            # Main production landing page & real Instagram profile viewer
+├── package.json          # Node.js project configuration & local server scripts
+├── radid_web.html        # Synchronized backup copy
+└── README.md             # Project documentation and guide
 ```
 
 ---
 
-## 🚀 How to Preview Locally
+## 🚀 How to Run Locally
 
-Simply double-click `index.html` to open it in your web browser (Chrome, Edge, Firefox, Brave, etc.).
+### Option 1: Direct Browser
+Simply double-click [`index.html`](file:///f:/AndroidDev/Projects/radid_web/index.html) to open it directly in Chrome, Edge, Safari, or Firefox.
 
-Alternatively, you can run a local test server:
-
+### Option 2: Local Dev Server (Node.js)
+Open PowerShell / Terminal inside `radid_web`:
 ```powershell
-# Using Python
-python -m http.server 8080
-
-# Or using Node.js / npx
-npx serve .
+# Start local preview server on http://localhost:3000
+npm start
 ```
-Then visit `http://localhost:8080` in your browser.
 
 ---
 
-## 🌐 Connecting Your Domain (`radid.cyou`)
+## 🌐 Live Deployment & SSL Status
 
-Since you already purchased the domain **`radid.cyou`**, here are the easiest ways to publish it for free with automatic SSL (HTTPS):
-
-### Option 1: Cloudflare Pages (Recommended - 100% Free & Fast)
-1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) > **Workers & Pages** > **Create application** > **Pages**.
-2. Select **Upload Assets** and drag & drop the `radid_web` folder.
-3. Once deployed, click **Custom Domains** > **Set up a domain**.
-4. Enter `radid.cyou` and follow the 1-click DNS configuration.
+- **Live URL**: [https://radid.cyou](https://radid.cyou)
+- **Subdomain**: [https://www.radid.cyou](https://www.radid.cyou) (Auto 301 redirects to apex)
+- **SSL**: Let's Encrypt TLS Certificate active and enforced
+- **Hosting**: GitHub Pages (`main` branch root `/`)
 
 ---
 
-### Option 2: Vercel (Super Fast Deployment)
-1. Open PowerShell in `radid_web` directory.
-2. Run:
-   ```bash
-   npx vercel
-   ```
-3. Follow the CLI prompts. Once deployed, go to project settings on Vercel > **Domains** > Add `radid.cyou`.
-4. Vercel will give you the DNS records (`A` record `76.76.21.21` or `CNAME`) to add at your domain registrar.
-
----
-
-### Option 3: GitHub Pages (Free)
-1. Create a GitHub repository named `radid_web`.
-2. Push this folder to GitHub.
-3. In GitHub repo **Settings** > **Pages**:
-   - Source: Deploy from branch (`main` / root).
-   - Custom domain: `radid.cyou`.
-   - Check **Enforce HTTPS**.
-4. At your domain registrar (where you bought `radid.cyou`):
-   - Add **A Records** pointing `@` to:
-     - `185.199.108.153`
-     - `185.199.109.153`
-     - `185.199.110.153`
-     - `185.199.111.153`
-   - Add a **CNAME Record** pointing `www` to your GitHub username (e.g. `yourname.github.io`).
-
----
-
-## ✨ Features Included
-- **Ultra-Modern Aesthetics**: Ambient neon glow blobs, glassmorphic cards, smooth typography.
-- **Interactive Canvas**: Subtle floating particles responding to screen bounds.
-- **Theme Switcher**: Dark mode (default) and Light mode toggle.
-- **Lead Capture / Notification**: Interactive email notification form with toast confirmation.
-- **Fast & Responsive**: Mobile-first responsive layout that looks great on any screen size.
+## ✨ Features
+- **Modern Glassmorphic Dark UI**: Ambient canvas animations and glowing neon effects.
+- **Real Instagram Explorer**: RapidAPI Scraper integration directly loading real user profiles, photos, and Reels `.mp4` video playback with sound inside custom modal lightbox.
+- **Privacy & Security**: `<meta name="referrer" content="no-referrer">` configured to avoid CDN 403 blocks.
+- **Clean Initial State**: No dummy/example accounts preloaded on page open.
