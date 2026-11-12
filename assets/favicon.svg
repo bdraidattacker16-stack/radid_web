@@ -1,11 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1"/>
-      <stop offset="50%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#ec4899"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#111528"/>
+      <stop offset="100%" stop-color="#090b12"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="20" y1="20" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="55%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
   </defs>
-  <circle cx="50" cy="50" r="46" fill="#0f172a" stroke="url(#g)" stroke-width="4"/>
-  <text x="50" y="64" font-family="sans-serif" font-weight="900" font-size="42" fill="url(#g)" text-anchor="middle">R</text>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="url(#bgGrad)" stroke="url(#accentGrad)" stroke-width="4"/>
+  <path d="M40 90V38h23c14.5 0 23.5 7.4 23.5 18.6 0 8.5-5.1 14.8-13.8 17.2L89 90H74.4L60.2 75.2H52.5V90H40Zm12.5-25.2h9.8c7.1 0 11.4-3.1 11.4-8.2s-4.3-8.1-11.4-8.1h-9.8v16.3Z" fill="url(#accentGrad)"/>
 </svg>

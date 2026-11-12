@@ -1,20 +1,22 @@
 {
   "name": "radid_web",
-  "version": "1.0.0",
-  "description": "radid.cyou - Official Website & Real Instagram Profile/Reels Explorer",
+  "version": "2.0.0",
+  "description": "Official Professional Profile Website of Deen Yeasin Radid (radid.cyou)",
   "main": "index.html",
   "scripts": {
     "start": "npx serve . -l 3000",
     "dev": "npx serve . -l 3000",
-    "test": "echo \"Site structure is valid\" && exit 0"
+    "test": "node -e \"const fs=require('fs');['index.html','styles.css','script.js','robots.txt','sitemap.xml','site.webmanifest','404.html','CNAME','assets/og-image.png','assets/favicon.svg'].forEach(f=>{if(!fs.existsSync(f))throw new Error('Missing '+f)});console.log('All required site and SEO files exist.');\""
   },
   "keywords": [
-    "radid",
+    "Deen Yeasin Radid",
+    "Radid",
     "radid.cyou",
-    "instagram-viewer",
-    "reels-player",
-    "portfolio"
+    "frontend-developer",
+    "personal-profile",
+    "portfolio",
+    "seo"
   ],
-  "author": "Radid",
+  "author": "Deen Yeasin Radid",
   "license": "MIT"
 }
