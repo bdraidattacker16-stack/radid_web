@@ -4,22 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>বীজগণিতীয় রাশি — সৃজনশীল প্রশ্ন | radid.cyou</title>
-  <meta name="title" content="বীজগণিতীয় রাশি — সৃজনশীল প্রশ্ন | radid.cyou">
-  <meta name="description" content="বহুপদী বীজগণিতীয় রাশি সম্পর্কিত সৃজনশীল প্রশ্নাবলী — radid.cyou">
+  <title>সৃজনশীল প্রশ্ন — বীজগণিতীয় রাশি</title>
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0d1117">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://radid.cyou/">
-
-  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="DEgioJaJ5K-YZgagCAV0Xj-xqySBeFtdy2NStlG-luw">
-
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
-  <!-- Google Fonts: Hind Siliguri for Bangla & JetBrains Mono for numbers/math -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after {
@@ -29,202 +23,91 @@
     }
 
     body {
-      min-height: 100vh;
-      background-color: #0d1117;
-      background-image: 
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
-        radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
-      color: #e6edf3;
-      font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
-      line-height: 1.6;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      padding: 24px 16px;
     }
 
     .container {
-      width: 100%;
-      max-width: 720px;
+      max-width: 580px;
       margin: 0 auto;
     }
 
-    .cq-card {
-      background: rgba(22, 27, 34, 0.85);
-      border: 1px solid rgba(48, 54, 61, 0.9);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 16px;
-      padding: 2.25rem;
-      box-shadow: 
-        0 20px 40px -15px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(255, 255, 255, 0.04);
-      transition: border-color 0.2s ease;
+    .header-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
-    .cq-card:hover {
-      border-color: rgba(56, 189, 248, 0.3);
+    .stem-desc {
+      margin-bottom: 6px;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 0.35rem 0.85rem;
-      border-radius: 9999px;
-      margin-bottom: 1.25rem;
+    .expressions {
+      margin-left: 18px;
+      margin-bottom: 14px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
     }
 
-    .badge-accent {
-      color: #a78bfa;
-      background: rgba(167, 139, 250, 0.1);
-      border-color: rgba(167, 139, 250, 0.2);
-      margin-top: 2rem;
-    }
-
-    .stem-title {
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: #c9d1d9;
-      margin-bottom: 1.25rem;
-    }
-
-    .expressions-box {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 1.25rem 1.75rem;
-      margin-bottom: 0.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .expr-row {
-      font-family: 'JetBrains Mono', 'Cambria Math', monospace;
-      font-size: 1.15rem;
-      color: #f0f6fc;
-      letter-spacing: 0.02em;
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
+    .expressions div {
+      margin: 2px 0;
     }
 
     .var {
       font-style: italic;
-      color: #79c0ff;
-      font-weight: 500;
     }
 
     sup {
-      font-size: 0.75em;
+      font-size: 11px;
       vertical-align: super;
       line-height: 0;
-      color: #ff7b72;
-    }
-
-    .op {
-      color: #8b949e;
-      margin: 0 0.3rem;
     }
 
     .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(48, 54, 61, 0.8), transparent);
-      margin: 1.75rem 0 1rem;
+      border-top: 1px dashed #bbb;
+      margin: 14px 0;
     }
 
-    .question-list {
+    .q-list {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.15rem;
-      margin-top: 1rem;
     }
 
-    .question-item {
+    .q-item {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 1rem;
-      padding: 0.85rem 1rem;
-      border-radius: 8px;
-      background: rgba(13, 17, 23, 0.4);
-      border: 1px solid rgba(48, 54, 61, 0.4);
-      transition: background 0.15s ease, border-color 0.15s ease;
+      margin-bottom: 8px;
+      gap: 12px;
     }
 
-    .question-item:hover {
-      background: rgba(22, 27, 34, 0.7);
-      border-color: rgba(110, 118, 129, 0.3);
-    }
-
-    .q-main {
+    .q-left {
       display: flex;
-      align-items: baseline;
-      gap: 0.65rem;
-      font-size: 1.05rem;
-      color: #e6edf3;
-      flex: 1;
+      gap: 6px;
     }
 
     .q-no {
       font-weight: 600;
-      color: #38bdf8;
-      min-width: 2.2rem;
-    }
-
-    .q-text {
-      flex: 1;
-    }
-
-    .q-text .math-inline {
-      font-family: 'JetBrains Mono', 'Cambria Math', monospace;
-      font-size: 1.02rem;
-      color: #f0f6fc;
-      background: rgba(110, 118, 129, 0.15);
-      padding: 0.1rem 0.35rem;
-      border-radius: 4px;
-      display: inline-block;
-      margin: 0 0.15rem;
-    }
-
-    .marks {
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #7ee787;
-      background: rgba(126, 231, 135, 0.1);
-      padding: 0.2rem 0.5rem;
-      border-radius: 6px;
       white-space: nowrap;
     }
 
-    @media (max-width: 600px) {
+    .q-marks {
+      font-weight: 600;
+      white-space: nowrap;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    @media (max-width: 480px) {
       body {
-        padding: 1.25rem 0.75rem;
+        padding: 16px 12px;
+        font-size: 14.5px;
       }
-      .cq-card {
-        padding: 1.35rem;
-      }
-      .expressions-box {
-        padding: 1rem;
-      }
-      .expr-row {
-        font-size: 1.05rem;
-      }
-      .question-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
-      .marks {
-        align-self: flex-end;
+      .expressions {
+        font-size: 15px;
+        margin-left: 12px;
       }
     }
   </style>
@@ -232,68 +115,51 @@
 <body>
 
   <main class="container">
-    <div class="cq-card">
-      
-      <!-- উদ্দীপক সেকশন -->
-      <div class="badge">📝 উদ্দীপক</div>
-      <p class="stem-title">তিনটি বহুপদী বীজগণিতীয় রাশি নিম্নরূপ:</p>
-      
-      <div class="expressions-box">
-        <div class="expr-row">
-          <span class="var">A</span>&nbsp;=&nbsp;4<span class="var">x</span><sup>2</sup>&nbsp;+&nbsp;5<span class="var">xy</span>&nbsp;−&nbsp;3<span class="var">y</span><sup>2</sup>
-        </div>
-        <div class="expr-row">
-          <span class="var">B</span>&nbsp;=&nbsp;−2<span class="var">x</span><sup>2</sup>&nbsp;+&nbsp;3<span class="var">xy</span>&nbsp;+&nbsp;4<span class="var">y</span><sup>2</sup>
-        </div>
-        <div class="expr-row">
-          <span class="var">C</span>&nbsp;=&nbsp;3<span class="var">x</span><sup>2</sup>&nbsp;−&nbsp;4<span class="var">x</span><span class="var">y</span>&nbsp;+&nbsp;2<span class="var">y</span><sup>2</sup>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <!-- সৃজনশীল প্রশ্নাবলী সেকশন -->
-      <div class="badge badge-accent">❓ সৃজনশীল প্রশ্নাবলী</div>
-
-      <ul class="question-list">
-        <!-- (ক) -->
-        <li class="question-item">
-          <div class="q-main">
-            <span class="q-no">(ক)</span>
-            <span class="q-text"><span class="math-inline"><span class="var">A</span></span> রাশিতে কয়টি পদ আছে এবং পদগুলো কী কী?</span>
-          </div>
-          <span class="marks">[১]</span>
-        </li>
-
-        <!-- (খ) -->
-        <li class="question-item">
-          <div class="q-main">
-            <span class="q-no">(খ)</span>
-            <span class="q-text">রাশি তিনটির সদৃশ পদগুলো নিচে নিচে সাজিয়ে যোগফল <span class="math-inline">(<span class="var">A</span> + <span class="var">B</span> + <span class="var">C</span>)</span> নির্ণয় করো।</span>
-          </div>
-          <span class="marks">[২]</span>
-        </li>
-
-        <!-- (গ) -->
-        <li class="question-item">
-          <div class="q-main">
-            <span class="q-no">(গ)</span>
-            <span class="q-text"><span class="math-inline">(<span class="var">A</span> + <span class="var">B</span>)</span> নির্ণয় করো এবং তা থেকে <span class="math-inline"><span class="var">C</span></span> বিয়োগ করো।</span>
-          </div>
-          <span class="marks">[৩]</span>
-        </li>
-
-        <!-- (ঘ) -->
-        <li class="question-item">
-          <div class="q-main">
-            <span class="q-no">(ঘ)</span>
-            <span class="q-text">যদি <span class="math-inline"><span class="var">x</span> = 2</span> এবং <span class="math-inline"><span class="var">y</span> = 1</span> হয়, তবে প্রমাণ করো যে, <span class="math-inline">(<span class="var">A</span> − <span class="var">B</span>) + <span class="var">C</span> = <span class="var">A</span> − (<span class="var">B</span> − <span class="var">C</span>)</span>।</span>
-          </div>
-          <span class="marks">[৪]</span>
-        </li>
-      </ul>
-
+    <div class="header-title">📝 উদ্দীপক:</div>
+    <p class="stem-desc">তিনটি বহুপদী বীজগণিতীয় রাশি নিম্নরূপ:</p>
+    
+    <div class="expressions">
+      <div><span class="var">A</span> = 4<span class="var">x</span><sup>2</sup> + 5<span class="var">xy</span> − 3<span class="var">y</span><sup>2</sup></div>
+      <div><span class="var">B</span> = −2<span class="var">x</span><sup>2</sup> + 3<span class="var">xy</span> + 4<span class="var">y</span><sup>2</sup></div>
+      <div><span class="var">C</span> = 3<span class="var">x</span><sup>2</sup> − 4<span class="var">x</span><span class="var">y</span> + 2<span class="var">y</span><sup>2</sup></div>
     </div>
+
+    <div class="divider"></div>
+
+    <div class="header-title">❓ সৃজনশীল প্রশ্নাবলী:</div>
+    <ul class="q-list">
+      <li class="q-item">
+        <div class="q-left">
+          <span class="q-no">(ক)</span>
+          <span><span class="var">A</span> রাশিতে কয়টি পদ আছে এবং পদগুলো কী কী?</span>
+        </div>
+        <span class="q-marks">[১]</span>
+      </li>
+
+      <li class="q-item">
+        <div class="q-left">
+          <span class="q-no">(খ)</span>
+          <span>রাশি তিনটির সদৃশ পদগুলো নিচে নিচে সাজিয়ে যোগফল (<span class="var">A</span> + <span class="var">B</span> + <span class="var">C</span>) নির্ণয় করো।</span>
+        </div>
+        <span class="q-marks">[২]</span>
+      </li>
+
+      <li class="q-item">
+        <div class="q-left">
+          <span class="q-no">(গ)</span>
+          <span>(<span class="var">A</span> + <span class="var">B</span>) নির্ণয় করো এবং তা থেকে <span class="var">C</span> বিয়োগ করো।</span>
+        </div>
+        <span class="q-marks">[৩]</span>
+      </li>
+
+      <li class="q-item">
+        <div class="q-left">
+          <span class="q-no">(ঘ)</span>
+          <span>যদি <span class="var">x</span> = 2 এবং <span class="var">y</span> = 1 হয়, তবে প্রমাণ করো যে, (<span class="var">A</span> − <span class="var">B</span>) + <span class="var">C</span> = <span class="var">A</span> − (<span class="var">B</span> − <span class="var">C</span>)।</span>
+        </div>
+        <span class="q-marks">[৪]</span>
+      </li>
+    </ul>
   </main>
 
 </body>
