@@ -24,19 +24,13 @@
   <style>
     :root {
       --bg: #04070f;
-      --surface: #081221;
-      --surface-card: rgba(8, 18, 33, 0.88);
-      --surface-inset: rgba(4, 7, 15, 0.75);
       --accent: #22d3ee;
-      --accent-glow: rgba(34, 211, 238, 0.25);
       --accent-2: #6d8cff;
-      --text: #e6f4fe;
       --text-muted: #94a9c9;
-      --border: rgba(34, 211, 238, 0.16);
-      --border-strong: rgba(34, 211, 238, 0.32);
-      --font-bangla: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, sans-serif;
+      --border: rgba(34, 211, 238, 0.2);
+      --font-bangla: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --font-display: 'Space Grotesk', var(--font-bangla);
+      --font-serif: 'Times New Roman', Times, Georgia, serif;
     }
 
     *, *::before, *::after {
@@ -47,10 +41,10 @@
 
     body {
       background-color: var(--bg);
-      color: var(--text);
+      color: #ffffff;
       font-family: var(--font-bangla);
       font-size: 15.5px;
-      line-height: 1.6;
+      line-height: 1.55;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -62,7 +56,7 @@
     }
 
     /* ==========================================================================
-       CYBERCORE BACKGROUND: Animated Perspective Grid, Glow Orbs & Scanlines
+       CYBERCORE BACKGROUND: 3D Grid, Ambient Glow & Scanlines
        ========================================================================== */
     .bg-canvas {
       position: fixed;
@@ -72,7 +66,6 @@
       overflow: hidden;
     }
 
-    /* Ambient Glow Orbs */
     .bg-glow-a {
       position: absolute;
       top: -15%;
@@ -80,7 +73,7 @@
       width: 50vw;
       height: 50vw;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.16) 0%, transparent 70%);
       filter: blur(90px);
       animation: floatSlow 20s ease-in-out infinite alternate;
     }
@@ -102,7 +95,6 @@
       100% { transform: translate3d(4%, 6%, 0) scale(1.1); }
     }
 
-    /* 3D Moving Perspective Grid (mahir966 style) */
     .bg-grid {
       position: fixed;
       inset: -20%;
@@ -123,7 +115,6 @@
       to { background-position: 0 50px, 50px 0; }
     }
 
-    /* Scanlines Overlay */
     .bg-scanlines {
       position: fixed;
       inset: 0;
@@ -139,19 +130,18 @@
       opacity: 0.6;
     }
 
-    /* ==========================================================================
-       CONTAINER & TOP STATUS BAR
-       ========================================================================== */
+    /* Container */
     .container {
       width: 100%;
       max-width: 660px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 22px;
       z-index: 1;
     }
 
+    /* Status Bar */
     .top-status-bar {
       display: flex;
       align-items: center;
@@ -203,51 +193,35 @@
     }
 
     /* ==========================================================================
-       TERMINAL CQ CARDS (Cybercore Glassmorphism)
+       CQ CARD: Terminal Top Bar + Crisp White Worksheet Body with BLACK Text
        ========================================================================== */
     .cq-card {
       position: relative;
-      background: var(--surface-card);
-      border: 1px solid var(--border);
+      background: #ffffff;
+      border: 1px solid rgba(34, 211, 238, 0.3);
       border-radius: 12px;
-      box-shadow:
-        0 20px 45px -15px rgba(0, 0, 0, 0.9),
-        0 0 0 1px rgba(34, 211, 238, 0.06);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 
+        0 20px 45px -15px rgba(0, 0, 0, 0.85),
+        0 0 0 1px rgba(34, 211, 238, 0.15);
       overflow: hidden;
-      transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cq-card:hover {
-      border-color: var(--border-strong);
       transform: translateY(-2px);
-      box-shadow:
+      box-shadow: 
         0 24px 50px -15px rgba(0, 0, 0, 0.95),
-        0 0 25px -5px rgba(34, 211, 238, 0.18);
+        0 0 20px -3px rgba(34, 211, 238, 0.25);
     }
 
-    /* Cyber Top-Left Accent Notch */
-    .cq-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 32px;
-      height: 2px;
-      background: var(--accent);
-      box-shadow: 0 0 8px var(--accent);
-      z-index: 2;
-    }
-
-    /* Card Top Terminal Bar */
+    /* Terminal Bar at Card Top */
     .terminal-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 16px;
-      background: rgba(4, 7, 15, 0.85);
-      border-bottom: 1px solid rgba(34, 211, 238, 0.1);
+      padding: 9px 16px;
+      background: #081221;
+      border-bottom: 1px solid rgba(34, 211, 238, 0.2);
     }
 
     .terminal-dots {
@@ -268,7 +242,7 @@
     .terminal-title {
       font-family: var(--font-mono);
       font-size: 12px;
-      color: var(--text-muted);
+      color: #94a9c9;
       letter-spacing: 0.03em;
     }
 
@@ -282,94 +256,66 @@
       border-radius: 4px;
     }
 
-    /* Card Content Area */
+    /* ==========================================================================
+       ALL CQ TEXT: STRICTLY PURE BLACK (#000000)
+       ========================================================================== */
     .cq-body {
-      padding: 20px 22px;
-    }
-
-    .cq-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .cq-num {
-      font-family: var(--font-mono);
-      font-size: 12.5px;
-      font-weight: 700;
-      color: var(--accent);
-      background: rgba(34, 211, 238, 0.12);
-      border: 1px solid rgba(34, 211, 238, 0.25);
-      padding: 2px 8px;
-      border-radius: 4px;
-      letter-spacing: 0.05em;
+      background: #ffffff;
+      color: #000000 !important;
+      padding: 22px 24px;
     }
 
     .cq-title {
       font-size: 17px;
       font-weight: 700;
-      color: #ffffff;
-      letter-spacing: -0.01em;
+      color: #000000 !important;
+      margin-bottom: 8px;
     }
 
     .stem-desc {
-      color: var(--text-muted);
-      font-size: 14.5px;
+      color: #000000 !important;
+      font-size: 15.5px;
       margin-bottom: 10px;
     }
 
-    /* Inset Terminal Code Panel for Expressions */
-    .math-panel {
-      background: var(--surface-inset);
-      border: 1px solid rgba(34, 211, 238, 0.12);
-      border-left: 3px solid var(--accent);
-      border-radius: 6px;
-      padding: 12px 16px;
-      margin-bottom: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      font-family: var(--font-mono);
-      font-size: 15px;
-      color: #ffffff;
-      letter-spacing: 0.02em;
+    /* সমীকরণ বা রাশিগুলো (সব লেখা কালো) */
+    .expressions {
+      margin-left: 14px;
+      margin-bottom: 12px;
+      font-family: var(--font-serif);
+      font-size: 16.5px;
+      color: #000000 !important;
     }
 
-    .expr-line {
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
+    .expressions div {
+      margin: 3px 0;
+      color: #000000 !important;
     }
 
     .var {
       font-style: italic;
-      color: #38bdf8;
-      font-weight: 500;
+      color: #000000 !important;
     }
 
     sup {
       font-size: 11px;
       vertical-align: super;
       line-height: 0;
-      color: #f43f5e;
-      font-weight: 600;
+      color: #000000 !important;
     }
 
-    /* Divider */
-    .cyber-divider {
+    .divider {
       border: none;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.25), transparent);
+      border-top: 1px dashed #cbd5e1;
       margin: 14px 0;
     }
 
-    /* Questions List */
+    /* প্রশ্নসমূহ (সব লেখা কালো) */
     .q-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
 
     .q-item {
@@ -377,57 +323,36 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 12px;
-      padding: 8px 10px;
-      border-radius: 6px;
-      background: rgba(34, 211, 238, 0.02);
-      border: 1px solid transparent;
-      transition: background 0.15s ease, border-color 0.15s ease;
-    }
-
-    .q-item:hover {
-      background: rgba(34, 211, 238, 0.06);
-      border-color: rgba(34, 211, 238, 0.15);
+      color: #000000 !important;
     }
 
     .q-left {
       display: flex;
-      align-items: baseline;
-      gap: 8px;
+      gap: 6px;
       flex: 1;
+      color: #000000 !important;
     }
 
-    .q-badge {
-      font-family: var(--font-mono);
-      font-size: 12.5px;
+    .q-no {
       font-weight: 700;
-      color: #a5b4fc;
-      background: rgba(99, 102, 241, 0.15);
-      border: 1px solid rgba(129, 140, 248, 0.25);
-      padding: 1px 6px;
-      border-radius: 4px;
       white-space: nowrap;
+      color: #000000 !important;
     }
 
     .q-text {
-      color: #e2e8f0;
+      color: #000000 !important;
       font-size: 15px;
     }
 
     .q-marks {
-      font-family: var(--font-mono);
-      font-weight: 600;
-      font-size: 12.5px;
-      color: #22d3ee;
-      background: rgba(34, 211, 238, 0.1);
-      border: 1px solid rgba(34, 211, 238, 0.25);
-      padding: 1px 6px;
-      border-radius: 4px;
+      font-weight: 700;
       white-space: nowrap;
+      font-family: var(--font-serif);
+      color: #000000 !important;
     }
 
-    /* Footer Brand Note */
     .site-footer {
-      margin-top: 16px;
+      margin-top: 12px;
       text-align: center;
       font-family: var(--font-mono);
       font-size: 12px;
@@ -439,20 +364,12 @@
       text-decoration: none;
     }
 
-    .site-footer a:hover {
-      text-decoration: underline;
-    }
-
     @media (max-width: 600px) {
       body {
         padding: 20px 12px 40px;
       }
       .cq-body {
-        padding: 16px 14px;
-      }
-      .math-panel {
-        font-size: 14px;
-        padding: 10px 12px;
+        padding: 16px 16px;
       }
       .q-text {
         font-size: 14.5px;
@@ -465,7 +382,7 @@
 </head>
 <body>
 
-  <!-- Cybercore Background Layer: 3D Grid, Ambient Glow & Scanlines -->
+  <!-- Cybercore 3D Grid, Glow & Scanlines Layer -->
   <div class="bg-canvas" aria-hidden="true">
     <div class="bg-glow-a"></div>
     <div class="bg-glow-b"></div>
@@ -497,35 +414,31 @@
       </div>
 
       <div class="cq-body">
-        <div class="cq-header">
-          <span class="cq-num">CQ-01</span>
-          <h2 class="cq-title">১. সৃজনশীল প্রশ্ন</h2>
-        </div>
-
+        <div class="cq-title">১. সৃজনশীল প্রশ্ন</div>
         <p class="stem-desc">
           <span class="var">A</span> = 4<span class="var">x</span><sup>2</sup> + 3<span class="var">xy</span> + 2<span class="var">y</span><sup>2</sup>, 
           <span class="var">B</span> = 2<span class="var">x</span><sup>2</sup> − 5<span class="var">xy</span>, 
           <span class="var">C</span> = 3<span class="var">y</span><sup>2</sup> − 3<span class="var">x</span><sup>2</sup> + 8<span class="var">xy</span> তিনটি বীজগণিতীয় রাশি।
         </p>
 
-        <hr class="cyber-divider">
+        <div class="divider"></div>
 
         <ul class="q-list">
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">ক</span>
+              <span class="q-no">ক)</span>
               <span class="q-text">প্রথম রাশিতে পদসংখ্যা কয়টি তা লেখো।</span>
             </div>
           </li>
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">খ</span>
+              <span class="q-no">খ)</span>
               <span class="q-text"><span class="var">A</span>, <span class="var">B</span>, <span class="var">C</span> রাশি তিনটির যোগফল নির্ণয় করো।</span>
             </div>
           </li>
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">গ</span>
+              <span class="q-no">গ)</span>
               <span class="q-text"><span class="var">x</span> = 2, <span class="var">y</span> = 1 নিয়ে 2<span class="var">A</span> − <span class="var">B</span> − <span class="var">C</span> নির্ণয় করো।</span>
             </div>
           </li>
@@ -546,35 +459,31 @@
       </div>
 
       <div class="cq-body">
-        <div class="cq-header">
-          <span class="cq-num">CQ-02</span>
-          <h2 class="cq-title">২. সৃজনশীল প্রশ্ন</h2>
+        <div class="cq-title">২. সৃজনশীল প্রশ্ন</div>
+        <div class="expressions">
+          <div><span class="var">a</span> = (<span class="var">p</span> − <span class="var">q</span>)<sup>2</sup>,</div>
+          <div><span class="var">b</span> = <span class="var">p</span><sup>2</sup> − 2<span class="var">pq</span> + <span class="var">q</span><sup>2</sup>,</div>
+          <div><span class="var">c</span> = <span class="var">p</span><sup>2</sup> + 2<span class="var">pq</span> + <span class="var">q</span><sup>2</sup></div>
         </div>
 
-        <div class="math-panel">
-          <div class="expr-line"><span class="var">a</span> = (<span class="var">p</span> − <span class="var">q</span>)<sup>2</sup></div>
-          <div class="expr-line"><span class="var">b</span> = <span class="var">p</span><sup>2</sup> − 2<span class="var">pq</span> + <span class="var">q</span><sup>2</sup></div>
-          <div class="expr-line"><span class="var">c</span> = <span class="var">p</span><sup>2</sup> + 2<span class="var">pq</span> + <span class="var">q</span><sup>2</sup></div>
-        </div>
-
-        <hr class="cyber-divider">
+        <div class="divider"></div>
 
         <ul class="q-list">
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">ক</span>
+              <span class="q-no">ক)</span>
               <span class="q-text"><span class="var">b</span> এর পদগুলোর সাংখ্যিক সহগগুলোর যোগফল নির্ণয় করো।</span>
             </div>
           </li>
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">খ</span>
+              <span class="q-no">খ)</span>
               <span class="q-text"><span class="var">c</span> + <span class="var">b</span> এবং <span class="var">c</span> − <span class="var">b</span> নির্ণয় করো।</span>
             </div>
           </li>
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">গ</span>
+              <span class="q-no">গ)</span>
               <span class="q-text"><span class="var">p</span> = 4 এবং <span class="var">q</span> = 1 হলে প্রমাণ করো যে, <span class="var">a</span> = <span class="var">b</span>।</span>
             </div>
           </li>
@@ -595,37 +504,33 @@
       </div>
 
       <div class="cq-body">
-        <div class="cq-header">
-          <span class="cq-num">CQ-03</span>
-          <h2 class="cq-title">৩. সৃজনশীল প্রশ্ন</h2>
-        </div>
-
+        <div class="cq-title">৩. সৃজনশীল প্রশ্ন</div>
         <p class="stem-desc"><span class="var">p</span>, <span class="var">q</span>, <span class="var">r</span> তিনটি বীজগণিতীয় রাশি যেখানে,</p>
         
-        <div class="math-panel">
-          <div class="expr-line"><span class="var">p</span> = 5<span class="var">x</span> + 3<span class="var">y</span> + 4<span class="var">z</span></div>
-          <div class="expr-line"><span class="var">q</span> = 2<span class="var">x</span> − <span class="var">y</span> + 5<span class="var">z</span></div>
-          <div class="expr-line"><span class="var">r</span> = −<span class="var">z</span> + 4<span class="var">y</span> + 3<span class="var">x</span></div>
+        <div class="expressions">
+          <div><span class="var">p</span> = 5<span class="var">x</span> + 3<span class="var">y</span> + 4<span class="var">z</span>,</div>
+          <div><span class="var">q</span> = 2<span class="var">x</span> − <span class="var">y</span> + 5<span class="var">z</span>, এবং</div>
+          <div><span class="var">r</span> = −<span class="var">z</span> + 4<span class="var">y</span> + 3<span class="var">x</span>.</div>
         </div>
 
-        <hr class="cyber-divider">
+        <div class="divider"></div>
 
         <ul class="q-list">
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">ক</span>
+              <span class="q-no">ক)</span>
               <span class="q-text"><span class="var">x</span> = 1, <span class="var">y</span> = 2 এবং <span class="var">z</span> = 1 হলে <span class="var">q</span> এর মান নির্ণয় করো।</span>
             </div>
           </li>
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">খ</span>
+              <span class="q-no">খ)</span>
               <span class="q-text">2<span class="var">p</span> − 3<span class="var">q</span> + 5<span class="var">r</span> এর মান নির্ণয় করো।</span>
             </div>
           </li>
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">গ</span>
+              <span class="q-no">গ)</span>
               <span class="q-text">প্রমাণ করো যে, প্রদত্ত রাশিগুলোর যোগফল প্রথম রাশির দ্বিগুণের সমান।</span>
             </div>
           </li>
@@ -646,25 +551,21 @@
       </div>
 
       <div class="cq-body">
-        <div class="cq-header">
-          <span class="cq-num">CQ-04</span>
-          <h2 class="cq-title">৪. সৃজনশীল প্রশ্ন</h2>
-        </div>
-
+        <div class="cq-title">৪. সৃজনশীল প্রশ্ন</div>
         <p class="stem-desc">তিনটি বহুপদী বীজগণিতীয় রাশি নিম্নরূপ:</p>
         
-        <div class="math-panel">
-          <div class="expr-line"><span class="var">A</span> = 4<span class="var">x</span><sup>2</sup> + 5<span class="var">xy</span> − 3<span class="var">y</span><sup>2</sup></div>
-          <div class="expr-line"><span class="var">B</span> = −2<span class="var">x</span><sup>2</sup> + 3<span class="var">xy</span> + 4<span class="var">y</span><sup>2</sup></div>
-          <div class="expr-line"><span class="var">C</span> = 3<span class="var">x</span><sup>2</sup> − 4<span class="var">x</span><span class="var">y</span> + 2<span class="var">y</span><sup>2</sup></div>
+        <div class="expressions">
+          <div><span class="var">A</span> = 4<span class="var">x</span><sup>2</sup> + 5<span class="var">xy</span> − 3<span class="var">y</span><sup>2</sup></div>
+          <div><span class="var">B</span> = −2<span class="var">x</span><sup>2</sup> + 3<span class="var">xy</span> + 4<span class="var">y</span><sup>2</sup></div>
+          <div><span class="var">C</span> = 3<span class="var">x</span><sup>2</sup> − 4<span class="var">x</span><span class="var">y</span> + 2<span class="var">y</span><sup>2</sup></div>
         </div>
 
-        <hr class="cyber-divider">
+        <div class="divider"></div>
 
         <ul class="q-list">
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">(ক)</span>
+              <span class="q-no">(ক)</span>
               <span class="q-text"><span class="var">A</span> রাশিতে কয়টি পদ আছে এবং পদগুলো কী কী?</span>
             </div>
             <span class="q-marks">[১]</span>
@@ -672,7 +573,7 @@
 
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">(খ)</span>
+              <span class="q-no">(খ)</span>
               <span class="q-text">রাশি তিনটির সদৃশ পদগুলো নিচে নিচে সাজিয়ে যোগফল (<span class="var">A</span> + <span class="var">B</span> + <span class="var">C</span>) নির্ণয় করো।</span>
             </div>
             <span class="q-marks">[২]</span>
@@ -680,7 +581,7 @@
 
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">(গ)</span>
+              <span class="q-no">(গ)</span>
               <span class="q-text">(<span class="var">A</span> + <span class="var">B</span>) নির্ণয় করো এবং তা থেকে <span class="var">C</span> বিয়োগ করো।</span>
             </div>
             <span class="q-marks">[৩]</span>
@@ -688,7 +589,7 @@
 
           <li class="q-item">
             <div class="q-left">
-              <span class="q-badge">(ঘ)</span>
+              <span class="q-no">(ঘ)</span>
               <span class="q-text">যদি <span class="var">x</span> = 2 এবং <span class="var">y</span> = 1 হয়, তবে প্রমাণ করো যে, (<span class="var">A</span> − <span class="var">B</span>) + <span class="var">C</span> = <span class="var">A</span> − (<span class="var">B</span> − <span class="var">C</span>)।</span>
             </div>
             <span class="q-marks">[৪]</span>
@@ -698,7 +599,7 @@
     </article>
 
     <footer class="site-footer">
-      <span>Official Profile: <a href="https://radid.cyou/">radid.cyou</a> &bull; Powered by Cybercore UI</span>
+      <span>Official Profile: <a href="https://radid.cyou/">radid.cyou</a></span>
     </footer>
 
   </main>
