@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>সৃজনশীল প্রশ্ন — বীজগণিতীয় রাশি | radid.cyou</title>
-  <meta name="title" content="সৃজনশীল প্রশ্ন — বীজগণিতীয় রাশি | radid.cyou">
-  <meta name="description" content="বহুপদী বীজগণিতীয় রাশি সম্পর্কিত সৃজনশীল প্রশ্নাবলী — radid.cyou">
+  <title>বীজগণিতীয় রাশি — সৃজনশীল প্রশ্নাবলী | radid.cyou</title>
+  <meta name="title" content="বীজগণিতীয় রাশি — সৃজনশীল প্রশ্নাবলী | radid.cyou">
+  <meta name="description" content="বহুপদী বীজগণিতীয় রাশি সম্পর্কিত সৃজনশীল প্রশ্নসমূহ — radid.cyou">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#090b12">
   <link rel="canonical" href="https://radid.cyou/">
@@ -36,14 +36,13 @@
       line-height: 1.55;
       min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 24px 16px;
+      padding: 32px 16px;
       position: relative;
       overflow-x: hidden;
     }
 
-    /* ডেভেলপার সাইটের সেই আসল দাগ কাটা (Grid) ব্যাকগ্রাউন্ড */
+    /* ডেভেলপার সাইটের সিগনেচার দাগ-কাটা (Grid) ও গ্লো ব্যাকগ্রাউন্ড */
     .ambient-bg {
       position: fixed;
       inset: 0;
@@ -67,32 +66,41 @@
       -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 30%, #000 50%, transparent 100%);
     }
 
-    /* Single Box Container */
     .container {
       width: 100%;
-      max-width: 600px;
+      max-width: 620px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
-    /* ডেভেলপার প্রোটোটাইপ স্টাইলের সিঙ্গেল কার্ড */
+    /* ডেভেলপার প্রোটোটাইপ স্টাইলের কার্ড */
     .cq-box {
       background: rgba(17, 21, 36, 0.85);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 16px;
-      padding: 24px 26px;
+      padding: 22px 24px;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       box-shadow: 
         0 20px 45px -12px rgba(0, 0, 0, 0.65),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      transition: border-color 0.2s ease;
     }
 
-    /* আগের হোয়াইট পেজের মতো টেক্সট প্রিন্ট ফরম্যাট */
-    .header-title {
-      font-size: 16.5px;
+    .cq-box:hover {
+      border-color: rgba(129, 140, 248, 0.3);
+    }
+
+    .cq-title {
+      font-size: 17px;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .stem-desc {
@@ -101,10 +109,10 @@
     }
 
     .expressions {
-      margin-left: 18px;
-      margin-bottom: 14px;
+      margin-left: 14px;
+      margin-bottom: 12px;
       font-family: 'Times New Roman', Times, Georgia, serif;
-      font-size: 17px;
+      font-size: 16.5px;
       color: #f8fafc;
     }
 
@@ -124,7 +132,7 @@
 
     .divider {
       border-top: 1px dashed rgba(255, 255, 255, 0.2);
-      margin: 16px 0;
+      margin: 14px 0;
     }
 
     .q-list {
@@ -135,8 +143,12 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       gap: 12px;
+    }
+
+    .q-item:last-child {
+      margin-bottom: 0;
     }
 
     .q-left {
@@ -164,31 +176,131 @@
 
     @media (max-width: 480px) {
       body {
-        padding: 16px 10px;
+        padding: 20px 10px;
         font-size: 14.5px;
       }
       .cq-box {
-        padding: 18px 16px;
+        padding: 16px 16px;
       }
       .expressions {
         font-size: 15.5px;
-        margin-left: 12px;
+        margin-left: 10px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- দাগ কাটা Developer Grid & Glow ব্যাকগ্রাউন্ড -->
+  <!-- দাগ কাটা Developer Grid & Ambient Glow ব্যাকগ্রাউন্ড -->
   <div class="ambient-bg" aria-hidden="true"></div>
   <div class="ambient-grid" aria-hidden="true"></div>
 
   <main class="container">
-    <!-- Single Unified Box -->
+
+    <!-- ১. সৃজনশীল প্রশ্ন -->
     <div class="cq-box">
+      <div class="cq-title">১. সৃজনশীল প্রশ্ন</div>
+      <p class="stem-desc">
+        <span class="var">A</span> = 4<span class="var">x</span><sup>2</sup> + 3<span class="var">xy</span> + 2<span class="var">y</span><sup>2</sup>, 
+        <span class="var">B</span> = 2<span class="var">x</span><sup>2</sup> − 5<span class="var">xy</span>, 
+        <span class="var">C</span> = 3<span class="var">y</span><sup>2</sup> − 3<span class="var">x</span><sup>2</sup> + 8<span class="var">xy</span> তিনটি বীজগণিতীয় রাশি।
+      </p>
+
+      <div class="divider"></div>
+
+      <ul class="q-list">
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">ক)</span>
+            <span class="q-text">প্রথম রাশিতে পদসংখ্যা কয়টি তা লেখো।</span>
+          </div>
+        </li>
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">খ)</span>
+            <span class="q-text"><span class="var">A</span>, <span class="var">B</span>, <span class="var">C</span> রাশি তিনটির যোগফল নির্ণয় করো।</span>
+          </div>
+        </li>
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">গ)</span>
+            <span class="q-text"><span class="var">x</span> = 2, <span class="var">y</span> = 1 নিয়ে 2<span class="var">A</span> − <span class="var">B</span> − <span class="var">C</span> নির্ণয় করো।</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ২. সৃজনশীল প্রশ্ন -->
+    <div class="cq-box">
+      <div class="cq-title">২. সৃজনশীল প্রশ্ন</div>
+      <p class="stem-desc">
+        <span class="var">a</span> = (<span class="var">p</span> − <span class="var">q</span>)<sup>2</sup>, 
+        <span class="var">b</span> = <span class="var">p</span><sup>2</sup> − 2<span class="var">pq</span> + <span class="var">q</span><sup>2</sup>, 
+        <span class="var">c</span> = <span class="var">p</span><sup>2</sup> + 2<span class="var">pq</span> + <span class="var">q</span><sup>2</sup>
+      </p>
+
+      <div class="divider"></div>
+
+      <ul class="q-list">
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">ক)</span>
+            <span class="q-text"><span class="var">b</span> এর পদগুলোর সাংখ্যিক সহগগুলোর যোগফল নির্ণয় করো।</span>
+          </div>
+        </li>
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">খ)</span>
+            <span class="q-text"><span class="var">c</span> + <span class="var">b</span> এবং <span class="var">c</span> − <span class="var">b</span> নির্ণয় করো।</span>
+          </div>
+        </li>
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">গ)</span>
+            <span class="q-text"><span class="var">p</span> = 4 এবং <span class="var">q</span> = 1 হলে প্রমাণ করো যে, <span class="var">a</span> = <span class="var">b</span>।</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ৩. সৃজনশীল প্রশ্ন -->
+    <div class="cq-box">
+      <div class="cq-title">৩. সৃজনশীল প্রশ্ন</div>
+      <p class="stem-desc"><span class="var">p</span>, <span class="var">q</span>, <span class="var">r</span> তিনটি বীজগণিতীয় রাশি যেখানে,</p>
       
-      <!-- উদ্দীপক সেকশন -->
-      <div class="header-title">📝 উদ্দীপক:</div>
+      <div class="expressions">
+        <div><span class="var">p</span> = 5<span class="var">x</span> + 3<span class="var">y</span> + 4<span class="var">z</span>,</div>
+        <div><span class="var">q</span> = 2<span class="var">x</span> − <span class="var">y</span> + 5<span class="var">z</span>, এবং</div>
+        <div><span class="var">r</span> = −<span class="var">z</span> + 4<span class="var">y</span> + 3<span class="var">x</span>.</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <ul class="q-list">
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">ক)</span>
+            <span class="q-text"><span class="var">x</span> = 1, <span class="var">y</span> = 2 এবং <span class="var">z</span> = 1 হলে <span class="var">q</span> এর মান নির্ণয় করো।</span>
+          </div>
+        </li>
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">খ)</span>
+            <span class="q-text">2<span class="var">p</span> − 3<span class="var">q</span> + 5<span class="var">r</span> এর মান নির্ণয় করো।</span>
+          </div>
+        </li>
+        <li class="q-item">
+          <div class="q-left">
+            <span class="q-no">গ)</span>
+            <span class="q-text">প্রমাণ করো যে, প্রদত্ত রাশিগুলোর যোগফল প্রথম রাশির দ্বিগুণের সমান।</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ৪. সৃজনশীল প্রশ্ন (আগের প্রশ্নটি - সবার নিচে) -->
+    <div class="cq-box">
+      <div class="cq-title">৪. সৃজনশীল প্রশ্ন</div>
       <p class="stem-desc">তিনটি বহুপদী বীজগণিতীয় রাশি নিম্নরূপ:</p>
       
       <div class="expressions">
@@ -197,11 +309,8 @@
         <div><span class="var">C</span> = 3<span class="var">x</span><sup>2</sup> − 4<span class="var">x</span><span class="var">y</span> + 2<span class="var">y</span><sup>2</sup></div>
       </div>
 
-      <!-- ড্যাশড ডিভাইডার -->
       <div class="divider"></div>
 
-      <!-- সৃজনশীল প্রশ্নাবলী সেকশন -->
-      <div class="header-title">❓ সৃজনশীল প্রশ্নাবলী:</div>
       <ul class="q-list">
         <li class="q-item">
           <div class="q-left">
@@ -235,8 +344,8 @@
           <span class="q-marks">[৪]</span>
         </li>
       </ul>
-
     </div>
+
   </main>
 
 </body>
