@@ -24,10 +24,11 @@
   <style>
     :root {
       --bg: #04070f;
+      --surface-card: rgba(8, 18, 33, 0.92);
       --accent: #22d3ee;
-      --accent-2: #6d8cff;
+      --text: #f1f5f9;
       --text-muted: #94a9c9;
-      --border: rgba(34, 211, 238, 0.2);
+      --border: rgba(34, 211, 238, 0.18);
       --font-bangla: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
       --font-serif: 'Times New Roman', Times, Georgia, serif;
@@ -41,7 +42,7 @@
 
     body {
       background-color: var(--bg);
-      color: #ffffff;
+      color: var(--text);
       font-family: var(--font-bangla);
       font-size: 15.5px;
       line-height: 1.55;
@@ -56,7 +57,7 @@
     }
 
     /* ==========================================================================
-       CYBERCORE BACKGROUND: 3D Grid, Ambient Glow & Scanlines
+       CYBERCORE DARK BACKGROUND: 3D Moving Grid, Glow Orbs & Scanlines
        ========================================================================== */
     .bg-canvas {
       position: fixed;
@@ -73,7 +74,7 @@
       width: 50vw;
       height: 50vw;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(34, 211, 238, 0.16) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, transparent 70%);
       filter: blur(90px);
       animation: floatSlow 20s ease-in-out infinite alternate;
     }
@@ -147,7 +148,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 8px 16px;
-      background: rgba(8, 18, 33, 0.7);
+      background: rgba(8, 18, 33, 0.75);
       border: 1px solid var(--border);
       border-radius: 9999px;
       backdrop-filter: blur(12px);
@@ -193,25 +194,38 @@
     }
 
     /* ==========================================================================
-       CQ CARD: Terminal Top Bar + Crisp White Worksheet Body with BLACK Text
+       CYBERCORE DARK CARD: matching mahir966 background with clean text
        ========================================================================== */
     .cq-card {
       position: relative;
-      background: #ffffff;
-      border: 1px solid rgba(34, 211, 238, 0.3);
+      background: var(--surface-card);
+      border: 1px solid var(--border);
       border-radius: 12px;
       box-shadow: 
-        0 20px 45px -15px rgba(0, 0, 0, 0.85),
-        0 0 0 1px rgba(34, 211, 238, 0.15);
+        0 20px 45px -15px rgba(0, 0, 0, 0.9),
+        0 0 0 1px rgba(34, 211, 238, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .cq-card:hover {
+      border-color: rgba(34, 211, 238, 0.35);
       transform: translateY(-2px);
-      box-shadow: 
-        0 24px 50px -15px rgba(0, 0, 0, 0.95),
-        0 0 20px -3px rgba(34, 211, 238, 0.25);
+    }
+
+    /* Cyan corner accent line */
+    .cq-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      z-index: 2;
     }
 
     /* Terminal Bar at Card Top */
@@ -220,8 +234,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 9px 16px;
-      background: #081221;
-      border-bottom: 1px solid rgba(34, 211, 238, 0.2);
+      background: rgba(4, 7, 15, 0.85);
+      border-bottom: 1px solid rgba(34, 211, 238, 0.12);
     }
 
     .terminal-dots {
@@ -256,61 +270,59 @@
       border-radius: 4px;
     }
 
-    /* ==========================================================================
-       ALL CQ TEXT: STRICTLY PURE BLACK (#000000)
-       ========================================================================== */
+    /* CQ Content Body */
     .cq-body {
-      background: #ffffff;
-      color: #000000 !important;
       padding: 22px 24px;
+      background: transparent;
+      color: #ffffff;
     }
 
     .cq-title {
       font-size: 17px;
       font-weight: 700;
-      color: #000000 !important;
+      color: #ffffff;
       margin-bottom: 8px;
     }
 
     .stem-desc {
-      color: #000000 !important;
+      color: #f1f5f9;
       font-size: 15.5px;
       margin-bottom: 10px;
     }
 
-    /* সমীকরণ বা রাশিগুলো (সব লেখা কালো) */
+    /* সমীকরণ বা রাশিগুলো */
     .expressions {
       margin-left: 14px;
       margin-bottom: 12px;
       font-family: var(--font-serif);
       font-size: 16.5px;
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     .expressions div {
       margin: 3px 0;
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     .var {
       font-style: italic;
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     sup {
       font-size: 11px;
       vertical-align: super;
       line-height: 0;
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     .divider {
       border: none;
-      border-top: 1px dashed #cbd5e1;
+      border-top: 1px dashed rgba(255, 255, 255, 0.15);
       margin: 14px 0;
     }
 
-    /* প্রশ্নসমূহ (সব লেখা কালো) */
+    /* প্রশ্নসমূহ */
     .q-list {
       list-style: none;
       display: flex;
@@ -323,24 +335,24 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 12px;
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     .q-left {
       display: flex;
       gap: 6px;
       flex: 1;
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     .q-no {
       font-weight: 700;
       white-space: nowrap;
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     .q-text {
-      color: #000000 !important;
+      color: #f1f5f9;
       font-size: 15px;
     }
 
@@ -348,7 +360,7 @@
       font-weight: 700;
       white-space: nowrap;
       font-family: var(--font-serif);
-      color: #000000 !important;
+      color: #ffffff;
     }
 
     .site-footer {
