@@ -2,14 +2,14 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>গণিত প্রশ্নপত্র — শ্রেণি: অষ্টম</title>
+  <title>গণিত (বার্ষিক মডেল টেস্ট) — শ্রেণি: অষ্টম</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     @page {
       size: A4 portrait;
-      margin: 12mm 15mm 15mm 15mm;
+      margin: 10mm 12mm 12mm 12mm;
     }
     *, *::before, *::after {
       box-sizing: border-box;
@@ -18,57 +18,78 @@
     }
     body {
       font-family: 'Noto Sans Bengali', Arial, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.5;
+      font-size: 10pt;
+      line-height: 1.45;
       color: #000000;
       background: #ffffff;
     }
     .header {
       text-align: center;
       border-bottom: 2px solid #000;
-      padding-bottom: 8px;
-      margin-bottom: 12px;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
     }
     .badge {
-      font-size: 9pt;
+      font-size: 8.5pt;
       font-weight: 700;
       display: inline-block;
-      border: 1px solid #444;
-      padding: 2px 10px;
+      border: 1px solid #333;
+      padding: 1px 10px;
       border-radius: 12px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .title {
-      font-size: 16pt;
+      font-size: 15pt;
       font-weight: 700;
-      margin: 3px 0;
+      margin: 2px 0;
     }
     .meta {
-      font-size: 10pt;
+      font-size: 9.5pt;
       font-weight: 600;
-      color: #222;
+      color: #111;
+    }
+    .notice {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #333;
+      margin-top: 3px;
     }
     .sec-head {
-      font-size: 12pt;
+      font-size: 11pt;
       font-weight: 700;
       text-align: center;
       background: #f0f0f0;
-      border: 1px solid #333;
-      padding: 3px;
-      margin: 14px 0 10px;
+      border: 1px solid #444;
+      padding: 3px 6px;
+      margin: 10px 0 8px;
+    }
+    .instruction-line {
+      text-align: center;
+      font-size: 9.5pt;
+      font-weight: 600;
+      margin: -4px 0 10px;
+      color: #222;
+    }
+    .bivag-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: underline;
+      margin: 10px 0 6px;
+      color: #000;
     }
     .q-box {
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       page-break-inside: avoid;
     }
     .q-title {
       font-weight: 700;
-      font-size: 10.5pt;
-      margin-bottom: 3px;
+      font-size: 10pt;
+      margin-bottom: 2px;
     }
     .stem {
-      margin-bottom: 5px;
-      line-height: 1.5;
+      margin-bottom: 4px;
+      line-height: 1.45;
     }
     .var {
       font-style: italic;
@@ -84,28 +105,29 @@
     }
     .sub-q-list {
       list-style: none;
-      margin-left: 10px;
+      margin-left: 8px;
     }
     .sub-q {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
+      align-items: baseline;
     }
     .marks {
       font-weight: 700;
       white-space: nowrap;
-      margin-left: 10px;
+      margin-left: 8px;
     }
     table.data-table {
       width: 80%;
-      margin: 6px auto;
+      margin: 5px auto;
       border-collapse: collapse;
       text-align: center;
-      font-size: 10pt;
+      font-size: 9.5pt;
     }
     table.data-table th, table.data-table td {
       border: 1px solid #000;
-      padding: 4px 8px;
+      padding: 3px 6px;
       white-space: nowrap;
     }
     table.data-table th {
@@ -114,13 +136,13 @@
     .mcq-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 20px;
-      row-gap: 8px;
+      column-gap: 16px;
+      row-gap: 6px;
     }
     .mcq-card {
       page-break-inside: avoid;
-      font-size: 9.5pt;
-      margin-bottom: 6px;
+      font-size: 9pt;
+      margin-bottom: 5px;
     }
     .mcq-q {
       font-weight: 600;
@@ -129,16 +151,16 @@
     .mcq-opts {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2px 8px;
-      font-size: 9pt;
+      gap: 1px 6px;
+      font-size: 8.5pt;
       color: #111;
     }
     .short-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 20px;
-      row-gap: 6px;
-      font-size: 9.5pt;
+      column-gap: 16px;
+      row-gap: 5px;
+      font-size: 9pt;
     }
     .short-item {
       page-break-inside: avoid;
@@ -147,119 +169,16 @@
 </head>
 <body>
 
+  <!-- ========================================================================= -->
+  <!-- অংশ ১: বহুনির্বাচনী প্রশ্ন (PDF এ আগে বহুনির্বাচনী)                         -->
+  <!-- ========================================================================= -->
+
   <div class="header">
     <div class="badge">NCTB ও জেএসসি (JSC) স্ট্যান্ডার্ড মডেল টেস্ট</div>
-    <div class="title">গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র)</div>
-    <div class="meta">শ্রেণি: অষ্টম &nbsp;|&nbsp; সময়: ৩ ঘণ্টা &nbsp;|&nbsp; পূর্ণমান: ১০০</div>
+    <div class="title">গণিত (বার্ষিক মডেল টেস্ট)</div>
+    <div class="meta">বহুনির্বাচনী অভীক্ষা &nbsp;|&nbsp; শ্রেণি: অষ্টম &nbsp;|&nbsp; সময়: ৩০ মিনিট &nbsp;|&nbsp; পূর্ণমান: ৩০</div>
+    <div class="notice">[বিশেষ দ্রষ্টব্য: সব প্রশ্নের উত্তর দেওয়া আবশ্যক। প্রতিটি প্রশ্নের মান ১।]</div>
   </div>
-
-  <div class="sec-head">সৃজনশীল প্রশ্ন</div>
-
-  <!-- ১ -->
-  <div class="q-box">
-    <div class="q-title">১ নং প্রশ্ন</div>
-    <div class="stem">কোনো আসল ৩ বছরে মুনাফা-আসলে ১৩,০০০ টাকা এবং ৫ বছরে মুনাফা-আসলে ১৫,০০০ টাকা হয়।</div>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) বার্ষিক ৮% সরল মুনাফায় ৫,০০০ টাকার ৩ বছরের সরল মুনাফা কত?</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) উদ্দীপকের তথ্যের আলোকে আসল এবং বার্ষিক মুনাফার হার নির্ণয় করো।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) উক্ত আসল একই হার চক্রবৃদ্ধি মুনাফায় ৩ বছরের জন্য ব্যাংকে জমা রাখলে সরল মুনাফা ও চক্রবৃদ্ধি মুনাফার পার্থক্য কত হবে?</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <!-- ২ -->
-  <div class="q-box">
-    <div class="q-title">২ নং প্রশ্ন</div>
-    <div class="stem">একটি আয়তাকার বাগানের দৈর্ঘ্য প্রস্থের ১.৫ গুণ এবং ক্ষেত্রফল ২১৬ বর্গমিটার। বাগানটির চারদিকে ২ মিটার চওড়া একটি রাস্তা রয়েছে।</div>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) একটি ত্রিভুজাকার ক্ষেত্রের ভূমি ২০ মিটার এবং উচ্চতা ১৫ মিটার হলে, এর ক্ষেত্রফল কত হেক্টর?</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) বাগানটির পরিসীমা নির্ণয় করো।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) প্রতি বর্গমিটারে ২৫ টাকা দরে রাস্তাটি বাঁধাই করতে মোট কত খরচ হবে?</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <!-- ৩ -->
-  <div class="q-box">
-    <div class="q-title">৩ নং প্রশ্ন</div>
-    <div class="stem"><span class="var">x</span><sup>2</sup> − 3<span class="var">x</span> + 1 = 0 একটি বীজগণিতীয় সমীকরণ এবং <span class="var">P</span> = (<span class="var">x</span> − 2) / (<span class="var">x</span><sup>2</sup> − 4), <span class="var">Q</span> = 1 / (<span class="var">x</span><sup>2</sup> + 5<span class="var">x</span> + 6) দুটি বীজগণিতীয় ভগ্নাংশ।</div>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) <span class="var">x</span> + 1/<span class="var">x</span> এর মান নির্ণয় করো।</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) প্রমাণ করো যে, <span class="var">x</span><sup>4</sup> + 1/<span class="var">x</span><sup>4</sup> = 47।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) <span class="var">P − Q</span> এর মান নির্ণয় করে ফলাফলকে লঘিষ্ঠ আকারে প্রকাশ করো।</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <!-- ৪ -->
-  <div class="q-box">
-    <div class="q-title">৪ নং প্রশ্ন</div>
-    <div class="stem"><span class="var">U</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> ≤ 7}, <span class="var">A</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> মৌলিক সংখ্যা এবং <span class="var">x</span> ≤ 7}, <span class="var">B</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> বিজোড় সংখ্যা এবং <span class="var">x</span> ≤ 7} এবং দুটি সমীকরণ: 2<span class="var">x</span> + <span class="var">y</span> = 8, 3<span class="var">x</span> − 2<span class="var">y</span> = 5।</div>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) <span class="var">A</span> সেটটিকে তালিকা পদ্ধতিতে প্রকাশ করে এর উপাদান সংখ্যা এবং উপসেটের সংখ্যা নির্ণয় করো।</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) সমীকরণদ্বয়কে প্রতিস্থাপন বা অপনয়ন পদ্ধতিতে সমাধান করে (<span class="var">x</span>, <span class="var">y</span>) নির্ণয় করো।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) ভেনচিত্রের তথ্যের আলোকে প্রমাণ করো যে, (<span class="var">A ∪ B</span>)′ = <span class="var">A</span>′ ∩ <span class="var">B</span>′।</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <!-- ৫ -->
-  <div class="q-box">
-    <div class="q-title">৫ নং প্রশ্ন</div>
-    <div class="stem">অষ্টম শ্রেণির ৪০ জন শিক্ষার্থীর গণিতে প্রাপ্ত নম্বরের গণসংখ্যা নিবেশন সারণি নিচে দেওয়া হলো:</div>
-    <table class="data-table">
-      <thead>
-        <tr><th>শ্রেণি ব্যবধান</th><th>৩১ - ৪০</th><th>৪১ - ৫০</th><th>৫১ - ৬০</th><th>৬১ - ৭০</th><th>৭১ - ৮০</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>গণসংখ্যা</strong></td><td>৬</td><td>৮</td><td>১০</td><td>১২</td><td>৪</td></tr>
-      </tbody>
-    </table>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) প্রচুরক শ্রেণি কোনটি এবং উক্ত শ্রেণির মধ্যমান নির্ণয় করো।</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) সারণি হতে সংক্ষিপ্ত পদ্ধতিতে গড় নির্ণয় করো।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) প্রদত্ত উপাত্তের গণসংখ্যা আয়তলেখ অঙ্কন করো।</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <!-- ৬ -->
-  <div class="q-box">
-    <div class="q-title">৬ নং প্রশ্ন</div>
-    <div class="stem">৫০ জন শিক্ষার্থীর দৈনিক টিফিন খরচের (টাকায়) গণসংখ্যা সারণি:</div>
-    <table class="data-table">
-      <thead>
-        <tr><th>শ্রেণি ব্যবধান</th><th>২৫ - ৩৪</th><th>৩৫ - ৪৪</th><th>৪৫ - ৫৪</th><th>৫৫ - ৬৪</th><th>৬৫ - ৭৪</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>গণসংখ্যা</strong></td><td>৫</td><td>৯</td><td>১৫</td><td>১৩</td><td>৮</td></tr>
-      </tbody>
-    </table>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) প্রদত্ত তথ্যের ক্রমযোজিত গণসংখ্যা সারণি তৈরি করো।</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) সারণি হতে মধ্যক নির্ণয় করো।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) একটি বিদ্যালয়ের অষ্টম শ্রেণির ১২০ জন শিক্ষার্থীর পছন্দের খেলা: ক্রিকেট ৫০ জন, ফুটবল ৪০ জন, দাবা ১০ জন ও ব্যাডমিন্টন ২০ জন। উপাত্তগুলোর কোণ নির্ণয়পূর্বক পাইচিত্র অঙ্কন করো।</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <!-- ৭ -->
-  <div class="q-box">
-    <div class="q-title">৭ নং প্রশ্ন</div>
-    <div class="stem">Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> এবং <span class="var">BC</span> বাহুর মধ্যবিন্দু।</div>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) <span class="var">AB</span> = 6 সেমি এবং <span class="var">BC</span> = 8 সেমি হলে, <span class="var">AC</span> বাহুর দৈর্ঘ্য নির্ণয় করো।</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) পিথাগোরাসের উপপাদ্যটি বিবৃতিসহ প্রমাণ করো যে, <span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) প্রমাণ করো যে, 5<span class="var">AC</span><sup>2</sup> = 4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>)।</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <!-- ৮ -->
-  <div class="q-box">
-    <div class="q-title">৮ নং প্রশ্ন</div>
-    <div class="stem"><span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> এবং <span class="var">CD</span> দুটি সমান জ্যা। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> এবং <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE</span> এবং <span class="var">OF</span> লম্ব।</div>
-    <div class="sub-q-list">
-      <div class="sub-q"><span>ক) বৃত্তটির ব্যাসার্ধ ৭ সেমি হলে এর পরিধি কত? (π = 22/7)</span><span class="marks">[২]</span></div>
-      <div class="sub-q"><span>খ) প্রমাণ করো যে, <span class="var">OE = OF</span> (অর্থাৎ, বৃত্তের সমান সমান জ্যা কেন্দ্র থেকে সমদূরবর্তী)।</span><span class="marks">[৪]</span></div>
-      <div class="sub-q"><span>গ) প্রমাণ করো যে, বৃত্তের ব্যাসই বৃহত্তম জ্যা।</span><span class="marks">[৪]</span></div>
-    </div>
-  </div>
-
-  <div class="sec-head" style="page-break-before: always;">বহুনির্বাচনী প্রশ্ন</div>
 
   <div class="mcq-grid">
     <!-- ১ -->
@@ -394,7 +313,7 @@
     </div>
   </div>
 
-  <div style="font-size: 9.5pt; margin: 8px 0 4px; padding: 4px; background: #f9f9f9; border-left: 3px solid #333;">
+  <div style="font-size: 9pt; margin: 6px 0 4px; padding: 3px 6px; background: #f9f9f9; border-left: 3px solid #333;">
     <strong>উদ্দীপক (২৭ ও ২৮):</strong> অষ্টম শ্রেণির ১০ জন শিক্ষার্থীর নম্বর: ২০, ২৫, ৩০, ২৫, ৪০, ৫০, ২৫, ৪৫, ৬০, ৩৫।
   </div>
 
@@ -421,6 +340,138 @@
     </div>
   </div>
 
+  <!-- ========================================================================= -->
+  <!-- অংশ ২: সৃজনশীল ও সংক্ষিপ্ত প্রশ্ন (PDF এ বহুনির্বাচনীর পরে CQ এবং Short)      -->
+  <!-- ========================================================================= -->
+
+  <div style="page-break-before: always;"></div>
+
+  <div class="header">
+    <div class="badge">NCTB ও জেএসসি (JSC) স্ট্যান্ডার্ড মডেল টেস্ট</div>
+    <div class="title">গণিত (বার্ষিক মডেল টেস্ট)</div>
+    <div class="meta">সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র &nbsp;|&nbsp; শ্রেণি: অষ্টম &nbsp;|&nbsp; সময়: ২ ঘণ্টা ৩০ মিনিট &nbsp;|&nbsp; পূর্ণমান: ৭০</div>
+  </div>
+
+  <div class="sec-head">সৃজনশীল প্রশ্ন</div>
+  <div class="instruction-line">প্রতিটি বিভাগ থেকে একটি করে মোট ৫টি প্রশ্নের উত্তর দাও।</div>
+
+  <!-- ক বিভাগ — পাটিগণিত -->
+  <div class="bivag-title">ক বিভাগ — পাটিগণিত</div>
+
+  <!-- ১ -->
+  <div class="q-box">
+    <div class="q-title">১ নং প্রশ্ন</div>
+    <div class="stem">কোনো আসল ৩ বছরে মুনাফা-আসলে ১৩,০০০ টাকা এবং ৫ বছরে মুনাফা-আসলে ১৫,০০০ টাকা হয়।</div>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) বার্ষিক ৮% সরল মুনাফায় ৫,০০০ টাকার ৩ বছরের সরল মুনাফা কত?</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) উদ্দীপকের তথ্যের আলোকে আসল এবং বার্ষিক মুনাফার হার নির্ণয় করো।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) উক্ত আসল একই হার চক্রবৃদ্ধি মুনাফায় ৩ বছরের জন্য ব্যাংকে জমা রাখলে সরল মুনাফা ও চক্রবৃদ্ধি মুনাফার পার্থক্য কত হবে?</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- ২ -->
+  <div class="q-box">
+    <div class="q-title">২ নং প্রশ্ন</div>
+    <div class="stem">একটি আয়তাকার বাগানের দৈর্ঘ্য প্রস্থের ১.৫ গুণ এবং ক্ষেত্রফল ২১৬ বর্গমিটার। বাগানটির চারদিকে ২ মিটার চওড়া একটি রাস্তা রয়েছে।</div>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) একটি ত্রিভুজাকার ক্ষেত্রের ভূমি ২০ মিটার এবং উচ্চতা ১৫ মিটার হলে, এর ক্ষেত্রফল কত হেক্টর?</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) বাগানটির পরিসীমা নির্ণয় করো।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) প্রতি বর্গমিটারে ২৫ টাকা দরে রাস্তাটি বাঁধাই করতে মোট কত খরচ হবে?</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- খ বিভাগ — বীজগণিত -->
+  <div class="bivag-title">খ বিভাগ — বীজগণিত</div>
+
+  <!-- ৩ -->
+  <div class="q-box">
+    <div class="q-title">৩ নং প্রশ্ন</div>
+    <div class="stem"><span class="var">x</span><sup>2</sup> − 3<span class="var">x</span> + 1 = 0 একটি বীজগণিতীয় সমীকরণ এবং <span class="var">P</span> = (<span class="var">x</span> − 2) / (<span class="var">x</span><sup>2</sup> − 4), <span class="var">Q</span> = 1 / (<span class="var">x</span><sup>2</sup> + 5<span class="var">x</span> + 6) দুটি বীজগণিতীয় ভগ্নাংশ।</div>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) <span class="var">x</span> + 1/<span class="var">x</span> এর মান নির্ণয় করো।</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) প্রমাণ করো যে, <span class="var">x</span><sup>4</sup> + 1/<span class="var">x</span><sup>4</sup> = 47।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) <span class="var">P − Q</span> এর মান নির্ণয় করে ফলাফলকে লঘিষ্ঠ আকারে প্রকাশ করো।</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- ৪ -->
+  <div class="q-box">
+    <div class="q-title">৪ নং প্রশ্ন</div>
+    <div class="stem"><span class="var">U</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> ≤ 7}, <span class="var">A</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> মৌলিক সংখ্যা এবং <span class="var">x</span> ≤ 7}, <span class="var">B</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> বিজোড় সংখ্যা এবং <span class="var">x</span> ≤ 7} এবং দুটি সমীকরণ: 2<span class="var">x</span> + <span class="var">y</span> = 8, 3<span class="var">x</span> − 2<span class="var">y</span> = 5।</div>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) <span class="var">A</span> সেটটিকে তালিকা পদ্ধতিতে প্রকাশ করে এর উপাদান সংখ্যা এবং উপসেটের সংখ্যা নির্ণয় করো।</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) সমীকরণদ্বয়কে প্রতিস্থাপন বা অপনয়ন পদ্ধতিতে সমাধান করে (<span class="var">x</span>, <span class="var">y</span>) নির্ণয় করো।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) ভেনচিত্রের তথ্যের আলোকে প্রমাণ করো যে, (<span class="var">A ∪ B</span>)′ = <span class="var">A</span>′ ∩ <span class="var">B</span>′।</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- গ বিভাগ — জ্যামিতি -->
+  <div class="bivag-title">গ বিভাগ — জ্যামিতি</div>
+
+  <!-- ৫ -->
+  <div class="q-box">
+    <div class="q-title">৫ নং প্রশ্ন</div>
+    <div class="stem">Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> এবং <span class="var">BC</span> বাহুর মধ্যবিন্দু।</div>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) <span class="var">AB</span> = 6 সেমি এবং <span class="var">BC</span> = 8 সেমি হলে, <span class="var">AC</span> বাহুর দৈর্ঘ্য নির্ণয় করো।</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) পিথাগোরাসের উপপাদ্যটি বিবৃতিসহ প্রমাণ করো যে, <span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) প্রমাণ করো যে, 5<span class="var">AC</span><sup>2</sup> = 4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>)।</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- ৬ -->
+  <div class="q-box">
+    <div class="q-title">৬ নং প্রশ্ন</div>
+    <div class="stem"><span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> এবং <span class="var">CD</span> দুটি সমান জ্যা। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> এবং <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE</span> এবং <span class="var">OF</span> লম্ব।</div>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) বৃত্তটির ব্যাসার্ধ ৭ সেমি হলে এর পরিধি কত? (π = 22/7)</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) প্রমাণ করো যে, <span class="var">OE = OF</span> (অর্থাৎ, বৃত্তের সমান সমান জ্যা কেন্দ্র থেকে সমদূরবর্তী)।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) প্রমাণ করো যে, বৃত্তের ব্যাসই বৃহত্তম জ্যা।</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- ঘ বিভাগ — পরিসংখ্যান -->
+  <div class="bivag-title">ঘ বিভাগ — পরিসংখ্যান</div>
+
+  <!-- ৭ -->
+  <div class="q-box">
+    <div class="q-title">৭ নং প্রশ্ন</div>
+    <div class="stem">অষ্টম শ্রেণির ৪০ জন শিক্ষার্থীর গণিতে প্রাপ্ত নম্বরের গণসংখ্যা নিবেশন সারণি নিচে দেওয়া হলো:</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>শ্রেণি ব্যবধান</th><th>৩১ - ৪০</th><th>৪১ - ৫০</th><th>৫১ - ৬০</th><th>৬১ - ৭০</th><th>৭১ - ৮০</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>গণসংখ্যা</strong></td><td>৬</td><td>৮</td><td>১০</td><td>১২</td><td>৪</td></tr>
+      </tbody>
+    </table>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) প্রচুরক শ্রেণি কোনটি এবং উক্ত শ্রেণির মধ্যমান নির্ণয় করো।</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) সারণি হতে সংক্ষিপ্ত পদ্ধতিতে গড় নির্ণয় করো।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) প্রদত্ত উপাত্তের গণসংখ্যা আয়তলেখ অঙ্কন করো।</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- ৮ -->
+  <div class="q-box">
+    <div class="q-title">৮ নং প্রশ্ন</div>
+    <div class="stem">৫০ জন শিক্ষার্থীর দৈনিক টিফিন খরচের (টাকায়) গণসংখ্যা সারণি:</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>শ্রেণি ব্যবধান</th><th>২৫ - ৩৪</th><th>৩৫ - ৪৪</th><th>৪৫ - ৫৪</th><th>৫৫ - ৬৪</th><th>৬৫ - ৭৪</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>গণসংখ্যা</strong></td><td>৫</td><td>৯</td><td>১৫</td><td>১৩</td><td>৮</td></tr>
+      </tbody>
+    </table>
+    <div class="sub-q-list">
+      <div class="sub-q"><span>ক) প্রদত্ত তথ্যের ক্রমযোজিত গণসংখ্যা সারণি তৈরি করো।</span><span class="marks">[২]</span></div>
+      <div class="sub-q"><span>খ) সারণি হতে মধ্যক নির্ণয় করো।</span><span class="marks">[৪]</span></div>
+      <div class="sub-q"><span>গ) একটি বিদ্যালয়ের অষ্টম শ্রেণির ১২০ জন শিক্ষার্থীর পছন্দের খেলা: ক্রিকেট ৫০ জন, ফুটবল ৪০ জন, দাবা ১০ জন ও ব্যাডমিন্টন ২০ জন। উপাত্তগুলোর কোণ নির্ণয়পূর্বক পাইচিত্র অঙ্কন করো।</span><span class="marks">[৪]</span></div>
+    </div>
+  </div>
+
+  <!-- ==================== CQ এর নিচে সংক্ষিপ্ত প্রশ্ন ==================== -->
   <div class="sec-head" style="margin-top: 14px;">সংক্ষিপ্ত প্রশ্ন</div>
 
   <div class="short-list">

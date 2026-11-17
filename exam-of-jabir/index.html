@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র) — শ্রেণি: ৮ম | Exam of Jabir | radid.cyou</title>
-  <meta name="title" content="গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র) — শ্রেণি: ৮ম | Exam of Jabir">
-  <meta name="description" content="অষ্টম শ্রেণির গণিত মডেল টেস্ট প্রশ্নপত্র — radid.cyou">
+  <title>গণিত (বার্ষিক মডেল টেস্ট) — শ্রেণি: ৮ম | Exam of Jabir | radid.cyou</title>
+  <meta name="title" content="গণিত (বার্ষিক মডেল টেস্ট) — শ্রেণি: ৮ম | Exam of Jabir">
+  <meta name="description" content="অষ্টম শ্রেণির গণিত বার্ষিক মডেল টেস্ট প্রশ্নপত্র — radid.cyou">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#090b12">
   <link rel="canonical" href="https://radid.cyou/exam-of-jabir/">
@@ -114,7 +114,7 @@
       max-width: 100%;
     }
 
-    /* টাইটেল: ১ লাইনে অটো-রিসাইজ */
+    /* টাইটেল: গণিত (বার্ষিক মডেল টেস্ট) — ১ লাইনে অটো-রিসাইজ */
     .exam-title {
       font-size: clamp(16px, 4.5vw, 22px);
       font-weight: 700;
@@ -193,7 +193,7 @@
       white-space: nowrap;
     }
 
-    /* অতিরিক্ত বাটন (সবগুলো ও প্রি-বিল্ট পিডিএফ লোড) */
+    /* অতিরিক্ত বাটন (সবগুলো ও প্রি-বিল্ট পিডিএফ লিংক) */
     .sub-actions {
       display: flex;
       justify-content: center;
@@ -235,19 +235,18 @@
     .section-wrap {
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 20px;
       animation: fadeIn 0.25s ease-out;
     }
 
-    /* সেকশন হেডার: ১ লাইনে ফিট */
+    /* সেকশন হেডার */
     .section-title-wrap {
       margin-top: 4px;
-      margin-bottom: -2px;
+      margin-bottom: -4px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       border-left: 3px solid #6366f1;
       padding-left: 12px;
-      white-space: nowrap;
     }
 
     .section-title {
@@ -255,6 +254,29 @@
       font-weight: 700;
       color: #f8fafc;
       white-space: nowrap;
+    }
+
+    .section-sub-inst {
+      font-size: 13.5px;
+      color: #a5b4fc;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+
+    /* বিভাগ হেডার */
+    .bivag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 6px 16px;
+      border-radius: 10px;
+      margin: 8px 0 2px;
+      align-self: flex-start;
     }
 
     /* ডেভেলপার কার্ড (CQ Box) */
@@ -550,8 +572,8 @@
       <!-- জেএসসি ব্যাজ -->
       <div class="exam-badge">NCTB ও জেএসসি (JSC) স্ট্যান্ডার্ড মডেল টেস্ট</div>
       
-      <!-- মূল টাইটেল -->
-      <h1 class="exam-title">গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র)</h1>
+      <!-- মূল টাইটেল: গণিত (বার্ষিক মডেল টেস্ট) -->
+      <h1 class="exam-title">গণিত (বার্ষিক মডেল টেস্ট)</h1>
       
       <!-- মেটা লাইন: ৩টি ট্যাগ এক লাইনে অটো-রিসাইজ -->
       <div class="exam-meta-pills">
@@ -562,7 +584,7 @@
         <span class="meta-item">পূর্ণমান: ১০০</span>
       </div>
       
-      <!-- ক্লিকযোগ্য ৩টি সেকশন বাটন -->
+      <!-- ৩টি ক্লিকযোগ্য সেকশন বাটন -->
       <div class="exam-nav">
         <button type="button" class="nav-btn active" id="btn-srijonshil" onclick="setSection('srijonshil')">
           <span class="nav-btn-val">৫০</span>
@@ -593,7 +615,11 @@
     <div id="sec-srijonshil" class="section-wrap">
       <div class="section-title-wrap">
         <h2 class="section-title">সৃজনশীল প্রশ্ন</h2>
+        <div class="section-sub-inst">প্রতিটি বিভাগ থেকে একটি করে মোট ৫টি প্রশ্নের উত্তর দাও।</div>
       </div>
+
+      <!-- ক বিভাগ — পাটিগণিত -->
+      <div class="bivag-badge">ক বিভাগ — পাটিগণিত</div>
 
       <!-- ১ নং প্রশ্ন -->
       <article class="cq-box" id="cq-1">
@@ -666,6 +692,9 @@
           </li>
         </ul>
       </article>
+
+      <!-- খ বিভাগ — বীজগণিত -->
+      <div class="bivag-badge">খ বিভাগ — বীজগণিত</div>
 
       <!-- ৩ নং প্রশ্ন -->
       <article class="cq-box" id="cq-3">
@@ -744,10 +773,88 @@
         </ul>
       </article>
 
+      <!-- গ বিভাগ — জ্যামিতি -->
+      <div class="bivag-badge">গ বিভাগ — জ্যামিতি</div>
+
       <!-- ৫ নং প্রশ্ন -->
       <article class="cq-box" id="cq-5">
         <div class="cq-header">
           <div class="cq-title">৫ নং প্রশ্ন</div>
+        </div>
+        <p class="stem-desc">
+          Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> এবং <span class="var">BC</span> বাহুর মধ্যবিন্দু।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text"><span class="var">AB</span> = 6 সেমি এবং <span class="var">BC</span> = 8 সেমি হলে, <span class="var">AC</span> বাহুর দৈর্ঘ্য নির্ণয় করো।</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">পিথাগোরাসের উপপাদ্যটি বিবৃতিসহ প্রমাণ করো যে, <span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">প্রমাণ করো যে, 5<span class="var">AC</span><sup>2</sup> = 4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৬ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-6">
+        <div class="cq-header">
+          <div class="cq-title">৬ নং প্রশ্ন</div>
+        </div>
+        <p class="stem-desc">
+          <span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> এবং <span class="var">CD</span> দুটি সমান জ্যা। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> এবং <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE</span> এবং <span class="var">OF</span> লম্ব।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">বৃত্তটির ব্যাসার্ধ ৭ সেমি হলে এর পরিধি কত? (π = 22/7)</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">প্রমাণ করো যে, <span class="var">OE = OF</span> (অর্থাৎ, বৃত্তের সমান সমান জ্যা কেন্দ্র থেকে সমদূরবর্তী)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">প্রমাণ করো যে, বৃত্তের ব্যাসই বৃহত্তম জ্যা।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ঘ বিভাগ — পরিসংখ্যান -->
+      <div class="bivag-badge">ঘ বিভাগ — পরিসংখ্যান</div>
+
+      <!-- ৭ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-7">
+        <div class="cq-header">
+          <div class="cq-title">৭ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           অষ্টম শ্রেণির ৪০ জন শিক্ষার্থীর গণিতে প্রাপ্ত নম্বরের গণসংখ্যা নিবেশন সারণি নিচে দেওয়া হলো:
@@ -806,10 +913,10 @@
         </ul>
       </article>
 
-      <!-- ৬ নং প্রশ্ন -->
-      <article class="cq-box" id="cq-6">
+      <!-- ৮ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-8">
         <div class="cq-header">
-          <div class="cq-title">৬ নং প্রশ্ন</div>
+          <div class="cq-title">৮ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           ৫০ জন শিক্ষার্থীর দৈনিক টিফিন খরচের (টাকায়) গণসংখ্যা সারণি:
@@ -862,78 +969,6 @@
             <div class="q-left">
               <span class="q-no">গ)</span>
               <span class="q-text">একটি বিদ্যালয়ের অষ্টম শ্রেণির ১২০ জন শিক্ষার্থীর পছন্দের খেলা: ক্রিকেট ৫০ জন, ফুটবল ৪০ জন, দাবা ১০ জন ও ব্যাডমিন্টন ২০ জন। উপাত্তগুলোর কোণ নির্ণয়পূর্বক পাইচিত্র অঙ্কন করো।</span>
-            </div>
-            <span class="q-marks">[৪]</span>
-          </li>
-        </ul>
-      </article>
-
-      <!-- ৭ নং প্রশ্ন -->
-      <article class="cq-box" id="cq-7">
-        <div class="cq-header">
-          <div class="cq-title">৭ নং প্রশ্ন</div>
-        </div>
-        <p class="stem-desc">
-          Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> এবং <span class="var">BC</span> বাহুর মধ্যবিন্দু।
-        </p>
-
-        <div class="divider"></div>
-
-        <ul class="q-list">
-          <li class="q-item">
-            <div class="q-left">
-              <span class="q-no">ক)</span>
-              <span class="q-text"><span class="var">AB</span> = 6 সেমি এবং <span class="var">BC</span> = 8 সেমি হলে, <span class="var">AC</span> বাহুর দৈর্ঘ্য নির্ণয় করো।</span>
-            </div>
-            <span class="q-marks">[২]</span>
-          </li>
-          <li class="q-item">
-            <div class="q-left">
-              <span class="q-no">খ)</span>
-              <span class="q-text">পিথাগোরাসের উপপাদ্যটি বিবৃতিসহ প্রমাণ করো যে, <span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>।</span>
-            </div>
-            <span class="q-marks">[৪]</span>
-          </li>
-          <li class="q-item">
-            <div class="q-left">
-              <span class="q-no">গ)</span>
-              <span class="q-text">প্রমাণ করো যে, 5<span class="var">AC</span><sup>2</sup> = 4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>)।</span>
-            </div>
-            <span class="q-marks">[৪]</span>
-          </li>
-        </ul>
-      </article>
-
-      <!-- ৮ নং প্রশ্ন -->
-      <article class="cq-box" id="cq-8">
-        <div class="cq-header">
-          <div class="cq-title">৮ নং প্রশ্ন</div>
-        </div>
-        <p class="stem-desc">
-          <span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> এবং <span class="var">CD</span> দুটি সমান জ্যা। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> এবং <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE</span> এবং <span class="var">OF</span> লম্ব।
-        </p>
-
-        <div class="divider"></div>
-
-        <ul class="q-list">
-          <li class="q-item">
-            <div class="q-left">
-              <span class="q-no">ক)</span>
-              <span class="q-text">বৃত্তটির ব্যাসার্ধ ৭ সেমি হলে এর পরিধি কত? (π = 22/7)</span>
-            </div>
-            <span class="q-marks">[২]</span>
-          </li>
-          <li class="q-item">
-            <div class="q-left">
-              <span class="q-no">খ)</span>
-              <span class="q-text">প্রমাণ করো যে, <span class="var">OE = OF</span> (অর্থাৎ, বৃত্তের সমান সমান জ্যা কেন্দ্র থেকে সমদূরবর্তী)।</span>
-            </div>
-            <span class="q-marks">[৪]</span>
-          </li>
-          <li class="q-item">
-            <div class="q-left">
-              <span class="q-no">গ)</span>
-              <span class="q-text">প্রমাণ করো যে, বৃত্তের ব্যাসই বৃহত্তম জ্যা।</span>
             </div>
             <span class="q-marks">[৪]</span>
           </li>
