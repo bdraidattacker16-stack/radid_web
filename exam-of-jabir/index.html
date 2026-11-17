@@ -6,7 +6,7 @@
 
   <title>গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র) — শ্রেণি: ৮ম | Exam of Jabir | radid.cyou</title>
   <meta name="title" content="গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র) — শ্রেণি: ৮ম | Exam of Jabir">
-  <meta name="description" content="অষ্টম শ্রেণির NCTB ও জেএসসি বোর্ড স্ট্যান্ডার্ড ১০০ নম্বরের গণিত মডেল টেস্ট প্রশ্নপত্র — পরীক্ষার্থী: জাবির (Jabir) | radid.cyou">
+  <meta name="description" content="অষ্টম শ্রেণির NCTB ও জেএসসি বোর্ড স্ট্যান্ডার্ড গণিত মডেল টেস্ট প্রশ্নপত্র — পরীক্ষার্থী: জাবির (Jabir) | radid.cyou">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#090b12">
   <link rel="canonical" href="https://radid.cyou/exam-of-jabir/">
@@ -276,11 +276,6 @@
       color: #f8fafc;
     }
 
-    .section-desc {
-      font-size: 13px;
-      color: #94a3b8;
-    }
-
     /* ডেভেলপার কার্ড (CQ Box) */
     .cq-box {
       background: rgba(17, 21, 36, 0.85);
@@ -305,8 +300,6 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 10px;
-      flex-wrap: wrap;
-      gap: 6px;
     }
 
     .cq-title {
@@ -316,16 +309,6 @@
       display: flex;
       align-items: center;
       gap: 6px;
-    }
-
-    .cq-chapter {
-      font-size: 12px;
-      font-weight: 600;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 2px 10px;
-      border-radius: 6px;
     }
 
     .stem-desc {
@@ -444,14 +427,25 @@
     }
 
     /* MCQ স্টাইল */
-    .mcq-box {
-      margin-bottom: 16px;
+    .mcq-item {
+      padding: 14px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+    }
+
+    .mcq-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .mcq-item:first-child {
+      padding-top: 0;
     }
 
     .mcq-stem {
       color: #f1f5f9;
       font-weight: 600;
       margin-bottom: 8px;
+      font-size: 15px;
     }
 
     .mcq-roman {
@@ -477,6 +471,16 @@
       color: #e2e8f0;
     }
 
+    .stem-quote {
+      background: rgba(99, 102, 241, 0.08);
+      border-left: 3px solid #6366f1;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin: 12px 0 16px;
+      font-size: 14.5px;
+      color: #e2e8f0;
+    }
+
     /* সংক্ষিপ্ত প্রশ্ন গ্রিড */
     .short-q-list {
       display: flex;
@@ -493,25 +497,13 @@
 
     .short-top {
       display: flex;
-      justify-content: space-between;
-      gap: 8px;
       align-items: baseline;
     }
 
     .short-no {
       font-weight: 600;
       color: #ffffff;
-      margin-right: 4px;
-    }
-
-    .short-badge {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: #38bdf8;
-      background: rgba(56, 189, 248, 0.1);
-      padding: 1px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
+      margin-right: 6px;
     }
 
     /* অ্যানিমেশন */
@@ -525,7 +517,7 @@
       body {
         background: #ffffff !important;
         color: #000000 !important;
-        font-size: 12pt;
+        font-size: 11.5pt;
         padding: 0;
       }
 
@@ -550,11 +542,11 @@
         padding: 16px;
       }
 
-      .exam-title, .stat-val, .cq-title, .q-no, .q-marks {
+      .exam-title, .stat-val, .cq-title, .q-no, .q-marks, .mcq-stem, .short-no {
         color: #000 !important;
       }
 
-      .stem-desc, .q-text, .short-item {
+      .stem-desc, .q-text, .short-item, .mcq-opt {
         color: #111 !important;
       }
 
@@ -609,13 +601,13 @@
     </a>
     <div class="action-group">
       <button type="button" class="action-btn active" id="btn-srijonshil" onclick="setSection('srijonshil')">
-        <span>📝 সৃজনশীল</span>
+        <span>📝 সৃজনশীল (৫০)</span>
       </button>
       <button type="button" class="action-btn" id="btn-bohunirbachoni" onclick="setSection('bohunirbachoni')">
-        <span>🔘 বহুনির্বাচনী</span>
+        <span>🔘 বহুনির্বাচনী (৩০)</span>
       </button>
       <button type="button" class="action-btn" id="btn-songkhipto" onclick="setSection('songkhipto')">
-        <span>✏️ সংক্ষিপ্ত</span>
+        <span>✏️ সংক্ষিপ্ত (১০)</span>
       </button>
       <button type="button" class="action-btn" id="btn-all" onclick="setSection('all')">
         <span>📋 সবগুলো</span>
@@ -633,7 +625,7 @@
     <section class="exam-header">
       <div class="exam-badge">NCTB ও জেএসসি (JSC) স্ট্যান্ডার্ড মডেল টেস্ট</div>
       <h1 class="exam-title">গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র)</h1>
-      <div class="exam-meta">শ্রেণি: অষ্টম (Class 8) &nbsp;|&nbsp; বিষয় কোড: ১৫৩ &nbsp;|&nbsp; সময়: ৩ ঘণ্টা</div>
+      <div class="exam-meta">শ্রেণি: অষ্টম (Class 8) &nbsp;|&nbsp; বিষয় কোড: ১৫৩ &nbsp;|&nbsp; সময়: ৩ ঘণ্টা &nbsp;|&nbsp; পূর্ণমান: ৯০</div>
       
       <div class="exam-candidate">
         <span>👤 পরীক্ষার্থী: <strong>জাবির (Jabir)</strong></span>
@@ -642,16 +634,16 @@
       <!-- ক্লিকযোগ্য সেকশন শর্টকাট বাটন -->
       <div class="exam-stats">
         <button type="button" class="stat-btn active" id="pill-srijonshil" onclick="setSection('srijonshil')">
-          <span class="stat-val">৮০</span>
-          <span class="stat-lbl">সৃজনশীল (৮টি)</span>
+          <span class="stat-val">৫০</span>
+          <span class="stat-lbl">সৃজনশীল (যেকোনো ৫টি)</span>
         </button>
         <button type="button" class="stat-btn" id="pill-bohunirbachoni" onclick="setSection('bohunirbachoni')">
-          <span class="stat-val">৫</span>
-          <span class="stat-lbl">বহুনির্বাচনী (৩টি)</span>
+          <span class="stat-val">৩০</span>
+          <span class="stat-lbl">বহুনির্বাচনী (৩০টি)</span>
         </button>
         <button type="button" class="stat-btn" id="pill-songkhipto" onclick="setSection('songkhipto')">
-          <span class="stat-val">১৫</span>
-          <span class="stat-lbl">সংক্ষিপ্ত (১৫টি)</span>
+          <span class="stat-val">১০</span>
+          <span class="stat-lbl">সংক্ষিপ্ত (যেকোনো ১০টি)</span>
         </button>
       </div>
     </section>
@@ -659,15 +651,13 @@
     <!-- ==================== অংশ—ক: সৃজনশীল প্রশ্নসমূহ ==================== -->
     <div id="sec-srijonshil" class="section-wrap">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—ক: সৃজনশীল প্রশ্ন (মোট নম্বর: ৮০)</h2>
-        <span class="section-desc">প্রতিটি প্রশ্নের মান: ১০</span>
+        <h2 class="section-title">অংশ—ক: সৃজনশীল প্রশ্ন (যেকোনো ৫টি প্রশ্নের উত্তর দাও)</h2>
       </div>
 
       <!-- ১. সৃজনশীল প্রশ্ন -->
       <article class="cq-box" id="cq-1">
         <div class="cq-header">
           <div class="cq-title">১. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">২য় অধ্যায়: মুনাফা</span>
         </div>
         <p class="stem-desc">
           কোনো আসল ৩ বছরে মুনাফা-আসলে ১৩,০০০ টাকা এবং ৫ বছরে মুনাফা-আসলে ১৫,০০০ টাকা হয়।
@@ -704,7 +694,6 @@
       <article class="cq-box" id="cq-2">
         <div class="cq-header">
           <div class="cq-title">২. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">৩য় অধ্যায়: পরিমাপ</span>
         </div>
         <p class="stem-desc">
           একটি আয়তাকার বাগানের দৈর্ঘ্য প্রস্থের ১.৫ গুণ এবং ক্ষেত্রফল ২১৬ বর্গমিটার। বাগানটির চারদিকে ২ মিটার চওড়া একটি রাস্তা রয়েছে।
@@ -741,7 +730,6 @@
       <article class="cq-box" id="cq-3">
         <div class="cq-header">
           <div class="cq-title">৩. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">৪র্থ ও ৫ম অধ্যায়: বীজগণিত</span>
         </div>
         <p class="stem-desc">
           <span class="var">x</span><sup>2</sup> − 3<span class="var">x</span> + 1 = 0 একটি বীজগণিতীয় সমীকরণ এবং 
@@ -780,7 +768,6 @@
       <article class="cq-box" id="cq-4">
         <div class="cq-header">
           <div class="cq-title">৪. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">৬ষ্ঠ ও ৭ম অধ্যায়: সমীকরণ ও সেট</span>
         </div>
         <p class="stem-desc">
           <span class="var">U</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> ≤ 7}, 
@@ -820,7 +807,6 @@
       <article class="cq-box" id="cq-5">
         <div class="cq-header">
           <div class="cq-title">৫. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">১১শ অধ্যায়: পরিসংখ্যান ১</span>
         </div>
         <p class="stem-desc">
           অষ্টম শ্রেণির ৪০ জন শিক্ষার্থীর গণিতে প্রাপ্ত নম্বরের গণসংখ্যা নিবেশন সারণি নিচে দেওয়া হলো:
@@ -882,7 +868,6 @@
       <article class="cq-box" id="cq-6">
         <div class="cq-header">
           <div class="cq-title">৬. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">১১শ অধ্যায়: পরিসংখ্যান ২</span>
         </div>
         <p class="stem-desc">
           ৫০ জন শিক্ষার্থীর দৈনিক টিফিন খরচের (টাকায়) গণসংখ্যা সারণি:
@@ -944,7 +929,6 @@
       <article class="cq-box" id="cq-7">
         <div class="cq-header">
           <div class="cq-title">৭. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">৯ম অধ্যায়: পিথাগোরাস</span>
         </div>
         <p class="stem-desc">
           Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> এবং <span class="var">BC</span> বাহুর মধ্যবিন্দু।
@@ -981,7 +965,6 @@
       <article class="cq-box" id="cq-8">
         <div class="cq-header">
           <div class="cq-title">৮. সৃজনশীল প্রশ্ন</div>
-          <span class="cq-chapter">১০ম অধ্যায়: বৃত্ত</span>
         </div>
         <p class="stem-desc">
           <span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> এবং <span class="var">CD</span> দুটি সমান জ্যা। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> এবং <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE</span> এবং <span class="var">OF</span> লম্ব।
@@ -1015,23 +998,34 @@
       </article>
     </div>
 
-    <!-- ==================== অংশ—খ: বহুনির্বাচনী প্রশ্ন (MCQ) ==================== -->
+    <!-- ==================== অংশ—খ: বহুনির্বাচনী প্রশ্ন (৩০টি) ==================== -->
     <div id="sec-bohunirbachoni" class="section-wrap" style="display: none;">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—খ: বহুনির্বাচনী প্রশ্ন (মোট নম্বর: ৫)</h2>
-        <span class="section-desc">সঠিক উত্তরের পাশে টিক দাও</span>
+        <h2 class="section-title">অংশ—খ: বহুনির্বাচনী প্রশ্ন (৩০টি প্রশ্ন — সবগুলোর উত্তর দাও)</h2>
       </div>
 
       <section class="cq-box" id="mcq-section">
-        <!-- MCQ ১ -->
-        <div class="mcq-box">
-          <div class="mcq-stem">১. সরল মুনাফা ও চক্রবৃদ্ধি মুনাফার ক্ষেত্রে—</div>
-          <div class="mcq-roman">
-            i. সরল মুনাফা <span class="var">I = Prn</span><br>
-            ii. চক্রবৃদ্ধি মূলধন <span class="var">C = P(1 + r)<sup>n</sup></span><br>
-            iii. চক্রবৃদ্ধি মুনাফা = <span class="var">C − P</span>
+        
+        <!-- ১ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১. বার্ষিক ৮% হারে ৫,০০০ টাকার ৩ বছরের সরল মুনাফা কত টাকা?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ১,০০০</div>
+            <div class="mcq-opt">খ) ১,২০০</div>
+            <div class="mcq-opt">গ) ১,৫০০</div>
+            <div class="mcq-opt">ঘ) ১,৬০০</div>
           </div>
-          <p style="margin-bottom: 8px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
+        </div>
+
+        <!-- ২ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২. চক্রবৃদ্ধি মুনাফার ক্ষেত্রে—</div>
+          <div class="mcq-roman">
+            i. চক্রবৃদ্ধি মূলধন <span class="var">C = P(1 + r)<sup>n</sup></span><br>
+            ii. চক্রবৃদ্ধি মুনাফা = <span class="var">C − P</span><br>
+            iii. প্রতি বছরান্তে মূলধন বৃদ্ধি পায়
+          </div>
+          <p style="margin-bottom: 6px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
           <div class="mcq-options">
             <div class="mcq-opt">ক) i ও ii</div>
             <div class="mcq-opt">খ) i ও iii</div>
@@ -1040,164 +1034,464 @@
           </div>
         </div>
 
-        <div class="divider"></div>
-
-        <!-- MCQ ২ -->
-        <div class="mcq-box">
-          <div class="mcq-stem">২. <span class="var">x</span><sup>2</sup> − √3<span class="var">x</span> + 1 = 0 হলে, <span class="var">x</span><sup>2</sup> + 1/<span class="var">x</span><sup>2</sup> এর মান কত?</div>
+        <!-- ৩ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৩. কোনো আসল ৩ বছরে সরল মুনাফাসহ দ্বিগুণ হলে, বার্ষিক মুনাফার হার কত?</div>
           <div class="mcq-options">
-            <div class="mcq-opt">ক) 1</div>
-            <div class="mcq-opt">খ) √3</div>
-            <div class="mcq-opt">গ) 3</div>
-            <div class="mcq-opt">ঘ) 5</div>
+            <div class="mcq-opt">ক) ২৫%</div>
+            <div class="mcq-opt">খ) ৩০%</div>
+            <div class="mcq-opt">গ) ৩৩⅓%</div>
+            <div class="mcq-opt">ঘ) ৫০%</div>
           </div>
         </div>
 
-        <div class="divider"></div>
-
-        <!-- MCQ ৩ -->
-        <div class="mcq-box" style="margin-bottom: 0;">
-          <div class="mcq-stem">৩. একটি সমকোণী ত্রিভুজের অতিভুজ ১৩ সেমি এবং এক বাহু ১২ সেমি হলে, অপর বাহুর দৈর্ঘ্য কত সেমি?</div>
+        <!-- ৪ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৪. ১ এয়র সমান কত বর্গমিটার?</div>
           <div class="mcq-options">
-            <div class="mcq-opt">ক) ৪ সেমি</div>
-            <div class="mcq-opt">খ) ৫ সেমি</div>
-            <div class="mcq-opt">গ) ৭ সেমি</div>
-            <div class="mcq-opt">ঘ) ৯ সেমি</div>
+            <div class="mcq-opt">ক) ১০</div>
+            <div class="mcq-opt">খ) ১০০</div>
+            <div class="mcq-opt">গ) ১,০০০</div>
+            <div class="mcq-opt">ঘ) ১০,০০০</div>
           </div>
         </div>
+
+        <!-- ৫ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৫. ১ ইঞ্চি সমান কত সেন্টিমিটার (প্রায়)?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ২.৫৪</div>
+            <div class="mcq-opt">খ) ২.৪৫</div>
+            <div class="mcq-opt">গ) ৩.২৫</div>
+            <div class="mcq-opt">ঘ) ১.৬১</div>
+          </div>
+        </div>
+
+        <!-- ৬ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৬. একটি আয়তাকার বাগানের দৈর্ঘ্য ২০ মিটার এবং প্রস্থ ১৫ মিটার হলে, এর পরিসীমা কত মিটার?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ৩৫</div>
+            <div class="mcq-opt">খ) ৫০</div>
+            <div class="mcq-opt">গ) ৭০</div>
+            <div class="mcq-opt">ঘ) ৩০০</div>
+          </div>
+        </div>
+
+        <!-- ৭ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৭. ৪ ডিগ্রি সেলসিয়াস তাপমাত্রায় ১ ঘন সেন্টিমিটার বিশুদ্ধ পানির ওজন কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ১ গ্রাম</div>
+            <div class="mcq-opt">খ) ১০ গ্রাম</div>
+            <div class="mcq-opt">গ) ১০০ গ্রাম</div>
+            <div class="mcq-opt">ঘ) ১ কিলোগ্রাম</div>
+          </div>
+        </div>
+
+        <!-- ৮ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৮. <span class="var">a + b</span> = 5 এবং <span class="var">a − b</span> = 3 হলে, <span class="var">ab</span> এর মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 2</div>
+            <div class="mcq-opt">খ) 4</div>
+            <div class="mcq-opt">গ) 8</div>
+            <div class="mcq-opt">ঘ) 16</div>
+          </div>
+        </div>
+
+        <!-- ৯ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৯. <span class="var">x</span> − 1/<span class="var">x</span> = 3 হলে, <span class="var">x</span><sup>3</sup> − 1/<span class="var">x</span><sup>3</sup> এর মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 18</div>
+            <div class="mcq-opt">খ) 27</div>
+            <div class="mcq-opt">গ) 36</div>
+            <div class="mcq-opt">ঘ) 45</div>
+          </div>
+        </div>
+
+        <!-- ১০ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১০. বীজগণিতের সূত্রানুসারে—</div>
+          <div class="mcq-roman">
+            i. (<span class="var">a + b</span>)<sup>2</sup> + (<span class="var">a − b</span>)<sup>2</sup> = 2(<span class="var">a</span><sup>2</sup> + <span class="var">b</span><sup>2</sup>)<br>
+            ii. (<span class="var">a + b</span>)<sup>2</sup> − (<span class="var">a − b</span>)<sup>2</sup> = 4<span class="var">ab</span><br>
+            iii. <span class="var">a</span><sup>2</sup> − <span class="var">b</span><sup>2</sup> = (<span class="var">a + b</span>)(<span class="var">a − b</span>)
+          </div>
+          <p style="margin-bottom: 6px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) i ও ii</div>
+            <div class="mcq-opt">খ) i ও iii</div>
+            <div class="mcq-opt">গ) ii ও iii</div>
+            <div class="mcq-opt">ঘ) i, ii ও iii</div>
+          </div>
+        </div>
+
+        <!-- ১১ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১১. <span class="var">x</span><sup>2</sup> + 5<span class="var">x</span> + 6 এর উৎপাদকে বিশ্লেষিত রূপ কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) (<span class="var">x</span> + 1)(<span class="var">x</span> + 6)</div>
+            <div class="mcq-opt">খ) (<span class="var">x</span> + 2)(<span class="var">x</span> + 3)</div>
+            <div class="mcq-opt">গ) (<span class="var">x</span> − 2)(<span class="var">x</span> − 3)</div>
+            <div class="mcq-opt">ঘ) (<span class="var">x</span> + 5)(<span class="var">x</span> + 1)</div>
+          </div>
+        </div>
+
+        <!-- ১২ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১২. (<span class="var">x</span><sup>2</sup> − <span class="var">y</span><sup>2</sup>) / (<span class="var">x + y</span>) এর লঘিষ্ঠ রূপ কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) <span class="var">x + y</span></div>
+            <div class="mcq-opt">খ) <span class="var">x − y</span></div>
+            <div class="mcq-opt">গ) 1 / (<span class="var">x − y</span>)</div>
+            <div class="mcq-opt">ঘ) 1</div>
+          </div>
+        </div>
+
+        <!-- ১৩ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৩. 1/(<span class="var">x</span> − 2) এবং 1/(<span class="var">x</span> + 2) এর যোগফল কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 2 / (<span class="var">x</span><sup>2</sup> − 4)</div>
+            <div class="mcq-opt">খ) 2<span class="var">x</span> / (<span class="var">x</span><sup>2</sup> − 4)</div>
+            <div class="mcq-opt">গ) 4 / (<span class="var">x</span><sup>2</sup> − 4)</div>
+            <div class="mcq-opt">ঘ) <span class="var">x</span> / (<span class="var">x</span><sup>2</sup> − 4)</div>
+          </div>
+        </div>
+
+        <!-- ১৪ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৪. (<span class="var">a/b</span>) ÷ (<span class="var">c/d</span>) এর সরল মান কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) <span class="var">ac / bd</span></div>
+            <div class="mcq-opt">খ) <span class="var">ad / bc</span></div>
+            <div class="mcq-opt">গ) <span class="var">ab / cd</span></div>
+            <div class="mcq-opt">ঘ) <span class="var">bc / ad</span></div>
+          </div>
+        </div>
+
+        <!-- ১৫ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৫. <span class="var">x + y</span> = 5 এবং <span class="var">x − y</span> = 1 হলে, (<span class="var">x</span>, <span class="var">y</span>) এর মান কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) (4, 1)</div>
+            <div class="mcq-opt">খ) (3, 2)</div>
+            <div class="mcq-opt">গ) (2, 3)</div>
+            <div class="mcq-opt">ঘ) (1, 4)</div>
+          </div>
+        </div>
+
+        <!-- ১৬ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৬. 2<span class="var">x</span> + 3<span class="var">y</span> = 12 সমীকরণে <span class="var">y</span> = 2 হলে, <span class="var">x</span> এর মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 2</div>
+            <div class="mcq-opt">খ) 3</div>
+            <div class="mcq-opt">গ) 4</div>
+            <div class="mcq-opt">ঘ) 6</div>
+          </div>
+        </div>
+
+        <!-- ১৭ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৭. দুটি সংখ্যার যোগফল 10 এবং বিয়োগফল 4 হলে, সংখ্যা দুটি কী কী?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 8 ও 2</div>
+            <div class="mcq-opt">খ) 7 ও 3</div>
+            <div class="mcq-opt">গ) 6 ও 4</div>
+            <div class="mcq-opt">ঘ) 5 ও 5</div>
+          </div>
+        </div>
+
+        <!-- ১৮ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৮. <span class="var">A</span> = {<span class="var">a</span>, <span class="var">b</span>, <span class="var">c</span>} হলে, <span class="var">A</span> সেটের উপসেট সংখ্যা কতটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 3</div>
+            <div class="mcq-opt">খ) 6</div>
+            <div class="mcq-opt">গ) 7</div>
+            <div class="mcq-opt">ঘ) 8</div>
+          </div>
+        </div>
+
+        <!-- ১৯ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৯. <span class="var">P</span> = {1, 2, 3} এবং <span class="var">Q</span> = {2, 3, 4} হলে, <span class="var">P ∩ Q</span> কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) {1, 4}</div>
+            <div class="mcq-opt">খ) {2, 3}</div>
+            <div class="mcq-opt">গ) {1, 2, 3, 4}</div>
+            <div class="mcq-opt">ঘ) ∅</div>
+          </div>
+        </div>
+
+        <!-- ২০ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২০. ফাঁকা সেটের প্রতীক কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) {0}</div>
+            <div class="mcq-opt">খ) ∅</div>
+            <div class="mcq-opt">গ) {∅}</div>
+            <div class="mcq-opt">ঘ) <span class="var">U</span></div>
+          </div>
+        </div>
+
+        <!-- ২১ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২১. সমকোণী ত্রিভুজের ক্ষেত্রে—</div>
+          <div class="mcq-roman">
+            i. সমকোণের বিপরীত বাহু হলো অতিভুজ<br>
+            ii. অতিভুজ<sup>২</sup> = ভূমি<sup>২</sup> + লম্ব<sup>২</sup><br>
+            iii. সমকোণ ছাড়া অপর কোণ দুটি পরস্পর পূরক কোণ
+          </div>
+          <p style="margin-bottom: 6px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) i ও ii</div>
+            <div class="mcq-opt">খ) i ও iii</div>
+            <div class="mcq-opt">গ) ii ও iii</div>
+            <div class="mcq-opt">ঘ) i, ii ও iii</div>
+          </div>
+        </div>
+
+        <!-- ২২ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২২. নিচের কোন বাহুগুলোর দৈর্ঘ্য দ্বারা একটি সমকোণী ত্রিভুজ অঙ্কন সম্ভব?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 2, 3, 4</div>
+            <div class="mcq-opt">খ) 3, 4, 5</div>
+            <div class="mcq-opt">গ) 4, 5, 6</div>
+            <div class="mcq-opt">ঘ) 5, 6, 7</div>
+          </div>
+        </div>
+
+        <!-- ২৩ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৩. একটি সমকোণী ত্রিভুজের অতিভুজ 10 সেমি এবং ভূমি 8 সেমি হলে, লম্বের দৈর্ঘ্য কত সেমি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 4</div>
+            <div class="mcq-opt">খ) 5</div>
+            <div class="mcq-opt">গ) 6</div>
+            <div class="mcq-opt">ঘ) 8</div>
+          </div>
+        </div>
+
+        <!-- ২৪ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৪. বৃত্তের ব্যাস ও ব্যাসার্ধের অনুপাত কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 1 : 2</div>
+            <div class="mcq-opt">খ) 2 : 1</div>
+            <div class="mcq-opt">গ) 1 : 1</div>
+            <div class="mcq-opt">ঘ) 4 : 1</div>
+          </div>
+        </div>
+
+        <!-- ২৫ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৫. বৃত্তের কেন্দ্র থেকে সমদূরবর্তী সকল জ্যা পরস্পর—</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) অসমান</div>
+            <div class="mcq-opt">খ) সমান্তরাল</div>
+            <div class="mcq-opt">গ) সমান</div>
+            <div class="mcq-opt">ঘ) লম্ব</div>
+          </div>
+        </div>
+
+        <!-- ২৬ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৬. একটি বৃত্তের ব্যাসার্ধ 7 সেমি হলে, এর পরিধি কত? (π = 22/7)</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ২২ সেমি</div>
+            <div class="mcq-opt">খ) ৪৪ সেমি</div>
+            <div class="mcq-opt">গ) ৮৮ সেমি</div>
+            <div class="mcq-opt">ঘ) ১৫৪ সেমি</div>
+          </div>
+        </div>
+
+        <!-- উদ্দীপক ২৭ ও ২৮ -->
+        <div class="stem-quote">
+          <strong>নিচের উদ্দীপকের আলোকে ২৭ ও ২৮ নম্বর প্রশ্নের উত্তর দাও:</strong><br>
+          অষ্টম শ্রেণির ১০ জন শিক্ষার্থীর প্রাপ্ত নম্বর: ২০, ২৫, ৩০, ২৫, ৪০, ৫০, ২৫, ৪৫, ৬০, ৩৫।
+        </div>
+
+        <!-- ২৭ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৭. উপাত্তগুলোর প্রচুরক কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ২০</div>
+            <div class="mcq-opt">খ) ২৫</div>
+            <div class="mcq-opt">গ) ৩৫</div>
+            <div class="mcq-opt">ঘ) ৫০</div>
+          </div>
+        </div>
+
+        <!-- ২৮ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৮. উপাত্তগুলোর মধ্যক কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ২৫</div>
+            <div class="mcq-opt">খ) ৩০</div>
+            <div class="mcq-opt">গ) ৩২.৫</div>
+            <div class="mcq-opt">ঘ) ৩৫</div>
+          </div>
+        </div>
+
+        <!-- ২৯ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৯. উপাত্তের সর্বোচ্চ সংখ্যা ৮০ এবং সর্বনিম্ন সংখ্যা ২০ হলে, পরিসর কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ৬০</div>
+            <div class="mcq-opt">খ) ৬১</div>
+            <div class="mcq-opt">গ) ৬২</div>
+            <div class="mcq-opt">ঘ) ১০০</div>
+          </div>
+        </div>
+
+        <!-- ৩০ -->
+        <div class="mcq-item" style="border-bottom: none;">
+          <div class="mcq-stem">৩০. পাইচিত্রে সমগ্র উপাত্তের জন্য বৃত্তের কেন্দ্রস্থ মোট কোণ কত ডিগ্রি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ৯০°</div>
+            <div class="mcq-opt">খ) ১৮০°</div>
+            <div class="mcq-opt">গ) ২৭০°</div>
+            <div class="mcq-opt">ঘ) ৩৬০°</div>
+          </div>
+        </div>
+
       </section>
     </div>
 
     <!-- ==================== অংশ—গ: সংক্ষিপ্ত উত্তর প্রশ্ন (১৫টি) ==================== -->
     <div id="sec-songkhipto" class="section-wrap" style="display: none;">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—গ: সংক্ষিপ্ত প্রশ্ন (মোট নম্বর: ১৫)</h2>
-        <span class="section-desc">প্রতিটি প্রশ্নের মান: ১</span>
+        <h2 class="section-title">অংশ—গ: সংক্ষিপ্ত প্রশ্ন (যেকোনো ১০টি প্রশ্নের উত্তর দাও)</h2>
       </div>
 
       <section class="cq-box" id="short-section">
         <div style="margin-bottom: 14px; font-size: 13.5px; color: #94a3b8;">
-          সবগুলো প্রশ্নের সংক্ষিপ্ত ও নির্ভুল উত্তর দাও:
+          প্রদত্ত ১৫টি প্রশ্ন থেকে যেকোনো ১০টি প্রশ্নের সংক্ষিপ্ত উত্তর দাও:
         </div>
 
         <div class="short-q-list">
           <!-- ১ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">১.</span> বার্ষিক ১০% সরল মুনাফায় ৬,০০০ টাকার ২ বছরের মুনাফা কত?</div>
-              <span class="short-badge">২য় অধ্যায়</span>
+              <span class="short-no">১.</span>
+              <span>বার্ষিক ১০% সরল মুনাফায় ৬,০০০ টাকার ২ বছরের মুনাফা কত?</span>
             </div>
           </div>
 
           <!-- ২ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">২.</span> চক্রবৃদ্ধি মূলধনের সূত্রটি প্রতীকগুলোর পরিচয়সহ লেখো।</div>
-              <span class="short-badge">২য় অধ্যায়</span>
+              <span class="short-no">২.</span>
+              <span>চক্রবৃদ্ধি মূলধনের সূত্রটি প্রতীকগুলোর পরিচয়সহ লেখো।</span>
             </div>
           </div>
 
           <!-- ৩ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">৩.</span> ১ একর সমান কত বর্গমিটার?</div>
-              <span class="short-badge">৩য় অধ্যায়</span>
+              <span class="short-no">৩.</span>
+              <span>১ একর সমান কত বর্গমিটার?</span>
             </div>
           </div>
 
           <!-- ৪ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">৪.</span> একটি ঘনকের এক ধারের দৈর্ঘ্য ৪ সেমি হলে, এর সমগ্র তলের ক্ষেত্রফল কত?</div>
-              <span class="short-badge">৩য় অধ্যায়</span>
+              <span class="short-no">৪.</span>
+              <span>একটি ঘনকের এক ধারের দৈর্ঘ্য ৪ সেমি হলে, এর সমগ্র তলের ক্ষেত্রফল কত?</span>
             </div>
           </div>
 
           <!-- ৫ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">৫.</span> <span class="var">a + b</span> = 5 এবং <span class="var">a − b</span> = 3 হলে, 4<span class="var">ab</span> এর মান কত?</div>
-              <span class="short-badge">৪র্থ অধ্যায়</span>
+              <span class="short-no">৫.</span>
+              <span><span class="var">a + b</span> = 5 এবং <span class="var">a − b</span> = 3 হলে, 4<span class="var">ab</span> এর মান কত?</span>
             </div>
           </div>
 
           <!-- ৬ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">৬.</span> <span class="var">x</span> − 1/<span class="var">x</span> = 4 হলে, <span class="var">x</span><sup>2</sup> + 1/<span class="var">x</span><sup>2</sup> এর মান কত?</div>
-              <span class="short-badge">৪র্থ অধ্যায়</span>
+              <span class="short-no">৬.</span>
+              <span><span class="var">x</span> − 1/<span class="var">x</span> = 4 হলে, <span class="var">x</span><sup>2</sup> + 1/<span class="var">x</span><sup>2</sup> এর মান কত?</span>
             </div>
           </div>
 
           <!-- ৭ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">৭.</span> (<span class="var">x</span><sup>2</sup> − 9) / (<span class="var">x</span> + 3) ভগ্নাংশটিকে লঘিষ্ঠ আকারে প্রকাশ করো।</div>
-              <span class="short-badge">৫ম অধ্যায়</span>
+              <span class="short-no">৭.</span>
+              <span>(<span class="var">x</span><sup>2</sup> − 9) / (<span class="var">x</span> + 3) ভগ্নাংশটিকে লঘিষ্ঠ আকারে প্রকাশ করো।</span>
             </div>
           </div>
 
           <!-- ৮ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">৮.</span> <span class="var">x + y</span> = 7 এবং <span class="var">x − y</span> = 3 হলে, (<span class="var">x</span>, <span class="var">y</span>) এর মান কত?</div>
-              <span class="short-badge">৬ষ্ঠ অধ্যায়</span>
+              <span class="short-no">৮.</span>
+              <span><span class="var">x + y</span> = 7 এবং <span class="var">x − y</span> = 3 হলে, (<span class="var">x</span>, <span class="var">y</span>) এর মান কত?</span>
             </div>
           </div>
 
           <!-- ৯ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">৯.</span> দুটি সংখ্যার যোগফল 16 এবং বিয়োগফল 4 হলে, বড় সংখ্যাটি কত?</div>
-              <span class="short-badge">৬ষ্ঠ অধ্যায়</span>
+              <span class="short-no">৯.</span>
+              <span>দুটি সংখ্যার যোগফল 16 এবং বিয়োগফল 4 হলে, বড় সংখ্যাটি কত?</span>
             </div>
           </div>
 
           <!-- ১০ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">১০.</span> <span class="var">A</span> = {3, 5, 7} হলে, এর প্রকৃত উপসেট সংখ্যা কয়টি?</div>
-              <span class="short-badge">৭ম অধ্যায়</span>
+              <span class="short-no">১০.</span>
+              <span><span class="var">A</span> = {3, 5, 7} হলে, এর প্রকৃত উপসেট সংখ্যা কয়টি?</span>
             </div>
           </div>
 
           <!-- ১১ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">১১.</span> <span class="var">P</span> = {1, 2, 3} এবং <span class="var">Q</span> = {2, 4} হলে, <span class="var">P \ Q</span> এর মান কত?</div>
-              <span class="short-badge">৭ম অধ্যায়</span>
+              <span class="short-no">১১.</span>
+              <span><span class="var">P</span> = {1, 2, 3} এবং <span class="var">Q</span> = {2, 4} হলে, <span class="var">P \ Q</span> এর মান কত?</span>
             </div>
           </div>
 
           <!-- ১২ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">১২.</span> সমকোণী ত্রিভুজের সমকোণ সংলগ্ন বাহুদ্বয় 6 সেমি ও 8 সেমি হলে, অতিভুজ কত?</div>
-              <span class="short-badge">৯ম অধ্যায়</span>
+              <span class="short-no">১২.</span>
+              <span>সমকোণী ত্রিভুজের সমকোণ সংলগ্ন বাহুদ্বয় 6 সেমি ও 8 সেমি হলে, অতিভুজ কত?</span>
             </div>
           </div>
 
           <!-- ১৩ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">১৩.</span> কোনো বৃত্তের ব্যাস ১৪ সেমি হলে, এর ক্ষেত্রফল কত? (π = 22/7)</div>
-              <span class="short-badge">১০ম অধ্যায়</span>
+              <span class="short-no">১৩.</span>
+              <span>কোনো বৃত্তের ব্যাস ১৪ সেমি হলে, এর ক্ষেত্রফল কত? (π = 22/7)</span>
             </div>
           </div>
 
           <!-- ১৪ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">১৪.</span> উপাত্তের সর্বোচ্চ মান ৭৫ এবং সর্বনিম্ন মান ২৫ হলে, ৫ শ্রেণি ব্যবধানে শ্রেণিসংখ্যা কত?</div>
-              <span class="short-badge">১১শ অধ্যায়</span>
+              <span class="short-no">১৪.</span>
+              <span>উপাত্তের সর্বোচ্চ মান ৭৫ এবং সর্বনিম্ন মান ২৫ হলে, ৫ শ্রেণি ব্যবধানে শ্রেণিসংখ্যা কত?</span>
             </div>
           </div>
 
           <!-- ১৫ -->
           <div class="short-item">
             <div class="short-top">
-              <div><span class="short-no">১৫.</span> ৫, ৭, ৯, ৩, ১১, ১২, ১৫ উপাত্তগুলোর মধ্যক কত?</div>
-              <span class="short-badge">১১শ অধ্যায়</span>
+              <span class="short-no">১৫.</span>
+              <span>৫, ৭, ৯, ৩, ১১, ১২, ১৫ উপাত্তগুলোর মধ্যক কত?</span>
             </div>
           </div>
         </div>
