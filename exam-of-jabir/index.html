@@ -77,7 +77,7 @@
       background: rgba(17, 21, 36, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 18px;
-      padding: 26px 24px 22px;
+      padding: 24px 20px 20px;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       box-shadow: 
@@ -98,17 +98,51 @@
       background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.8), transparent);
     }
 
-    .exam-title {
-      font-size: 23px;
+    /* আগের জেএসসি ব্যাজ: ১ লাইনে অটো-রিসাইজ */
+    .exam-badge {
+      display: inline-block;
+      font-size: clamp(10px, 2.8vw, 12.5px);
       font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 3px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      white-space: nowrap;
+      max-width: 100%;
     }
 
-    .exam-meta {
-      font-size: 14.5px;
-      color: #cbd5e1;
+    /* টাইটেল: ১ লাইনে অটো-রিসাইজ */
+    .exam-title {
+      font-size: clamp(16px, 4.5vw, 22px);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      white-space: nowrap;
+    }
+
+    /* মেটা ট্যাগ: শ্রেণি, সময়, পূর্ণমান (১ লাইনে অটো-রিসাইজ) */
+    .exam-meta-pills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
       margin-bottom: 18px;
+      white-space: nowrap;
+      font-size: clamp(11.5px, 3.2vw, 14.5px);
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .meta-item {
+      white-space: nowrap;
+    }
+
+    .meta-dot {
+      color: #64748b;
+      font-size: 10px;
     }
 
     /* ৩টি ক্লিকযোগ্য সেকশন নেভিগেশন বাটন */
@@ -144,7 +178,7 @@
     }
 
     .nav-btn-val {
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 700;
       color: #ffffff;
       display: block;
@@ -152,13 +186,14 @@
     }
 
     .nav-btn-lbl {
-      font-size: 12.5px;
+      font-size: 13px;
       color: #c7d2fe;
       margin-top: 2px;
       display: block;
+      white-space: nowrap;
     }
 
-    /* অতিরিক্ত হেল্পার বাটন (সবগুলো ও প্রিন্ট) */
+    /* অতিরিক্ত বাটন (সবগুলো ও প্রি-বিল্ট পিডিএফ লোড) */
     .sub-actions {
       display: flex;
       justify-content: center;
@@ -173,10 +208,14 @@
       color: #94a3b8;
       font-size: 12.5px;
       font-weight: 600;
-      padding: 5px 14px;
+      padding: 6px 14px;
       border-radius: 8px;
       cursor: pointer;
       font-family: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       transition: all 0.2s ease;
     }
 
@@ -200,7 +239,7 @@
       animation: fadeIn 0.25s ease-out;
     }
 
-    /* সেকশন হেডার */
+    /* সেকশন হেডার: ১ লাইনে ফিট */
     .section-title-wrap {
       margin-top: 4px;
       margin-bottom: -2px;
@@ -208,12 +247,14 @@
       align-items: center;
       border-left: 3px solid #6366f1;
       padding-left: 12px;
+      white-space: nowrap;
     }
 
     .section-title {
-      font-size: 17.5px;
+      font-size: clamp(15.5px, 4vw, 18px);
       font-weight: 700;
       color: #f8fafc;
+      white-space: nowrap;
     }
 
     /* ডেভেলপার কার্ড (CQ Box) */
@@ -243,7 +284,7 @@
     }
 
     .cq-title {
-      font-size: 17px;
+      font-size: 16.5px;
       font-weight: 700;
       color: #ffffff;
       display: flex;
@@ -359,7 +400,7 @@
 
     .cq-table {
       width: 100%;
-      min-width: 520px; /* টেবিল কখনো ভেঙে দ্বিতীয় লাইনে যাবে না */
+      min-width: 520px;
       border-collapse: collapse;
       font-size: 14px;
       text-align: center;
@@ -368,7 +409,7 @@
     .cq-table th, .cq-table td {
       border: 1px solid rgba(255, 255, 255, 0.12);
       padding: 9px 12px;
-      white-space: nowrap; /* 'শ্রেণি ব্যবধান' কখনো ২য় লাইনে যাবে না */
+      white-space: nowrap;
     }
 
     .cq-table th {
@@ -469,65 +510,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* প্রিন্ট ও পেপার সিএসএস */
-    @media print {
-      body {
-        background: #ffffff !important;
-        color: #000000 !important;
-        font-size: 11.5pt;
-        padding: 0;
-      }
-
-      .ambient-bg, .ambient-grid, .sub-actions, .exam-nav {
-        display: none !important;
-      }
-
-      .section-wrap {
-        display: flex !important;
-      }
-
-      .container {
-        max-width: 100% !important;
-        gap: 16px;
-      }
-
-      .exam-header {
-        background: none !important;
-        border: 2px solid #000 !important;
-        box-shadow: none !important;
-        color: #000 !important;
-        padding: 16px;
-      }
-
-      .exam-title, .nav-btn-val, .cq-title, .q-no, .q-marks, .mcq-stem, .short-no {
-        color: #000 !important;
-      }
-
-      .stem-desc, .q-text, .short-item, .mcq-opt {
-        color: #111 !important;
-      }
-
-      .cq-box {
-        background: none !important;
-        border: 1px solid #777 !important;
-        box-shadow: none !important;
-        page-break-inside: avoid;
-        margin-bottom: 12px;
-      }
-
-      .q-marks {
-        background: none !important;
-        border: 1px solid #000 !important;
-        color: #000 !important;
-      }
-
-      .cq-table th, .cq-table td {
-        border-color: #000 !important;
-        color: #000 !important;
-        background: none !important;
-      }
-    }
-
     @media (max-width: 480px) {
       body {
         padding: 16px 10px 40px;
@@ -546,10 +528,10 @@
         padding: 10px 4px;
       }
       .nav-btn-val {
-        font-size: 17px;
+        font-size: 18px;
       }
       .nav-btn-lbl {
-        font-size: 11.5px;
+        font-size: 12px;
       }
     }
   </style>
@@ -565,46 +547,58 @@
 
     <!-- পেইজের প্রথম জিনিস: এক্সাম হেডার বক্স -->
     <section class="exam-header">
+      <!-- জেএসসি ব্যাজ -->
+      <div class="exam-badge">NCTB ও জেএসসি (JSC) স্ট্যান্ডার্ড মডেল টেস্ট</div>
+      
+      <!-- মূল টাইটেল -->
       <h1 class="exam-title">গণিত (সৃজনশীল ও সংক্ষিপ্ত প্রশ্নপত্র)</h1>
-      <div class="exam-meta">শ্রেণি: অষ্টম (Class 8) &nbsp;|&nbsp; বিষয় কোড: ১৫৩ &nbsp;|&nbsp; সময়: ৩ ঘণ্টা &nbsp;|&nbsp; পূর্ণমান: ৯০</div>
+      
+      <!-- মেটা লাইন: ৩টি ট্যাগ এক লাইনে অটো-রিসাইজ -->
+      <div class="exam-meta-pills">
+        <span class="meta-item">শ্রেণি: অষ্টম</span>
+        <span class="meta-dot">•</span>
+        <span class="meta-item">সময়: ৩ ঘণ্টা</span>
+        <span class="meta-dot">•</span>
+        <span class="meta-item">পূর্ণমান: ১০০</span>
+      </div>
       
       <!-- ক্লিকযোগ্য ৩টি সেকশন বাটন -->
       <div class="exam-nav">
         <button type="button" class="nav-btn active" id="btn-srijonshil" onclick="setSection('srijonshil')">
           <span class="nav-btn-val">৫০</span>
-          <span class="nav-btn-lbl">সৃজনশীল (যেকোনো ৫টি)</span>
+          <span class="nav-btn-lbl">সৃজনশীল</span>
         </button>
         <button type="button" class="nav-btn" id="btn-bohunirbachoni" onclick="setSection('bohunirbachoni')">
           <span class="nav-btn-val">৩০</span>
-          <span class="nav-btn-lbl">বহুনির্বাচনী (৩০টি)</span>
+          <span class="nav-btn-lbl">বহুনির্বাচনী</span>
         </button>
         <button type="button" class="nav-btn" id="btn-songkhipto" onclick="setSection('songkhipto')">
           <span class="nav-btn-val">১০</span>
-          <span class="nav-btn-lbl">সংক্ষিপ্ত (যেকোনো ১০টি)</span>
+          <span class="nav-btn-lbl">সংক্ষিপ্ত</span>
         </button>
       </div>
 
-      <!-- অতিরিক্ত বাটন: সবগুলো ও প্রিন্ট -->
+      <!-- অতিরিক্ত বাটন: সবগুলো ও সার্ভার-সাইড প্রি-বিল্ট পিডিএফ লিংক -->
       <div class="sub-actions">
         <button type="button" class="sub-btn" id="btn-all" onclick="setSection('all')">
           <span>📋 সবগুলো প্রশ্ন</span>
         </button>
-        <button type="button" class="sub-btn" onclick="window.print()">
-          <span>🖨️ প্রিন্ট করুন</span>
-        </button>
+        <a href="question-paper.pdf" target="_blank" class="sub-btn">
+          <span>🖨️ প্রিন্ট / PDF</span>
+        </a>
       </div>
     </section>
 
-    <!-- ==================== অংশ—ক: সৃজনশীল প্রশ্নসমূহ ==================== -->
+    <!-- ==================== সৃজনশীল প্রশ্নসমূহ ==================== -->
     <div id="sec-srijonshil" class="section-wrap">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—ক: সৃজনশীল প্রশ্ন (যেকোনো ৫টি প্রশ্নের উত্তর দাও)</h2>
+        <h2 class="section-title">সৃজনশীল প্রশ্ন</h2>
       </div>
 
-      <!-- ১. সৃজনশীল প্রশ্ন -->
+      <!-- ১ নং প্রশ্ন -->
       <article class="cq-box" id="cq-1">
         <div class="cq-header">
-          <div class="cq-title">১. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">১ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           কোনো আসল ৩ বছরে মুনাফা-আসলে ১৩,০০০ টাকা এবং ৫ বছরে মুনাফা-আসলে ১৫,০০০ টাকা হয়।
@@ -637,10 +631,10 @@
         </ul>
       </article>
 
-      <!-- ২. সৃজনশীল প্রশ্ন -->
+      <!-- ২ নং প্রশ্ন -->
       <article class="cq-box" id="cq-2">
         <div class="cq-header">
-          <div class="cq-title">২. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">২ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           একটি আয়তাকার বাগানের দৈর্ঘ্য প্রস্থের ১.৫ গুণ এবং ক্ষেত্রফল ২১৬ বর্গমিটার। বাগানটির চারদিকে ২ মিটার চওড়া একটি রাস্তা রয়েছে।
@@ -673,10 +667,10 @@
         </ul>
       </article>
 
-      <!-- ৩. সৃজনশীল প্রশ্ন -->
+      <!-- ৩ নং প্রশ্ন -->
       <article class="cq-box" id="cq-3">
         <div class="cq-header">
-          <div class="cq-title">৩. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">৩ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           <span class="var">x</span><sup>2</sup> − 3<span class="var">x</span> + 1 = 0 একটি বীজগণিতীয় সমীকরণ এবং 
@@ -711,10 +705,10 @@
         </ul>
       </article>
 
-      <!-- ৪. সৃজনশীল প্রশ্ন -->
+      <!-- ৪ নং প্রশ্ন -->
       <article class="cq-box" id="cq-4">
         <div class="cq-header">
-          <div class="cq-title">৪. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">৪ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           <span class="var">U</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> ≤ 7}, 
@@ -750,16 +744,16 @@
         </ul>
       </article>
 
-      <!-- ৫. সৃজনশীল প্রশ্ন -->
+      <!-- ৫ নং প্রশ্ন -->
       <article class="cq-box" id="cq-5">
         <div class="cq-header">
-          <div class="cq-title">৫. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">৫ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           অষ্টম শ্রেণির ৪০ জন শিক্ষার্থীর গণিতে প্রাপ্ত নম্বরের গণসংখ্যা নিবেশন সারণি নিচে দেওয়া হলো:
         </p>
 
-        <!-- সারণি: 'শ্রেণি ব্যবধান' কখনো ২য় লাইনে যাবে না -->
+        <!-- সারণি -->
         <div class="cq-table-wrap">
           <table class="cq-table">
             <thead>
@@ -812,16 +806,16 @@
         </ul>
       </article>
 
-      <!-- ৬. সৃজনশীল প্রশ্ন -->
+      <!-- ৬ নং প্রশ্ন -->
       <article class="cq-box" id="cq-6">
         <div class="cq-header">
-          <div class="cq-title">৬. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">৬ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           ৫০ জন শিক্ষার্থীর দৈনিক টিফিন খরচের (টাকায়) গণসংখ্যা সারণি:
         </p>
 
-        <!-- সারণি: 'শ্রেণি ব্যবধান' কখনো ২য় লাইনে যাবে না -->
+        <!-- সারণি -->
         <div class="cq-table-wrap">
           <table class="cq-table">
             <thead>
@@ -874,10 +868,10 @@
         </ul>
       </article>
 
-      <!-- ৭. সৃজনশীল প্রশ্ন -->
+      <!-- ৭ নং প্রশ্ন -->
       <article class="cq-box" id="cq-7">
         <div class="cq-header">
-          <div class="cq-title">৭. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">৭ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> এবং <span class="var">BC</span> বাহুর মধ্যবিন্দু।
@@ -910,10 +904,10 @@
         </ul>
       </article>
 
-      <!-- ৮. সৃজনশীল প্রশ্ন -->
+      <!-- ৮ নং প্রশ্ন -->
       <article class="cq-box" id="cq-8">
         <div class="cq-header">
-          <div class="cq-title">৮. সৃজনশীল প্রশ্ন</div>
+          <div class="cq-title">৮ নং প্রশ্ন</div>
         </div>
         <p class="stem-desc">
           <span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> এবং <span class="var">CD</span> দুটি সমান জ্যা। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> এবং <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE</span> এবং <span class="var">OF</span> লম্ব।
@@ -947,10 +941,10 @@
       </article>
     </div>
 
-    <!-- ==================== অংশ—খ: বহুনির্বাচনী প্রশ্ন (৩০টি) ==================== -->
+    <!-- ==================== বহুনির্বাচনী প্রশ্ন ==================== -->
     <div id="sec-bohunirbachoni" class="section-wrap" style="display: none;">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—খ: বহুনির্বাচনী প্রশ্ন (৩০টি প্রশ্ন — সবগুলোর উত্তর দাও)</h2>
+        <h2 class="section-title">বহুনির্বাচনী প্রশ্ন</h2>
       </div>
 
       <section class="cq-box" id="mcq-section">
@@ -1312,17 +1306,13 @@
       </section>
     </div>
 
-    <!-- ==================== অংশ—গ: সংক্ষিপ্ত উত্তর প্রশ্ন (১৫টি) ==================== -->
+    <!-- ==================== সংক্ষিপ্ত প্রশ্ন ==================== -->
     <div id="sec-songkhipto" class="section-wrap" style="display: none;">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—গ: সংক্ষিপ্ত প্রশ্ন (যেকোনো ১০টি প্রশ্নের উত্তর দাও)</h2>
+        <h2 class="section-title">সংক্ষিপ্ত প্রশ্ন</h2>
       </div>
 
       <section class="cq-box" id="short-section">
-        <div style="margin-bottom: 14px; font-size: 13.5px; color: #94a3b8;">
-          প্রদত্ত ১৫টি প্রশ্ন থেকে যেকোনো ১০টি প্রশ্নের সংক্ষিপ্ত উত্তর দাও:
-        </div>
-
         <div class="short-q-list">
           <!-- ১ -->
           <div class="short-item">
