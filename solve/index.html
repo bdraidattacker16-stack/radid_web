@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>গণিত (বার্ষিক মডেল টেস্ট) — আদর্শ সমাধান ও পূর্ণ উত্তরমালা | শ্রেণি: ৮ম | radid.cyou</title>
+  <meta name="title" content="গণিত (বার্ষিক মডেল টেস্ট) — সম্পূর্ণ সমাধান ও উত্তরমালা | radid.cyou">
+  <meta name="description" content="অষ্টম শ্রেণির গণিত বার্ষিক মডেল টেস্টের সৃজনশীল, বহুনির্বাচনী ও সংক্ষিপ্ত প্রশ্নের শতভাগ নির্ভুল ও পূর্ণাঙ্গ ব্যাখ্যাসহ সমাধান নির্দেশিকা।">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#090b12">
+  <link rel="canonical" href="https://radid.cyou/solve/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://radid.cyou/solve/">
+  <meta property="og:title" content="গণিত (বার্ষিক মডেল টেস্ট) — আদর্শ সমাধান ও পূর্ণ উত্তরমালা">
+  <meta property="og:description" content="অষ্টম শ্রেণির গণিত বার্ষিক মডেল টেস্টের পূর্ণাঙ্গ সমাধান ও উত্তরমালা।">
+  <meta property="og:image" content="https://radid.cyou/assets/og-image.png">
+
+  <!-- ফন্ট: Noto Sans Bengali (বাংলা প্রমিত) & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #090b12;
+      color: #e2e8f0;
+      font-family: 'Noto Sans Bengali', 'SolaimanLipi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+      padding: 16px 12px 60px;
+    }
+
+    /* সাইবার অ্যাম্বিয়েন্ট গ্রিড ব্যাকগ্রাউন্ড */
+    .ambient-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ambient-glow {
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 650px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(99, 102, 241, 0.08) 45%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* অ্যাপ কনটেইনার */
+    .app-container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* হেডার বক্স */
+    .header-card {
+      background: rgba(15, 18, 30, 0.9);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 16px;
+      padding: 20px 18px 18px;
+      text-align: center;
+      box-shadow: 0 10px 32px -8px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(16, 185, 129, 0.15);
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ব্যাজ */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 9999px;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    /* টাইটেল: ১ লাইনে অটো-রিসাইজ */
+    .exam-title {
+      font-size: clamp(16px, 4.2vw, 23px);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.35;
+      text-shadow: 0 0 18px rgba(52, 211, 153, 0.25);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    /* মেটা পিলস */
+    .meta-pills {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      overflow-x: auto;
+      max-width: 100%;
+      padding: 2px 4px;
+    }
+
+    .meta-pill {
+      font-size: clamp(11.5px, 2.7vw, 13.5px);
+      font-weight: 600;
+      color: #cbd5e1;
+      background: rgba(30, 41, 59, 0.7);
+      padding: 4px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      white-space: nowrap;
+    }
+
+    .meta-pill.highlight {
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.3);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    /* সেকশন সুইচ বাটন */
+    .nav-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .nav-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #94a3b8;
+      background: rgba(17, 24, 39, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .nav-btn:hover {
+      color: #f1f5f9;
+      background: rgba(30, 41, 59, 0.95);
+      border-color: rgba(52, 211, 153, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .nav-btn.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.3) 0%, rgba(5, 150, 105, 0.4) 100%);
+      border-color: #10b981;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+    }
+
+    /* অ্যাকশন বাটনস */
+    .actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 2px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 16px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #cbd5e1;
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .action-btn:hover {
+      color: #ffffff;
+      background: rgba(51, 65, 85, 0.8);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .action-btn.primary {
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.35);
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .action-btn.primary:hover {
+      background: rgba(16, 185, 129, 0.2);
+    }
+
+    /* সার্চ ও ফিল্টার বার */
+    .search-box {
+      width: 100%;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      color: #f8fafc;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: #10b981;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.3);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      font-size: 15px;
+      pointer-events: none;
+    }
+
+    /* সেকশন হেডার */
+    .section-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-left: 3px solid #10b981;
+      padding-left: 12px;
+      margin-top: 6px;
+    }
+
+    .sec-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sec-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* বিভাগ ব্যাজ */
+    .bivag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 6px 16px;
+      border-radius: 10px;
+      margin: 4px 0 0;
+      align-self: flex-start;
+    }
+
+    /* সলিউশন কার্ড (Glassmorphic Box) */
+    .sol-card {
+      background: rgba(17, 21, 36, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color 0.2s ease;
+    }
+
+    .sol-card:hover {
+      border-color: rgba(16, 185, 129, 0.25);
+    }
+
+    .sol-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 10px;
+      margin-bottom: 2px;
+    }
+
+    .sol-q-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sol-marks {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    /* উদ্দীপক বর্ণনা */
+    .stem-box {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: #e2e8f0;
+      background: rgba(15, 23, 42, 0.6);
+      border-left: 3px solid #38bdf8;
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* সমাধান ধাপসমূহ */
+    .sol-part {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: rgba(11, 15, 25, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .part-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .part-tag {
+      color: #34d399;
+      font-size: 15px;
+    }
+
+    .part-q-text {
+      color: #94a3b8;
+      font-size: 13.5px;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+
+    .part-marks {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    .part-body {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #cbd5e1;
+      padding-top: 6px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.06);
+    }
+
+    .result-badge {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 3px 12px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* গণিত চলক ও প্রতীক */
+    .var {
+      font-family: 'Fira Code', monospace;
+      font-style: italic;
+      color: #38bdf8;
+      padding: 0 2px;
+    }
+
+    /* টেবিল ডিজাইন */
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+
+    .math-table {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 13.5px;
+      white-space: nowrap;
+    }
+
+    .math-table th {
+      background: rgba(30, 41, 59, 0.9);
+      color: #38bdf8;
+      font-weight: 700;
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .math-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      color: #e2e8f0;
+    }
+
+    .math-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .math-table tr:hover td {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    /* ==================== MCQ কুইক আনসার গ্রিড ==================== */
+    .quick-mcq-box {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .quick-mcq-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quick-mcq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+      gap: 6px;
+    }
+
+    .quick-pill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 8px;
+      border-radius: 6px;
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .quick-pill:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #10b981;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .quick-q-num {
+      color: #94a3b8;
+      font-weight: 500;
+    }
+
+    .quick-ans {
+      font-weight: 700;
+      color: #34d399;
+    }
+
+    /* MCQ কার্ড */
+    .mcq-card {
+      background: rgba(17, 21, 36, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .mcq-card:hover {
+      border-color: rgba(56, 189, 248, 0.25);
+    }
+
+    .mcq-q-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    .mcq-q-num {
+      color: #38bdf8;
+      font-weight: 800;
+      margin-right: 4px;
+    }
+
+    .mcq-opts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    @media (max-width: 540px) {
+      .mcq-opts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .opt-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      color: #94a3b8;
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .opt-box.correct {
+      color: #ffffff;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.15);
+      border-color: #10b981;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+    }
+
+    .opt-tag {
+      font-weight: 700;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .opt-box.correct .opt-tag {
+      color: #34d399;
+    }
+
+    .explanation-box {
+      background: rgba(16, 185, 129, 0.06);
+      border-left: 3px solid #10b981;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    .exp-title {
+      color: #34d399;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    /* সংক্ষিপ্ত প্রশ্ন কার্ড */
+    .short-card {
+      background: rgba(17, 21, 36, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .short-q-line {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .short-q-num {
+      color: #38bdf8;
+      font-weight: 800;
+      margin-right: 4px;
+    }
+
+    .short-ans-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 14px;
+      padding-top: 4px;
+    }
+
+    .short-ans-label {
+      color: #34d399;
+      font-weight: 700;
+    }
+
+    .short-ans-val {
+      color: #ffffff;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .short-working {
+      color: #94a3b8;
+      font-size: 13px;
+      font-style: italic;
+    }
+
+    /* ফুটার */
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 13px;
+      color: #64748b;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* প্রিন্ট স্টাইল */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .ambient-grid, .ambient-glow, .nav-bar, .actions-bar, .search-box, .footer, .quick-mcq-box {
+        display: none !important;
+      }
+      .header-card, .sol-card, .mcq-card, .short-card, .stem-box, .sol-part {
+        background: transparent !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        color: #000000 !important;
+      }
+      .exam-title, .sec-title, .sol-q-title, .mcq-q-title, .short-q-line, strong {
+        color: #000000 !important;
+      }
+      .var {
+        color: #000000 !important;
+        font-weight: 600;
+      }
+      .opt-box.correct {
+        border-color: #000 !important;
+        background: #f0fdf4 !important;
+        color: #000000 !important;
+      }
+      .result-badge, .short-ans-val {
+        border-color: #000 !important;
+        background: #f0fdf4 !important;
+        color: #000000 !important;
+      }
+      .explanation-box {
+        border-left: 3px solid #000 !important;
+        background: #fafafa !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ব্যাকগ্রাউন্ড এফেক্ট -->
+  <div class="ambient-grid"></div>
+  <div class="ambient-glow"></div>
+
+  <main class="app-container">
+    
+    <!-- ==================== হেডার কার্ড ==================== -->
+    <header class="header-card">
+      <div class="badge">NCTB ও জেএসসি (JSC) স্ট্যান্ডার্ড মডেল টেস্ট</div>
+      <h1 class="exam-title">গণিত (বার্ষিক মডেল টেস্ট) — আদর্শ সমাধান ও পূর্ণ উত্তরমালা</h1>
+      
+      <div class="meta-pills">
+        <span class="meta-pill">শ্রেণি: অষ্টম</span>
+        <span class="meta-pill">বিষয়: গণিত</span>
+        <span class="meta-pill">পূর্ণমান: ১০০</span>
+        <span class="meta-pill highlight">💡 আদর্শ উত্তর নির্দেশিকা</span>
+      </div>
+
+      <!-- সেকশন ফিল্টার বাটনস -->
+      <nav class="nav-bar">
+        <button type="button" class="nav-btn active" id="btn-all" onclick="setSection('all')">
+          <span>📋 সবগুলো সমাধান</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-srijonshil" onclick="setSection('srijonshil')">
+          <span>📝 সৃজনশীল (১–৮)</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-mcq" onclick="setSection('mcq')">
+          <span>🔘 বহুনির্বাচনী (১–৩০)</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-short" onclick="setSection('short')">
+          <span>✍️ সংক্ষিপ্ত (১–১৫)</span>
+        </button>
+      </nav>
+
+      <!-- কুইক সার্চ ইনপুট -->
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="যেকোনো প্রশ্ন, অধ্যায় বা সমাধান খুঁজুন (যেমন: মুনাফা, পিথাগোরাস, সেট)..." oninput="handleSearch(this.value)">
+      </div>
+
+      <!-- অতিরিক্ত অ্যাকশন বাটনস -->
+      <div class="actions-bar">
+        <a href="/exam-of-jabir/" class="action-btn primary">
+          <span>📄 মূল প্রশ্নপত্র দেখুন</span>
+        </a>
+        <a href="/exam-of-jabir/question-paper-v2.pdf" target="_blank" class="action-btn">
+          <span>📥 প্রশ্নপত্র PDF ডাউনলোড</span>
+        </a>
+        <button type="button" class="action-btn" onclick="window.print()">
+          <span>🖨️ প্রিন্ট / Save PDF</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================== বহুনির্বাচনী দ্রুত উত্তর গ্রিড ==================== -->
+    <section id="quick-mcq-wrap" class="quick-mcq-box">
+      <div class="quick-mcq-title">
+        <span>⚡ বহুনির্বাচনী দ্রুত উত্তরমালা (OMR / খাতা মূল্যায়নের জন্য):</span>
+      </div>
+      <div class="quick-mcq-grid" id="quick-grid">
+        <!-- JS দিয়ে ১ থেকে ৩০ জেনারেট হবে -->
+      </div>
+    </section>
+
+    <!-- ==================== সৃজনশীল সমাধান সেকশন ==================== -->
+    <section id="sec-srijonshil" class="section-wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">📝 অংশ—ক: সৃজনশীল প্রশ্ন সমাধান</h2>
+        <span class="sec-badge">পূর্ণমান: ৫০ (যেকোনো ৫টি)</span>
+      </div>
+
+      <!-- ক বিভাগ — পাটিগণিত -->
+      <div class="bivag-badge">ক বিভাগ — পাটিগণিত</div>
+
+      <!-- ১ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-1" data-search="মুনাফা আসল সরল মুনাফা চক্রবৃদ্ধি পার্থক্য ১">
+        <div class="sol-card-header">
+          <div class="sol-q-title">১ নং সৃজনশীল প্রশ্নের সমাধান (মুনাফা)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> কোনো আসল ৩ বছরে মুনাফা-আসলে ১৩,০০০ টাকা এবং ৫ বছরে মুনাফা-আসলে ১৫,০০০ টাকা হয়।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">বার্ষিক ৮% সরল মুনাফায় ৫,০০০ টাকার ৩ বছরের সরল মুনাফা কত?</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            আমরা জানি, সরল মুনাফা, <span class="var">I = Prn</span><br>
+            এখানে, মূলধন <span class="var">P</span> = ৫,০০০ টাকা, মুনাফার হার <span class="var">r</span> = ৮% = <sup>৮</sup>/<sub>১০০</sub>, সময় <span class="var">n</span> = ৩ বছর।<br>
+            ∴ <span class="var">I</span> = ৫,০০০ × (<sup>৮</sup>/<sub>১০০</sub>) × ৩ = ৫,০০০ × ০.০৮ × ৩ = <strong>১,২০০ টাকা</strong>।
+            <div><span class="result-badge">উত্তর: ১,২০০ টাকা</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">উদ্দীপকের তথ্যের আলোকে আসল এবং বার্ষিক মুনাফার হার নির্ণয় করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            উদ্দীপক অনুসারে,<br>
+            আসল + ৫ বছরের মুনাফা = ১৫,০০০ টাকা<br>
+            আসল + ৩ বছরের মুনাফা = ১৩,০০০ টাকা<br>
+            ───────────────────────────── (বিয়োগ করে)<br>
+            (৫ − ৩) বা ২ বছরের মুনাফা = (১৫,০০০ − ১৩,০০০) = ২,০০০ টাকা<br>
+            ∴ ১ বছরের মুনাফা = <sup>২,০০০</sup>/<sub>২</sub> = ১,০০০ টাকা<br>
+            ∴ ৩ বছরের মুনাফা = ১,০০০ × ৩ = ৩,০০০ টাকা<br><br>
+            অতএব, আসল = (৩ বছরের মুনাফা-আসল) − (৩ বছরের মুনাফা)<br>
+            = ১৩,০০০ − ৩,০০০ = <strong>১০,০০০ টাকা</strong>।<br><br>
+            এখন, ১০,০০০ টাকার ১ বছরের মুনাফা ১,০০০ টাকা<br>
+            ∴ বার্ষিক মুনাফার হার, <span class="var">r</span> = (<sup>১,০০০</sup>/<sub>১০,০০০</sub>) × ১০০% = <strong>১০%</strong>।
+            <div><span class="result-badge">উত্তর: আসল ১০,০০০ টাকা এবং মুনাফার হার ১০%</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">উক্ত আসল একই হার চক্রবৃদ্ধি মুনাফায় ৩ বছরের জন্য ব্যাংকে জমা রাখলে সরল ও চক্রবৃদ্ধি মুনাফার পার্থক্য কত হবে?</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            'খ' হতে পাই, আসল <span class="var">P</span> = ১০,০০০ টাকা, মুনাফার হার <span class="var">r</span> = ১০% = ০.১ এবং সময় <span class="var">n</span> = ৩ বছর।<br>
+            ৩ বছরের সরল মুনাফা <span class="var">I</span> = ৩,০০০ টাকা।<br><br>
+            আমরা জানি, চক্রবৃদ্ধি মূলধন, <span class="var">C = P(1 + r)<sup>n</sup></span><br>
+            = ১০,০০০ × (১ + ০.১)<sup>৩</sup><br>
+            = ১০,০০০ × (১.১)<sup>৩</sup><br>
+            = ১০,০০০ × ১.৩৩১ = ১৩,৩১০ টাকা।<br><br>
+            ∴ চক্রবৃদ্ধি মুনাফা = <span class="var">C − P</span> = ১৩,৩১০ − ১০,০০০ = ৩,৩১০ টাকা।<br>
+            অতএব, চক্রবৃদ্ধি মুনাফা ও সরল মুনাফার পার্থক্য = ৩,৩১০ − ৩,০০০ = <strong>৩১০ টাকা</strong>।
+            <div><span class="result-badge">উত্তর: ৩১০ টাকা</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ২ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-2" data-search="পরিমাপ বাগান রাস্তা পরিসীমা হেক্টর খরচ ২">
+        <div class="sol-card-header">
+          <div class="sol-q-title">২ নং সৃজনশীল প্রশ্নের সমাধান (পরিমাপ)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> একটি আয়তাকার বাগানের দৈর্ঘ্য প্রস্থের ১.৫ গুণ এবং ক্ষেত্রফল ২১৬ বর্গমিটার। বাগানটির চারদিকে ২ মিটার চওড়া একটি রাস্তা রয়েছে।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">একটি ত্রিভুজাকার ক্ষেত্রের ভূমি ২০ মিটার এবং উচ্চতা ১৫ মিটার হলে, এর ক্ষেত্রফল কত হেক্টর?</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            ত্রিভুজাকার ক্ষেত্রের ক্ষেত্রফল = ½ × ভূমি × উচ্চতা<br>
+            = ½ × ২০ × ১৫ = ১৫০ বর্গমিটার।<br>
+            আমরা জানি, ১০,০০০ বর্গমিটার = ১ হেক্টর।<br>
+            ∴ ১৫০ বর্গমিটার = <sup>১৫০</sup>/<sub>১০,০০০</sub> = <strong>০.০১৫ হেক্টর</strong>।
+            <div><span class="result-badge">উত্তর: ০.০১৫ হেক্টর</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">বাগানটির পরিসীমা নির্ণয় করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            ধরি, বাগানটির প্রস্থ = <span class="var">x</span> মিটার।<br>
+            ∴ বাগানটির দৈর্ঘ্য = ১.৫<span class="var">x</span> মিটার।<br>
+            প্রশ্নমতে, দৈর্ঘ্য × প্রস্থ = ক্ষেত্রফল<br>
+            ⇒ ১.৫<span class="var">x</span> × <span class="var">x</span> = ২১৬<br>
+            ⇒ ১.৫<span class="var">x</span><sup>২</sup> = ২১৬<br>
+            ⇒ <span class="var">x</span><sup>২</sup> = <sup>২১৬</sup>/<sub>১.৫</sub> = ১৪৪<br>
+            ⇒ <span class="var">x</span> = √১৪৪ = ১২ মিটার।<br><br>
+            ∴ বাগানের প্রস্থ = ১২ মিটার এবং দৈর্ঘ্য = ১.৫ × ১২ = ১৮ মিটার।<br>
+            অতএব, বাগানটির পরিসীমা = ২(দৈর্ঘ্য + প্রস্থ)<br>
+            = ২(১৮ + ১২) = ২ × ৩০ = <strong>৬০ মিটার</strong>।
+            <div><span class="result-badge">উত্তর: ৬০ মিটার</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">প্রতি বর্গমিটারে ২৫ টাকা দরে রাস্তাটি বাঁধাই করতে মোট কত খরচ হবে?</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            'খ' হতে পাই, বাগানের দৈর্ঘ্য = ১৮ মিটার এবং প্রস্থ = ১২ মিটার।<br>
+            বাগানের মূল ক্ষেত্রফল = ২১৬ বর্গমিটার।<br>
+            বাগানটির চারদিকে ২ মিটার চওড়া রাস্তা আছে।<br>
+            ∴ রাস্তাসহ বাগানের দৈর্ঘ্য = ১৮ + (২ × ২) = ১৮ + ৪ = ২২ মিটার।<br>
+            রাস্তাসহ বাগানের প্রস্থ = ১২ + (২ × ২) = ১২ + ৪ = ১৬ মিটার।<br>
+            ∴ রাস্তাসহ বাগানের ক্ষেত্রফল = ২২ × ১৬ = ৩৫২ বর্গমিটার।<br><br>
+            অতএব, শুধু রাস্তার ক্ষেত্রফল = (রাস্তাসহ ক্ষেত্রফল) − (বাগানের ক্ষেত্রফল)<br>
+            = ৩৫২ − ২১৬ = ১৩৬ বর্গমিটার।<br><br>
+            প্রতি বর্গমিটারে রাস্তা বাঁধাইয়ের খরচ ২৫ টাকা।<br>
+            ∴ মোট খরচ = ১৩৬ × ২৫ = <strong>৩,৪০০ টাকা</strong>।
+            <div><span class="result-badge">উত্তর: ৩,৪০০ টাকা</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- খ বিভাগ — বীজগণিত -->
+      <div class="bivag-badge">খ বিভাগ — বীজগণিত</div>
+
+      <!-- ৩ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-3" data-search="বীজগণিত ভগ্নাংশ সমীকরণ সরল ৩">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৩ নং সৃজনশীল প্রশ্নের সমাধান (বীজগণিতীয় সূত্রাবলী ও ভগ্নাংশ)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> <span class="var">x</span><sup>2</sup> − 3<span class="var">x</span> + 1 = 0 একটি বীজগণিতীয় সমীকরণ এবং <span class="var">P</span> = (<sup><span class="var">x</span> − 2</sup>/<sub><span class="var">x</span><sup>2</sup> − 4</sub>), <span class="var">Q</span> = (<sup>1</sup>/<sub><span class="var">x</span><sup>2</sup> + 5<span class="var">x</span> + 6</sub>) দুটি ভগ্নাংশ।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text"><span class="var">x</span> + <sup>1</sup>/<sub><span class="var">x</span></sub> এর মান নির্ণয় করো।</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            দেওয়া আছে, <span class="var">x</span><sup>2</sup> − 3<span class="var">x</span> + 1 = 0<br>
+            ⇒ <span class="var">x</span><sup>2</sup> + 1 = 3<span class="var">x</span><br>
+            উভয় পক্ষকে <span class="var">x</span> দ্বারা ভাগ করে পাই,<br>
+            <sup>(<span class="var">x</span><sup>2</sup> + 1)</sup>/<sub><span class="var">x</span></sub> = <sup>3<span class="var">x</span></sup>/<sub><span class="var">x</span></sub><br>
+            ⇒ <sup><span class="var">x</span><sup>2</sup></sup>/<sub><span class="var">x</span></sub> + <sup>1</sup>/<sub><span class="var">x</span></sub> = 3<br>
+            ⇒ <span class="var">x</span> + <sup>1</sup>/<sub><span class="var">x</span></sub> = <strong>3</strong>।
+            <div><span class="result-badge">উত্তর: 3</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">প্রমাণ করো যে, <span class="var">x</span><sup>4</sup> + <sup>1</sup>/<sub><span class="var">x</span><sup>4</sup></sub> = 47।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            'ক' হতে পাই, <span class="var">x</span> + <sup>1</sup>/<sub><span class="var">x</span></sub> = 3<br>
+            উভয় পক্ষকে বর্গ করে পাই,<br>
+            (<span class="var">x</span> + <sup>1</sup>/<sub><span class="var">x</span></sub>)<sup>2</sup> = 3<sup>2</sup><br>
+            ⇒ <span class="var">x</span><sup>2</sup> + 2 · <span class="var">x</span> · (<sup>1</sup>/<sub><span class="var">x</span></sub>) + <sup>1</sup>/<sub><span class="var">x</span><sup>2</sup></sub> = 9<br>
+            ⇒ <span class="var">x</span><sup>2</sup> + <sup>1</sup>/<sub><span class="var">x</span><sup>2</sup></sub> = 9 − 2 = 7<br><br>
+            পুনরায় উভয় পক্ষকে বর্গ করে পাই,<br>
+            (<span class="var">x</span><sup>2</sup> + <sup>1</sup>/<sub><span class="var">x</span><sup>2</sup></sub>)<sup>2</sup> = 7<sup>2</sup><br>
+            ⇒ (<span class="var">x</span><sup>2</sup>)<sup>2</sup> + 2 · <span class="var">x</span><sup>2</sup> · (<sup>1</sup>/<sub><span class="var">x</span><sup>2</sup></sub>) + (<sup>1</sup>/<sub><span class="var">x</span><sup>2</sup></sub>)<sup>2</sup> = 49<br>
+            ⇒ <span class="var">x</span><sup>4</sup> + 2 + <sup>1</sup>/<sub><span class="var">x</span><sup>4</sup></sub> = 49<br>
+            ⇒ <span class="var">x</span><sup>4</sup> + <sup>1</sup>/<sub><span class="var">x</span><sup>4</sup></sub> = 49 − 2 = <strong>47</strong> (প্রমাণিত)।
+            <div><span class="result-badge">প্রমাণিত: x⁴ + 1/x⁴ = 47</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text"><span class="var">P − Q</span> কে সরলতম ভগ্নাংশ আকারে প্রকাশ করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            দেওয়া আছে,<br>
+            <span class="var">P</span> = <sup>(<span class="var">x</span> − 2)</sup>/<sub>(<span class="var">x</span><sup>2</sup> − 4)</sub> = <sup>(<span class="var">x</span> − 2)</sup>/<sub>[(<span class="var">x</span> − 2)(<span class="var">x</span> + 2)]</sub> = <sup>1</sup>/<sub>(<span class="var">x</span> + 2)</sub><br><br>
+            <span class="var">Q</span> = <sup>1</sup>/<sub>(<span class="var">x</span><sup>2</sup> + 5<span class="var">x</span> + 6)</sub> = <sup>1</sup>/<sub>[<span class="var">x</span><sup>2</sup> + 3<span class="var">x</span> + 2<span class="var">x</span> + 6]</sub> = <sup>1</sup>/<sub>[<span class="var">x</span>(<span class="var">x</span> + 3) + 2(<span class="var">x</span> + 3)]</sub> = <sup>1</sup>/<sub>[(<span class="var">x</span> + 2)(<span class="var">x</span> + 3)]</sub><br><br>
+            ∴ <span class="var">P − Q</span> = <sup>1</sup>/<sub>(<span class="var">x</span> + 2)</sub> − <sup>1</sup>/<sub>[(<span class="var">x</span> + 2)(<span class="var">x</span> + 3)]</sub><br>
+            হরগুলোর লসাগু = (<span class="var">x</span> + 2)(<span class="var">x</span> + 3)<br>
+            = <sup>[(<span class="var">x</span> + 3) − 1]</sup>/<sub>[(<span class="var">x</span> + 2)(<span class="var">x</span> + 3)]</sub><br>
+            = <sup>(<span class="var">x</span> + 2)</sup>/<sub>[(<span class="var">x</span> + 2)(<span class="var">x</span> + 3)]</sub><br>
+            = <strong><sup>1</sup>/<sub>(<span class="var">x</span> + 3)</sub></strong>।
+            <div><span class="result-badge">উত্তর: 1 / (x + 3)</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ৪ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-4" data-search="সেট সহসমীকরণ প্রতিস্থাপন অপনয়ন ভেনচিত্র ৪">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৪ নং সৃজনশীল প্রশ্নের সমাধান (সরল সহসমীকরণ ও সেট)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> <span class="var">U</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> ≤ 7}, <span class="var">A</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> মৌলিক সংখ্যা এবং <span class="var">x</span> ≤ 7}, <span class="var">B</span> = {<span class="var">x</span> ∈ ℕ : <span class="var">x</span> বিজোড় সংখ্যা এবং <span class="var">x</span> ≤ 7} এবং দুটি সমীকরণ: 2<span class="var">x</span> + <span class="var">y</span> = 8, 3<span class="var">x</span> − 2<span class="var">y</span> = 5।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text"><span class="var">A</span> সেটটিকে তালিকা পদ্ধতিতে প্রকাশ করে এর উপসেটের সংখ্যা নির্ণয় করো।</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            স্বাভাবিক সংখ্যার সেট ℕ = {1, 2, 3, 4, 5, 6, 7, ...}<br>
+            সার্বিক সেট <span class="var">U</span> = {1, 2, 3, 4, 5, 6, 7}<br>
+            ৭ এর সমান বা ছোট মৌলিক সংখ্যাগুলো হলো: 2, 3, 5, 7।<br>
+            ∴ তালিকা পদ্ধতিতে সেট <span class="var">A</span> = <strong>{2, 3, 5, 7}</strong>।<br><br>
+            এখানে, সেট <span class="var">A</span> এর উপাদান সংখ্যা <span class="var">n</span> = 4।<br>
+            আমরা জানি, কোনো সেটের উপাদান সংখ্যা <span class="var">n</span> হলে তার উপসেটের সংখ্যা = 2<sup>n</sup>।<br>
+            ∴ <span class="var">A</span> সেটের উপসেট সংখ্যা = 2<sup>4</sup> = <strong>16টি</strong>।
+            <div><span class="result-badge">উত্তর: A = {2, 3, 5, 7} এবং উপসেট সংখ্যা 16টি</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">সমীকরণদ্বয়কে প্রতিস্থাপন বা অপনয়ন পদ্ধতিতে সমাধান করে (<span class="var">x</span>, <span class="var">y</span>) নির্ণয় করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            প্রদত্ত সমীকরণদ্বয়:<br>
+            2<span class="var">x</span> + <span class="var">y</span> = 8 .........(i)<br>
+            3<span class="var">x</span> − 2<span class="var">y</span> = 5 .........(ii)<br><br>
+            <strong>প্রতিস্থাপন পদ্ধতি:</strong><br>
+            (i) নং সমীকরণ হতে পাই, <span class="var">y</span> = 8 − 2<span class="var">x</span> .........(iii)<br>
+            <span class="var">y</span> এর মান (ii) নং সমীকরণে বসিয়ে পাই,<br>
+            3<span class="var">x</span> − 2(8 − 2<span class="var">x</span>) = 5<br>
+            ⇒ 3<span class="var">x</span> − 16 + 4<span class="var">x</span> = 5<br>
+            ⇒ 7<span class="var">x</span> − 16 = 5<br>
+            ⇒ 7<span class="var">x</span> = 5 + 16 = 21<br>
+            ⇒ <span class="var">x</span> = <sup>21</sup>/<sub>7</sub> = 3<br><br>
+            এখন, <span class="var">x</span> = 3 এর মান (iii) নং সমীকরণে বসিয়ে পাই,<br>
+            <span class="var">y</span> = 8 − 2(3) = 8 − 6 = 2<br><br>
+            ∴ নির্ণেয় সমাধান: <strong>(<span class="var">x</span>, <span class="var">y</span>) = (3, 2)</strong>।
+            <div><span class="result-badge">উত্তর: (x, y) = (3, 2)</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">দেখাও যে, (<span class="var">A ∪ B</span>)′ = <span class="var">A</span>′ ∩ <span class="var">B</span>′।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            দেওয়া আছে, <span class="var">U</span> = {1, 2, 3, 4, 5, 6, 7}<br>
+            <span class="var">A</span> = {2, 3, 5, 7}<br>
+            <span class="var">B</span> = {1, 3, 5, 7} (৭ পর্যন্ত বিজোড় সংখ্যাসমূহ)<br><br>
+            <strong>বামপক্ষ:</strong><br>
+            <span class="var">A ∪ B</span> = {2, 3, 5, 7} ∪ {1, 3, 5, 7} = {1, 2, 3, 5, 7}<br>
+            ∴ (<span class="var">A ∪ B</span>)′ = <span class="var">U</span>  (<span class="var">A ∪ B</span>)<br>
+            = {1, 2, 3, 4, 5, 6, 7}  {1, 2, 3, 5, 7} = <strong>{4, 6}</strong><br><br>
+            <strong>ডানপক্ষ:</strong><br>
+            <span class="var">A</span>′ = <span class="var">U</span>  <span class="var">A</span> = {1, 2, 3, 4, 5, 6, 7}  {2, 3, 5, 7} = {1, 4, 6}<br>
+            <span class="var">B</span>′ = <span class="var">U</span>  <span class="var">B</span> = {1, 2, 3, 4, 5, 6, 7}  {1, 3, 5, 7} = {2, 4, 6}<br>
+            ∴ <span class="var">A</span>′ ∩ <span class="var">B</span>′ = {1, 4, 6} ∩ {2, 4, 6} = <strong>{4, 6}</strong><br><br>
+            যেহেতু বামপক্ষ = ডানপক্ষ = {4, 6},<br>
+            অতএব, (<span class="var">A ∪ B</span>)′ = <span class="var">A</span>′ ∩ <span class="var">B</span>′ (দেখানো হলো)।
+            <div><span class="result-badge">দেখানো হলো: (A ∪ B)′ = A′ ∩ B′</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- গ বিভাগ — জ্যামিতি -->
+      <div class="bivag-badge">গ বিভাগ — জ্যামিতি</div>
+
+      <!-- ৫ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-5" data-search="পিথাগোরাস সমকোণী অতিভুজ জ্যামিতি ৫">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৫ নং সৃজনশীল প্রশ্নের সমাধান (পিথাগোরাসের উপপাদ্য)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> এবং <span class="var">BC</span> বাহুর মধ্যবিন্দু।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text"><span class="var">AB</span> = 6 সেমি এবং <span class="var">BC</span> = 8 সেমি হলে, <span class="var">AC</span> বাহুর দৈর্ঘ্য নির্ণয় করো।</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            দেওয়া আছে, সমকোণী Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°, লম্ব <span class="var">AB</span> = 6 সেমি এবং ভূমি <span class="var">BC</span> = 8 সেমি।<br>
+            পিথাগোরাসের উপপাদ্য অনুসারে,<br>
+            <span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup><br>
+            ⇒ <span class="var">AC</span> = √(<span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>)<br>
+            = √(6<sup>2</sup> + 8<sup>2</sup>) = √(36 + 64) = √100 = <strong>10 সেমি</strong>।
+            <div><span class="result-badge">উত্তর: 10 সেমি</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">পিথাগোরাসের উপপাদ্যটি বিবৃতিসহ প্রমাণ করো যে, <span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>উপপাদ্যের সাধারণ নির্বচন:</strong> একটি সমকোণী ত্রিভুজের অতিভুজের ওপর অঙ্কিত বর্গক্ষেত্রের ক্ষেত্রফল অপর দুই বাহুর ওপর অঙ্কিত বর্গক্ষেত্রদ্বয়ের ক্ষেত্রফলের সমষ্টির সমান।<br><br>
+            <strong>বিশেষ নির্বচন:</strong> মনে করি, Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90° এবং অতিভুজ <span class="var">AC</span>। প্রমাণ করতে হবে যে, <span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>।<br><br>
+            <strong>অঙ্কন:</strong> সমকৌণিক বিন্দু <span class="var">B</span> থেকে অতিভুজ <span class="var">AC</span> এর ওপর <span class="var">BD ⊥ AC</span> লম্ব আঁকি।<br><br>
+            <strong>প্রমাণ:</strong><br>
+            ১. Δ<span class="var">ABD</span> এবং Δ<span class="var">ABC</span> সদৃশকোণী, কারণ ∠<span class="var">BDA</span> = ∠<span class="var">ABC</span> = 90° এবং ∠<span class="var">A</span> সাধারণ কোণ।<br>
+            ∴ <sup><span class="var">AD</span></sup>/<sub><span class="var">AB</span></sub> = <sup><span class="var">AB</span></sup>/<sub><span class="var">AC</span></sub> ⇒ <span class="var">AB</span><sup>2</sup> = <span class="var">AC</span> × <span class="var">AD</span> .........(১)<br><br>
+            ২. অনুরূপভাবে, Δ<span class="var">BCD</span> এবং Δ<span class="var">ABC</span> সদৃশকোণী।<br>
+            ∴ <sup><span class="var">CD</span></sup>/<sub><span class="var">BC</span></sub> = <sup><span class="var">BC</span></sup>/<sub><span class="var">AC</span></sub> ⇒ <span class="var">BC</span><sup>2</sup> = <span class="var">AC</span> × <span class="var">CD</span> .........(২)<br><br>
+            ৩. সমীকরণ (১) ও (২) যোগ করে পাই,<br>
+            <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup> = <span class="var">AC</span> × <span class="var">AD</span> + <span class="var">AC</span> × <span class="var">CD</span><br>
+            = <span class="var">AC</span>(<span class="var">AD + CD</span>)<br>
+            যেহেতু <span class="var">AD + CD = AC</span>, সুতরাং:<br>
+            <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup> = <span class="var">AC</span> × <span class="var">AC</span> = <span class="var">AC</span><sup>2</sup><br>
+            ∴ <strong><span class="var">AC</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup></strong> (প্রমাণিত)।
+            <div><span class="result-badge">প্রমাণিত: AC² = AB² + BC²</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">প্রমাণ করো যে, 5<span class="var">AC</span><sup>2</sup> = 4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>বিশেষ নির্বচন:</strong> Δ<span class="var">ABC</span> এ ∠<span class="var">B</span> = 90°। <span class="var">D</span> এবং <span class="var">E</span> যথাক্রমে <span class="var">AB</span> ও <span class="var">BC</span> বাহুর মধ্যবিন্দু। <span class="var">A, E</span> এবং <span class="var">C, D</span> যোগ করি। প্রমাণ করতে হবে যে, 5<span class="var">AC</span><sup>2</sup> = 4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>)।<br><br>
+            <strong>প্রমাণ:</strong><br>
+            যেহেতু <span class="var">E</span> হলো <span class="var">BC</span> এর মধ্যবিন্দু, ∴ <span class="var">BE</span> = ½<span class="var">BC</span>।<br>
+            সমকোণী Δ<span class="var">ABE</span> এ পিথাগোরাসের উপপাদ্য অনুযায়ী,<br>
+            <span class="var">AE</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + <span class="var">BE</span><sup>2</sup> = <span class="var">AB</span><sup>2</sup> + (½<span class="var">BC</span>)<sup>2</sup> = <span class="var">AB</span><sup>2</sup> + ¼<span class="var">BC</span><sup>2</sup> .........(১)<br><br>
+            অনুরূপভাবে, যেহেতু <span class="var">D</span> হলো <span class="var">AB</span> এর মধ্যবিন্দু, ∴ <span class="var">BD</span> = ½<span class="var">AB</span>।<br>
+            সমকোণী Δ<span class="var">DBC</span> এ পিথাগোরাসের উপপাদ্য অনুযায়ী,<br>
+            <span class="var">CD</span><sup>2</sup> = <span class="var">BC</span><sup>2</sup> + <span class="var">BD</span><sup>2</sup> = <span class="var">BC</span><sup>2</sup> + (½<span class="var">AB</span>)<sup>2</sup> = <span class="var">BC</span><sup>2</sup> + ¼<span class="var">AB</span><sup>2</sup> .........(২)<br><br>
+            এখন, (১) ও (২) নং সমীকরণ যোগ করে পাই,<br>
+            <span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup> = (<span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>) + ¼(<span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup>)<br>
+            যেহেতু Δ<span class="var">ABC</span> সমকোণী ত্রিভুজ, সুতরাং <span class="var">AB</span><sup>2</sup> + <span class="var">BC</span><sup>2</sup> = <span class="var">AC</span><sup>2</sup>।<br>
+            ∴ <span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup> = <span class="var">AC</span><sup>2</sup> + ¼<span class="var">AC</span><sup>2</sup> = (1 + ¼)<span class="var">AC</span><sup>2</sup> = <sup>5</sup>/<sub>4</sub><span class="var">AC</span><sup>2</sup><br><br>
+            উভয় পক্ষকে 4 দ্বারা গুণ করে পাই,<br>
+            4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>) = 5<span class="var">AC</span><sup>2</sup><br>
+            বা, <strong>5<span class="var">AC</span><sup>2</sup> = 4(<span class="var">AE</span><sup>2</sup> + <span class="var">CD</span><sup>2</sup>)</strong> (প্রমাণিত)।
+            <div><span class="result-badge">প্রমাণিত: 5AC² = 4(AE² + CD²)</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ৬ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-6" data-search="বৃত্ত ব্যাস জ্যা কেন্দ্র পরিধি ৬">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৬ নং সৃজনশীল প্রশ্নের সমাধান (বৃত্ত)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> <span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> এবং <span class="var">CD</span> দুটি সমান জ্যা। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> এবং <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE</span> এবং <span class="var">OF</span> লম্ব।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">বৃত্তটির ব্যাসার্ধ ৭ সেমি হলে এর পরিধি কত? (π = 22/7)</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            দেওয়া আছে, বৃত্তের ব্যাসার্ধ <span class="var">r</span> = ৭ সেমি।<br>
+            আমরা জানি, বৃত্তের পরিধি = 2π<span class="var">r</span><br>
+            = ২ × (<sup>২২</sup>/<sub>৭</sub>) × ৭ = ২ × ২২ = <strong>৪৪ সেমি</strong>।
+            <div><span class="result-badge">উত্তর: ৪৪ সেমি</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">প্রমাণ করো যে, <span class="var">OE = OF</span> (বৃত্তের সমান সমান জ্যা কেন্দ্র থেকে সমদূরবর্তী)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>বিশেষ নির্বচন:</strong> মনে করি, <span class="var">O</span> বৃত্তের কেন্দ্র এবং <span class="var">AB</span> ও <span class="var">CD</span> দুটি সমান জ্যা, অর্থাৎ <span class="var">AB = CD</span>। কেন্দ্র <span class="var">O</span> থেকে <span class="var">AB</span> ও <span class="var">CD</span> এর ওপর যথাক্রমে <span class="var">OE ⊥ AB</span> এবং <span class="var">OF ⊥ CD</span> আঁকা হলো। <span class="var">O, A</span> এবং <span class="var">O, C</span> যোগ করি। প্রমাণ করতে হবে যে, <span class="var">OE = OF</span>।<br><br>
+            <strong>প্রমাণ:</strong><br>
+            আমরা জানি, কেন্দ্র থেকে ব্যাস ভিন্ন কোনো জ্যা-এর ওপর অঙ্কিত লম্ব ওই জ্যা-কে সমদ্বিখণ্ডিত করে।<br>
+            ∴ <span class="var">AE</span> = ½<span class="var">AB</span> এবং <span class="var">CF</span> = ½<span class="var">CD</span>।<br>
+            কিন্তু দেওয়া আছে, <span class="var">AB = CD</span><br>
+            ∴ ½<span class="var">AB</span> = ½<span class="var">CD</span> ⇒ <span class="var">AE = CF</span> .........(১)<br><br>
+            এখন সমকোণী Δ<span class="var">OAE</span> এবং সমকোণী Δ<span class="var">OCF</span> এর মধ্যে—<br>
+            অতিভুজ <span class="var">OA</span> = অতিভুজ <span class="var">OC</span> [উভয়ে একই বৃত্তের ব্যাসার্ধ]<br>
+            এবং বাহু <span class="var">AE</span> = বাহু <span class="var">CF</span> [(১) নং হতে]<br>
+            ∴ Δ<span class="var">OAE</span> ≅ Δ<span class="var">OCF</span> [সমকোণী ত্রিভুজের অতিভুজ-বাহু সর্বসমতা উপপাদ্য]<br>
+            ∴ <strong><span class="var">OE = OF</span></strong>।<br><br>
+            যেহেতু <span class="var">OE</span> এবং <span class="var">OF</span> যথাক্রমে কেন্দ্র <span class="var">O</span> হতে <span class="var">AB</span> ও <span class="var">CD</span> জ্যা-এর দূরত্ব নির্দেশ করে,<br>
+            অতএব, বৃত্তের সমান সমান জ্যা কেন্দ্র থেকে সমদূরবর্তী। (প্রমাণিত)।
+            <div><span class="result-badge">প্রমাণিত: OE = OF</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">প্রমাণ করো যে, বৃত্তের ব্যাসই বৃহত্তম জ্যা।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>বিশেষ নির্বচন:</strong> মনে করি, <span class="var">O</span> কেন্দ্রবিশিষ্ট একটি বৃত্তে <span class="var">AB</span> ব্যাস এবং <span class="var">CD</span> ব্যাস ভিন্ন যেকোনো একটি জ্যা। প্রমাণ করতে হবে যে, <span class="var">AB > CD</span>।<br><br>
+            <strong>অঙ্কন:</strong> <span class="var">O, C</span> এবং <span class="var">O, D</span> যোগ করি।<br><br>
+            <strong>প্রমাণ:</strong><br>
+            বৃত্তের কেন্দ্র <span class="var">O</span> থেকে পরিধির দূরত্বই বৃত্তের ব্যাসার্ধ।<br>
+            ∴ <span class="var">OA = OB = OC = OD = r</span> (বৃত্তের ব্যাসার্ধ)।<br>
+            এবং ব্যাস <span class="var">AB = OA + OB = r + r = 2r</span>।<br><br>
+            এখন, Δ<span class="var">OCD</span> ত্রিভুজে আমরা জানি, ত্রিভুজের যেকোনো দুই বাহুর সমষ্টি তার তৃতীয় বাহু অপেক্ষা বৃহত্তর।<br>
+            ∴ <span class="var">OC + OD > CD</span><br>
+            ⇒ <span class="var">r + r > CD</span><br>
+            ⇒ <span class="var">2r > CD</span><br>
+            যেহেতু <span class="var">2r = AB</span> (ব্যাস),<br>
+            ∴ <strong><span class="var">AB > CD</span></strong>।<br><br>
+            অতএব, বৃত্তের ব্যাসই বৃহত্তম জ্যা। (প্রমাণিত)।
+            <div><span class="result-badge">প্রমাণিত: বৃত্তের ব্যাসই বৃহত্তম জ্যা</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ঘ বিভাগ — পরিসংখ্যান -->
+      <div class="bivag-badge">ঘ বিভাগ — পরিসংখ্যান</div>
+
+      <!-- ৭ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-7" data-search="পরিসংখ্যান গড় প্রচুরক আয়তলেখ নিবেশন ৭">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৭ নং সৃজনশীল প্রশ্নের সমাধান (তথ্য ও উপাত্ত — পরিসংখ্যান ১)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> অষ্টম শ্রেণির ৪০ জন শিক্ষার্থীর গণিতে প্রাপ্ত নম্বরের গণসংখ্যা নিবেশন সারণি:
+          <div class="table-wrap">
+            <table class="math-table">
+              <thead>
+                <tr>
+                  <th>শ্রেণি ব্যবধান</th>
+                  <th>৩১ - ৪০</th>
+                  <th>৪১ - ৫০</th>
+                  <th>৫১ - ৬০</th>
+                  <th>৬১ - ৭০</th>
+                  <th>৭১ - ৮০</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>গণসংখ্যা</td>
+                  <td>৬</td>
+                  <td>৮</td>
+                  <td>১০</td>
+                  <td>১২</td>
+                  <td>৪</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">প্রচুরক শ্রেণির মধ্যমান নির্ণয় করো।</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            প্রদত্ত সারণিতে সর্বোচ্চ গণসংখ্যা ১২ রয়েছে (৬১ − ৭০) শ্রেণিতে।<br>
+            ∴ প্রচুরক শ্রেণি হলো: <strong>৬১ − ৭০</strong>।<br>
+            আমরা জানি, কোনো শ্রেণির মধ্যমান = <sup>(শ্রেণির নিম্নসীমা + ঊর্ধ্বসীমা)</sup>/<sub>২</sub><br>
+            ∴ প্রচুরক শ্রেণির মধ্যমান = <sup>(৬১ + ৭০)</sup>/<sub>২</sub> = <sup>১৩১</sup>/<sub>২</sub> = <strong>৬৫.৫</strong>।
+            <div><span class="result-badge">উত্তর: প্রচুরক শ্রেণি ৬১ − ৭০ এবং মধ্যমান ৬৫.৫</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">সারণি হতে সংক্ষিপ্ত পদ্ধতিতে গড় নির্ণয় করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            ধরি, আনুমানিক গড় <span class="var">a</span> = ৫৫.৫ (৫১−৬০ শ্রেণির মধ্যমান), শ্রেণি ব্যবধান <span class="var">h</span> = ১০।<br>
+            <strong>সংক্ষিপ্ত পদ্ধতিতে গড় নির্ণয়ের সারণি:</strong>
+            <div class="table-wrap">
+              <table class="math-table">
+                <thead>
+                  <tr>
+                    <th>শ্রেণি ব্যবধান</th>
+                    <th>শ্রেণি মধ্যমান (<span class="var">x<sub>i</sub></span>)</th>
+                    <th>গণসংখ্যা (<span class="var">f<sub>i</sub></span>)</th>
+                    <th>ধাপ বিচ্যুতি (<span class="var">u<sub>i</sub> = (x<sub>i</sub> - a)/h</span>)</th>
+                    <th><span class="var">f<sub>i</sub>u<sub>i</sub></span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>৩১ − ৪০</td>
+                    <td>৩৫.৫</td>
+                    <td>৬</td>
+                    <td>−২</td>
+                    <td>−১২</td>
+                  </tr>
+                  <tr>
+                    <td>৪১ − ৫০</td>
+                    <td>৪৫.৫</td>
+                    <td>৮</td>
+                    <td>−১</td>
+                    <td>−৮</td>
+                  </tr>
+                  <tr>
+                    <td>৫১ − ৬০</td>
+                    <td>৫৫.৫ (<span class="var">a</span>)</td>
+                    <td>১০</td>
+                    <td>০</td>
+                    <td>০</td>
+                  </tr>
+                  <tr>
+                    <td>৬১ − ৭০</td>
+                    <td>৬৫.৫</td>
+                    <td>১২</td>
+                    <td>+১</td>
+                    <td>+১২</td>
+                  </tr>
+                  <tr>
+                    <td>৭১ − ৮০</td>
+                    <td>৭৫.৫</td>
+                    <td>৪</td>
+                    <td>+২</td>
+                    <td>+৮</td>
+                  </tr>
+                  <tr style="font-weight: 700; background: rgba(56, 189, 248, 0.08);">
+                    <td colspan="2">মোট</td>
+                    <td><span class="var">N</span> = ৪০</td>
+                    <td>—</td>
+                    <td>∑<span class="var">f<sub>i</sub>u<sub>i</sub></span> = ০</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            ∑<span class="var">f<sub>i</sub>u<sub>i</sub></span> = (−১২ − ৮) + ০ + (১২ + ৮) = −২০ + ২০ = ০।<br>
+            আমরা জানি, সংক্ষিপ্ত গড় <span class="var">x̄ = a + (∑f<sub>i</sub>u<sub>i</sub> / N) × h</span><br>
+            = ৫৫.৫ + (<sup>০</sup>/<sub>৪০</sub>) × ১০ = ৫৫.৫ + ০ = <strong>৫৫.৫</strong>।
+            <div><span class="result-badge">উত্তর: নির্ণেয় গড় ৫৫.৫</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">প্রদত্ত উপাত্তের গণসংখ্যা আয়তলেখ অঙ্কন করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>১. অবিচ্ছিন্ন শ্রেণি সীমা সারণি:</strong><br>
+            • ৩১ − ৪০ → ৩০.৫ − ৪০.৫ (গণসংখ্যা ৬)<br>
+            • ৪১ − ৫০ → ৪০.৫ − ৫০.৫ (গণসংখ্যা ৮)<br>
+            • ৫১ − ৬০ → ৫০.৫ − ৬০.৫ (গণসংখ্যা ১০)<br>
+            • ৬১ − ৭০ → ৬০.৫ − ৭০.৫ (গণসংখ্যা ১২)<br>
+            • ৭১ − ৮০ → ৭০.৫ − ৮০.৫ (গণসংখ্যা ৪)<br><br>
+            <strong>২. অঙ্কনের বিবরণ:</strong><br>
+            ছক কাগজের সুবিধাজনক স্থানে অক্ষদ্বয় <span class="var">OX</span> এবং <span class="var">OY</span> আঁকি। <span class="var">X</span>-অক্ষ বরাবর অবিচ্ছিন্ন শ্রেণি সীমা (প্রতি ৫ ক্ষুদ্র ঘর = ১০ একক) এবং <span class="var">Y</span>-অক্ষ বরাবর গণসংখ্যা (প্রতি ১ ক্ষুদ্র ঘর = ১ একক) স্থাপন করি। মূলবিন্দু <span class="var">O</span> হতে ৩০.৫ পর্যন্ত মানগুলো বোঝাতে <span class="var">X</span>-অক্ষে ভাঙা চিহ্ন (≈) ব্যবহার করা হলো। এরপর প্রতি অবিচ্ছিন্ন শ্রেণির ওপর গণসংখ্যার সমান উচ্চতায় আয়তক্ষেত্র এঁকে গণসংখ্যা আয়তলেখ সম্পন্ন করা হলো।
+            <div><span class="result-badge">অঙ্কন নির্দেশিকা সম্পন্ন</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ৮ নং প্রশ্ন -->
+      <article class="sol-card" id="sol-cq-8" data-search="মধ্যক পাইচিত্র ক্রমযোজিত টিফিন খেলা ৮">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৮ নং সৃজনশীল প্রশ্নের সমাধান (তথ্য ও উপাত্ত — পরিসংখ্যান ২)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> ৫০ জন শিক্ষার্থীর দৈনিক টিফিন খরচের (টাকায়) গণসংখ্যা সারণি:
+          <div class="table-wrap">
+            <table class="math-table">
+              <thead>
+                <tr>
+                  <th>শ্রেণি (টাকা)</th>
+                  <th>২৫ - ৩৪</th>
+                  <th>৩৫ - ৪৪</th>
+                  <th>৪৫ - ৫৪</th>
+                  <th>৫৫ - ৬৪</th>
+                  <th>৬৫ - ৭৪</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>গণসংখ্যা</td>
+                  <td>৫</td>
+                  <td>৯</td>
+                  <td>১৫</td>
+                  <td>১৩</td>
+                  <td>৮</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <em>(অতিরিক্ত উপাত্ত: ১২০ জন শিক্ষার্থীর পছন্দের খেলা: ক্রিকেট ৫০ জন, ফুটবল ৪০ জন, দাবা ১০ জন, ব্যাডমিন্টন ২০ জন)।</em>
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">ক্রমযোজিত গণসংখ্যা সারণি তৈরি করো।</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            <strong>ক্রমযোজিত গণসংখ্যা নিবেশন সারণি:</strong>
+            <div class="table-wrap">
+              <table class="math-table">
+                <thead>
+                  <tr>
+                    <th>শ্রেণি ব্যবধান</th>
+                    <th>গণসংখ্যা (<span class="var">f<sub>i</sub></span>)</th>
+                    <th>ক্রমযোজিত গণসংখ্যা</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>২৫ − ৩৪</td>
+                    <td>৫</td>
+                    <td>৫</td>
+                  </tr>
+                  <tr>
+                    <td>৩৫ − ৪৪</td>
+                    <td>৯</td>
+                    <td>৫ + ৯ = ১৪</td>
+                  </tr>
+                  <tr>
+                    <td>৪৫ − ৫৪</td>
+                    <td>১৫</td>
+                    <td>১৪ + ১৫ = ২৯</td>
+                  </tr>
+                  <tr>
+                    <td>৫৫ − ৬৪</td>
+                    <td>১৩</td>
+                    <td>২৯ + ১৩ = ৪২</td>
+                  </tr>
+                  <tr>
+                    <td>৬৫ − ৭৪</td>
+                    <td>৮</td>
+                    <td>৪২ + ৮ = ৫০</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div><span class="result-badge">সারণি সম্পন্ন</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">সারণি হতে মধ্যক নির্ণয় করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            এখানে, মোট গণসংখ্যা <span class="var">N</span> = ৫০<br>
+            ∴ <sup><span class="var">N</span></sup>/<sub>২</sub> = <sup>৫০</sup>/<sub>২</sub> = ২৫ তম পদ।<br>
+            'ক' এর ক্রমযোজিত সারণি থেকে দেখা যায়, ২৫ তম পদটি <strong>৪৫ − ৫৪</strong> শ্রেণিতে অবস্থিত।<br>
+            অতএব, মধ্যক শ্রেণি হলো: <strong>৪৫ − ৫৪</strong>।<br><br>
+            আমরা জানি, মধ্যক = <span class="var">L + [(N/2 − F<sub>c</sub>) / f<sub>m</sub>] × h</span><br>
+            এখানে,<br>
+            মধ্যক শ্রেণির নিম্নসীমা, <span class="var">L</span> = ৪৫<br>
+            মধ্যক শ্রেণির পূর্ববর্তী শ্রেণির ক্রমযোজিত গণসংখ্যা, <span class="var">F<sub>c</sub></span> = ১৪<br>
+            মধ্যক শ্রেণির গণসংখ্যা, <span class="var">f<sub>m</sub></span> = ১৫<br>
+            শ্রেণি ব্যবধান, <span class="var">h</span> = ১০<br><br>
+            ∴ মধ্যক = ৪৫ + [<sup>(২৫ − ১৪)</sup>/<sub>১৫</sub>] × ১০<br>
+            = ৪৫ + [<sup>১১</sup>/<sub>১৫</sub>] × ১০<br>
+            = ৪৫ + <sup>১১০</sup>/<sub>১৫</sub> = ৪৫ + ৭.৩৩ = <strong>৫২.৩৩ (প্রায়)</strong>।
+            <div><span class="result-badge">উত্তর: ৫২.৩৩ (প্রায়)</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">১২০ জন শিক্ষার্থীর পছন্দের খেলার তথ্যের আলোকে একটি পাইচিত্র অঙ্কন করো।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            মোট শিক্ষার্থী = ১২০ জন।<br>
+            আমরা জানি, বৃত্তের কেন্দ্রে সমগ্র উপাত্তের জন্য মোট কোণ = ৩৬০°।<br><br>
+            <strong>প্রতিটি খেলার জন্য কেন্দ্রীয় কোণ নির্ণয়:</strong><br>
+            • <strong>ক্রিকেট:</strong> (<sup>৫০</sup>/<sub>১২০</sub>) × ৩৬০° = ৫০ × ৩° = <strong>১৫০°</strong><br>
+            • <strong>ফুটবল:</strong> (<sup>৪০</sup>/<sub>১২০</sub>) × ৩৬০° = ৪০ × ৩° = <strong>১২০°</strong><br>
+            • <strong>দাবা:</strong> (<sup>১০</sup>/<sub>১২০</sub>) × ৩৬০° = ১০ × ৩° = <strong>৩০°</strong><br>
+            • <strong>ব্যাডমিন্টন:</strong> (<sup>২০</sup>/<sub>১২০</sub>) × ৩৬০° = ২০ × ৩° = <strong>৬০°</strong><br>
+            <em>[যাচাই: ১৫০° + ১২০° + ৩০° + ৬০° = ৩৬০°]</em><br><br>
+            <strong>অঙ্কন পদ্ধতি:</strong> যেকোনো ব্যাসার্ধ নিয়ে একটি বৃত্ত আঁকি। চাঁদার সাহায্যে বৃত্তের কেন্দ্রে ক্রমানুসারে ১৫০°, ১২০°, ৩০° ও ৬০° কোণগুলো চিহ্নিত করে বিভিন্ন রঙ বা হ্যাচিং দিয়ে চিহ্নিত করলে অভীষ্ট পাইচিত্র পাওয়া যায়।
+            <div><span class="result-badge">পাইচিত্রের কোণসমূহ: ১৫০°, ১২০°, ৩০°, ৬০°</span></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== বহুনির্বাচনী প্রশ্ন সমাধান ==================== -->
+    <section id="sec-mcq" class="section-wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">🔘 অংশ—খ: বহুনির্বাচনী অভীক্ষা উত্তরমালা</h2>
+        <span class="sec-badge">পূর্ণমান: ৩০ (৩০টি প্রশ্ন)</span>
+      </div>
+
+      <div id="mcq-container" style="display: flex; flex-direction: column; gap: 14px;">
+        <!-- এখানে ৩০টি MCQ কার্ড লোড হবে -->
+      </div>
+    </section>
+
+    <!-- ==================== সংক্ষিপ্ত প্রশ্ন সমাধান ==================== -->
+    <section id="sec-short" class="section-wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">✍️ অংশ—গ: সংক্ষিপ্ত উত্তর প্রশ্ন সমাধান</h2>
+        <span class="sec-badge">পূর্ণমান: ১০ (১০টি প্রশ্ন)</span>
+      </div>
+
+      <div id="short-container" style="display: flex; flex-direction: column; gap: 10px;">
+        <!-- এখানে ১৫টি সংক্ষিপ্ত প্রশ্ন কার্ড লোড হবে -->
+      </div>
+    </section>
+
+    <!-- ফুটার -->
+    <footer class="footer">
+      <p>গণিত (বার্ষিক মডেল টেস্ট) — শ্রেণি: অষ্টম | NCTB ও JSC প্রমিত পাঠ্যক্রম</p>
+      <p>© ২০২৬ <a href="https://radid.cyou/">radid.cyou</a> • সর্বস্বত্ব সংরক্ষিত</p>
+      <p><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">⬆️ পেজের শীর্ষে যান</a></p>
+    </footer>
+
+  </main>
+
+  <script>
+    // ৩০টি বহুনির্বাচনী প্রশ্নের ডেটা
+    const mcqData = [
+      {
+        num: "১",
+        q: "বার্ষিক ৮% হারে ৫,০০০ টাকার ৩ বছরের সরল মুনাফা কত টাকা?",
+        opts: ["ক) ১,০০০", "খ) ১,২০০", "গ) ১,৫০০", "ঘ) ১,৬০০"],
+        correct: 1, // খ
+        exp: "আমরা জানি, সরল মুনাফা I = Prn = ৫,০০০ × (৮/১০০) × ৩ = ১,২০০ টাকা।"
+      },
+      {
+        num: "২",
+        q: "চক্রবৃদ্ধি মুনাফার ক্ষেত্রে—<br>i. চক্রবৃদ্ধি মূলধন C = P(1 + r)ⁿ<br>ii. চক্রবৃদ্ধি মুনাফা = C − P<br>iii. প্রতি বছরান্তে মূলধন বৃদ্ধি পায়<br>নিচের কোনটি সঠিক?",
+        opts: ["ক) i ও ii", "খ) i ও iii", "গ) ii ও iii", "ঘ) i, ii ও iii"],
+        correct: 3, // ঘ
+        exp: "চক্রবৃদ্ধি মুনাফায় প্রতি বছর মুনাফা আসলের সাথে যুক্ত হয়ে নতুন মূলধন গঠিত হয় এবং তিনটি তথ্যই পাঠ্যবইয়ের প্রমিত সূত্র।"
+      },
+      {
+        num: "৩",
+        q: "কোনো আসল ৩ বছরের সরল মুনাফাসহ দ্বিগুণ হলে, বার্ষিক মুনাফার হার কত?",
+        opts: ["ক) ২৫%", "খ) ৩০%", "গ) ৩৩⅓%", "ঘ) ৫০%"],
+        correct: 2, // গ
+        exp: "মুনাফা I = আসল P; অতএব, r = I / (Pn) = P / (P × ৩) = ⅓ = ৩৩⅓%।"
+      },
+      {
+        num: "৪",
+        q: "১ এয়র সমান কত বর্গমিটার?",
+        opts: ["ক) ১০", "খ) ১০০", "গ) ১,০০০", "ঘ) ১০,০০০"],
+        correct: 1, // খ
+        exp: "মেট্রিক পরিমাপ পদ্ধতি অনুযায়ী ১ এয়র = ১০০ বর্গমিটার এবং ১০০ এয়র = ১ হেক্টর।"
+      },
+      {
+        num: "৫",
+        q: "১ ইঞ্চি সমান কত সেন্টিমিটার (প্রায়)?",
+        opts: ["ক) ২.৫৪", "খ) ২.৪৫", "গ) ৩.২৫", "ঘ) ১.৬১"],
+        correct: 0, // ক
+        exp: "আন্তর্জাতিক রূপান্তর প্রমিতি অনুসারে ১ ইঞ্চি = ২.৫৪ সেন্টিমিটার (প্রায়)।"
+      },
+      {
+        num: "৬",
+        q: "একটি আয়তাকার বাগানের দৈর্ঘ্য ২০ মিটার এবং প্রস্থ ১৫ মিটার হলে, এর পরিসীমা কত মিটার?",
+        opts: ["ক) ৩৫", "খ) ৫০", "গ) ৭০", "ঘ) ৩০০"],
+        correct: 2, // গ
+        exp: "পরিসীমা = ২ × (দৈর্ঘ্য + প্রস্থ) = ২ × (২০ + ১৫) = ২ × ৩৫ = ৭০ মিটার।"
+      },
+      {
+        num: "৭",
+        q: "৪ ডিগ্রি সেলসিয়াস তাপমাত্রায় ১ ঘন সেন্টিমিটার বিশুদ্ধ পানির ওজন কত?",
+        opts: ["ক) ১ গ্রাম", "খ) ১০ গ্রাম", "গ) ১০০ গ্রাম", "ঘ) ১ কিলোগ্রাম"],
+        correct: 0, // ক
+        exp: "৪° সেলসিয়াসে পানির ঘনত্ব সর্বোচ্চ এবং ১ ঘন সেমি পানির আদর্শ ওজন ১ গ্রাম।"
+      },
+      {
+        num: "৮",
+        q: "a + b = 5 এবং a − b = 3 হলে, ab এর মান কত?",
+        opts: ["ক) 2", "খ) 4", "গ) 8", "ঘ) 16"],
+        correct: 1, // খ
+        exp: "ab = [(a + b)² − (a − b)²] / 4 = [5² − 3²] / 4 = (25 − 9) / 4 = 16 / 4 = 4।"
+      },
+      {
+        num: "৯",
+        q: "x − 1/x = 3 হলে, x³ − 1/x³ এর মান কত?",
+        opts: ["ক) 18", "খ) 27", "গ) 36", "ঘ) 45"],
+        correct: 2, // গ
+        exp: "x³ − 1/x³ = (x − 1/x)³ + 3(x − 1/x) = 3³ + 3(3) = 27 + 9 = 36।"
+      },
+      {
+        num: "১০",
+        q: "বীজগণিতের সূত্রানুসারে—<br>i. (a + b)² = a² + 2ab + b²<br>ii. a² − b² = (a + b)(a − b)<br>iii. (a − b)² = (a + b)² − 4ab<br>নিচের কোনটি সঠিক?",
+        opts: ["ক) i ও ii", "খ) i ও iii", "গ) ii ও iii", "ঘ) i, ii ও iii"],
+        correct: 3, // ঘ
+        exp: "বীজগণিতীয় প্রথম দুটি মূল সূত্র এবং তৃতীয়টি প্রমিত অনুসিদ্ধান্ত।"
+      },
+      {
+        num: "১১",
+        q: "x² + 5x + 6 এর উৎপাদকে বিশ্লেষিত রূপ কোনটি?",
+        opts: ["ক) (x + 1)(x + 6)", "খ) (x + 2)(x + 3)", "গ) (x − 2)(x − 3)", "ঘ) (x + 5)(x + 1)"],
+        correct: 1, // খ
+        exp: "x² + 3x + 2x + 6 = x(x + 3) + 2(x + 3) = (x + 2)(x + 3)।"
+      },
+      {
+        num: "১২",
+        q: "(x² − y²) / (x + y) এর লঘিষ্ঠ রূপ কোনটি?",
+        opts: ["ক) x + y", "খ) x − y", "গ) 1/(x − y)", "ঘ) 1"],
+        correct: 1, // খ
+        exp: "লব (x − y)(x + y); হর (x + y) দ্বারা ভাগ করলে অবশিষ্ট থাকে (x − y)।"
+      },
+      {
+        num: "১৩",
+        q: "1/(x − 2) এবং 1/(x + 2) এর যোগফল কত?",
+        opts: ["ক) 2/(x² − 4)", "খ) 2x/(x² − 4)", "গ) 4/(x² − 4)", "ঘ) x/(x² − 4)"],
+        correct: 1, // খ
+        exp: "লসাগু = (x² − 4); লব = (x + 2) + (x − 2) = 2x। ফলাফল = 2x / (x² − 4)।"
+      },
+      {
+        num: "১৪",
+        q: "(a/b) ÷ (c/d) এর সরল মান কোনটি?",
+        opts: ["ক) ac / bd", "খ) ad / bc", "গ) bc / ad", "ঘ) ab / cd"],
+        correct: 1, // খ
+        exp: "ভাগ চিহ্নের বদলে গুণ দিলে দ্বিতীয় ভগ্নাংশটি ব্যস্তকরণ হয়: (a/b) × (d/c) = ad / bc।"
+      },
+      {
+        num: "১৫",
+        q: "x + y = 5 এবং x − y = 1 হলে, (x, y) এর মান কোনটি?",
+        opts: ["ক) (2, 3)", "খ) (3, 2)", "গ) (4, 1)", "ঘ) (5, 0)"],
+        correct: 1, // খ
+        exp: "যোগ করলে 2x = 6 ⇒ x = 3; বিয়োগ করলে 2y = 4 ⇒ y = 2। অতএব (x, y) = (3, 2)।"
+      },
+      {
+        num: "১৬",
+        q: "2x + 3y = 12 সমীকরণে y = 2 হলে, x এর মান কত?",
+        opts: ["ক) 2", "খ) 3", "গ) 4", "ঘ) 6"],
+        correct: 1, // খ
+        exp: "2x + 3(2) = 12 ⇒ 2x + 6 = 12 ⇒ 2x = 6 ⇒ x = 3।"
+      },
+      {
+        num: "১৭",
+        q: "দুটি সংখ্যার যোগফল 10 এবং বিয়োগফল 4 হলে, সংখ্যা দুটি কী কী?",
+        opts: ["ক) 6 ও 4", "খ) 7 ও 3", "গ) 8 ও 2", "ঘ) 5 ও 5"],
+        correct: 1, // খ
+        exp: "বড় সংখ্যা = (10 + 4)/2 = 7; ছোট সংখ্যা = (10 − 4)/2 = 3।"
+      },
+      {
+        num: "১৮",
+        q: "A = {a, b, c} হলে, A সেটের উপসেট সংখ্যা কতটি?",
+        opts: ["ক) 3", "খ) 4", "গ) 6", "ঘ) 8"],
+        correct: 3, // ঘ
+        exp: "উপাদান সংখ্যা n = 3 হলে, উপসেট সংখ্যা = 2ⁿ = 2³ = 8টি।"
+      },
+      {
+        num: "১৯",
+        q: "P = {1, 2, 3} এবং Q = {2, 3, 4} হলে, P ∩ Q কোনটি?",
+        opts: ["ক) {1, 2, 3, 4}", "খ) {2, 3}", "গ) {1, 4}", "ঘ) ∅"],
+        correct: 1, // খ
+        exp: "ছেদ সেট P ∩ Q হলো উভয় সেটের সাধারণ বা কমন উপাদানগুলোর সেট, যা {2, 3}।"
+      },
+      {
+        num: "২০",
+        q: "ফাঁকা সেটের প্রতীক কোনটি?",
+        opts: ["ক) {0}", "খ) ∅ বা { }", "গ) {∅}", "ঘ) 0"],
+        correct: 1, // খ
+        exp: "কোনো উপাদান না থাকলে তাকে ফাঁকা সেট বলে এবং ওরি (∅) বা খালি দ্বিতীয় বন্ধনী দিয়ে প্রকাশ করা হয়।"
+      },
+      {
+        num: "২১",
+        q: "সমকোণী ত্রিভুজের ক্ষেত্রে—<br>i. সমকোণের বিপরীত বাহু হলো অতিভুজ<br>ii. অতিভুজই ত্রিভুজের বৃহত্তম বাহু<br>iii. পিথাগোরাসের উপপাদ্য প্রযোজ্য<br>নিচের কোনটি সঠিক?",
+        opts: ["ক) i ও ii", "খ) i ও iii", "গ) ii ও iii", "ঘ) i, ii ও iii"],
+        correct: 3, // ঘ
+        exp: "সমকোণী ত্রিভুজের তিনটি তথ্যই জ্যামিতিক শতসিদ্ধ ধর্ম।"
+      },
+      {
+        num: "২২",
+        q: "নিচের কোন বাহুগুলোর দৈর্ঘ্য দ্বারা একটি সমকোণী ত্রিভুজ অঙ্কন সম্ভব?",
+        opts: ["ক) ২, ৩, ৪", "খ) ৩, ৪, ৫", "গ) ৪, ৫, ৬", "ঘ) ৫, ৬, ৭"],
+        correct: 1, // খ
+        exp: "৩² + ৪² = ৯ + ১৬ = ২৫ = ৫²; যা পিথাগোরাসের উপপাদ্য সিদ্ধ করে।"
+      },
+      {
+        num: "২৩",
+        q: "একটি সমকোণী ত্রিভুজের অতিভুজ 10 সেমি এবং ভূমি 8 সেমি হলে, লম্বের দৈর্ঘ্য কত সেমি?",
+        opts: ["ক) 4", "খ) 5", "গ) 6", "ঘ) 7"],
+        correct: 2, // গ
+        exp: "লম্ব = √(অতিভুজ² − ভূমি²) = √(10² − 8²) = √(100 − 64) = √36 = 6 সেমি।"
+      },
+      {
+        num: "২৪",
+        q: "বৃত্তের ব্যাস ও ব্যাসার্ধের অনুপাত কত?",
+        opts: ["ক) ১ : ২", "খ) ২ : ১", "গ) ১ : ১", "ঘ) ৪ : ১"],
+        correct: 1, // খ
+        exp: "ব্যাস = 2r এবং ব্যাসার্ধ = r; সুতরাং ব্যাস ও ব্যাসার্ধের অনুপাত = 2r : r = ২ : ১।"
+      },
+      {
+        num: "২৫",
+        q: "বৃত্তের কেন্দ্র থেকে সমদূরবর্তী সকল জ্যা পরস্পর—",
+        opts: ["ক) অসমান", "খ) সমান্তরাল", "গ) সমান", "ঘ) লম্ব"],
+        correct: 2, // গ
+        exp: "NCTB পাঠ্যবইয়ের ১০ম অধ্যায়ের উপপাদ্য ৩ অনুসারে কেন্দ্র থেকে সমদূরবর্তী সকল জ্যা পরস্পর সমান।"
+      },
+      {
+        num: "২৬",
+        q: "একটি বৃত্তের ব্যাসার্ধ 7 সেমি হলে, এর পরিধি কত? (π = 22/7)",
+        opts: ["ক) ২২ সেমি", "খ) ৪৪ সেমি", "গ) ৮৮ সেমি", "ঘ) ১৫৪ সেমি"],
+        correct: 1, // খ
+        exp: "পরিধি = 2πr = ২ × (২২/৭) × ৭ = ৪৪ সেমি।"
+      },
+      {
+        num: "২৭",
+        q: "উপাত্তগুলোর প্রচুরক কত? [উপাত্ত: ২০, ২৫, ২৫, ২৫, ৩০, ৩৫, ৪০]",
+        opts: ["ক) ২০", "খ) ২৫", "গ) ৩০", "ঘ) ৪০"],
+        correct: 1, // খ
+        exp: "প্রদত্ত উপাত্তের মধ্যে ২৫ সংখ্যাটি সর্বাধিক ৩ বার রয়েছে, সুতরাং প্রচুরক ২৫।"
+      },
+      {
+        num: "২৮",
+        q: "উপাত্তগুলোর মধ্যক কত? [উপাত্ত: ২০, ২৫, ২৫, ২৫, ৩০, ৩৫, ৪০]",
+        opts: ["ক) ২০", "খ) ২৫", "গ) ৩০", "ঘ) ৩৫"],
+        correct: 1, // খ
+        exp: "মোট উপাত্ত সংখ্যা n = ৭টি। মানের ক্রমানুসারে সাজালে মধ্যক হলো (৭ + ১)/২ বা ৪র্থ পদ = ২৫।"
+      },
+      {
+        num: "২৯",
+        q: "উপাত্তের সর্বোচ্চ সংখ্যা ৮০ এবং সর্বনিম্ন সংখ্যা ২০ হলে, পরিসর কত?",
+        opts: ["ক) ৬০", "খ) ৬১", "গ) ৫৯", "ঘ) ৮০"],
+        correct: 1, // খ
+        exp: "পরিসর = (সর্বোচ্চ মান − সর্বনিম্ন মান) + ১ = (৮০ − ২০) + ১ = ৬০ + ১ = ৬১।"
+      },
+      {
+        num: "৩০",
+        q: "পাইচিত্রে সমগ্র উপাত্তের জন্য বৃত্তের কেন্দ্রস্থ মোট কোণ কত ডিগ্রি?",
+        opts: ["ক) ৯০°", "খ) ১৮০°", "গ) ২৭০°", "ঘ) ৩৬০°"],
+        correct: 3, // ঘ
+        exp: "যেকোনো বৃত্তের কেন্দ্রে উৎপন্ন মোট কোণের পরিমাপ সর্বদা ৩৬০°।"
+      }
+    ];
+
+    // ১৫টি সংক্ষিপ্ত প্রশ্নের ডেটা
+    const shortData = [
+      {
+        num: "১",
+        q: "বার্ষিক ১০% সরল মুনাফায় ৬,০০০ টাকার ২ বছরের মুনাফা কত?",
+        ans: "১,২০০ টাকা",
+        work: "I = Prn = ৬,০০০ × ০.১০ × ২ = ১,২০০ টাকা।"
+      },
+      {
+        num: "২",
+        q: "চক্রবৃদ্ধি মূলধনের সূত্রটি প্রতীকগুলোর পরিচয়সহ লেখো।",
+        ans: "C = P(1 + r)ⁿ",
+        work: "এখানে, C = চক্রবৃদ্ধি মূলধন, P = প্রারম্ভিক মূলধন (আসল), r = বার্ষিক মুনাফার হার, n = সময় (বছর)।"
+      },
+      {
+        num: "৩",
+        q: "১ একর সমান কত বর্গমিটার?",
+        ans: "৪০৪৬.৮৬ বর্গমিটার (বা প্রায় ৪০৪৭ বর্গমিটার)",
+        work: "মেট্রিক প্রমিত রূপান্তর নিয়ম।"
+      },
+      {
+        num: "৪",
+        q: "একটি ঘনকের এক ধারের দৈর্ঘ্য ৪ সেমি হলে, এর সমগ্র তলের ক্ষেত্রফল কত?",
+        ans: "৯৬ বর্গ সেমি",
+        work: "ঘনকের সমগ্র তল = 6a² = ৬ × ৪² = ৬ × ১৬ = ৯৬ বর্গ সেমি।"
+      },
+      {
+        num: "৫",
+        q: "a + b = 5 এবং a − b = 3 হলে, 4ab এর মান কত?",
+        ans: "16",
+        work: "4ab = (a + b)² − (a − b)² = 5² − 3² = 25 − 9 = 16।"
+      },
+      {
+        num: "৬",
+        q: "x − 1/x = 4 হলে, x² + 1/x² এর মান কত?",
+        ans: "18",
+        work: "x² + 1/x² = (x − 1/x)² + 2 = 4² + 2 = 16 + 2 = 18।"
+      },
+      {
+        num: "৭",
+        q: "(x² − 9) / (x + 3) ভগ্নাংশটিকে লঘিষ্ঠ আকারে প্রকাশ করো।",
+        ans: "x − 3",
+        work: "(x − 3)(x + 3) / (x + 3) = x − 3।"
+      },
+      {
+        num: "৮",
+        q: "x + y = 7 এবং x − y = 3 হলে, (x, y) এর মান কত?",
+        ans: "(5, 2)",
+        work: "যোগ করে 2x = 10 ⇒ x = 5; বিয়োগ করে 2y = 4 ⇒ y = 2।"
+      },
+      {
+        num: "৯",
+        q: "দুটি সংখ্যার যোগফল 16 এবং বিয়োগফল 4 হলে, বড় সংখ্যাটি কত?",
+        ans: "10",
+        work: "বড় সংখ্যা = (যোগফল + বিয়োগফল)/২ = (১৬ + ৪)/২ = ২০/২ = ১০।"
+      },
+      {
+        num: "১০",
+        q: "A = {3, 5, 7} হলে, এর প্রকৃত উপসেট সংখ্যা কয়টি?",
+        ans: "7টি",
+        work: "প্রকৃত উপসেট সংখ্যা = 2ⁿ − 1 = 2³ − 1 = 8 − 1 = 7টি।"
+      },
+      {
+        num: "১১",
+        q: "P = {1, 2, 3} এবং Q = {2, 4} হলে, P \ Q এর মান কত?",
+        ans: "{1, 3}",
+        work: "P হতে Q এর উপাদান বাদ দিলে অবশিষ্ট থাকে {1, 3}।"
+      },
+      {
+        num: "১২",
+        q: "সমকোণী ত্রিভুজের সমকোণ সংলগ্ন বাহুদ্বয় 6 সেমি ও 8 সেমি হলে, অতিভুজ কত?",
+        ans: "10 সেমি",
+        work: "অতিভুজ = √(6² + 8²) = √(36 + 64) = √100 = 10 সেমি।"
+      },
+      {
+        num: "১৩",
+        q: "কোনো বৃত্তের ব্যাস ১৪ সেমি হলে, এর ক্ষেত্রফল কত? (π = 22/7)",
+        ans: "১৫৪ বর্গ সেমি",
+        work: "ব্যাসার্ধ r = ৭ সেমি; ক্ষেত্রফল = πr² = (২২/৭) × ৭² = ১৫৪ বর্গ সেমি।"
+      },
+      {
+        num: "১৪",
+        q: "উপাত্তের সর্বোচ্চ মান ৭৫ এবং সর্বনিম্ন মান ২৫ হলে, ৫ শ্রেণি ব্যবধানে শ্রেণিসংখ্যা কত?",
+        ans: "১১টি",
+        work: "পরিসর = (৭৫ − ২৫) + ১ = ৫১; শ্রেণিসংখ্যা = ৫১ / ৫ = ১০.২ ⇒ ১১টি।"
+      },
+      {
+        num: "১৫",
+        q: "৫, ৭, ৯, ৩, ১১, ১২, ১৫ উপাত্তগুলোর মধ্যক কত?",
+        ans: "৯",
+        work: "ঊর্ধ্বক্রমে সাজিয়ে: ৩, ৫, ৭, ৯, ১১, ১২, ১৫; মধ্যক = ৪র্থ পদ = ৯।"
+      }
+    ];
+
+    const banglaOpts = ['ক', 'খ', 'গ', 'ঘ'];
+
+    // রেন্ডারিং ফাংশন
+    function initPage() {
+      // ১. কুইক গ্রিড
+      const quickGrid = document.getElementById('quick-grid');
+      let quickHtml = '';
+      mcqData.forEach((item, idx) => {
+        const correctLetter = banglaOpts[item.correct];
+        quickHtml += `
+          <a href="#mcq-${idx+1}" class="quick-pill">
+            <span class="quick-q-num">${item.num}:</span>
+            <span class="quick-ans">${correctLetter}</span>
+          </a>
+        `;
+      });
+      quickGrid.innerHTML = quickHtml;
+
+      // ২. ৩০টি MCQ কার্ড
+      const mcqContainer = document.getElementById('mcq-container');
+      let mcqHtml = '';
+      mcqData.forEach((item, idx) => {
+        let optsHtml = '';
+        item.opts.forEach((opt, oIdx) => {
+          const isCorrect = oIdx === item.correct;
+          optsHtml += `
+            <div class="opt-box ${isCorrect ? 'correct' : ''}">
+              <span class="opt-tag">${opt.slice(0, 2)}</span>
+              <span>${opt.slice(2).trim()}</span>
+              ${isCorrect ? '<span style="margin-left: auto; color: #34d399;">✓</span>' : ''}
+            </div>
+          `;
+        });
+
+        mcqHtml += `
+          <article class="mcq-card" id="mcq-${idx+1}" data-search="${item.num} ${item.q.replace(/<[^>]+>/g, '')} ${item.exp}">
+            <div class="mcq-q-title">
+              <span class="mcq-q-num">${item.num}.</span>
+              ${item.q}
+            </div>
+            <div class="mcq-opts-grid">
+              ${optsHtml}
+            </div>
+            <div class="explanation-box">
+              <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+              <strong>${item.opts[item.correct]}</strong> — ${item.exp}
+            </div>
+          </article>
+        `;
+      });
+      mcqContainer.innerHTML = mcqHtml;
+
+      // ৩. ১৫টি সংক্ষিপ্ত কার্ড
+      const shortContainer = document.getElementById('short-container');
+      let shortHtml = '';
+      shortData.forEach((item, idx) => {
+        shortHtml += `
+          <article class="short-card" id="short-${idx+1}" data-search="${item.num} ${item.q} ${item.ans} ${item.work}">
+            <div class="short-q-line">
+              <span class="short-q-num">${item.num}.</span>
+              ${item.q}
+            </div>
+            <div class="short-ans-line">
+              <span class="short-ans-label">সঠিক উত্তর:</span>
+              <span class="short-ans-val">${item.ans}</span>
+              ${item.work ? `<span class="short-working">[${item.work}]</span>` : ''}
+            </div>
+          </article>
+        `;
+      });
+      shortContainer.innerHTML = shortHtml;
+    }
+
+    // সেকশন সুইচ
+    function setSection(type) {
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-' + type);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const secCQ = document.getElementById('sec-srijonshil');
+      const secMCQ = document.getElementById('sec-mcq');
+      const secShort = document.getElementById('sec-short');
+      const quickMCQ = document.getElementById('quick-mcq-wrap');
+
+      if (type === 'all') {
+        secCQ.style.display = 'flex';
+        secMCQ.style.display = 'flex';
+        secShort.style.display = 'flex';
+        quickMCQ.style.display = 'flex';
+      } else if (type === 'srijonshil') {
+        secCQ.style.display = 'flex';
+        secMCQ.style.display = 'none';
+        secShort.style.display = 'none';
+        quickMCQ.style.display = 'none';
+      } else if (type === 'mcq') {
+        secCQ.style.display = 'none';
+        secMCQ.style.display = 'flex';
+        secShort.style.display = 'none';
+        quickMCQ.style.display = 'flex';
+      } else if (type === 'short') {
+        secCQ.style.display = 'none';
+        secMCQ.style.display = 'none';
+        secShort.style.display = 'flex';
+        quickMCQ.style.display = 'none';
+      }
+    }
+
+    // রিয়েলটাইম সার্চ
+    function handleSearch(query) {
+      query = query.trim().toLowerCase();
+      const allCards = document.querySelectorAll('[data-search]');
+      
+      if (!query) {
+        allCards.forEach(c => c.style.display = '');
+        return;
+      }
+
+      allCards.forEach(c => {
+        const text = c.getAttribute('data-search').toLowerCase();
+        if (text.includes(query)) {
+          c.style.display = '';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    // পেজ লোড হলে
+    window.addEventListener('DOMContentLoaded', initPage);
+  </script>
+</body>
+</html>

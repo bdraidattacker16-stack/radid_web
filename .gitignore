@@ -16,3 +16,4 @@ desktop.ini
 # Temporary & logs
 *.log
 .cache/
+scratch/
