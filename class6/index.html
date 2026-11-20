@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — শ্রেণি: ষষ্ঠ | radid.cyou</title>
-  <meta name="title" content="গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — শ্রেণি: ষষ্ঠ | radid.cyou">
-  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত বার্ষিক মূল্যায়ন ও মডেল টেস্ট প্রশ্নপত্র — radid.cyou">
+  <title>ষষ্ঠ শ্রেণি — গণিত (সৃজনশীল ও বহুনির্বাচনী) | radid.cyou</title>
+  <meta name="title" content="ষষ্ঠ শ্রেণি — গণিত (সৃজনশীল ও বহুনির্বাচনী) | radid.cyou">
+  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত: ৮ম অধ্যায় (তথ্য ও উপাত্ত)-এর ২টি সৃজনশীল এবং ৬ষ্ঠ অধ্যায় (জ্যামিতি)-এর ৩০টি বহুনির্বাচনী প্রশ্ন — radid.cyou">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#090b12">
   <link rel="canonical" href="https://radid.cyou/class6/">
 
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
-  <!-- Google Fonts: Noto Sans Bengali & Hind Siliguri -->
+  <!-- Google Fonts: Hind Siliguri & Noto Sans Bengali for authentic Bangla typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px 60px;
+      padding: 28px 16px 60px;
       position: relative;
       overflow-x: hidden;
     }
@@ -69,26 +69,28 @@
       max-width: 680px;
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 24px;
     }
 
-    /* এক্সাম হেডার বক্স */
-    .exam-header {
-      background: rgba(17, 21, 36, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 18px;
-      padding: 24px 20px 20px;
+    /* শীর্ষ শিরোনাম ও বিষয়বস্তু পরিচিতি বক্স (পরীক্ষা কার্ড ছাড়া পরিচ্ছন্ন হেডার) */
+    .page-header {
+      background: rgba(17, 21, 36, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 22px 20px 18px;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       box-shadow: 
         0 20px 45px -12px rgba(0, 0, 0, 0.65),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      text-align: center;
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
       position: relative;
       overflow: hidden;
     }
 
-    .exam-header::before {
+    .page-header::before {
       content: '';
       position: absolute;
       top: 0;
@@ -98,131 +100,80 @@
       background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.8), transparent);
     }
 
-    .exam-badge {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
-      color: #818cf8;
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid rgba(99, 102, 241, 0.25);
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-bottom: 12px;
-      letter-spacing: 0.2px;
-    }
-
-    .exam-title {
+    .page-title {
       font-size: 22px;
-      font-weight: 700;
+      font-weight: 800;
       color: #ffffff;
-      margin-bottom: 12px;
+      text-align: center;
       letter-spacing: -0.2px;
     }
 
-    .exam-meta-pills {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      white-space: nowrap;
-      gap: 6px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 7px 12px;
-      border-radius: 30px;
-      margin: 0 auto 18px;
-      width: fit-content;
-      max-width: 100%;
-      font-size: 13.5px;
-      color: #cbd5e1;
-    }
-
-    .meta-item {
-      font-weight: 500;
-    }
-
-    .meta-dot {
-      color: #64748b;
-      font-size: 10px;
-      line-height: 1;
-    }
-
-    /* সেকশন বাটনস */
-    .exam-nav {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .nav-btn {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 12px;
-      padding: 10px 14px;
+    /* ২ পয়েন্টে পেজের বিষয়বস্তু */
+    .content-summary-box {
       display: flex;
       flex-direction: column;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: #e2e8f0;
+      line-height: 1.45;
+    }
+
+    .point-badge {
+      background: rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(129, 140, 248, 0.45);
+      color: #c7d2fe;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: inherit;
-    }
-
-    .nav-btn:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(129, 140, 248, 0.3);
-      transform: translateY(-1px);
-    }
-
-    .nav-btn.active {
-      background: rgba(99, 102, 241, 0.16);
-      border-color: rgba(129, 140, 248, 0.55);
-      box-shadow: 0 0 15px rgba(99, 102, 241, 0.25);
-    }
-
-    .nav-btn-val {
-      font-size: 17px;
+      font-size: 13.5px;
       font-weight: 700;
-      color: #818cf8;
-      line-height: 1.2;
+      flex-shrink: 0;
     }
 
-    .nav-btn-lbl {
-      font-size: 13px;
-      color: #cbd5e1;
-      font-weight: 500;
+    .summary-item strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .header-action {
+      display: flex;
+      justify-content: center;
       margin-top: 2px;
     }
 
-    .sub-actions {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .sub-btn {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 8px;
-      padding: 6px 14px;
-      font-size: 13px;
-      color: #94a3b8;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      font-family: inherit;
-    }
-
-    .sub-btn:hover {
-      color: #f1f5f9;
+    .print-btn {
       background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 8px;
+      padding: 7px 18px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .sub-btn.active {
-      color: #818cf8;
-      border-color: rgba(129, 140, 248, 0.4);
-      background: rgba(99, 102, 241, 0.08);
+    .print-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
     }
 
     /* সেকশন কার্ড */
@@ -230,7 +181,6 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
-      animation: fadeIn 0.25s ease-out;
     }
 
     .section-title-wrap {
@@ -385,20 +335,19 @@
       box-shadow: 0 0 10px rgba(99, 102, 241, 0.25);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media (max-width: 480px) {
       body {
-        padding: 18px 12px 50px;
+        padding: 20px 12px 50px;
         font-size: 14.5px;
       }
-      .exam-meta-pills {
-        font-size: 12px;
-        padding: 5px 10px;
-        gap: 4px;
+      .page-header {
+        padding: 16px 14px;
+      }
+      .page-title {
+        font-size: 19px;
+      }
+      .summary-item {
+        font-size: 14px;
       }
       .cq-box {
         padding: 16px 14px;
@@ -421,27 +370,37 @@
         padding: 0 !important;
       }
 
-      .ambient-bg, .ambient-grid, .exam-nav, .sub-actions {
+      .ambient-bg, .ambient-grid, .header-action {
         display: none !important;
       }
 
-      .exam-header {
+      .page-header {
         background: none !important;
         border: none !important;
         box-shadow: none !important;
-        padding: 0 0 12px 0 !important;
+        padding: 0 0 10px 0 !important;
         border-bottom: 2px solid #000 !important;
         margin-bottom: 16px !important;
       }
 
-      .exam-title {
+      .page-title {
         color: #000 !important;
       }
 
-      .exam-meta-pills {
-        border: 1px solid #999 !important;
-        color: #222 !important;
+      .content-summary-box {
         background: none !important;
+        border: 1px solid #999 !important;
+        color: #000 !important;
+      }
+
+      .summary-item {
+        color: #000 !important;
+      }
+
+      .point-badge {
+        background: none !important;
+        border: 1px solid #000 !important;
+        color: #000 !important;
       }
 
       .section-wrap {
@@ -495,50 +454,33 @@
 
   <main class="container">
 
-    <!-- এক্সাম হেডার বক্স -->
-    <header class="exam-header">
-      <div class="exam-badge">এনসিটিবি কারিকুলাম ও বার্ষিক মূল্যায়ন স্ট্যান্ডার্ড</div>
-      <h1 class="exam-title">গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট)</h1>
+    <!-- শীর্ষ শিরোনাম ও ২ পয়েন্টে বিষয়বস্তুর পরিচিতি -->
+    <header class="page-header">
+      <h1 class="page-title">ষষ্ঠ শ্রেণি — গণিত</h1>
       
-      <div class="exam-meta-pills">
-        <span class="meta-item">শ্রেণি: ষষ্ঠ</span>
-        <span class="meta-dot">•</span>
-        <span class="meta-item">বিষয়: গণিত</span>
-        <span class="meta-dot">•</span>
-        <span class="meta-item">সৃজনশীল: ২০</span>
-        <span class="meta-dot">•</span>
-        <span class="meta-item">বহুনির্বাচনী: ৩০</span>
-        <span class="meta-dot">•</span>
-        <span class="meta-item">পূর্ণমান: ৫০</span>
+      <div class="content-summary-box">
+        <div class="summary-item">
+          <span class="point-badge">১</span>
+          <span class="summary-text"><strong>২টি সৃজনশীল প্রশ্ন</strong> (৮ম অধ্যায়: তথ্য ও উপাত্ত)</span>
+        </div>
+        <div class="summary-item">
+          <span class="point-badge">২</span>
+          <span class="summary-text"><strong>৩০টি বহুনির্বাচনী প্রশ্ন</strong> (৬ষ্ঠ অধ্যায়: জ্যামিতি — ত্রিভুজ ও চতুর্ভুজ)</span>
+        </div>
       </div>
 
-      <!-- ২টি ক্লিকযোগ্য সেকশন বাটন -->
-      <div class="exam-nav">
-        <button type="button" class="nav-btn active" id="btn-srijonshil" onclick="setSection('srijonshil')">
-          <span class="nav-btn-val">২০</span>
-          <span class="nav-btn-lbl">সৃজনশীল</span>
-        </button>
-        <button type="button" class="nav-btn" id="btn-bohunirbachoni" onclick="setSection('bohunirbachoni')">
-          <span class="nav-btn-val">৩০</span>
-          <span class="nav-btn-lbl">বহুনির্বাচনী</span>
-        </button>
-      </div>
-
-      <!-- অতিরিক্ত বাটন: সবগুলো ও প্রিন্ট -->
-      <div class="sub-actions">
-        <button type="button" class="sub-btn" id="btn-all" onclick="setSection('all')">সবগুলো প্রশ্ন</button>
-        <button type="button" class="sub-btn" onclick="window.print()">🖨️ প্রিন্ট / Save PDF</button>
+      <div class="header-action">
+        <button type="button" class="print-btn" onclick="window.print()">🖨️ প্রিন্ট / Save PDF</button>
       </div>
     </header>
 
-    <!-- ==================== সৃজনশীল প্রশ্ন ==================== -->
-    <div id="sec-srijonshil" class="section-wrap">
+    <!-- ==================== ১. সৃজনশীল প্রশ্ন (তথ্য ও উপাত্ত) ==================== -->
+    <section id="sec-srijonshil" class="section-wrap">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—ক: সৃজনশীল প্রশ্ন (৮ম অধ্যায়: তথ্য ও উপাত্ত)</h2>
+        <h2 class="section-title">১. সৃজনশীল প্রশ্নাবলি (৮ম অধ্যায়: তথ্য ও উপাত্ত)</h2>
       </div>
 
-      <!-- ১ নং প্রশ্ন -->
-      <article class="cq-box" id="cq-1">
+<article class="cq-box" id="cq-1">
         <div class="cq-header">
           <div class="cq-title">১ নং প্রশ্ন</div>
         </div>
@@ -610,12 +552,12 @@
           </li>
         </ul>
       </article>
-    </div>
+    </section>
 
-    <!-- ==================== বহুনির্বাচনী প্রশ্ন ==================== -->
-    <div id="sec-bohunirbachoni" class="section-wrap" style="display: none;">
+    <!-- ==================== ২. বহুনির্বাচনী প্রশ্ন (জ্যামিতি) ==================== -->
+    <section id="sec-bohunirbachoni" class="section-wrap">
       <div class="section-title-wrap">
-        <h2 class="section-title">অংশ—খ: বহুনির্বাচনী প্রশ্ন (৬ষ্ঠ অধ্যায়: জ্যামিতি — ত্রিভুজ ও চতুর্ভুজ)</h2>
+        <h2 class="section-title">২. বহুনির্বাচনী প্রশ্নাবলি (৬ষ্ঠ অধ্যায়: জ্যামিতি — ত্রিভুজ ও চতুর্ভুজ)</h2>
       </div>
 
       <div class="cq-box">
@@ -949,35 +891,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
   </main>
 
   <script>
-    // সেকশন সুইচার
-    function setSection(sec) {
-      const srijonshil = document.getElementById('sec-srijonshil');
-      const bohunirbachoni = document.getElementById('sec-bohunirbachoni');
-
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
-
-      if (sec === 'srijonshil') {
-        srijonshil.style.display = 'flex';
-        bohunirbachoni.style.display = 'none';
-        document.getElementById('btn-srijonshil')?.classList.add('active');
-      } else if (sec === 'bohunirbachoni') {
-        srijonshil.style.display = 'none';
-        bohunirbachoni.style.display = 'flex';
-        document.getElementById('btn-bohunirbachoni')?.classList.add('active');
-      } else if (sec === 'all') {
-        srijonshil.style.display = 'flex';
-        bohunirbachoni.style.display = 'flex';
-        document.getElementById('btn-all')?.classList.add('active');
-      }
-    }
-
-    // MCQ অপশন নির্বাচন
+    // MCQ অপশন নির্বাচন (ট্যাপ বা ক্লিক)
     function toggleSelect(el) {
       const parent = el.parentElement;
       const isAlready = el.classList.contains('selected');
