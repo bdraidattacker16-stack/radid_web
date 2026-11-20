@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — আদর্শ সমাধান ও পূর্ণ উত্তরমালা | শ্রেণি: ৬ষ্ঠ | radid.cyou</title>
-  <meta name="title" content="গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — সম্পূর্ণ সমাধান ও উত্তরমালা | radid.cyou">
-  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত বার্ষিক মূল্যায়ন ও মডেল টেস্টের সৃজনশীল (তথ্য ও উপাত্ত) এবং বহুনির্বাচনী (জ্যামিতি) প্রশ্নের শতভাগ নির্ভুল ও পূর্ণাঙ্গ ব্যাখ্যাসহ আদর্শ সমাধান নির্দেশিকা।">
+  <title>গণিত (মডেল টেস্ট ও অনুশীলন) — পূর্ণাঙ্গ সমাধান ও উত্তরমালা | শ্রেণি: ৬ষ্ঠ | radid.cyou</title>
+  <meta name="title" content="গণিত (মডেল টেস্ট ও অনুশীলন) — পূর্ণাঙ্গ সমাধান ও উত্তরমালা | radid.cyou">
+  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত: তথ্য ও উপাত্ত এবং ব্যবহারিক জ্যামিতির ৫টি সৃজনশীল এবং জ্যামিতির ৩০টি বহুনির্বাচনী প্রশ্নের শতভাগ নির্ভুল ও পূর্ণাঙ্গ সমাধান নির্দেশিকা।">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#090b12">
   <link rel="canonical" href="https://radid.cyou/solve6/">
@@ -14,8 +14,8 @@
   <!-- Open Graph / Social -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://radid.cyou/solve6/">
-  <meta property="og:title" content="গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — আদর্শ সমাধান ও পূর্ণ উত্তরমালা">
-  <meta property="og:description" content="ষষ্ঠ শ্রেণির গণিত বার্ষিক মূল্যায়ন ও মডেল টেস্টের পূর্ণাঙ্গ সমাধান ও উত্তরমালা।">
+  <meta property="og:title" content="গণিত (মডেল টেস্ট ও অনুশীলন) — পূর্ণাঙ্গ সমাধান ও উত্তরমালা">
+  <meta property="og:description" content="ষষ্ঠ শ্রেণির গণিত ৫টি সৃজনশীল ও ৩০টি জ্যামিতি বহুনির্বাচনী প্রশ্নের আদর্শ সমাধান।">
   <meta property="og:image" content="https://radid.cyou/assets/og-image.png">
 
   <!-- ফন্ট: Noto Sans Bengali & Fira Code -->
@@ -85,6 +85,29 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+
+    /* LaTeX-স্টাইল উল্লম্ব ভগ্নাংশ */
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.9em;
+      padding: 0 3px;
+      line-height: 1.1;
+      position: relative;
+    }
+
+    .frac-top {
+      border-bottom: 1.5px solid currentColor;
+      padding-bottom: 1px;
+      font-size: 0.95em;
+    }
+
+    .frac-bottom {
+      padding-top: 1px;
+      font-size: 0.95em;
     }
 
     /* হেডার বক্স */
@@ -655,6 +678,10 @@
         background: #f1f5f9 !important;
         color: #000 !important;
       }
+
+      .frac-top {
+        border-bottom: 1px solid #000 !important;
+      }
     }
 
     @media (max-width: 640px) {
@@ -684,15 +711,15 @@
     <!-- ==================== হেডার কার্ড ==================== -->
     <header class="header-card">
       <div class="badge">এনসিটিবি কারিকুলাম ও বার্ষিক মূল্যায়ন স্ট্যান্ডার্ড</div>
-      <h1 class="exam-title">গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — আদর্শ সমাধান ও পূর্ণ উত্তরমালা</h1>
+      <h1 class="exam-title">গণিত (মডেল টেস্ট ও অনুশীলন) — পূর্ণাঙ্গ সমাধান ও উত্তরমালা</h1>
       
       <div class="meta-pills">
         <span class="meta-pill">শ্রেণি: ষষ্ঠ</span>
         <span class="meta-pill">বিষয়: গণিত</span>
-        <span class="meta-pill">সৃজনশীল: ২০</span>
+        <span class="meta-pill">সৃজনশীল: ৫০ (৫টি প্রশ্ন)</span>
         <span class="meta-pill">বহুনির্বাচনী: ৩০</span>
-        <span class="meta-pill">পূর্ণমান: ৫০</span>
-        <span class="meta-pill highlight">💡 আদর্শ উত্তর নির্দেশিকা</span>
+        <span class="meta-pill">মোট পূর্ণমান: ৮০</span>
+        <span class="meta-pill highlight">💡 আদর্শ সমাধান নির্দেশিকা</span>
       </div>
 
       <!-- সেকশন ফিল্টার বাটনস -->
@@ -701,7 +728,7 @@
           <span>📋 সবগুলো সমাধান</span>
         </button>
         <button type="button" class="nav-btn" id="btn-srijonshil" onclick="setSection('srijonshil')">
-          <span>📝 সৃজনশীল (১–২)</span>
+          <span>📝 সৃজনশীল (১–৫)</span>
         </button>
         <button type="button" class="nav-btn" id="btn-bohunirbachoni" onclick="setSection('bohunirbachoni')">
           <span>🔘 বহুনির্বাচনী (১–৩০)</span>
@@ -711,7 +738,7 @@
       <!-- কুইক সার্চ ইনপুট -->
       <div class="search-box">
         <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" class="search-input" placeholder="যেকোনো প্রশ্ন, বিষয় বা সমাধান খুঁজুন (যেমন: মধ্যক, প্রচুরক, ত্রিভুজ, রম্বস)..." oninput="handleSearch(this.value)">
+        <input type="text" id="search-input" class="search-input" placeholder="যেকোনো প্রশ্ন, বিষয় বা সমাধান খুঁজুন (যেমন: মধ্যক, প্রচুরক, লম্ব, ত্রিকোণী, কোণ)..." oninput="handleSearch(this.value)">
       </div>
 
       <!-- অতিরিক্ত অ্যাকশন বাটনস -->
@@ -731,15 +758,165 @@
         <span>⚡ জ্যামিতি বহুনির্বাচনী দ্রুত উত্তরমালা (OMR / মূল্যায়নের জন্য দ্রুত নির্দেশিকা):</span>
       </div>
       <div class="quick-mcq-grid" id="quick-grid">
-        <!-- JS দিয়ে ১ থেকে ৩০ জেনারেট হবে -->
+
+    <a href="#sol-mcq-1" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-2" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-3" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৩:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-4" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৪:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-5" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৫:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-6" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৬:</span>
+      <span class="quick-ans">ক</span>
+    </a>
+  
+    <a href="#sol-mcq-7" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৭:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-8" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৮:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-9" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৯:</span>
+      <span class="quick-ans">ক</span>
+    </a>
+  
+    <a href="#sol-mcq-10" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১০:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-11" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১১:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-12" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১২:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-13" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৩:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-14" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৪:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-15" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৫:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-16" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৬:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-17" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৭:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-18" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৮:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-19" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৯:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-20" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২০:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-21" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২১:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-22" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২২:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-23" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৩:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-24" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৪:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-25" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৫:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-26" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৬:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-27" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৭:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#sol-mcq-28" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৮:</span>
+      <span class="quick-ans">ঘ</span>
+    </a>
+  
+    <a href="#sol-mcq-29" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৯:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#sol-mcq-30" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৩০:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
       </div>
     </section>
 
     <!-- ==================== সৃজনশীল সমাধান সেকশন ==================== -->
     <section id="sec-srijonshil" class="section-wrap">
       <div class="sec-head">
-        <h2 class="sec-title">📝 অংশ—ক: সৃজনশীল প্রশ্ন সমাধান (৮ম অধ্যায়: তথ্য ও উপাত্ত)</h2>
-        <span class="sec-badge">পূর্ণমান: ২০ (২টি প্রশ্ন × ১০ = ২০)</span>
+        <h2 class="sec-title">📝 অংশ—ক: সৃজনশীল প্রশ্ন সমাধান (তথ্য ও উপাত্ত এবং ব্যবহারিক জ্যামিতি)</h2>
+        <span class="sec-badge">পূর্ণমান: ৫০ (৫টি প্রশ্ন × ১০ = ৫০)</span>
       </div>
 
       <!-- ১ নং প্রশ্ন (তথ্য ও উপাত্ত — গড়, মধ্যক ও প্রচুরক) -->
@@ -781,10 +958,9 @@
             ২০, ১৯, ১৮, ১৭, ১৬, ১৬, ১৫, ১৫, ১৫, ১৪, ১৩, ১২, ১২, ১১, ১০।<br><br>
             <strong>৩. প্রাপ্ত নম্বরের গড় নির্ণয়:</strong><br>
             আমরা জানি, <span class="var">গড় = উপাত্তসমূহের সমষ্টি ÷ উপাত্তসমূহের সংখ্যা</span><br><br>
-            উপাত্তসমূহের সমষ্টি = ১০ + ১১ + ১২ + ১২ + ১৩ + ১৪ + ১৫ + ১৫ + ১৫ + ১৬ + ১৬ + ১৭ + ১৮ + ১৯ + ২০<br>
-            = <strong>২২৩</strong>।<br><br>
+            উপাত্তসমূহের সমষ্টি = ১০ + ১১ + ১২ + ১২ + ১৩ + ১৪ + ১৫ + ১৫ + ১৫ + ১৬ + ১৬ + ১৭ + ১৮ + ১৯ + ২০ = <strong>২২৩</strong>।<br><br>
             এখানে, মোট শিক্ষার্থীর (উপাত্তের) সংখ্যা = ১৫।<br>
-            ∴ নির্ণেয় গড় = <sup>২২৩</sup>/<sub>১৫</sub> = <strong>১৪.৮৭ (প্রায়)</strong> বা ১৪<sup>১৩</sup>/<sub>১৫</sub>।
+            ∴ নির্ণেয় গড় = <span class="frac"><span class="frac-top">২২৩</span><span class="frac-bottom">১৫</span></span> = <strong>১৪.৮৭ (প্রায়)</strong> বা ১৪ <span class="frac"><span class="frac-top">১৩</span><span class="frac-bottom">১৫</span></span>।
             <div><span class="result-badge">উত্তর: ঊর্ধ্বক্রম ও অধঃক্রম সাজানো হলো এবং প্রাপ্ত নম্বরের গড় ১৪.৮৭ (প্রায়)।</span></div>
           </div>
         </div>
@@ -801,8 +977,8 @@
             ১০, ১১, ১২, ১২, ১৩, ১৪, ১৫, <span class="var" style="color: #34d399; font-weight: bold;">১৫</span>, ১৫, ১৬, ১৬, ১৭, ১৮, ১৯, ২০।<br><br>
             এখানে উপাত্তের সংখ্যা, <span class="var">n = ১৫</span>, যা একটি বিজোড় সংখ্যা।<br>
             আমরা জানি, উপাত্তের সংখ্যা বিজোড় হলে,<br>
-            <span class="var">মধ্যক = <sup>(n + ১)</sup>/<sub>২</sub> তম পদের মান</span><br>
-            = <sup>(১৫ + ১)</sup>/<sub>২</sub> তম পদ = <sup>১৬</sup>/<sub>২</sub> তম পদ = <strong>৮ম পদের মান</strong>।<br>
+            <span class="var">মধ্যক = <span class="frac"><span class="frac-top">n + ১</span><span class="frac-bottom">২</span></span> তম পদের মান</span><br>
+            = <span class="frac"><span class="frac-top">১৫ + ১</span><span class="frac-bottom">২</span></span> তম পদ = <span class="frac"><span class="frac-top">১৬</span><span class="frac-bottom">২</span></span> তম পদ = <strong>৮ম পদের মান</strong>।<br>
             সাজানো উপাত্তের ক্রমানুসারে ৮ম পদটি হলো <strong>১৫</strong>।<br>
             ∴ মধ্যক = <strong>১৫</strong>।<br><br>
             <strong>২. প্রচুরক নির্ণয়:</strong><br>
@@ -853,15 +1029,15 @@
             <strong>২. গড় নির্ণয়:</strong><br>
             উপাত্তসমূহের সমষ্টি = ২০ + ২৫ + ২৬ + ২৮ + ৩১ + ৩৪ + ৩৫ + ৩৬ + ৩৬ + ৩৮ = <strong>৩০৯</strong>।<br>
             মোট উপাত্তের সংখ্যা, <span class="var">n = ১০</span>।<br>
-            ∴ নির্ণেয় গড় = <sup>৩০৯</sup>/<sub>১০</sub> = <strong>৩০.৯</strong>।<br><br>
+            ∴ নির্ণেয় গড় = <span class="frac"><span class="frac-top">৩০৯</span><span class="frac-bottom">১০</span></span> = <strong>৩০.৯</strong>।<br><br>
             <strong>৩. মধ্যক নির্ণয়:</strong><br>
             এখানে উপাত্তের সংখ্যা, <span class="var">n = ১০</span>, যা একটি জোড় সংখ্যা।<br>
             আমরা জানি, উপাত্তের সংখ্যা জোড় হলে,<br>
-            <span class="var">মধ্যক = [<sup>n</sup>/<sub>২</sub> তম পদ + (<sup>n</sup>/<sub>২</sub> + ১) তম পদ] ÷ ২</span><br>
-            = [<sup>১০</sup>/<sub>২</sub> তম পদ + (<sup>১০</sup>/<sub>২</sub> + ১) তম পদ] ÷ ২<br>
+            <span class="var">মধ্যক = [<span class="frac"><span class="frac-top">n</span><span class="frac-bottom">২</span></span> তম পদ + (<span class="frac"><span class="frac-top">n</span><span class="frac-bottom">২</span></span> + ১) তম পদ] ÷ ২</span><br>
+            = [<span class="frac"><span class="frac-top">১০</span><span class="frac-bottom">২</span></span> তম পদ + (<span class="frac"><span class="frac-top">১০</span><span class="frac-bottom">২</span></span> + ১) তম পদ] ÷ ২<br>
             = [৫ম পদ + ৬ষ্ঠ পদ] ÷ ২।<br><br>
             সাজানো উপাত্তের ৫ম পদ = <strong>৩১</strong> এবং ৬ষ্ঠ পদ = <strong>৩৪</strong>।<br>
-            ∴ মধ্যক = <sup>(৩১ + ৩৪)</sup>/<sub>২</sub> = <sup>৬৫</sup>/<sub>২</sub> = <strong>৩২.৫</strong>।
+            ∴ মধ্যক = <span class="frac"><span class="frac-top">৩১ + ৩৪</span><span class="frac-bottom">২</span></span> = <span class="frac"><span class="frac-top">৬৫</span><span class="frac-bottom">২</span></span> = <strong>৩২.৫</strong>।
             <div><span class="result-badge">উত্তর: উপাত্তগুলোর গড় ৩০.৯ এবং মধ্যক ৩২.৫।</span></div>
           </div>
         </div>
@@ -899,6 +1075,207 @@
           </div>
         </div>
       </article>
+
+      <!-- ৩ নং প্রশ্ন (ব্যবহারিক জ্যামিতি — সম্পাদ্য ১ ও ৭, ত্রিকোণী) -->
+      <article class="sol-card" id="sol-cq-3" data-search="৩ ব্যবহারিক জ্যামিতি ত্রিকোণী সেট স্কয়ার সম্পাদ্য ১ সম্পাদ্য ৭ রেখাংশ কোণ স্থানান্তর">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৩ নং সৃজনশীল প্রশ্নের সমাধান (ব্যবহারিক জ্যামিতি — সম্পাদ্য ১, ৭ ও ত্রিকোণী)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> AB = ৫ সেমি দৈর্ঘ্যের একটি নির্দিষ্ট রেখাংশ এবং একটি সূক্ষ্মকোণ ∠P।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">জ্যামিতি বক্সের 'ত্রিকোণী' বা সেট স্কয়ারে কী কী পরিমাপের কোণ থাকে এবং এর প্রধান একটি ব্যবহার লেখো।</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            <strong>১. ত্রিকোণীর কোণসমূহের পরিমাপ:</strong><br>
+            জ্যামিতি বক্সে দুই ধরনের ত্রিকোণী (Set Square) থাকে—<br>
+            • প্রথম ত্রিকোণীর কোণগুলো হলো: <strong>৯০°, ৪৫° ও ৪৫°</strong> (সমদ্বিবাহু সমকোণী ত্রিকোণী)।<br>
+            • দ্বিতীয় ত্রিকোণীর কোণগুলো হলো: <strong>৯০°, ৬০° ও ৩০°</strong> (বিষমবাহু সমকোণী ত্রিকোণী)।<br><br>
+            <strong>২. প্রধান ব্যবহার:</strong><br>
+            ত্রিকোণীর সাহায্যে সমান্তরাল রেখা ও লম্ব রেখা অত্যন্ত সহজে ও নির্ভুলভাবে আঁকা যায় এবং চাঁদার সাহায্য ছাড়াই সরাসরি ৩০°, ৪৫°, ৬০° ও ৯০° কোণ আঁকা যায়।
+            <div><span class="result-badge">উত্তর: ত্রিকোণীর কোণসমূহ এবং প্রধান ব্যবহার সুস্পষ্টভাবে বিবৃত।</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">রুলার ও কম্পাসের সাহায্যে প্রদত্ত AB রেখাংশের সমান করে একটি রেখাংশ CD অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>[বিশেষ নির্বচন]:</strong><br>
+            দেওয়া আছে, একটি নির্দিষ্ট রেখাংশ AB = ৫ সেমি। রুলার ও কম্পাসের সাহায্যে AB এর সমান করে একটি রেখাংশ CD আঁকতে হবে।<br><br>
+            <strong>[অঙ্কনের বিবরণ (সম্পাদ্য ১)]:</strong><br>
+            ১. যেকোনো একটি রশ্মি CE আঁকি।<br>
+            ২. কম্পাসের কাঁটা A বিন্দুতে স্থাপন করি এবং পেন্সিলের অগ্রভাগ B বিন্দুতে নিখুঁতভাবে বসিয়ে AB রেখাংশের সমান ব্যাসার্ধ নিই।<br>
+            ৩. ব্যাসার্ধ অপরিবর্তিত রেখে কম্পাসের কাঁটাটি CE রশ্মির আদিবিন্দু C তে স্থাপন করি।<br>
+            ৪. CE রশ্মির ওপর একটি বৃত্তচাপ আঁকি যেন তা রশ্মিটিকে D বিন্দুতে ছেদ করে।<br><br>
+            অতএব, <strong>CD রেখাংশই উদ্দিষ্ট রেখাংশ</strong>, যার দৈর্ঘ্য প্রদত্ত রেখাংশ AB এর সমান (CD = AB = ৫ সেমি)।
+            <div><span class="result-badge">প্রমাণিত: CD রেখাংশটি AB এর সমান করে অঙ্কিত হলো।</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">রুলার ও কম্পাস ব্যবহার করে চাঁদার সাহায্য ছাড়াই প্রদত্ত ∠P কোণের সমান একটি কোণ ∠XOY অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>[বিশেষ নির্বচন]:</strong><br>
+            দেওয়া আছে, একটি নির্দিষ্ট সূক্ষ্মকোণ ∠P। চাঁদার সাহায্য ছাড়া কেবল রুলার ও পেন্সিল কম্পাস দিয়ে ∠P এর সমান করে একটি কোণ ∠XOY আঁকতে হবে।<br><br>
+            <strong>[অঙ্কনের বিবরণ (সম্পাদ্য ৭)]:</strong><br>
+            ১. যেকোনো একটি রশ্মি OX আঁকি।<br>
+            ২. প্রদত্ত ∠P কোণের শীর্ষবিন্দু P কে কেন্দ্র করে যেকোনো সুবিধাজনক ব্যাসার্ধ নিয়ে একটি বৃত্তচাপ আঁকি, যা কোণের বাহু দুটিকে যথাক্রমে E ও F বিন্দুতে ছেদ করে।<br>
+            ৩. একই ব্যাসার্ধ নিয়ে OX রশ্মির প্রারম্ভিক বিন্দু O কে কেন্দ্র করে একটি বৃত্তচাপ আঁকি, যা OX রশ্মিকে M বিন্দুতে ছেদ করে।<br>
+            ৪. এবার প্রদত্ত কোণের E বিন্দুতে কম্পাসের কাঁটা বসিয়ে F বিন্দু পর্যন্ত দূরত্বের সমান (EF এর সমান) ব্যাসার্ধ নিই।<br>
+            ৫. M বিন্দুকে কেন্দ্র করে EF দূরত্বের সমান ব্যাসার্ধ নিয়ে পূর্বের বৃত্তচাপের ওপর আরেকটি বৃত্তচাপ আঁকি। মনে করি বৃত্তচাপদ্বয় পরস্পর N বিন্দুতে ছেদ করে।<br>
+            ৬. O ও N বিন্দু দিয়ে OY রশ্মি টানি।<br><br>
+            অতএব, <strong>∠XOY কোণটিই প্রদত্ত ∠P কোণের সমান কোণ (∠XOY = ∠P)</strong>।
+            <div><span class="result-badge">প্রমাণিত: ∠XOY = ∠P কোণ স্থানান্তরিত ও অঙ্কিত হলো।</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ৪ নং প্রশ্ন (ব্যবহারিক জ্যামিতি — রেখাংশকে চার ভাগে ভাগ ও ৬০° কোণকে সমদ্বিখণ্ডন) -->
+      <article class="sol-card" id="sol-cq-4" data-search="৪ ব্যবহারিক জ্যামিতি ৮ সেমি রেখাংশ চার ভাগ ৬০ ডিগ্রি সমদ্বিখণ্ডিত ৩০ ডিগ্রি">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৪ নং সৃজনশীল প্রশ্নের সমাধান (রেখাংশ চার ভাগে ভাগ ও ৬০° সমদ্বিখণ্ডন)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> একটি রেখাংশের দৈর্ঘ্য ৮ সেমি এবং একটি কোণের পরিমাপ ৬০°।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">জ্যামিতি বক্সে পেন্সিল কম্পাস ও কাঁটা কম্পাসের প্রধান ব্যবহার কী?</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            • <strong>পেন্সিল কম্পাস:</strong> বৃত্ত ও বৃত্তচাপ অঙ্কন করতে এবং নির্দিষ্ট ব্যাসার্ধ নিয়ে কোণ বা রেখাংশ স্থানান্তর করতে ব্যবহৃত হয়।<br>
+            • <strong>কাঁটা কম্পাস (ডিভাইডার):</strong> দুটি বিন্দুর মধ্যবর্তী দূরত্ব নিখুঁতভাবে পরিমাপ করতে, রেখাংশের দৈর্ঘ্য তুলনা করতে এবং দূরত্ব অবিকৃত রেখে স্থানান্তর করতে ব্যবহৃত হয়।
+            <div><span class="result-badge">উত্তর: পেন্সিল কম্পাস ও কাঁটা কম্পাসের ব্যবহার বর্ণিত।</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">রুলার ও কম্পাসের সাহায্যে প্রদত্ত ৮ সেমি রেখাংশটিকে সমান চার ভাগে ভাগ করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>[বিশেষ নির্বচন]:</strong><br>
+            মনে করি, AB = ৮ সেমি একটি প্রদত্ত রেখাংশ। রুলার ও কম্পাসের সাহায্যে AB রেখাংশকে সমান ৪টি অংশে বিভক্ত করতে হবে।<br><br>
+            <strong>[অঙ্কনের বিবরণ]:</strong><br>
+            ১. <strong>প্রথম সমদ্বিখণ্ডন (২ ভাগে ভাগ):</strong><br>
+            • A বিন্দুকে কেন্দ্র করে AB এর অর্ধেকের বেশি ব্যাসার্ধ নিয়ে AB এর উভয় পাশে দুটি বৃত্তচাপ আঁকি。<br>
+            • B বিন্দুকে কেন্দ্র করে একই ব্যাসার্ধ নিয়ে পূর্বের বৃত্তচাপদ্বয়ের ওপর আরও দুটি বৃত্তচাপ আঁকি যেন তারা পরস্পরকে দুটি বিন্দুতে ছেদ করে。<br>
+            • ছেদবিন্দুদ্বয় রুলার দিয়ে যোগ করি। রেখাংশটি AB কে M বিন্দুতে ছেদ করে। ফলে AB রেখাংশটি M বিন্দুতে সমান দুই ভাগে বিভক্ত হয় (AM = MB = ৪ সেমি)।<br>
+            ২. <strong>দ্বিতীয় সমদ্বিখণ্ডন (৪ ভাগে ভাগ):</strong><br>
+            • একইভাবে AM রেখাংশকে লম্বসমদ্বিখণ্ডিত করে মধ্যবিন্দু P নির্ণয় করি (AP = PM = ২ সেমি)।<br>
+            • এবং MB রেখাংশকে একইভাবে লম্বসমদ্বিখণ্ডিত করে মধ্যবিন্দু Q নির্ণয় করি (MQ = QB = ২ সেমি)।<br><br>
+            অতএব, P, M, Q বিন্দু তিনটি AB রেখাংশটিকে যথাক্রমে <strong>AP, PM, MQ ও QB—এই চারটি সমান অংশে বিভক্ত করেছে</strong>, যেখানে প্রতিটি অংশের দৈর্ঘ্য = <span class="frac"><span class="frac-top">৮</span><span class="frac-bottom">৪</span></span> সেমি = <strong>২ সেমি</strong>।
+            <div><span class="result-badge">প্রমাণিত: ৮ সেমি রেখাংশ সমান ৪ ভাগে বিভক্ত হলো।</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">চাঁদা ব্যবহার না করে কেবল রুলার ও কম্পাসের সাহায্যে প্রদত্ত ৬০° কোণটির সমান একটি কোণ আঁকো এবং কোণটিকে সমদ্বিখণ্ডিত করে দেখাও যে উৎপন্ন প্রতিটি কোণ ৩০° (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>[বিশেষ নির্বচন]:</strong><br>
+            চাঁদার সাহায্য ছাড়া রুলার ও পেন্সিল কম্পাস দিয়ে ৬০° কোণ আঁকতে হবে এবং কোণটিকে সমদ্বিখণ্ডিত করে ৩০° কোণ প্রদর্শন করতে হবে।<br><br>
+            <strong>[অঙ্কনের বিবরণ]:</strong><br>
+            ১. <strong>৬০° কোণ অঙ্কন:</strong><br>
+            • যেকোনো একটি রশ্মি AB আঁকি。<br>
+            • A বিন্দুকে কেন্দ্র করে যেকোনো সুবিধাজনক ব্যাসার্ধ নিয়ে একটি বৃত্তচাপ আঁকি, যা AB রশ্মিকে C বিন্দুতে ছেদ করে。<br>
+            • একই ব্যাসার্ধ নিয়ে C বিন্দুকে কেন্দ্র করে ওই বৃত্তচাপের ওপর আরেকটি বৃত্তচাপ আঁকি, যা পূর্বের বৃত্তচাপকে D বিন্দুতে ছেদ করে。<br>
+            • A ও D বিন্দু যোগ করে AD রশ্মিকে বর্ধিত করি। ফলে ∠DAB = ৬০° কোণ উৎপন্ন হলো。<br>
+            ২. <strong>৬০° কোণ সমদ্বিখণ্ডন (৩০° কোণ তৈরি):</strong><br>
+            • এবার C ও D বিন্দুকে কেন্দ্র করে CD দূরত্বের অর্ধেকের বেশি ব্যাসার্ধ নিয়ে ∠DAB এর অভ্যন্তরীণ অঞ্চলে দুটি বৃত্তচাপ আঁকি যা পরস্পর E বিন্দুতে ছেদ করে。<br>
+            • A ও E যোগ করে AE রশ্মি টানি। AE রশ্মি ∠DAB কোণটিকে সমান দুই ভাগে সমদ্বিখণ্ডিত করে。<br><br>
+            অতএব, উৎপন্ন প্রতিটি কোণ <strong>∠DAE = ∠EAB = <span class="frac"><span class="frac-top">৬০°</span><span class="frac-bottom">২</span></span> = ৩০°</strong>।
+            <div><span class="result-badge">প্রমাণিত: প্রতিটি কোণ ৩০° উৎপন্ন হলো।</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ৫ নং প্রশ্ন (ব্যবহারিক জ্যামিতি — লম্বসমদ্বিখণ্ডক ও ৪৫° কোণ অঙ্কন) -->
+      <article class="sol-card" id="sol-cq-5" data-search="৫ ব্যবহারিক জ্যামিতি লম্বসমদ্বিখণ্ডক মধ্যবিন্দু লম্ব ৪৫ ডিগ্রি সমকোণ">
+        <div class="sol-card-header">
+          <div class="sol-q-title">৫ নং সৃজনশীল প্রশ্নের সমাধান (লম্বসমদ্বিখণ্ডক ও ৪৫° কোণ অঙ্কন)</div>
+          <span class="sol-marks">১০ নম্বর</span>
+        </div>
+        <div class="stem-box">
+          <strong>উদ্দীপক:</strong> AB = ৬ সেমি দৈর্ঘ্যের একটি রেখাংশ এবং একটি কোণ ∠X = ৯০°।
+        </div>
+
+        <!-- ক -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(ক)</span><span class="part-q-text">কোনো রেখাংশের লম্বসমদ্বিখণ্ডক আঁকার জন্য কম্পাসে রেখাংশটির কতটুকু ব্যাসার্ধ নিয়ে বৃত্তচাপ আঁকতে হয়?</span></div>
+            <span class="part-marks">[২]</span>
+          </div>
+          <div class="part-body">
+            উত্তর: কোনো রেখাংশের লম্বসমদ্বিখণ্ডক আঁকার জন্য কম্পাসে প্রদত্ত রেখাংশটির <strong>অর্ধেকের বেশি (More than half)</strong> দৈর্ঘ্যের সমান ব্যাসার্ধ নিয়ে রেখাংশটির উভয় পাশে বৃত্তচাপ আঁকতে হয়।<br>
+            *(কারণ ব্যাসার্ধ অর্ধেকের সমান বা কম নিলে বৃত্তচাপ দুটি পরস্পরকে কখনো ছেদ করবে না)*।
+            <div><span class="result-badge">উত্তর: অর্ধেকের বেশি ব্যাসার্ধ নিতে হয়।</span></div>
+          </div>
+        </div>
+
+        <!-- খ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(খ)</span><span class="part-q-text">রুলার ও কম্পাসের সাহায্যে AB রেখাংশের মধ্যবিন্দুতে একটি লম্ব অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>[বিশেষ নির্বচন]:</strong><br>
+            মনে করি, AB = ৬ সেমি একটি নির্দিষ্ট রেখাংশ। এর মধ্যবিন্দু নির্ণয় করে মধ্যবিন্দুতে একটি লম্ব আঁকতে হবে।<br><br>
+            <strong>[অঙ্কনের বিবরণ]:</strong><br>
+            ১. A বিন্দুকে কেন্দ্র করে AB এর অর্ধেকের বেশি ব্যাসার্ধ নিয়ে AB রেখাংশের উভয় পাশে দুটি বৃত্তচাপ আঁকি。<br>
+            ২. একই ব্যাসার্ধ নিয়ে B বিন্দুকে কেন্দ্র করে AB এর উভয় পাশে আরও দুটি বৃত্তচাপ আঁকি যেন তারা পূর্বের বৃত্তচাপদ্বয়কে যথাক্রমে P ও Q বিন্দুতে ছেদ করে。<br>
+            ৩. P ও Q বিন্দু দুটি রুলার দিয়ে যোগ করি। PQ রেখাংশ AB রেখাংশকে M বিন্দুতে ছেদ করে。<br>
+            ৪. এখানে M হলো AB রেখাংশের মধ্যবিন্দু (AM = MB = ৩ সেমি) এবং PM রেখাংশটি AB এর ওপর লম্ব (PM ⊥ AB)।<br><br>
+            অতএব, <strong>PM রেখাংশটিই AB রেখাংশের মধ্যবিন্দু M-এ নির্ণেয় লম্ব</strong>।
+            <div><span class="result-badge">প্রমাণিত: মধ্যবিন্দুতে লম্ব অঙ্কিত হলো।</span></div>
+          </div>
+        </div>
+
+        <!-- গ -->
+        <div class="sol-part">
+          <div class="part-head">
+            <div><span class="part-tag">(গ)</span><span class="part-q-text">চাঁদা ব্যবহার না করে কেবল রুলার ও কম্পাসের সাহায্যে ৪৫° কোণ অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span></div>
+            <span class="part-marks">[৪]</span>
+          </div>
+          <div class="part-body">
+            <strong>[বিশেষ নির্বচন]:</strong><br>
+            রুলার ও পেন্সিল কম্পাসের সাহায্যে চাঁদার সাহায্য ছাড়া ৪৫° কোণ আঁকতে হবে।<br><br>
+            <strong>[অঙ্কনের বিবরণ]:</strong><br>
+            ১. <strong>৯০° (সমকোণ) অঙ্কন:</strong><br>
+            • যেকোনো একটি সরলরেখাংশ AB নিই এবং A বিন্দুতে লম্ব আঁকার জন্য সুবিধাজনক ব্যাসার্ধ নিয়ে বৃত্তচাপ আঁকি。<br>
+            • একই ব্যাসার্ধ নিয়ে পরপর কেটে ৬০° ও ১২০° এর বিন্দু চিহ্নিত করি এবং তাদের মধ্যবর্তী কোণকে সমদ্বিখণ্ডিত করে AC লম্ব টানি। ফলে ∠CAB = ৯০° উৎপন্ন হলো。<br>
+            ২. <strong>৯০° কোণ সমদ্বিখণ্ডন (৪৫° কোণ তৈরি):</strong><br>
+            • সমকোণের বাহুদ্বয়ে উৎপন্ন বৃত্তচাপের ছেদবিন্দু E ও F কে কেন্দ্র করে EF দূরত্বের অর্ধেকের বেশি ব্যাসার্ধ নিয়ে ∠CAB এর অভ্যন্তরীণ অঞ্চলে দুটি বৃত্তচাপ আঁকি, যা পরস্পর D বিন্দুতে ছেদ করে。<br>
+            • A ও D যোগ করে AD রশ্মি টানি। AD রশ্মি ৯০° কোণটিকে সমান দুই ভাগে সমদ্বিখণ্ডিত করেছে。<br><br>
+            অতএব, <strong>∠DAB = <span class="frac"><span class="frac-top">৯০°</span><span class="frac-bottom">২</span></span> = ৪৫° কোণ উৎপন্ন হলো</strong>।
+            <div><span class="result-badge">প্রমাণিত: ৪৫° কোণ অঙ্কিত হলো।</span></div>
+          </div>
+        </div>
+      </article>
     </section>
 
     <!-- ==================== বহুনির্বাচনী প্রশ্ন সমাধান ==================== -->
@@ -909,13 +1286,1153 @@
       </div>
 
       <div id="mcq-container" style="display: flex; flex-direction: column; gap: 14px;">
-        <!-- এখানে ৩০টি MCQ কার্ড স্ক্রিপ্ট দ্বারা লোড হবে -->
+
+    <article class="sol-card mcq-card" id="sol-mcq-1" data-search="১ যে ত্রিভুজের প্রত্যেকটি কোণ ৯০° অপেক্ষা কম, তাকে কী বলে? যে কোণের পরিমাপ ৯০° অপেক্ষা কম তাকে সূক্ষ্মকোণ বলে। কোনো ত্রিভুজের তিনটি কোণই সূক্ষ্মকোণ হলে তাকে সূক্ষ্মকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১.</span>
+        যে ত্রিভুজের প্রত্যেকটি কোণ ৯০° অপেক্ষা কম, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সরলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) সূক্ষ্মকোণী ত্রিভুজ</strong> — যে কোণের পরিমাপ ৯০° অপেক্ষা কম তাকে সূক্ষ্মকোণ বলে। কোনো ত্রিভুজের তিনটি কোণই সূক্ষ্মকোণ হলে তাকে সূক্ষ্মকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-2" data-search="২ বাহুভেদে ত্রিভুজ কত প্রকার? বাহুর দৈর্ঘ্য অনুসারে ত্রিভুজ তিন প্রকার: সমবাহু ত্রিভুজ, সমদ্বিবাহু ত্রিভুজ এবং বিষমবাহু ত্রিভুজ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২.</span>
+        বাহুভেদে ত্রিভুজ কত প্রকার?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>২ প্রকার</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>৩ প্রকার</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৪ প্রকার</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৫ প্রকার</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ৩ প্রকার</strong> — বাহুর দৈর্ঘ্য অনুসারে ত্রিভুজ তিন প্রকার: সমবাহু ত্রিভুজ, সমদ্বিবাহু ত্রিভুজ এবং বিষমবাহু ত্রিভুজ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-3" data-search="৩ পাঠ্যবই অনুযায়ী, প্রত্যেক রম্বস একটি— রম্বসের বিপরীত বাহুগুলো পরস্পর সমান্তরাল হওয়ায় প্রত্যেক রম্বসই মূলত একটি বিশেষ ধরনের সামান্তরিক।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৩.</span>
+        পাঠ্যবই অনুযায়ী, প্রত্যেক রম্বস একটি—
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সামান্তরিক</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>আয়ত</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>বর্গ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সামান্তরিক</strong> — রম্বসের বিপরীত বাহুগুলো পরস্পর সমান্তরাল হওয়ায় প্রত্যেক রম্বসই মূলত একটি বিশেষ ধরনের সামান্তরিক।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-4" data-search="৪ যে ত্রিভুজের একটি কোণ সমকোণ, তাকে কী বলে? যে ত্রিভুজের একটি কোণ এক সমকোণ বা ৯০°, তাকে সমকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৪.</span>
+        যে ত্রিভুজের একটি কোণ সমকোণ, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমকোণী ত্রিভুজ</strong> — যে ত্রিভুজের একটি কোণ এক সমকোণ বা ৯০°, তাকে সমকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-5" data-search="৫ তিনটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে? তিনটি সরলরেখাংশ দ্বারা সীমাবদ্ধ সমতল ক্ষেত্র বা চিত্রকে ত্রিভুজ (Triangle) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৫.</span>
+        তিনটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>চতুর্ভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>কোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সরলরেখা</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ত্রিভুজ</strong> — তিনটি সরলরেখাংশ দ্বারা সীমাবদ্ধ সমতল ক্ষেত্র বা চিত্রকে ত্রিভুজ (Triangle) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-6" data-search="৬ একটি ত্রিভুজে সর্বোচ্চ কয়টি স্থূলকোণ থাকা সম্ভব? ত্রিভুজের তিন কোণের সমষ্টি ১৮০°। স্থূলকোণ ৯০° এর বড় হওয়ায় দুটি স্থূলকোণ থাকলে সমষ্টি ১৮০° অতিক্রম করবে, যা অসম্ভব। তাই সর্বোচ্চ ১টি স্থূলকোণ থাকতে পারে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৬.</span>
+        একটি ত্রিভুজে সর্বোচ্চ কয়টি স্থূলকোণ থাকা সম্ভব?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box correct">
+        <span class="opt-tag">ক)</span>
+        <span>১টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>২টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>একটিও না</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>ক) ১টি</strong> — ত্রিভুজের তিন কোণের সমষ্টি ১৮০°। স্থূলকোণ ৯০° এর বড় হওয়ায় দুটি স্থূলকোণ থাকলে সমষ্টি ১৮০° অতিক্রম করবে, যা অসম্ভব। তাই সর্বোচ্চ ১টি স্থূলকোণ থাকতে পারে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-7" data-search="৭ যে ত্রিভুজের তিনটি বাহুই পরস্পর সমান, তাকে কী বলে? যে ত্রিভুজের তিনটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমবাহু ত্রিভুজ বলে। এর প্রতিটি কোণের মান ৬০°।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৭.</span>
+        যে ত্রিভুজের তিনটি বাহুই পরস্পর সমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমবাহু ত্রিভুজ</strong> — যে ত্রিভুজের তিনটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমবাহু ত্রিভুজ বলে। এর প্রতিটি কোণের মান ৬০°।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-8" data-search="৮ একটি চতুর্ভুজে কয়টি কর্ণ থাকে? যেকোনো চতুর্ভুজের বিপরীত শীর্ষবিন্দু জোড়ার সংযোগকারী রেখাংশকে কর্ণ বলে। একটি চতুর্ভুজে মোট ২টি কর্ণ থাকে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৮.</span>
+        একটি চতুর্ভুজে কয়টি কর্ণ থাকে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>১টি</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>২টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪টি</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ২টি</strong> — যেকোনো চতুর্ভুজের বিপরীত শীর্ষবিন্দু জোড়ার সংযোগকারী রেখাংশকে কর্ণ বলে। একটি চতুর্ভুজে মোট ২টি কর্ণ থাকে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-9" data-search="৯ একটি ত্রিভুজে সর্বোচ্চ কয়টি সমকোণ থাকতে পারে? দুটি সমকোণের সমষ্টিই ১৮০° হয়ে যায়; তাই তৃতীয় কোণ সম্ভব হতো না। ফলে যেকোনো ত্রিভুজে কেবল ১টি সমকোণ থাকতে পারে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৯.</span>
+        একটি ত্রিভুজে সর্বোচ্চ কয়টি সমকোণ থাকতে পারে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box correct">
+        <span class="opt-tag">ক)</span>
+        <span>১টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>২টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪টি</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>ক) ১টি</strong> — দুটি সমকোণের সমষ্টিই ১৮০° হয়ে যায়; তাই তৃতীয় কোণ সম্ভব হতো না। ফলে যেকোনো ত্রিভুজে কেবল ১টি সমকোণ থাকতে পারে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-10" data-search="১০ যে ত্রিভুজের একটি কোণ স্থূলকোণ, তাকে কী বলে? যে ত্রিভুজের একটি কোণের মান ৯০° অপেক্ষা বড় এবং ১৮০° অপেক্ষা ছোট, তাকে স্থূলকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১০.</span>
+        যে ত্রিভুজের একটি কোণ স্থূলকোণ, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) স্থূলকোণী ত্রিভুজ</strong> — যে ত্রিভুজের একটি কোণের মান ৯০° অপেক্ষা বড় এবং ১৮০° অপেক্ষা ছোট, তাকে স্থূলকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-11" data-search="১১ কোণভেদে ত্রিভুজকে কত ভাগে ভাগ করা যায়? কোণের পরিমাপ অনুসারে ত্রিভুজ তিন প্রকার: সূক্ষ্মকোণী ত্রিভুজ, সমকোণী ত্রিভুজ এবং স্থূলকোণী ত্রিভুজ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১১.</span>
+        কোণভেদে ত্রিভুজকে কত ভাগে ভাগ করা যায়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>২ ভাগে</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>৩ ভাগে</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৪ ভাগে</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৫ ভাগে</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ৩ ভাগে</strong> — কোণের পরিমাপ অনুসারে ত্রিভুজ তিন প্রকার: সূক্ষ্মকোণী ত্রিভুজ, সমকোণী ত্রিভুজ এবং স্থূলকোণী ত্রিভুজ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-12" data-search="১২ যে ত্রিভুজের দুইটি বাহু পরস্পর সমান, তাকে কী বলে? যে ত্রিভুজের যেকোনো দুটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমদ্বিবাহু ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১২.</span>
+        যে ত্রিভুজের দুইটি বাহু পরস্পর সমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমদ্বিবাহু ত্রিভুজ</strong> — যে ত্রিভুজের যেকোনো দুটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমদ্বিবাহু ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-13" data-search="১৩ সামান্তরিকের বিপরীত বাহু ও বিপরীত কোণগুলো কেমন হয়? সামান্তরিকের বৈশিষ্ট্য অনুযায়ী এর বিপরীত বাহুদ্বয় পরস্পর সমান ও সমান্তরাল এবং বিপরীত কোণগুলো পরস্পর সমান।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৩.</span>
+        সামান্তরিকের বিপরীত বাহু ও বিপরীত কোণগুলো কেমন হয়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>অসমান</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>পরস্পর সমান</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>পূরক কোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) পরস্পর সমান</strong> — সামান্তরিকের বৈশিষ্ট্য অনুযায়ী এর বিপরীত বাহুদ্বয় পরস্পর সমান ও সমান্তরাল এবং বিপরীত কোণগুলো পরস্পর সমান।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-14" data-search="১৪ যেকোনো ত্রিভুজের তিন কোণের সমষ্টি কত সমকোণ? জ্যামিতির মৌলিক উপপাদ্য অনুসারে, যেকোনো ত্রিভুজের তিনটি অভ্যন্তরীণ কোণের পরিমাপের সমষ্টি ১৮০° বা ২ সমকোণ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৪.</span>
+        যেকোনো ত্রিভুজের তিন কোণের সমষ্টি কত সমকোণ?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>১ সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>২ সমকোণ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩ সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪ সমকোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ২ সমকোণ</strong> — জ্যামিতির মৌলিক উপপাদ্য অনুসারে, যেকোনো ত্রিভুজের তিনটি অভ্যন্তরীণ কোণের পরিমাপের সমষ্টি ১৮০° বা ২ সমকোণ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-15" data-search="১৫ একটি চতুর্ভুজের মোট কয়টি বাহু ও কয়টি শীর্ষবিন্দু থাকে? চারটি রেখাংশ দ্বারা গঠিত আবদ্ধ চিত্রের ৪টি বাহু ও ৪টি কোণ সংলগ্ন শীর্ষবিন্দু থাকে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৫.</span>
+        একটি চতুর্ভুজের মোট কয়টি বাহু ও কয়টি শীর্ষবিন্দু থাকে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>৩টি বাহু ও ৩টি শীর্ষবিন্দু</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>৪টি বাহু ও ৪টি শীর্ষবিন্দু</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৪টি বাহু ও ২টি শীর্ষবিন্দু</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪টি বাহু ও ৬টি শীর্ষবিন্দু</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ৪টি বাহু ও ৪টি শীর্ষবিন্দু</strong> — চারটি রেখাংশ দ্বারা গঠিত আবদ্ধ চিত্রের ৪টি বাহু ও ৪টি কোণ সংলগ্ন শীর্ষবিন্দু থাকে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-16" data-search="১৬ যে চতুর্ভুজের বিপরীত বাহুগুলো পরস্পর সমান্তরাল, তাকে কী বলে? যে চতুর্ভুজের উভয় জোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে সামান্তরিক (Parallelogram) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৬.</span>
+        যে চতুর্ভুজের বিপরীত বাহুগুলো পরস্পর সমান্তরাল, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সামান্তরিক</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বৃত্ত</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সামান্তরিক</strong> — যে চতুর্ভুজের উভয় জোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে সামান্তরিক (Parallelogram) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-17" data-search="১৭ পাঠ্যবই অনুযায়ী "বর্গ একটি রম্বস"—এর মূল কারণ কোনটি? রম্বসের মৌলিক শর্ত হলো এর চারটি বাহুর দৈর্ঘ্য সমান হতে হবে। যেহেতু বর্গেরও চারটি বাহুই সমান, তাই বর্গ একটি বিশেষ রম্বস।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৭.</span>
+        পাঠ্যবই অনুযায়ী "বর্গ একটি রম্বস"—এর মূল কারণ কোনটি?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বর্গের বিপরীত কোণ অসমান</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>বর্গের বাহুগুলো সব সমান</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বর্গের কর্ণদ্বয় অসমান</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>বর্গের কোণগুলো স্থূলকোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) বর্গের বাহুগুলো সব সমান</strong> — রম্বসের মৌলিক শর্ত হলো এর চারটি বাহুর দৈর্ঘ্য সমান হতে হবে। যেহেতু বর্গেরও চারটি বাহুই সমান, তাই বর্গ একটি বিশেষ রম্বস।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-18" data-search="১৮ একটি ত্রিভুজের একটি কোণ সমকোণ এবং দুইটি বাহু পরস্পর সমান হলে, তাকে কী ধরনের ত্রিভুজ বলা হয়? একটি কোণ ৯০° এবং সমকোণ সংলগ্ন দুটি বাহুর দৈর্ঘ্য সমান হলে তাকে সমদ্বিবাহু সমকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৮.</span>
+        একটি ত্রিভুজের একটি কোণ সমকোণ এবং দুইটি বাহু পরস্পর সমান হলে, তাকে কী ধরনের ত্রিভুজ বলা হয়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমদ্বিবাহু সমকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমদ্বিবাহু সমকোণী ত্রিভুজ</strong> — একটি কোণ ৯০° এবং সমকোণ সংলগ্ন দুটি বাহুর দৈর্ঘ্য সমান হলে তাকে সমদ্বিবাহু সমকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-19" data-search="১৯ যে ত্রিভুজের তিনটি বাহুই পরস্পর অসমান, তাকে কী বলে? যে ত্রিভুজের তিনটি বাহুর একটির দৈর্ঘ্যও অপরটির সমান নয়, তাকে বিষমবাহু ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৯.</span>
+        যে ত্রিভুজের তিনটি বাহুই পরস্পর অসমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) বিষমবাহু ত্রিভুজ</strong> — যে ত্রিভুজের তিনটি বাহুর একটির দৈর্ঘ্যও অপরটির সমান নয়, তাকে বিষমবাহু ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-20" data-search="২০ যে আয়তের দুইটি সন্নিহিত বাহু সমান, তাকে কী বলে? আয়তের কোণগুলো সমকোণ। এর সন্নিহিত বাহু দুটি সমান হলে চার বাহুই সমান হয়ে যায়, ফলে তা বর্গে পরিণত হয়।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২০.</span>
+        যে আয়তের দুইটি সন্নিহিত বাহু সমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সামান্তরিক</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>বর্গ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) বর্গ</strong> — আয়তের কোণগুলো সমকোণ। এর সন্নিহিত বাহু দুটি সমান হলে চার বাহুই সমান হয়ে যায়, ফলে তা বর্গে পরিণত হয়।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-21" data-search="২১ চারটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে? চারটি সরলরেখাংশ দ্বারা সীমাবদ্ধ ক্ষেত্রকে চতুর্ভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২১.</span>
+        চারটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>চতুর্ভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বহুভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>কোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) চতুর্ভুজ</strong> — চারটি সরলরেখাংশ দ্বারা সীমাবদ্ধ ক্ষেত্রকে চতুর্ভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-22" data-search="২২ সমকোণী ত্রিভুজের সমকোণ ছাড়া অপর কোণ দুইটি কেমন? সমকোণ ৯০° হওয়ায় অপর দুই কোণের সমষ্টি ৯০° (১৮০° − ৯০° = ৯০°)। ফলে উভয় কোণই অবশ্যই সূক্ষ্মকোণ (৯০° এর কম) হতে হয়।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২২.</span>
+        সমকোণী ত্রিভুজের সমকোণ ছাড়া অপর কোণ দুইটি কেমন?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>উভয়েই সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>উভয়েই স্থূলকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>উভয়েই সূক্ষ্মকোণ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>একটি স্থূলকোণ ও একটি সূক্ষ্মকোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) উভয়েই সূক্ষ্মকোণ</strong> — সমকোণ ৯০° হওয়ায় অপর দুই কোণের সমষ্টি ৯০° (১৮০° − ৯০° = ৯০°)। ফলে উভয় কোণই অবশ্যই সূক্ষ্মকোণ (৯০° এর কম) হতে হয়।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-23" data-search="২৩ একটি ত্রিভুজের মোট কয়টি বাহু ও কোণ (উপাদান) রয়েছে? একটি ত্রিভুজে ৩টি বাহু এবং ৩টি কোণ—মোট ৬টি প্রধান উপাদান থাকে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৩.</span>
+        একটি ত্রিভুজের মোট কয়টি বাহু ও কোণ (উপাদান) রয়েছে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>৪টি</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>৬টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৯টি</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) ৬টি</strong> — একটি ত্রিভুজে ৩টি বাহু এবং ৩টি কোণ—মোট ৬টি প্রধান উপাদান থাকে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-24" data-search="২৪ যে সামান্তরিকের প্রত্যেকটি কোণ সমকোণ, তাকে কী বলে? যে সামান্তরিকের একটি (বা প্রত্যেকটি) কোণ এক সমকোণ বা ৯০°, তাকে আয়ত (Rectangle) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৪.</span>
+        যে সামান্তরিকের প্রত্যেকটি কোণ সমকোণ, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>আয়ত</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>বিষমবাহু চতুর্ভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) আয়ত</strong> — যে সামান্তরিকের একটি (বা প্রত্যেকটি) কোণ এক সমকোণ বা ৯০°, তাকে আয়ত (Rectangle) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-25" data-search="২৫ চতুর্ভুজের বিপরীত শীর্ষবিন্দুদ্বয়ের সংযোগকারী রেখাংশকে কী বলে? চতুর্ভুজের মুখোমুখি অবস্থিত দুটি বিপরীত শীর্ষবিন্দু যোগ করলে কর্ণ গঠিত হয়।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৫.</span>
+        চতুর্ভুজের বিপরীত শীর্ষবিন্দুদ্বয়ের সংযোগকারী রেখাংশকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বাহু</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>মধ্যমা</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>কর্ণ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>উচ্চতা</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) কর্ণ</strong> — চতুর্ভুজের মুখোমুখি অবস্থিত দুটি বিপরীত শীর্ষবিন্দু যোগ করলে কর্ণ গঠিত হয়।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-26" data-search="২৬ একটি ত্রিভুজের বাহু তিনটির দৈর্ঘ্যের সমষ্টিকে কী বলে? যেকোনো বহুভুজের সীমানা নির্দেশক বাহুগুলোর মোট দৈর্ঘ্যকে তার পরিসীমা (Perimeter) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৬.</span>
+        একটি ত্রিভুজের বাহু তিনটির দৈর্ঘ্যের সমষ্টিকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ক্ষেত্রফল</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>পরিসীমা</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>মধ্যমা</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>উচ্চতা</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) পরিসীমা</strong> — যেকোনো বহুভুজের সীমানা নির্দেশক বাহুগুলোর মোট দৈর্ঘ্যকে তার পরিসীমা (Perimeter) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-27" data-search="২৭ চতুর্ভুজের চার কোণের পরিমাপের সমষ্টি কত ডিগ্রি? চতুর্ভুজকে একটি কর্ণ দ্বারা দুটি ত্রিভুজে ভাগ করা যায়। প্রতিটি ত্রিভুজের ১৮০° করে দুই ত্রিভুজের মোট ১৮০° × ২ = ৩৬০° বা ৪ সমকোণ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৭.</span>
+        চতুর্ভুজের চার কোণের পরিমাপের সমষ্টি কত ডিগ্রি?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>১৮০°</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>২৭০°</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>৩৬০°</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৫৪০°</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) ৩৬০°</strong> — চতুর্ভুজকে একটি কর্ণ দ্বারা দুটি ত্রিভুজে ভাগ করা যায়। প্রতিটি ত্রিভুজের ১৮০° করে দুই ত্রিভুজের মোট ১৮০° × ২ = ৩৬০° বা ৪ সমকোণ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-28" data-search="২৮ যে চতুর্ভুজের কেবল একজোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে কী বলে? যে চতুর্ভুজের কেবল এক জোড়া বিপরীত বাহু সমান্তরাল এবং অপর জোড়া অসমান্তরাল, তাকে ট্রাপিজিয়াম বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৮.</span>
+        যে চতুর্ভুজের কেবল একজোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সামান্তরিক</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>আয়ত</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">ঘ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>ঘ) ট্রাপিজিয়াম</strong> — যে চতুর্ভুজের কেবল এক জোড়া বিপরীত বাহু সমান্তরাল এবং অপর জোড়া অসমান্তরাল, তাকে ট্রাপিজিয়াম বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-29" data-search="২৯ সামান্তরিকের কর্ণ দুইটি তাদের ছেদবিন্দুতে কী হয়? সামান্তরিকের একটি মৌলিক বৈশিষ্ট্য হলো—এর কর্ণদ্বয় পরস্পরকে তাদের ছেদবিন্দুতে সমান দুই ভাগে বিভক্ত (সমদ্বিখণ্ডিত) করে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৯.</span>
+        সামান্তরিকের কর্ণ দুইটি তাদের ছেদবিন্দুতে কী হয়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>অসমান থাকে</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমদ্বিখণ্ডিত হয়</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>সমকোণে ছেদ করে</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>একটি অপরটির দ্বিগুণ হয়</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমদ্বিখণ্ডিত হয়</strong> — সামান্তরিকের একটি মৌলিক বৈশিষ্ট্য হলো—এর কর্ণদ্বয় পরস্পরকে তাদের ছেদবিন্দুতে সমান দুই ভাগে বিভক্ত (সমদ্বিখণ্ডিত) করে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="sol-mcq-30" data-search="৩০ যে চতুর্ভুজের চারটি বাহুই সমান কিন্তু কোণগুলো সমকোণ নয়, তাকে কী বলে? চারটি বাহু সমান এবং বিপরীত কোণগুলো সমান কিন্তু কোনো কোণই সমকোণ নয়—এমন চতুর্ভুজকে রম্বস বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৩০.</span>
+        যে চতুর্ভুজের চারটি বাহুই সমান কিন্তু কোণগুলো সমকোণ নয়, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বর্গ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>আয়ত</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>রম্বস</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) রম্বস</strong> — চারটি বাহু সমান এবং বিপরীত কোণগুলো সমান কিন্তু কোনো কোণই সমকোণ নয়—এমন চতুর্ভুজকে রম্বস বলে।
+      </div>
+    </article>
+  
       </div>
     </section>
 
     <!-- ফুটার -->
     <footer class="footer">
-      <p>গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — শ্রেণি: ষষ্ঠ | NCTB প্রমিত কারিকুলাম</p>
+      <p>গণিত (মডেল টেস্ট ও অনুশীলন) — শ্রেণি: ষষ্ঠ | NCTB প্রমিত কারিকুলাম</p>
       <p>© ২০২৬ <a href="https://radid.cyou/">radid.cyou</a> • সর্বস্বত্ব সংরক্ষিত</p>
       <p><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">⬆️ পেজের শীর্ষে যান</a></p>
     </footer>
@@ -923,423 +2440,6 @@
   </main>
 
   <script>
-    // ৩০টি জ্যামিতি বহুনির্বাচনী প্রশ্নের ডেটা
-    const mcqData = [
-  {
-    "num": "১",
-    "q": "যে ত্রিভুজের প্রত্যেকটি কোণ ৯০° অপেক্ষা কম, তাকে কী বলে?",
-    "opts": [
-      "ক) সমকোণী ত্রিভুজ",
-      "খ) স্থূলকোণী ত্রিভুজ",
-      "গ) সূক্ষ্মকোণী ত্রিভুজ",
-      "ঘ) সরলকোণী ত্রিভুজ"
-    ],
-    "correct": 2,
-    "exp": "যে কোণের পরিমাপ ৯০° অপেক্ষা কম তাকে সূক্ষ্মকোণ বলে। কোনো ত্রিভুজের তিনটি কোণই সূক্ষ্মকোণ হলে তাকে সূক্ষ্মকোণী ত্রিভুজ বলে।"
-  },
-  {
-    "num": "২",
-    "q": "বাহুভেদে ত্রিভুজ কত প্রকার?",
-    "opts": [
-      "ক) ২ প্রকার",
-      "খ) ৩ প্রকার",
-      "গ) ৪ প্রকার",
-      "ঘ) ৫ প্রকার"
-    ],
-    "correct": 1,
-    "exp": "বাহুর দৈর্ঘ্য অনুসারে ত্রিভুজ তিন প্রকার: সমবাহু ত্রিভুজ, সমদ্বিবাহু ত্রিভুজ এবং বিষমবাহু ত্রিভুজ।"
-  },
-  {
-    "num": "৩",
-    "q": "পাঠ্যবই অনুযায়ী, প্রত্যেক রম্বস একটি—",
-    "opts": [
-      "ক) ট্রাপিজিয়াম",
-      "খ) সামান্তরিক",
-      "গ) আয়ত",
-      "ঘ) বর্গ"
-    ],
-    "correct": 1,
-    "exp": "রম্বসের বিপরীত বাহুগুলো পরস্পর সমান্তরাল হওয়ায় প্রত্যেক রম্বসই মূলত একটি বিশেষ ধরনের সামান্তরিক।"
-  },
-  {
-    "num": "৪",
-    "q": "যে ত্রিভুজের একটি কোণ সমকোণ, তাকে কী বলে?",
-    "opts": [
-      "ক) সূক্ষ্মকোণী ত্রিভুজ",
-      "খ) সমকোণী ত্রিভুজ",
-      "গ) স্থূলকোণী ত্রিভুজ",
-      "ঘ) সমবাহু ত্রিভুজ"
-    ],
-    "correct": 1,
-    "exp": "যে ত্রিভুজের একটি কোণ এক সমকোণ বা ৯০°, তাকে সমকোণী ত্রিভুজ বলে।"
-  },
-  {
-    "num": "৫",
-    "q": "তিনটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে?",
-    "opts": [
-      "ক) চতুর্ভুজ",
-      "খ) ত্রিভুজ",
-      "গ) কোণ",
-      "ঘ) সরলরেখা"
-    ],
-    "correct": 1,
-    "exp": "তিনটি সরলরেখাংশ দ্বারা সীমাবদ্ধ সমতল ক্ষেত্র বা চিত্রকে ত্রিভুজ (Triangle) বলে।"
-  },
-  {
-    "num": "৬",
-    "q": "একটি ত্রিভুজে সর্বোচ্চ কয়টি স্থূলকোণ থাকা সম্ভব?",
-    "opts": [
-      "ক) ১টি",
-      "খ) ২টি",
-      "গ) ৩টি",
-      "ঘ) একটিও না"
-    ],
-    "correct": 0,
-    "exp": "ত্রিভুজের তিন কোণের সমষ্টি ১৮০°। স্থূলকোণ ৯০° এর বড় হওয়ায় দুটি স্থূলকোণ থাকলে সমষ্টি ১৮০° অতিক্রম করবে, যা অসম্ভব। তাই সর্বোচ্চ ১টি স্থূলকোণ থাকতে পারে।"
-  },
-  {
-    "num": "৭",
-    "q": "যে ত্রিভুজের তিনটি বাহুই পরস্পর সমান, তাকে কী বলে?",
-    "opts": [
-      "ক) সমদ্বিবাহু ত্রিভুজ",
-      "খ) সমবাহু ত্রিভুজ",
-      "গ) বিষমবাহু ত্রিভুজ",
-      "ঘ) সমকোণী ত্রিভুজ"
-    ],
-    "correct": 1,
-    "exp": "যে ত্রিভুজের তিনটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমবাহু ত্রিভুজ বলে। এর প্রতিটি কোণের মান ৬০°।"
-  },
-  {
-    "num": "৮",
-    "q": "একটি চতুর্ভুজে কয়টি কর্ণ থাকে?",
-    "opts": [
-      "ক) ১টি",
-      "খ) ২টি",
-      "গ) ৩টি",
-      "ঘ) ৪টি"
-    ],
-    "correct": 1,
-    "exp": "যেকোনো চতুর্ভুজের বিপরীত শীর্ষবিন্দু জোড়ার সংযোগকারী রেখাংশকে কর্ণ বলে। একটি চতুর্ভুজে মোট ২টি কর্ণ থাকে।"
-  },
-  {
-    "num": "৯",
-    "q": "একটি ত্রিভুজে সর্বোচ্চ কয়টি সমকোণ থাকতে পারে?",
-    "opts": [
-      "ক) ১টি",
-      "খ) ২টি",
-      "গ) ৩টি",
-      "ঘ) ৪টি"
-    ],
-    "correct": 0,
-    "exp": "দুটি সমকোণের সমষ্টিই ১৮০° হয়ে যায়; তাই তৃতীয় কোণ সম্ভব হতো না। ফলে যেকোনো ত্রিভুজে কেবল ১টি সমকোণ থাকতে পারে।"
-  },
-  {
-    "num": "১০",
-    "q": "যে ত্রিভুজের একটি কোণ স্থূলকোণ, তাকে কী বলে?",
-    "opts": [
-      "ক) সূক্ষ্মকোণী ত্রিভুজ",
-      "খ) সমকোণী ত্রিভুজ",
-      "গ) স্থূলকোণী ত্রিভুজ",
-      "ঘ) সমদ্বিবাহু ত্রিভুজ"
-    ],
-    "correct": 2,
-    "exp": "যে ত্রিভুজের একটি কোণের মান ৯০° অপেক্ষা বড় এবং ১৮০° অপেক্ষা ছোট, তাকে স্থূলকোণী ত্রিভুজ বলে।"
-  },
-  {
-    "num": "১১",
-    "q": "কোণভেদে ত্রিভুজকে কত ভাগে ভাগ করা যায়?",
-    "opts": [
-      "ক) ২ ভাগে",
-      "খ) ৩ ভাগে",
-      "গ) ৪ ভাগে",
-      "ঘ) ৫ ভাগে"
-    ],
-    "correct": 1,
-    "exp": "কোণের পরিমাপ অনুসারে ত্রিভুজ তিন প্রকার: সূক্ষ্মকোণী ত্রিভুজ, সমকোণী ত্রিভুজ এবং স্থূলকোণী ত্রিভুজ।"
-  },
-  {
-    "num": "১২",
-    "q": "যে ত্রিভুজের দুইটি বাহু পরস্পর সমান, তাকে কী বলে?",
-    "opts": [
-      "ক) সমবাহু ত্রিভুজ",
-      "খ) সমদ্বিবাহু ত্রিভুজ",
-      "গ) বিষমবাহু ত্রিভুজ",
-      "ঘ) সূক্ষ্মকোণী ত্রিভুজ"
-    ],
-    "correct": 1,
-    "exp": "যে ত্রিভুজের যেকোনো দুটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমদ্বিবাহু ত্রিভুজ বলে।"
-  },
-  {
-    "num": "১৩",
-    "q": "সামান্তরিকের বিপরীত বাহু ও বিপরীত কোণগুলো কেমন হয়?",
-    "opts": [
-      "ক) অসমান",
-      "খ) পরস্পর সমান",
-      "গ) সমকোণ",
-      "ঘ) পূরক কোণ"
-    ],
-    "correct": 1,
-    "exp": "সামান্তরিকের বৈশিষ্ট্য অনুযায়ী এর বিপরীত বাহুদ্বয় পরস্পর সমান ও সমান্তরাল এবং বিপরীত কোণগুলো পরস্পর সমান।"
-  },
-  {
-    "num": "১৪",
-    "q": "যেকোনো ত্রিভুজের তিন কোণের সমষ্টি কত সমকোণ?",
-    "opts": [
-      "ক) ১ সমকোণ",
-      "খ) ২ সমকোণ",
-      "গ) ৩ সমকোণ",
-      "ঘ) ৪ সমকোণ"
-    ],
-    "correct": 1,
-    "exp": "জ্যামিতির মৌলিক উপপাদ্য অনুসারে, যেকোনো ত্রিভুজের তিনটি অভ্যন্তরীণ কোণের পরিমাপের সমষ্টি ১৮০° বা ২ সমকোণ।"
-  },
-  {
-    "num": "১৫",
-    "q": "একটি চতুর্ভুজের মোট কয়টি বাহু ও কয়টি শীর্ষবিন্দু থাকে?",
-    "opts": [
-      "ক) ৩টি বাহু ও ৩টি শীর্ষবিন্দু",
-      "খ) ৪টি বাহু ও ৪টি শীর্ষবিন্দু",
-      "গ) ৪টি বাহু ও ২টি শীর্ষবিন্দু",
-      "ঘ) ৪টি বাহু ও ৬টি শীর্ষবিন্দু"
-    ],
-    "correct": 1,
-    "exp": "চারটি রেখাংশ দ্বারা গঠিত আবদ্ধ চিত্রের ৪টি বাহু ও ৪টি কোণ সংলগ্ন শীর্ষবিন্দু থাকে।"
-  },
-  {
-    "num": "১৬",
-    "q": "যে চতুর্ভুজের বিপরীত বাহুগুলো পরস্পর সমান্তরাল, তাকে কী বলে?",
-    "opts": [
-      "ক) ট্রাপিজিয়াম",
-      "খ) সামান্তরিক",
-      "গ) বৃত্ত",
-      "ঘ) রম্বস"
-    ],
-    "correct": 1,
-    "exp": "যে চতুর্ভুজের উভয় জোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে সামান্তরিক (Parallelogram) বলে।"
-  },
-  {
-    "num": "১৭",
-    "q": "পাঠ্যবই অনুযায়ী \"বর্গ একটি রম্বস\"—এর মূল কারণ কোনটি?",
-    "opts": [
-      "ক) বর্গের বিপরীত কোণ অসমান",
-      "খ) বর্গের বাহুগুলো সব সমান",
-      "গ) বর্গের কর্ণদ্বয় অসমান",
-      "ঘ) বর্গের কোণগুলো স্থূলকোণ"
-    ],
-    "correct": 1,
-    "exp": "রম্বসের মৌলিক শর্ত হলো এর চারটি বাহুর দৈর্ঘ্য সমান হতে হবে। যেহেতু বর্গেরও চারটি বাহুই সমান, তাই বর্গ একটি বিশেষ রম্বস।"
-  },
-  {
-    "num": "১৮",
-    "q": "একটি ত্রিভুজের একটি কোণ সমকোণ এবং দুইটি বাহু পরস্পর সমান হলে, তাকে কী ধরনের ত্রিভুজ বলা হয়?",
-    "opts": [
-      "ক) বিষমবাহু ত্রিভুজ",
-      "খ) সমদ্বিবাহু সমকোণী ত্রিভুজ",
-      "গ) স্থূলকোণী ত্রিভুজ",
-      "ঘ) সমবাহু ত্রিভুজ"
-    ],
-    "correct": 1,
-    "exp": "একটি কোণ ৯০° এবং সমকোণ সংলগ্ন দুটি বাহুর দৈর্ঘ্য সমান হলে তাকে সমদ্বিবাহু সমকোণী ত্রিভুজ বলে।"
-  },
-  {
-    "num": "১৯",
-    "q": "যে ত্রিভুজের তিনটি বাহুই পরস্পর অসমান, তাকে কী বলে?",
-    "opts": [
-      "ক) সমদ্বিবাহু ত্রিভুজ",
-      "খ) সমবাহু ত্রিভুজ",
-      "গ) বিষমবাহু ত্রিভুজ",
-      "ঘ) সমকোণী ত্রিভুজ"
-    ],
-    "correct": 2,
-    "exp": "যে ত্রিভুজের তিনটি বাহুর একটির দৈর্ঘ্যও অপরটির সমান নয়, তাকে বিষমবাহু ত্রিভুজ বলে।"
-  },
-  {
-    "num": "২০",
-    "q": "যে আয়তের দুইটি সন্নিহিত বাহু সমান, তাকে কী বলে?",
-    "opts": [
-      "ক) সামান্তরিক",
-      "খ) রম্বস",
-      "গ) বর্গ",
-      "ঘ) ট্রাপিজিয়াম"
-    ],
-    "correct": 2,
-    "exp": "আয়তের কোণগুলো সমকোণ। এর সন্নিহিত বাহু দুটি সমান হলে চার বাহুই সমান হয়ে যায়, ফলে তা বর্গে পরিণত হয়।"
-  },
-  {
-    "num": "২১",
-    "q": "চারটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে?",
-    "opts": [
-      "ক) ত্রিভুজ",
-      "খ) চতুর্ভুজ",
-      "গ) বহুভুজ",
-      "ঘ) কোণ"
-    ],
-    "correct": 1,
-    "exp": "চারটি সরলরেখাংশ দ্বারা সীমাবদ্ধ ক্ষেত্রকে চতুর্ভুজ বলে।"
-  },
-  {
-    "num": "২২",
-    "q": "সমকোণী ত্রিভুজের সমকোণ ছাড়া অপর কোণ দুইটি কেমন?",
-    "opts": [
-      "ক) উভয়েই সমকোণ",
-      "খ) উভয়েই স্থূলকোণ",
-      "গ) উভয়েই সূক্ষ্মকোণ",
-      "ঘ) একটি স্থূলকোণ ও একটি সূক্ষ্মকোণ"
-    ],
-    "correct": 2,
-    "exp": "সমকোণ ৯০° হওয়ায় অপর দুই কোণের সমষ্টি ৯০° (১৮০° − ৯০° = ৯০°)। ফলে উভয় কোণই অবশ্যই সূক্ষ্মকোণ (৯০° এর কম) হতে হয়।"
-  },
-  {
-    "num": "২৩",
-    "q": "একটি ত্রিভুজের মোট কয়টি বাহু ও কোণ (উপাদান) রয়েছে?",
-    "opts": [
-      "ক) ৩টি",
-      "খ) ৪টি",
-      "গ) ৬টি",
-      "ঘ) ৯টি"
-    ],
-    "correct": 2,
-    "exp": "একটি ত্রিভুজে ৩টি বাহু এবং ৩টি কোণ—মোট ৬টি প্রধান উপাদান থাকে।"
-  },
-  {
-    "num": "২৪",
-    "q": "যে সামান্তরিকের প্রত্যেকটি কোণ সমকোণ, তাকে কী বলে?",
-    "opts": [
-      "ক) রম্বস",
-      "খ) আয়ত",
-      "গ) ট্রাপিজিয়াম",
-      "ঘ) বিষমবাহু চতুর্ভুজ"
-    ],
-    "correct": 1,
-    "exp": "যে সামান্তরিকের একটি (বা প্রত্যেকটি) কোণ এক সমকোণ বা ৯০°, তাকে আয়ত (Rectangle) বলে।"
-  },
-  {
-    "num": "২৫",
-    "q": "চতুর্ভুজের বিপরীত শীর্ষবিন্দুদ্বয়ের সংযোগকারী রেখাংশকে কী বলে?",
-    "opts": [
-      "ক) বাহু",
-      "খ) মধ্যমা",
-      "গ) কর্ণ",
-      "ঘ) উচ্চতা"
-    ],
-    "correct": 2,
-    "exp": "চতুর্ভুজের মুখোমুখি অবস্থিত দুটি বিপরীত শীর্ষবিন্দু যোগ করলে কর্ণ গঠিত হয়।"
-  },
-  {
-    "num": "২৬",
-    "q": "একটি ত্রিভুজের বাহু তিনটির দৈর্ঘ্যের সমষ্টিকে কী বলে?",
-    "opts": [
-      "ক) ক্ষেত্রফল",
-      "খ) পরিসীমা",
-      "গ) মধ্যমা",
-      "ঘ) উচ্চতা"
-    ],
-    "correct": 1,
-    "exp": "যেকোনো বহুভুজের সীমানা নির্দেশক বাহুগুলোর মোট দৈর্ঘ্যকে তার পরিসীমা (Perimeter) বলে।"
-  },
-  {
-    "num": "২৭",
-    "q": "চতুর্ভুজের চার কোণের পরিমাপের সমষ্টি কত ডিগ্রি?",
-    "opts": [
-      "ক) ১৮০°",
-      "খ) ২৭০°",
-      "গ) ৩৬০°",
-      "ঘ) ৫৪০°"
-    ],
-    "correct": 2,
-    "exp": "চতুর্ভুজকে একটি কর্ণ দ্বারা দুটি ত্রিভুজে ভাগ করা যায়। প্রতিটি ত্রিভুজের ১৮০° করে দুই ত্রিভুজের মোট ১৮০° × ২ = ৩৬০° বা ৪ সমকোণ।"
-  },
-  {
-    "num": "২৮",
-    "q": "যে চতুর্ভুজের কেবল একজোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে কী বলে?",
-    "opts": [
-      "ক) সামান্তরিক",
-      "খ) আয়ত",
-      "গ) রম্বস",
-      "ঘ) ট্রাপিজিয়াম"
-    ],
-    "correct": 3,
-    "exp": "যে চতুর্ভুজের কেবল এক জোড়া বিপরীত বাহু সমান্তরাল এবং অপর জোড়া অসমান্তরাল, তাকে ট্রাপিজিয়াম বলে।"
-  },
-  {
-    "num": "২৯",
-    "q": "সামান্তরিকের কর্ণ দুইটি তাদের ছেদবিন্দুতে কী হয়?",
-    "opts": [
-      "ক) অসমান থাকে",
-      "খ) সমদ্বিখণ্ডিত হয়",
-      "গ) সমকোণে ছেদ করে",
-      "ঘ) একটি অপরটির দ্বিগুণ হয়"
-    ],
-    "correct": 1,
-    "exp": "সামান্তরিকের একটি মৌলিক বৈশিষ্ট্য হলো—এর কর্ণদ্বয় পরস্পরকে তাদের ছেদবিন্দুতে সমান দুই ভাগে বিভক্ত (সমদ্বিখণ্ডিত) করে।"
-  },
-  {
-    "num": "৩০",
-    "q": "যে চতুর্ভুজের চারটি বাহুই সমান কিন্তু কোণগুলো সমকোণ নয়, তাকে কী বলে?",
-    "opts": [
-      "ক) বর্গ",
-      "খ) আয়ত",
-      "গ) রম্বস",
-      "ঘ) ট্রাপিজিয়াম"
-    ],
-    "correct": 2,
-    "exp": "চারটি বাহু সমান এবং বিপরীত কোণগুলো সমান কিন্তু কোনো কোণই সমকোণ নয়—এমন চতুর্ভুজকে রম্বস বলে।"
-  }
-];
-
-    const banglaOpts = ['ক', 'খ', 'গ', 'ঘ'];
-
-    // রেন্ডারিং ফাংশন
-    function initPage() {
-      // ১. কুইক গ্রিড (OMR)
-      const quickGrid = document.getElementById('quick-grid');
-      let quickHtml = '';
-      mcqData.forEach((item, idx) => {
-        const correctLetter = banglaOpts[item.correct];
-        quickHtml += `
-          <a href="#mcq-${idx+1}" class="quick-pill">
-            <span class="quick-q-num">${item.num}:</span>
-            <span class="quick-ans">${correctLetter}</span>
-          </a>
-        `;
-      });
-      quickGrid.innerHTML = quickHtml;
-
-      // ২. ৩০টি MCQ কার্ড
-      const mcqContainer = document.getElementById('mcq-container');
-      let mcqHtml = '';
-      mcqData.forEach((item, idx) => {
-        let optsHtml = '';
-        item.opts.forEach((opt, oIdx) => {
-          const isCorrect = oIdx === item.correct;
-          optsHtml += `
-            <div class="opt-box ${isCorrect ? 'correct' : ''}">
-              <span class="opt-tag">${opt.slice(0, 2)}</span>
-              <span>${opt.slice(2).trim()}</span>
-              ${isCorrect ? '<span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>' : ''}
-            </div>
-          `;
-        });
-
-        mcqHtml += `
-          <article class="mcq-card" id="mcq-${idx+1}" data-search="${item.num} ${item.q.replace(/<[^>]+>/g, '')} ${item.exp}">
-            <div class="mcq-q-title">
-              <span class="mcq-q-num">${item.num}.</span>
-              ${item.q}
-            </div>
-            <div class="mcq-opts-grid">
-              ${optsHtml}
-            </div>
-            <div class="explanation-box">
-              <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
-              <strong>${item.opts[item.correct]}</strong> — ${item.exp}
-            </div>
-          </article>
-        `;
-      });
-      mcqContainer.innerHTML = mcqHtml;
-    }
-
     // সেকশন সুইচ
     function setSection(type) {
       document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
@@ -1384,8 +2484,6 @@
         }
       });
     }
-
-    window.addEventListener('DOMContentLoaded', initPage);
   </script>
 </body>
 </html>

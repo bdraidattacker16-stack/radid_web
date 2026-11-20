@@ -6,7 +6,7 @@
 
   <title>ষষ্ঠ শ্রেণি — গণিত (সৃজনশীল ও বহুনির্বাচনী) | radid.cyou</title>
   <meta name="title" content="ষষ্ঠ শ্রেণি — গণিত (সৃজনশীল ও বহুনির্বাচনী) | radid.cyou">
-  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত: ৮ম অধ্যায় (তথ্য ও উপাত্ত)-এর ২টি সৃজনশীল এবং ৬ষ্ঠ অধ্যায় (জ্যামিতি)-এর ৩০টি বহুনির্বাচনী প্রশ্ন — radid.cyou">
+  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত: তথ্য ও উপাত্ত এবং ব্যবহারিক জ্যামিতির ৫টি সৃজনশীল এবং জ্যামিতির ৩০টি বহুনির্বাচনী প্রশ্ন — radid.cyou">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#090b12">
   <link rel="canonical" href="https://radid.cyou/class6/">
@@ -72,7 +72,30 @@
       gap: 24px;
     }
 
-    /* শীর্ষ শিরোনাম ও বিষয়বস্তু পরিচিতি বক্স (পরীক্ষা কার্ড ছাড়া পরিচ্ছন্ন হেডার) */
+    /* LaTeX-স্টাইল উল্লম্ব ভগ্নাংশ */
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.9em;
+      padding: 0 3px;
+      line-height: 1.1;
+      position: relative;
+    }
+
+    .frac-top {
+      border-bottom: 1.5px solid currentColor;
+      padding-bottom: 1px;
+      font-size: 0.95em;
+    }
+
+    .frac-bottom {
+      padding-top: 1px;
+      font-size: 0.95em;
+    }
+
+    /* শীর্ষ শিরোনাম ও বিষয়বস্তু পরিচিতি বক্স */
     .page-header {
       background: rgba(17, 21, 36, 0.85);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -443,6 +466,10 @@
         border: 1px solid #ddd !important;
         color: #111 !important;
       }
+
+      .frac-top {
+        border-bottom: 1px solid #000 !important;
+      }
     }
   </style>
 </head>
@@ -461,7 +488,7 @@
       <div class="content-summary-box">
         <div class="summary-item">
           <span class="point-badge">১</span>
-          <span class="summary-text"><strong>২টি সৃজনশীল প্রশ্ন</strong> (৮ম অধ্যায়: তথ্য ও উপাত্ত)</span>
+          <span class="summary-text"><strong>৫টি সৃজনশীল প্রশ্ন</strong> (৮ম অধ্যায়: তথ্য ও উপাত্ত [২টি] এবং ৭ম অধ্যায়: ব্যবহারিক জ্যামিতি [৩টি])</span>
         </div>
         <div class="summary-item">
           <span class="point-badge">২</span>
@@ -474,15 +501,16 @@
       </div>
     </header>
 
-    <!-- ==================== ১. সৃজনশীল প্রশ্ন (তথ্য ও উপাত্ত) ==================== -->
+    <!-- ==================== ১. সৃজনশীল প্রশ্ন (তথ্য ও উপাত্ত এবং ব্যবহারিক জ্যামিতি) ==================== -->
     <section id="sec-srijonshil" class="section-wrap">
       <div class="section-title-wrap">
-        <h2 class="section-title">১. সৃজনশীল প্রশ্নাবলি (৮ম অধ্যায়: তথ্য ও উপাত্ত)</h2>
+        <h2 class="section-title">১. সৃজনশীল প্রশ্নাবলি (মান বণ্টন: ২ + ৪ + ৪ = ১০)</h2>
       </div>
 
-<article class="cq-box" id="cq-1">
+      <!-- ১ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-1">
         <div class="cq-header">
-          <div class="cq-title">১ নং প্রশ্ন</div>
+          <div class="cq-title">১ নং প্রশ্ন (৮ম অধ্যায়: তথ্য ও উপাত্ত)</div>
         </div>
         <p class="stem-desc">
           ষষ্ঠ শ্রেণির ১৫ জন শিক্ষার্থীর একটি শ্রেণি অভীক্ষায় ২০ নম্বরের মধ্যে প্রাপ্ত নম্বর নিচে দেওয়া হলো:<br>
@@ -519,7 +547,7 @@
       <!-- ২ নং প্রশ্ন -->
       <article class="cq-box" id="cq-2">
         <div class="cq-header">
-          <div class="cq-title">২ নং প্রশ্ন</div>
+          <div class="cq-title">২ নং প্রশ্ন (৮ম অধ্যায়: তথ্য ও উপাত্ত)</div>
         </div>
         <p class="stem-desc">
           একজন শিক্ষার্থীকে ২০ থেকে ৪০ পর্যন্ত সংখ্যাগুলোর মধ্য হতে ১০টি সংখ্যা লিখতে বলায় সে নিম্নোক্ত সংখ্যাগুলো লিখল:<br>
@@ -547,6 +575,114 @@
             <div class="q-left">
               <span class="q-no">গ)</span>
               <span class="q-text">উপাত্তগুলোর প্রচুরক নির্ণয় করো এবং ছক কাগজে উপাত্তসমূহের একটি রেখাচিত্র (Line Graph) অঙ্কন করে এর বিবরণ দাও।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৩ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-3">
+        <div class="cq-header">
+          <div class="cq-title">৩ নং প্রশ্ন (৭ম অধ্যায়: ব্যবহারিক জ্যামিতি)</div>
+        </div>
+        <p class="stem-desc">
+          AB = ৫ সেমি দৈর্ঘ্যের একটি নির্দিষ্ট রেখাংশ এবং একটি সূক্ষ্মকোণ ∠P।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">জ্যামিতি বক্সের 'ত্রিকোণী' বা সেট স্কয়ারে কী কী পরিমাপের কোণ থাকে এবং এর প্রধান একটি ব্যবহার লেখো।</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">রুলার ও কম্পাসের সাহায্যে প্রদত্ত AB রেখাংশের সমান করে একটি রেখাংশ CD অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">রুলার ও কম্পাস ব্যবহার করে চাঁদার সাহায্য ছাড়াই প্রদত্ত ∠P কোণের সমান একটি কোণ ∠XOY অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৪ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-4">
+        <div class="cq-header">
+          <div class="cq-title">৪ নং প্রশ্ন (৭ম অধ্যায়: ব্যবহারিক জ্যামিতি)</div>
+        </div>
+        <p class="stem-desc">
+          একটি রেখাংশের দৈর্ঘ্য ৮ সেমি এবং একটি কোণের পরিমাপ ৬০°।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">জ্যামিতি বক্সে পেন্সিল কম্পাস ও কাঁটা কম্পাসের প্রধান ব্যবহার কী?</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">রুলার ও কম্পাসের সাহায্যে প্রদত্ত ৮ সেমি রেখাংশটিকে সমান চার ভাগে ভাগ করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">চাঁদা ব্যবহার না করে কেবল রুলার ও কম্পাসের সাহায্যে প্রদত্ত ৬০° কোণটির সমান একটি কোণ আঁকো এবং কোণটিকে সমদ্বিখণ্ডিত করে দেখাও যে উৎপন্ন প্রতিটি কোণ ৩০° (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৫ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-5">
+        <div class="cq-header">
+          <div class="cq-title">৫ নং প্রশ্ন (৭ম অধ্যায়: ব্যবহারিক জ্যামিতি)</div>
+        </div>
+        <p class="stem-desc">
+          AB = ৬ সেমি দৈর্ঘ্যের একটি রেখাংশ এবং একটি কোণ ∠X = ৯০°।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">কোনো রেখাংশের লম্বসমদ্বিখণ্ডক আঁকার জন্য কম্পাসে রেখাংশটির আনুমানিক অর্ধেকের বেশি (<span class="frac"><span class="frac-top">১</span><span class="frac-bottom">২</span></span> অংশের বেশি) ব্যাসার্ধ নেওয়ার প্রয়োজন হয় কেন?</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">রুলার ও কম্পাসের সাহায্যে AB রেখাংশের মধ্যবিন্দুতে একটি লম্ব অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">চাঁদা ব্যবহার না করে কেবল রুলার ও কম্পাসের সাহায্যে ৪৫° কোণ অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
             </div>
             <span class="q-marks">[৪]</span>
           </li>
