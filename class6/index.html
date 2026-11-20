@@ -1,137 +1,110 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ষষ্ঠ শ্রেণি — গণিত (৫টি সৃজনশীল ও ৩০টি বহুনির্বাচনী প্রশ্ন)</title>
+  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত — ৫টি সৃজনশীল প্রশ্ন ও ৩০টি বহুনির্বাচনী প্রশ্ন।" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 
-  <title>ষষ্ঠ শ্রেণি — গণিত (সৃজনশীল ও বহুনির্বাচনী) | radid.cyou</title>
-  <meta name="title" content="ষষ্ঠ শ্রেণি — গণিত (সৃজনশীল ও বহুনির্বাচনী) | radid.cyou">
-  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত: তথ্য ও উপাত্ত এবং ব্যবহারিক জ্যামিতির ৫টি সৃজনশীল এবং জ্যামিতির ৩০টি বহুনির্বাচনী প্রশ্ন — radid.cyou">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#090b12">
-  <link rel="canonical" href="https://radid.cyou/class6/">
-
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-
-  <!-- Google Fonts: Hind Siliguri & Noto Sans Bengali for authentic Bangla typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Hind Siliguri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    *, *::before, *::after {
+    /* CSS ভেরিয়েবল ও ডার্ক থিম প্যালেট */
+    :root {
+      --bg-dark: #0a0e17;
+      --card-bg: rgba(18, 24, 38, 0.95);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+      --grid-line: rgba(255, 255, 255, 0.03);
+    }
+
+    * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
-      background-color: #090b12;
-      color: #f1f5f9;
-      font-family: 'Noto Sans Bengali', 'Hind Siliguri', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-      font-size: 15.5px;
-      line-height: 1.6;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 28px 16px 60px;
+      line-height: 1.6;
       position: relative;
       overflow-x: hidden;
+      padding: 24px 16px 80px 16px;
     }
 
-    /* সাইবার দাগ-কাটা (Grid) ও গ্লো ব্যাকগ্রাউন্ড */
+    /* Ambient Background Glow */
     .ambient-bg {
       position: fixed;
-      inset: 0;
-      z-index: -2;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: 
+        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 45%);
       pointer-events: none;
-      background:
-        radial-gradient(720px 440px at 85% 6%, rgba(99, 102, 241, 0.16), transparent 70%),
-        radial-gradient(600px 400px at 10% 85%, rgba(56, 189, 248, 0.12), transparent 70%);
+      z-index: 0;
     }
 
     .ambient-grid {
       position: fixed;
-      inset: 0;
-      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 32px 32px;
       pointer-events: none;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse 95% 80% at 50% 30%, #000 50%, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse 95% 80% at 50% 30%, #000 50%, transparent 100%);
+      z-index: 0;
     }
 
     .container {
-      width: 100%;
-      max-width: 680px;
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 28px;
     }
 
-    /* LaTeX-স্টাইল উল্লম্ব ভগ্নাংশ */
-    .frac {
-      display: inline-flex;
-      flex-direction: column;
-      vertical-align: middle;
-      text-align: center;
-      font-size: 0.9em;
-      padding: 0 3px;
-      line-height: 1.1;
-      position: relative;
-    }
-
-    .frac-top {
-      border-bottom: 1.5px solid currentColor;
-      padding-bottom: 1px;
-      font-size: 0.95em;
-    }
-
-    .frac-bottom {
-      padding-top: 1px;
-      font-size: 0.95em;
-    }
-
-    /* শীর্ষ শিরোনাম ও বিষয়বস্তু পরিচিতি বক্স */
+    /* পেজ হেডার */
     .page-header {
-      background: rgba(17, 21, 36, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 22px 20px 18px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 
-        0 20px 45px -12px rgba(0, 0, 0, 0.65),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      padding: 20px 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 10%;
-      right: 10%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.8), transparent);
+      gap: 16px;
     }
 
     .page-title {
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 26px;
+      font-weight: 700;
       color: #ffffff;
       text-align: center;
-      letter-spacing: -0.2px;
+      letter-spacing: -0.3px;
     }
 
-    /* ২ পয়েন্টে পেজের বিষয়বস্তু */
+    /* ২ পয়েন্টে পরিচিতি বক্স */
     .content-summary-box {
       display: flex;
       flex-direction: column;
@@ -147,98 +120,116 @@
       align-items: center;
       gap: 12px;
       font-size: 15px;
-      color: #e2e8f0;
-      line-height: 1.45;
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+
+    .highlight-summary-item {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
     }
 
     .point-badge {
-      background: rgba(99, 102, 241, 0.2);
-      border: 1px solid rgba(129, 140, 248, 0.45);
-      color: #c7d2fe;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 13.5px;
+      width: 24px;
+      height: 24px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 6px;
+      color: var(--accent-blue);
+      font-size: 13px;
       font-weight: 700;
       flex-shrink: 0;
     }
 
-    .summary-item strong {
-      color: #ffffff;
-      font-weight: 700;
+    .highlight-point-badge {
+      background: rgba(245, 158, 11, 0.25);
+      border-color: rgba(245, 158, 11, 0.5);
+      color: #fbbf24;
+      font-weight: 800;
     }
 
-    .header-action {
+    .summary-text {
+      flex: 1;
       display: flex;
-      justify-content: center;
-      margin-top: 2px;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
-    .print-btn {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 8px;
-      padding: 7px 18px;
-      font-size: 13.5px;
-      color: #cbd5e1;
-      cursor: pointer;
-      font-family: inherit;
-      transition: all 0.15s ease;
+    /* হাইলাইট চিপ */
+    .cq-highlight-chip {
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(217, 119, 6, 0.3));
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #fbbf24;
+      padding: 3px 12px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.15);
     }
 
-    .print-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
-      border-color: rgba(255, 255, 255, 0.25);
-      transform: translateY(-1px);
+    /* প্রশ্ন কাউন্টার ব্যাজ */
+    .cq-counter-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      letter-spacing: 0.3px;
     }
 
     /* সেকশন কার্ড */
     .section-wrap {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
 
     .section-title-wrap {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding-bottom: 8px;
-      margin-top: 4px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 10px;
     }
 
     .section-title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
-      color: #f8fafc;
-      letter-spacing: -0.2px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    /* সৃজনশীল কার্ড */
+    /* সৃজনশীল প্রশ্নের বক্স */
     .cq-box {
-      background: rgba(17, 21, 36, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 16px;
-      padding: 22px 24px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 
-        0 20px 45px -12px rgba(0, 0, 0, 0.65),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
-      transition: border-color 0.2s ease;
-    }
-
-    .cq-box:hover {
-      border-color: rgba(129, 140, 248, 0.3);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     }
 
     .cq-header {
       margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .cq-title {
@@ -252,12 +243,13 @@
 
     .stem-desc {
       color: #e2e8f0;
-      line-height: 1.65;
+      line-height: 1.7;
       font-size: 15px;
     }
 
     .divider {
-      border-top: 1px dashed rgba(255, 255, 255, 0.18);
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
       margin: 14px 0;
     }
 
@@ -265,45 +257,40 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     .q-item {
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
-      gap: 12px;
+      gap: 8px;
     }
 
     .q-left {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       flex: 1;
     }
 
     .q-no {
       font-weight: 600;
       white-space: nowrap;
-      color: #818cf8;
+      font-family: inherit;
+      color: var(--accent-blue);
+      font-size: 15px;
+      flex-shrink: 0;
     }
 
     .q-text {
-      color: #e2e8f0;
-      line-height: 1.55;
-    }
-
-    .q-marks {
-      font-weight: 600;
-      white-space: nowrap;
-      font-family: inherit;
-      color: #94a3b8;
-      font-size: 14px;
+      color: #f1f5f9;
+      font-size: 15px;
+      line-height: 1.6;
     }
 
     /* বহুনির্বাচনী স্টাইল */
     .mcq-item {
       padding: 16px 0;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
     }
 
     .mcq-item:last-child {
@@ -311,77 +298,71 @@
       padding-bottom: 0;
     }
 
-    .mcq-item:first-child {
-      padding-top: 0;
-    }
-
     .mcq-stem {
-      color: #f8fafc;
+      font-size: 16px;
       font-weight: 600;
-      margin-bottom: 10px;
-      font-size: 15.5px;
+      color: #ffffff;
+      margin-bottom: 12px;
       line-height: 1.5;
     }
 
     .mcq-options {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .mcq-options {
+        grid-template-columns: 1fr;
+      }
     }
 
     .mcq-opt {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 8px;
+      padding: 10px 14px;
       font-size: 14.5px;
       color: #cbd5e1;
       cursor: pointer;
       user-select: none;
-      transition: all 0.15s ease;
+      transition: all 0.2s ease;
       display: flex;
       align-items: center;
     }
 
     .mcq-opt:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(129, 140, 248, 0.4);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.16);
       color: #ffffff;
-      transform: translateY(-1px);
     }
 
     .mcq-opt.selected {
-      background: rgba(99, 102, 241, 0.22);
-      border-color: rgba(129, 140, 248, 0.7);
-      color: #c7d2fe;
+      background: rgba(56, 189, 248, 0.12);
+      border-color: var(--accent-blue);
+      color: #ffffff;
       font-weight: 600;
-      box-shadow: 0 0 10px rgba(99, 102, 241, 0.25);
     }
 
-    @media (max-width: 480px) {
-      body {
-        padding: 20px 12px 50px;
-        font-size: 14.5px;
-      }
-      .page-header {
-        padding: 16px 14px;
-      }
-      .page-title {
-        font-size: 19px;
-      }
-      .summary-item {
-        font-size: 14px;
-      }
-      .cq-box {
-        padding: 16px 14px;
-      }
-      .mcq-options {
-        grid-template-columns: 1fr;
-      }
-      .mcq-opt {
-        padding: 7px 11px;
-        font-size: 14px;
-      }
+    /* ভগ্নাংশের ল্যাটেক্স স্টাইল */
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.9em;
+      padding: 0 3px;
+      line-height: 1.1;
+    }
+
+    .frac-top {
+      border-bottom: 1.5px solid currentColor;
+      padding-bottom: 1px;
+    }
+
+    .frac-bottom {
+      padding-top: 1px;
     }
 
     /* প্রিন্ট স্টাইল */
@@ -393,7 +374,7 @@
         padding: 0 !important;
       }
 
-      .ambient-bg, .ambient-grid, .header-action {
+      .ambient-bg, .ambient-grid {
         display: none !important;
       }
 
@@ -403,7 +384,6 @@
         box-shadow: none !important;
         padding: 0 0 10px 0 !important;
         border-bottom: 2px solid #000 !important;
-        margin-bottom: 16px !important;
       }
 
       .page-title {
@@ -417,6 +397,12 @@
       }
 
       .summary-item {
+        color: #000 !important;
+      }
+
+      .cq-highlight-chip, .cq-counter-badge {
+        background: none !important;
+        border: 1px solid #000 !important;
         color: #000 !important;
       }
 
@@ -441,6 +427,10 @@
         page-break-inside: avoid;
         margin-bottom: 12px !important;
         padding: 12px !important;
+      }
+
+      .cq-title {
+        color: #000 !important;
       }
 
       .stem-desc, .q-text {
@@ -486,31 +476,31 @@
       <h1 class="page-title">ষষ্ঠ শ্রেণি — গণিত</h1>
       
       <div class="content-summary-box">
-        <div class="summary-item">
-          <span class="point-badge">১</span>
-          <span class="summary-text"><strong>৫টি সৃজনশীল প্রশ্ন</strong> (৮ম অধ্যায়: তথ্য ও উপাত্ত [২টি] এবং ৭ম অধ্যায়: ব্যবহারিক জ্যামিতি [৩টি])</span>
+        <div class="summary-item highlight-summary-item">
+          <span class="point-badge highlight-point-badge">১</span>
+          <span class="summary-text"><span class="cq-highlight-chip">✨ মোট ৫টি সৃজনশীল প্রশ্ন</span></span>
         </div>
         <div class="summary-item">
           <span class="point-badge">২</span>
-          <span class="summary-text"><strong>৩০টি বহুনির্বাচনী প্রশ্ন</strong> (৬ষ্ঠ অধ্যায়: জ্যামিতি — ত্রিভুজ ও চতুর্ভুজ)</span>
+          <span class="summary-text"><strong>৩০টি বহুনির্বাচনী প্রশ্ন</strong></span>
         </div>
-      </div>
-
-      <div class="header-action">
-        <button type="button" class="print-btn" onclick="window.print()">🖨️ প্রিন্ট / Save PDF</button>
       </div>
     </header>
 
-    <!-- ==================== ১. সৃজনশীল প্রশ্ন (তথ্য ও উপাত্ত এবং ব্যবহারিক জ্যামিতি) ==================== -->
+    <!-- ==================== ১. সৃজনশীল প্রশ্নাবলি ==================== -->
     <section id="sec-srijonshil" class="section-wrap">
       <div class="section-title-wrap">
-        <h2 class="section-title">১. সৃজনশীল প্রশ্নাবলি (মান বণ্টন: ২ + ৪ + ৪ = ১০)</h2>
+        <h2 class="section-title">
+          ১. সৃজনশীল প্রশ্নাবলি
+          <span class="cq-highlight-chip">মোট ৫টি</span>
+        </h2>
       </div>
 
       <!-- ১ নং প্রশ্ন -->
       <article class="cq-box" id="cq-1">
         <div class="cq-header">
-          <div class="cq-title">১ নং প্রশ্ন (৮ম অধ্যায়: তথ্য ও উপাত্ত)</div>
+          <div class="cq-title">১ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ১ / ৫</span>
         </div>
         <p class="stem-desc">
           ষষ্ঠ শ্রেণির ১৫ জন শিক্ষার্থীর একটি শ্রেণি অভীক্ষায় ২০ নম্বরের মধ্যে প্রাপ্ত নম্বর নিচে দেওয়া হলো:<br>
@@ -525,21 +515,18 @@
               <span class="q-no">ক)</span>
               <span class="q-text">কালামের গণিতে প্রাপ্ত নম্বর ১৫; আবার ষষ্ঠ শ্রেণির শিক্ষার্থীদের গড় নম্বর ১৫—এই দুই তথ্যের কোনটি দ্বারা পরিসংখ্যান বোঝায় এবং কেন?</span>
             </div>
-            <span class="q-marks">[২]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">খ)</span>
               <span class="q-text">উদ্দীপকের উপাত্তগুলোকে মানের ঊর্ধ্বক্রমানুসারে ও অধঃক্রমানুসারে সাজাও এবং শিক্ষার্থীদের প্রাপ্ত নম্বরের গড় নির্ণয় করো।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">গ)</span>
               <span class="q-text">উপাত্তগুলোর মধ্যক ও প্রচুরক নির্ণয় করো।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
         </ul>
       </article>
@@ -547,7 +534,8 @@
       <!-- ২ নং প্রশ্ন -->
       <article class="cq-box" id="cq-2">
         <div class="cq-header">
-          <div class="cq-title">২ নং প্রশ্ন (৮ম অধ্যায়: তথ্য ও উপাত্ত)</div>
+          <div class="cq-title">২ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ২ / ৫</span>
         </div>
         <p class="stem-desc">
           একজন শিক্ষার্থীকে ২০ থেকে ৪০ পর্যন্ত সংখ্যাগুলোর মধ্য হতে ১০টি সংখ্যা লিখতে বলায় সে নিম্নোক্ত সংখ্যাগুলো লিখল:<br>
@@ -560,23 +548,20 @@
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">ক)</span>
-              <span class="q-text">উপাত্ত ও বিন্যস্ত উপাত্ত কাকে বলে?</span>
+              <span class="q-text">উপরে উল্লিখিত সংখ্যাগুলোর মধ্য হতে প্রথম তিনটি ও শেষ তিনটি মৌলিক সংখ্যা পৃথক করো।</span>
             </div>
-            <span class="q-marks">[২]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">খ)</span>
-              <span class="q-text">উপাত্তগুলোকে মানের ঊর্ধ্বক্রমানুসারে সাজিয়ে তাদের গড় এবং মধ্যক নির্ণয় করো।</span>
+              <span class="q-text">সংখ্যাগুলোর গড় নির্ণয় করো।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">গ)</span>
-              <span class="q-text">উপাত্তগুলোর প্রচুরক নির্ণয় করো এবং ছক কাগজে উপাত্তসমূহের একটি রেখাচিত্র (Line Graph) অঙ্কন করে এর বিবরণ দাও।</span>
+              <span class="q-text">উপাত্তগুলোর প্রচুরক ও মধ্যক নির্ণয় করো।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
         </ul>
       </article>
@@ -584,10 +569,11 @@
       <!-- ৩ নং প্রশ্ন -->
       <article class="cq-box" id="cq-3">
         <div class="cq-header">
-          <div class="cq-title">৩ নং প্রশ্ন (৭ম অধ্যায়: ব্যবহারিক জ্যামিতি)</div>
+          <div class="cq-title">৩ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ৩ / ৫</span>
         </div>
         <p class="stem-desc">
-          AB = ৫ সেমি দৈর্ঘ্যের একটি নির্দিষ্ট রেখাংশ এবং একটি সূক্ষ্মকোণ ∠P।
+          AB = ৫ সেমি দৈর্ঘ্যের একটি নির্দিষ্ট রেখাংশ এবং একটি সূক্ষ্মকোণ ∠P দেওয়া আছে।
         </p>
 
         <div class="divider"></div>
@@ -596,23 +582,20 @@
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">ক)</span>
-              <span class="q-text">জ্যামিতি বক্সের 'ত্রিকোণী' বা সেট স্কয়ারে কী কী পরিমাপের কোণ থাকে এবং এর প্রধান একটি ব্যবহার লেখো।</span>
+              <span class="q-text">জ্যামিতি বক্সের ত্রিকোণীদ্বয়ের (Set Squares) কোণগুলোর পরিমাপ কত ডিগ্রি এবং এদের প্রধান ব্যবহার কী?</span>
             </div>
-            <span class="q-marks">[২]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">খ)</span>
-              <span class="q-text">রুলার ও কম্পাসের সাহায্যে প্রদত্ত AB রেখাংশের সমান করে একটি রেখাংশ CD অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+              <span class="q-text">রুলার ও কম্পাসের সাহায্যে প্রদত্ত রেখাংশ AB এর সমান করে একটি রেখাংশ CD আঁকো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">গ)</span>
-              <span class="q-text">রুলার ও কম্পাস ব্যবহার করে চাঁদার সাহায্য ছাড়াই প্রদত্ত ∠P কোণের সমান একটি কোণ ∠XOY অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+              <span class="q-text">চাঁদা ব্যবহার না করে রুলার ও কম্পাসের সাহায্যে প্রদত্ত ∠P এর সমান করে একটি কোণ ∠XOY আঁকো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
         </ul>
       </article>
@@ -620,7 +603,8 @@
       <!-- ৪ নং প্রশ্ন -->
       <article class="cq-box" id="cq-4">
         <div class="cq-header">
-          <div class="cq-title">৪ নং প্রশ্ন (৭ম অধ্যায়: ব্যবহারিক জ্যামিতি)</div>
+          <div class="cq-title">৪ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ৪ / ৫</span>
         </div>
         <p class="stem-desc">
           একটি রেখাংশের দৈর্ঘ্য ৮ সেমি এবং একটি কোণের পরিমাপ ৬০°।
@@ -634,21 +618,18 @@
               <span class="q-no">ক)</span>
               <span class="q-text">জ্যামিতি বক্সে পেন্সিল কম্পাস ও কাঁটা কম্পাসের প্রধান ব্যবহার কী?</span>
             </div>
-            <span class="q-marks">[২]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">খ)</span>
               <span class="q-text">রুলার ও কম্পাসের সাহায্যে প্রদত্ত ৮ সেমি রেখাংশটিকে সমান চার ভাগে ভাগ করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">গ)</span>
-              <span class="q-text">চাঁদা ব্যবহার না করে কেবল রুলার ও কম্পাসের সাহায্যে প্রদত্ত ৬০° কোণটির সমান একটি কোণ আঁকো এবং কোণটিকে সমদ্বিখণ্ডিত করে দেখাও যে উৎপন্ন প্রতিটি কোণ ৩০° (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+              <span class="q-text">চাঁদা ব্যবহার না করে কেবল রুলার ও কম্পাস ব্যবহার করে প্রদত্ত ৬০° কোণটির সমান একটি কোণ আঁকো এবং কোণটিকে সমদ্বিখণ্ডিত করে দেখাও যে উৎপন্ন প্রতিটি কোণ ৩০° (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
         </ul>
       </article>
@@ -656,7 +637,8 @@
       <!-- ৫ নং প্রশ্ন -->
       <article class="cq-box" id="cq-5">
         <div class="cq-header">
-          <div class="cq-title">৫ নং প্রশ্ন (৭ম অধ্যায়: ব্যবহারিক জ্যামিতি)</div>
+          <div class="cq-title">৫ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ৫ / ৫</span>
         </div>
         <p class="stem-desc">
           AB = ৬ সেমি দৈর্ঘ্যের একটি রেখাংশ এবং একটি কোণ ∠X = ৯০°।
@@ -670,30 +652,27 @@
               <span class="q-no">ক)</span>
               <span class="q-text">কোনো রেখাংশের লম্বসমদ্বিখণ্ডক আঁকার জন্য কম্পাসে রেখাংশটির আনুমানিক অর্ধেকের বেশি (<span class="frac"><span class="frac-top">১</span><span class="frac-bottom">২</span></span> অংশের বেশি) ব্যাসার্ধ নেওয়ার প্রয়োজন হয় কেন?</span>
             </div>
-            <span class="q-marks">[২]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">খ)</span>
               <span class="q-text">রুলার ও কম্পাসের সাহায্যে AB রেখাংশের মধ্যবিন্দুতে একটি লম্ব অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
           <li class="q-item">
             <div class="q-left">
               <span class="q-no">গ)</span>
               <span class="q-text">চাঁদা ব্যবহার না করে কেবল রুলার ও কম্পাসের সাহায্যে ৪৫° কোণ অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
             </div>
-            <span class="q-marks">[৪]</span>
           </li>
         </ul>
       </article>
     </section>
 
-    <!-- ==================== ২. বহুনির্বাচনী প্রশ্ন (জ্যামিতি) ==================== -->
+    <!-- ==================== ২. বহুনির্বাচনী প্রশ্নাবলি ==================== -->
     <section id="sec-bohunirbachoni" class="section-wrap">
       <div class="section-title-wrap">
-        <h2 class="section-title">২. বহুনির্বাচনী প্রশ্নাবলি (৬ষ্ঠ অধ্যায়: জ্যামিতি — ত্রিভুজ ও চতুর্ভুজ)</h2>
+        <h2 class="section-title">২. বহুনির্বাচনী প্রশ্নাবলি (মোট ৩০টি)</h2>
       </div>
 
       <div class="cq-box">
