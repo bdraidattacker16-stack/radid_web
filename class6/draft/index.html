@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — শ্রেণি: ৬ষ্ঠ | radid.cyou</title>
+  <meta name="title" content="গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট) — শ্রেণি: ৬ষ্ঠ | radid.cyou">
+  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত বার্ষিক মূল্যায়ন ও মডেল টেস্ট প্রশ্নপত্র — radid.cyou">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#090b12">
+  <link rel="canonical" href="https://radid.cyou/class6/draft/">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <!-- Google Fonts: Noto Sans Bengali for 100% Authentic Bangla Typography & Numerals -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #090b12;
+      color: #f1f5f9;
+      font-family: 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-size: 15.5px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 60px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ডেভেলপার সাইটের সিগনেচার দাগ-কাটা (Grid) ও গ্লো ব্যাকগ্রাউন্ড */
+    .ambient-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background:
+        radial-gradient(720px 440px at 85% 6%, rgba(99, 102, 241, 0.16), transparent 70%),
+        radial-gradient(600px 400px at 10% 85%, rgba(56, 189, 248, 0.12), transparent 70%);
+    }
+
+    .ambient-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 95% 80% at 50% 30%, #000 50%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 95% 80% at 50% 30%, #000 50%, transparent 100%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* পেইজের প্রথম জিনিস: মূল এক্সাম হেডার বক্স */
+    .exam-header {
+      background: rgba(17, 21, 36, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      padding: 24px 20px 20px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 
+        0 20px 45px -12px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exam-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.8), transparent);
+    }
+
+    /* জেএসসি ব্যাজ: ১ লাইনে অটো-রিসাইজ */
+    .exam-badge {
+      display: inline-block;
+      font-size: clamp(10px, 2.8vw, 12.5px);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 3px 14px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+
+    /* টাইটেল: ১ লাইনে অটো-রিসাইজ */
+    .exam-title {
+      font-size: clamp(16px, 4.5vw, 22px);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      white-space: nowrap;
+    }
+
+    /* মেটা ট্যাগ: শ্রেণি, সময়, পূর্ণমান (১ লাইনে অটো-রিসাইজ) */
+    .exam-meta-pills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      white-space: nowrap;
+      font-size: clamp(11.5px, 3.2vw, 14.5px);
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    .meta-item {
+      white-space: nowrap;
+    }
+
+    .meta-dot {
+      color: #64748b;
+      font-size: 10px;
+    }
+
+    /* সাধারণ নির্দেশাবলী কোট বক্স */
+    .instructions-box {
+      background: rgba(99, 102, 241, 0.08);
+      border-left: 3px solid #6366f1;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .instructions-title {
+      color: #818cf8;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .instructions-list {
+      list-style-type: disc;
+      margin-left: 18px;
+    }
+
+    .instructions-list li {
+      margin-bottom: 3px;
+    }
+
+    .instructions-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ৩টি ক্লিকযোগ্য সেকশন নেভিগেশন বাটন */
+    .exam-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px 6px;
+      cursor: pointer;
+      font-family: inherit;
+      color: inherit;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .nav-btn:hover {
+      background: rgba(99, 102, 241, 0.18);
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .nav-btn.active {
+      background: #4f46e5;
+      border-color: #6366f1;
+      box-shadow: 0 0 16px rgba(99, 102, 241, 0.45);
+    }
+
+    .nav-btn-val {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .nav-btn-lbl {
+      font-size: 13px;
+      color: #c7d2fe;
+      margin-top: 2px;
+      display: block;
+      white-space: nowrap;
+    }
+
+    /* অতিরিক্ত বাটন (সবগুলো ও প্রিন্ট) */
+    .sub-actions {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    }
+
+    .sub-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94a3b8;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .sub-btn:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .sub-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      color: #c7d2fe;
+      border-color: #6366f1;
+    }
+
+    /* সেকশন র‍্যাপার */
+    .section-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    /* সেকশন হেডার */
+    .section-title-wrap {
+      margin-top: 4px;
+      margin-bottom: -4px;
+      display: flex;
+      flex-direction: column;
+      border-left: 3px solid #6366f1;
+      padding-left: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(15.5px, 4vw, 18px);
+      font-weight: 700;
+      color: #f8fafc;
+      white-space: nowrap;
+    }
+
+    /* ডেভেলপার কার্ড (CQ Box) */
+    .cq-box {
+      background: rgba(17, 21, 36, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 22px 24px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 
+        0 20px 45px -12px rgba(0, 0, 0, 0.65),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      transition: border-color 0.2s ease;
+      position: relative;
+    }
+
+    .cq-box:hover {
+      border-color: rgba(129, 140, 248, 0.3);
+    }
+
+    .cq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .cq-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stem-desc {
+      color: #e2e8f0;
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .var {
+      font-style: italic;
+      font-family: 'Times New Roman', Times, Georgia, serif;
+    }
+
+    sup {
+      font-size: 11px;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    sub {
+      font-size: 11px;
+      vertical-align: sub;
+      line-height: 0;
+    }
+
+    .divider {
+      border-top: 1px dashed rgba(255, 255, 255, 0.18);
+      margin: 14px 0;
+    }
+
+    /* প্রশ্ন লিস্ট */
+    .q-list {
+      list-style: none;
+    }
+
+    .q-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 9px;
+      gap: 12px;
+    }
+
+    .q-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .q-left {
+      display: flex;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .q-no {
+      font-weight: 600;
+      white-space: nowrap;
+      color: #ffffff;
+    }
+
+    .q-text {
+      color: #e2e8f0;
+    }
+
+    .q-marks {
+      font-weight: 600;
+      white-space: nowrap;
+      font-family: 'Times New Roman', Times, serif;
+      color: #a5b4fc;
+      background: rgba(99, 102, 241, 0.1);
+      padding: 1px 7px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      border: 1px solid rgba(99, 102, 241, 0.2);
+    }
+
+    /* ডাটা টেবিল: এক লাইনে ফিট ও স্মুথ হরিজন্টাল স্ক্রোল */
+    .cq-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 14px 0 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(15, 23, 42, 0.6);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(99, 102, 241, 0.4) transparent;
+    }
+
+    .cq-table-wrap::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .cq-table-wrap::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.4);
+      border-radius: 4px;
+    }
+
+    .cq-table {
+      width: 100%;
+      min-width: 460px;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .cq-table th, .cq-table td {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 9px 12px;
+      white-space: nowrap;
+    }
+
+    .cq-table th {
+      background: rgba(99, 102, 241, 0.18);
+      color: #f8fafc;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .cq-table td {
+      color: #e2e8f0;
+      white-space: nowrap;
+    }
+
+    /* MCQ স্টাইল */
+    .mcq-item {
+      padding: 14px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+    }
+
+    .mcq-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .mcq-item:first-child {
+      padding-top: 0;
+    }
+
+    .mcq-stem {
+      color: #f1f5f9;
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .mcq-roman {
+      margin-left: 14px;
+      margin-bottom: 10px;
+      font-size: 14.5px;
+      color: #cbd5e1;
+    }
+
+    .mcq-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .mcq-opt {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #e2e8f0;
+    }
+
+    /* সংক্ষিপ্ত প্রশ্ন গ্রিড */
+    .short-q-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .short-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+
+    .short-top {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .short-no {
+      font-weight: 600;
+      color: #ffffff;
+      margin-right: 6px;
+    }
+
+    /* অ্যানিমেশন */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 16px 10px 40px;
+        font-size: 14.5px;
+      }
+      .cq-box, .exam-header {
+        padding: 16px 14px;
+      }
+      .mcq-options {
+        grid-template-columns: 1fr;
+      }
+      .exam-nav {
+        gap: 6px;
+      }
+      .nav-btn {
+        padding: 10px 4px;
+      }
+      .nav-btn-val {
+        font-size: 18px;
+      }
+      .nav-btn-lbl {
+        font-size: 12px;
+      }
+    }
+
+    /* প্রিন্ট স্টাইল */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .ambient-bg, .ambient-grid, .exam-nav, .sub-actions {
+        display: none !important;
+      }
+      .exam-header, .cq-box, .short-item, .mcq-opt, .cq-table-wrap, .instructions-box {
+        background: transparent !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        color: #000000 !important;
+        page-break-inside: avoid;
+      }
+      .exam-title, .section-title, .cq-title, .mcq-stem, .short-no, strong, .instructions-title {
+        color: #000000 !important;
+      }
+      .exam-badge, .q-marks {
+        color: #000000 !important;
+        background: #eee !important;
+        border-color: #ccc !important;
+      }
+      .var {
+        color: #000000 !important;
+      }
+      .section-wrap {
+        display: flex !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ডেভেলপার সিগনেচার ব্যাকগ্রাউন্ড -->
+  <div class="ambient-bg" aria-hidden="true"></div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <!-- মূল কন্টেইনার -->
+  <main class="container">
+
+    <!-- পেইজের প্রথম জিনিস: এক্সাম হেডার বক্স -->
+    <section class="exam-header">
+      <!-- ব্যাজ -->
+      <div class="exam-badge">সংরক্ষিত খসড়া / ড্রাফট প্রশ্নপত্র</div>
+      
+      <!-- মূল টাইটেল -->
+      <h1 class="exam-title">গণিত (বার্ষিক মূল্যায়ন ও মডেল টেস্ট)</h1>
+      
+      <!-- মেটা লাইন: শ্রেণি, সময়, পূর্ণমান (১ লাইনে অটো-রিসাইজ) -->
+      <div class="exam-meta-pills">
+        <span class="meta-item">শ্রেণি: ষষ্ঠ</span>
+        <span class="meta-dot">•</span>
+        <span class="meta-item">বিষয়: গণিত</span>
+        <span class="meta-dot">•</span>
+        <span class="meta-item">সময়: ৩ ঘণ্টা</span>
+        <span class="meta-dot">•</span>
+        <span class="meta-item">পূর্ণমান: ১০০</span>
+      </div>
+
+
+      <!-- ৩টি ক্লিকযোগ্য সেকশন বাটন -->
+      <div class="exam-nav">
+        <button type="button" class="nav-btn active" id="btn-srijonshil" onclick="setSection('srijonshil')">
+          <span class="nav-btn-val">৫০</span>
+          <span class="nav-btn-lbl">সৃজনশীল</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-bohunirbachoni" onclick="setSection('bohunirbachoni')">
+          <span class="nav-btn-val">৩০</span>
+          <span class="nav-btn-lbl">বহুনির্বাচনী</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-songkhipto" onclick="setSection('songkhipto')">
+          <span class="nav-btn-val">২০</span>
+          <span class="nav-btn-lbl">সংক্ষিপ্ত</span>
+        </button>
+      </div>
+
+      <!-- অতিরিক্ত বাটন: সবগুলো ও প্রিন্ট -->
+      <div class="sub-actions">
+        <button type="button" class="sub-btn" id="btn-all" onclick="setSection('all')">
+          <span>📋 সবগুলো প্রশ্ন</span>
+        </button>
+        <button type="button" class="sub-btn" onclick="window.print()">
+          <span>🖨️ প্রিন্ট / Save PDF</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== সৃজনশীল প্রশ্নসমূহ ==================== -->
+    <div id="sec-srijonshil" class="section-wrap">
+      <div class="section-title-wrap">
+        <h2 class="section-title">অংশ—গ: সৃজনশীল প্রশ্ন</h2>
+      </div>
+
+      <!-- ১ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-1">
+        <div class="cq-header">
+          <div class="cq-title">১ নং প্রশ্ন</div>
+        </div>
+        <p class="stem-desc">
+          একটি বিদ্যালয়ের ষষ্ঠ শ্রেণিতে মোট 250 জন শিক্ষার্থী রয়েছে। কোনো একদিন প্রতিকূল আবহাওয়ার কারণে 20% শিক্ষার্থী অনুপস্থিত ছিল।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">15% কে সাধারণ ভগ্নাংশ ও দশমিকে প্রকাশ করো।</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">ওই দিন কতজন শিক্ষার্থী উপস্থিত ছিল তা নির্ণয় করো।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">যদি মোট শিক্ষার্থীর মধ্যে ছাত্র ও ছাত্রীর অনুপাত 3 : 2 হয়, তবে ওই শ্রেণিতে ছাত্র ও ছাত্রীর সংখ্যা আলাদাভাবে নির্ণয় করো।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ২ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-2">
+        <div class="cq-header">
+          <div class="cq-title">২ নং প্রশ্ন</div>
+        </div>
+        <p class="stem-desc">
+          একটি ছাত্রাবাসে 50 জন শিক্ষার্থীর 15 দিনের খাদ্য মজুত আছে। 5 দিন পর ওই ছাত্রাবাসে আরও 25 জন নতুন শিক্ষার্থী আসল।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">8 জন লোক একটি কাজ 6 দিনে করতে পারলে, 1 জন লোক ওই কাজ কত দিনে করতে পারবে?</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">বাকি খাদ্যে মোট শিক্ষার্থীদের আর কত দিন চলবে তা নির্ণয় করো।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">যদি 5 দিন পর 25 জন নতুন শিক্ষার্থী না এসে 10 জন শিক্ষার্থী চলে যেত, তবে বাকি খাদ্যে অবশিষ্ট শিক্ষার্থীদের কত দিন চলত?</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৩ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-3">
+        <div class="cq-header">
+          <div class="cq-title">৩ নং প্রশ্ন</div>
+        </div>
+        <p class="stem-desc">
+          <span class="var">A</span> = 2<span class="var">a</span><sup>2</sup><span class="var">b</span>, <span class="var">B</span> = 3<span class="var">ab</span><sup>2</sup>, <span class="var">C</span> = 4<span class="var">a</span><sup>3</sup><span class="var">b</span><sup>3</sup> তিনটি একপদী বীজগণিতীয় রাশি।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">সূচকের গুণের নিয়ম অনুসারে <span class="var">a</span><sup>3</sup> × <span class="var">a</span><sup>4</sup> এর মান কত?</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text"><span class="var">A</span> এবং <span class="var">B</span> এর গুণফল নির্ণয় করো।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text"><span class="var">a</span> = 2 এবং <span class="var">b</span> = 3 হলে, <span class="var">A</span> × <span class="var">B</span> − <span class="var">C</span> এর মান নির্ণয় করো।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৪ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-4">
+        <div class="cq-header">
+          <div class="cq-title">৪ নং প্রশ্ন</div>
+        </div>
+        <p class="stem-desc">
+          <span class="var">XY</span> একটি সরলরেখা এবং <span class="var">P</span> রেখাটির বহিঃস্থ একটি বিন্দু। আবার, ∠<span class="var">PQR</span> = 90° একটি সমকোণ।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">এক সমকোণ সমান কত ডিগ্রি এবং এক সরলকোণ সমান কত সমকোণ?</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">রুলার ও কম্পাসের সাহায্যে <span class="var">P</span> বিন্দু থেকে <span class="var">XY</span> রেখার ওপর একটি লম্ব অঙ্কন করো (অঙ্কনের চিহ্ন ও বিবরণ আবশ্যক)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">রুলার ও কম্পাসের সাহায্যে ∠<span class="var">PQR</span> কোণটিকে সমদ্বিখণ্ডিত করে 45° কোণ অঙ্কন করো (অঙ্কনের বিবরণসহ)।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৫ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-5">
+        <div class="cq-header">
+          <div class="cq-title">৫ নং প্রশ্ন</div>
+        </div>
+        <p class="stem-desc">
+          একটি বিদ্যালয়ের ষষ্ঠ শ্রেণির রবি থেকে বৃহস্পতিবার পর্যন্ত ৫ দিনের উপস্থিত শিক্ষার্থীর সংখ্যা নিচে দেওয়া হলো:
+        </p>
+
+        <!-- সারণি -->
+        <div class="cq-table-wrap">
+          <table class="cq-table">
+            <thead>
+              <tr>
+                <th>বার / দিন</th>
+                <th>রবিবার</th>
+                <th>সোমবার</th>
+                <th>মঙ্গলবার</th>
+                <th>বুধবার</th>
+                <th>বৃহস্পতিবার</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>উপস্থিতি</strong></td>
+                <td>১৮০ জন</td>
+                <td>১৯০ জন</td>
+                <td>১৭০ জন</td>
+                <td>১৯৫ জন</td>
+                <td>১৬০ জন</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">মাধ্যমিক উপাত্ত কাকে বলে?</span>
+            </div>
+            <span class="q-marks">[২]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">ছক কাগজে X-অক্ষে দিন এবং Y-অক্ষে শিক্ষার্থীর উপস্থিতি ধরে একটি রেখাচিত্র (Line Graph) অঙ্কন করো।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">কোন দিন উপস্থিতি সর্বাধিক এবং কোন দিন সর্বনিম্ন ছিল? ওই সপ্তাহে দৈনিক গড় উপস্থিতি কত ছিল তা নির্ণয় করো।</span>
+            </div>
+            <span class="q-marks">[৪]</span>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ==================== বহুনির্বাচনী প্রশ্ন ==================== -->
+    <div id="sec-bohunirbachoni" class="section-wrap" style="display: none;">
+      <div class="section-title-wrap">
+        <h2 class="section-title">অংশ—ক: বহুনির্বাচনী প্রশ্ন</h2>
+      </div>
+
+      <section class="cq-box">
+        <!-- ১ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১. 3 : 5 এর সমতুল অনুপাত কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 5 : 3</div>
+            <div class="mcq-opt">খ) 6 : 10</div>
+            <div class="mcq-opt">গ) 9 : 20</div>
+            <div class="mcq-opt">ঘ) 15 : 20</div>
+          </div>
+        </div>
+
+        <!-- ২ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২. 40° কোণের পূরক কোণের মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 40°</div>
+            <div class="mcq-opt">খ) 50°</div>
+            <div class="mcq-opt">গ) 140°</div>
+            <div class="mcq-opt">ঘ) 180°</div>
+          </div>
+        </div>
+
+        <!-- ৩ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৩. <span class="var">a</span> = 2 এবং <span class="var">b</span> = 3 হলে, 4<span class="var">a</span><sup>2</sup> − 2<span class="var">b</span> এর মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 8</div>
+            <div class="mcq-opt">খ) 10</div>
+            <div class="mcq-opt">গ) 12</div>
+            <div class="mcq-opt">ঘ) 14</div>
+          </div>
+        </div>
+
+        <!-- ৪ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৪. একটি রেখাংশের ওপর অপর একটি রশ্মি মিলিত হলে উৎপন্ন সন্নিহিত কোণদ্বয়ের সমষ্টি কত সমকোণ?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) ১ সমকোণ</div>
+            <div class="mcq-opt">খ) ২ সমকোণ</div>
+            <div class="mcq-opt">গ) ৩ সমকোণ</div>
+            <div class="mcq-opt">ঘ) ৪ সমকোণ</div>
+          </div>
+        </div>
+
+        <!-- ৫ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৫. (−12) − (−7) এর সরল মান কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) −19</div>
+            <div class="mcq-opt">খ) −5</div>
+            <div class="mcq-opt">গ) 5</div>
+            <div class="mcq-opt">ঘ) 19</div>
+          </div>
+        </div>
+
+        <!-- ৬ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৬. অনুপাতের পূর্ব রাশি 7 এবং উত্তর রাশি 5 হলে, অনুপাতটি কোন ধরনের?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) লঘু অনুপাত</div>
+            <div class="mcq-opt">খ) গুরু অনুপাত</div>
+            <div class="mcq-opt">গ) একক অনুপাত</div>
+            <div class="mcq-opt">ঘ) ব্যস্ত অনুপাত</div>
+          </div>
+        </div>
+
+        <!-- ৭ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৭. 5<span class="var">x</span><sup>2</sup><span class="var">y</span> এবং −3<span class="var">yx</span><sup>2</sup> পদ দুটি কোন ধরনের পদ?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) বিসদৃশ পদ</div>
+            <div class="mcq-opt">খ) সদৃশ পদ</div>
+            <div class="mcq-opt">গ) যৌগিক পদ</div>
+            <div class="mcq-opt">ঘ) অমূলদ পদ</div>
+          </div>
+        </div>
+
+        <!-- ৮ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৮. ইউক্লিডীয় জ্যামিতি অনুসারে একটি বিন্দুর কয়টি মাত্রা রয়েছে?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) কোনো মাত্রা নেই</div>
+            <div class="mcq-opt">খ) ১টি</div>
+            <div class="mcq-opt">গ) ২টি</div>
+            <div class="mcq-opt">ঘ) ৩টি</div>
+          </div>
+        </div>
+
+        <!-- ৯ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৯. 12 জন লোক একটি কাজ 15 দিনে করতে পারে। ওই কাজ 20 জন লোক কত দিনে সম্পন্ন করতে পারবে?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 8 দিনে</div>
+            <div class="mcq-opt">খ) 9 দিনে</div>
+            <div class="mcq-opt">গ) 10 দিনে</div>
+            <div class="mcq-opt">ঘ) 12 দিনে</div>
+          </div>
+        </div>
+
+        <!-- ১০ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১০. কোনো সংখ্যার 3 গুণ থেকে 4 বিয়োগ করলে বিয়োগফল 17 হয়। সমীকরণটি কী হবে?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 3<span class="var">x</span> + 4 = 17</div>
+            <div class="mcq-opt">খ) 3<span class="var">x</span> − 4 = 17</div>
+            <div class="mcq-opt">গ) 4<span class="var">x</span> − 3 = 17</div>
+            <div class="mcq-opt">ঘ) <span class="var">x</span> − 4 = 17</div>
+          </div>
+        </div>
+
+        <!-- ১১ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১১. 5<span class="var">y</span> − 2 = 3<span class="var">y</span> + 8 সমীকরণে <span class="var">y</span> এর মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 3</div>
+            <div class="mcq-opt">খ) 4</div>
+            <div class="mcq-opt">গ) 5</div>
+            <div class="mcq-opt">ঘ) 6</div>
+          </div>
+        </div>
+
+        <!-- ১২ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১২. চাঁদার সাহায্য ছাড়া কেবল রুলার ও পেন্সিল কম্পাস দিয়ে সরাসরি নিচের কোন কোণটি আঁকা যায়?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 50°</div>
+            <div class="mcq-opt">খ) 60°</div>
+            <div class="mcq-opt">গ) 70°</div>
+            <div class="mcq-opt">ঘ) 80°</div>
+          </div>
+        </div>
+
+        <!-- ১৩ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৩. কোনো সংখ্যার 75% সমান 60 হলে, মূল সংখ্যাটি কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 45</div>
+            <div class="mcq-opt">খ) 70</div>
+            <div class="mcq-opt">গ) 80</div>
+            <div class="mcq-opt">ঘ) 90</div>
+          </div>
+        </div>
+
+        <!-- ১৪ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৪. 4 / 5 কে শতকরায় প্রকাশ করলে কত হবে?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 20%</div>
+            <div class="mcq-opt">খ) 40%</div>
+            <div class="mcq-opt">গ) 60%</div>
+            <div class="mcq-opt">ঘ) 80%</div>
+          </div>
+        </div>
+
+        <!-- ১৫ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৫. দুটি রাশির অনুপাত 4 : 7। পূর্ব রাশি 24 হলে, উত্তর রাশি কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 28</div>
+            <div class="mcq-opt">খ) 35</div>
+            <div class="mcq-opt">গ) 42</div>
+            <div class="mcq-opt">ঘ) 49</div>
+          </div>
+        </div>
+
+        <!-- ১৬ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৬. একটি ত্রিভুজের তিনটি কোণের পরিমাপের সমষ্টি কত ডিগ্রি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 90°</div>
+            <div class="mcq-opt">খ) 180°</div>
+            <div class="mcq-opt">গ) 270°</div>
+            <div class="mcq-opt">ঘ) 360°</div>
+          </div>
+        </div>
+
+        <!-- ১৭ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৭. 5<span class="var">x</span><sup>3</sup><span class="var">y</span><sup>2</sup> রাশিতে <span class="var">x</span> এর সূচক বা ঘাত কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 2</div>
+            <div class="mcq-opt">খ) 3</div>
+            <div class="mcq-opt">গ) 5</div>
+            <div class="mcq-opt">ঘ) 6</div>
+          </div>
+        </div>
+
+        <!-- ১৮ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৮. রেখাংশের বহিঃস্থ কোনো বিন্দু থেকে ওই রেখাংশের ওপর লম্ব অঙ্কন করলে উৎপন্ন কোণের মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 45°</div>
+            <div class="mcq-opt">খ) 60°</div>
+            <div class="mcq-opt">গ) 90°</div>
+            <div class="mcq-opt">ঘ) 180°</div>
+          </div>
+        </div>
+
+        <!-- ১৯ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">১৯. একজন বই বিক্রেতা প্রকাশনীর কাছ থেকে 10% কমিশনে বই ক্রয় করেন। 500 টাকা মুদ্রিত মূল্যের একটি বই ক্রয় করতে তাকে কত টাকা পরিশোধ করতে হবে?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 400 টাকা</div>
+            <div class="mcq-opt">খ) 450 টাকা</div>
+            <div class="mcq-opt">গ) 480 টাকা</div>
+            <div class="mcq-opt">ঘ) 550 টাকা</div>
+          </div>
+        </div>
+
+        <!-- ২০ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২০. পিতার বয়স পুত্রের বয়সের 4 গুণ। তাদের বয়সের সমষ্টি 50 বছর হলে, পুত্রের বয়স কত বছর?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 8 বছর</div>
+            <div class="mcq-opt">খ) 10 বছর</div>
+            <div class="mcq-opt">গ) 12 বছর</div>
+            <div class="mcq-opt">ঘ) 15 বছর</div>
+          </div>
+        </div>
+
+        <!-- ২১ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২১. 65° কোণের সম্পূরক কোণের মান কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 25°</div>
+            <div class="mcq-opt">খ) 115°</div>
+            <div class="mcq-opt">গ) 125°</div>
+            <div class="mcq-opt">ঘ) 135°</div>
+          </div>
+        </div>
+
+        <!-- ২২ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২২. <span class="var">x</span><sup>3</sup> × <span class="var">x</span><sup>4</sup> × <span class="var">x</span><sup>2</sup> এর সরল মান কোনটি?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) <span class="var">x</span><sup>8</sup></div>
+            <div class="mcq-opt">খ) <span class="var">x</span><sup>9</sup></div>
+            <div class="mcq-opt">গ) <span class="var">x</span><sup>12</sup></div>
+            <div class="mcq-opt">ঘ) <span class="var">x</span><sup>24</sup></div>
+          </div>
+        </div>
+
+        <!-- ২৩ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৩. দুটি সরলরেখা পরস্পর ছেদ করলে উৎপন্ন বিপরীত পাশের কোণগুলোকে কী বলে?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) পূরক কোণ</div>
+            <div class="mcq-opt">খ) একান্তর কোণ</div>
+            <div class="mcq-opt">গ) বিপ্রতীপ কোণ</div>
+            <div class="mcq-opt">ঘ) অনুরূপ কোণ</div>
+          </div>
+        </div>
+
+        <!-- ২৪ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৪. সরাসরি মূল উৎস থেকে সংগৃহীত উপাত্তকে কী বলা হয়?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) প্রাথমিক উপাত্ত</div>
+            <div class="mcq-opt">খ) মাধ্যমিক উপাত্ত</div>
+            <div class="mcq-opt">গ) পরোক্ষ উপাত্ত</div>
+            <div class="mcq-opt">ঘ) শ্রেণিবদ্ধ উপাত্ত</div>
+          </div>
+        </div>
+
+        <!-- ২৫ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৫. কোনো উপাত্তে যদি কোনো সংখ্যাই একাধিকবার উপস্থিত না থাকে, তবে তার প্রচুরক কী হবে?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 0</div>
+            <div class="mcq-opt">খ) 1</div>
+            <div class="mcq-opt">গ) কোনো প্রচুরক নেই</div>
+            <div class="mcq-opt">ঘ) উপাত্তের গড়ই প্রচুরক</div>
+          </div>
+        </div>
+
+        <!-- ২৬ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৬. 7 জন শিক্ষার্থীর গণিতে প্রাপ্ত নম্বর: 20, 22, 25, 28, 30, 32, 35। তাদের নম্বরের পরিসর কত?</div>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) 15</div>
+            <div class="mcq-opt">খ) 16</div>
+            <div class="mcq-opt">গ) 18</div>
+            <div class="mcq-opt">ঘ) 20</div>
+          </div>
+        </div>
+
+        <!-- ২৭ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৭. বীজগণিতের নিয়মানুসারে—</div>
+          <div class="mcq-roman">
+            i. রাশিতে কেবল + ও − চিহ্ন দ্বারা পদ বিভক্ত হয়<br>
+            ii. কোনো পদে কোনো সংখ্যা যুক্ত না থাকলে তার সাংখ্যিক সহগ 1<br>
+            iii. <span class="var">a</span><sup>3</sup> এবং 3<span class="var">a</span> একই অর্থ প্রকাশ করে
+          </div>
+          <p style="margin-bottom: 6px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) i ও ii</div>
+            <div class="mcq-opt">খ) i ও iii</div>
+            <div class="mcq-opt">গ) ii ও iii</div>
+            <div class="mcq-opt">ঘ) i, ii ও iii</div>
+          </div>
+        </div>
+
+        <!-- ২৮ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৮. পূর্ণসংখ্যার বৈশিষ্ট্যের ক্ষেত্রে—</div>
+          <div class="mcq-roman">
+            i. সকল ধনাত্মক পূর্ণসংখ্যা 0 অপেক্ষা বড়<br>
+            ii. সংখ্যারেখায় −8 সংখ্যাটি −3 এর বাঁয়ে অবস্থান করে বিধায় −8 &lt; −3<br>
+            iii. 0 একটি ধনাত্মক পূর্ণসংখ্যা
+          </div>
+          <p style="margin-bottom: 6px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) i ও ii</div>
+            <div class="mcq-opt">খ) i ও iii</div>
+            <div class="mcq-opt">গ) ii ও iii</div>
+            <div class="mcq-opt">ঘ) i, ii ও iii</div>
+          </div>
+        </div>
+
+        <!-- ২৯ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">২৯. সরল সমীকরণের ক্ষেত্রে—</div>
+          <div class="mcq-roman">
+            i. অজ্ঞাত চলকের ঘাত সর্বদা 1 থাকে<br>
+            ii. উভয় পক্ষে একই সংখ্যা যোগ বা বিয়োগ করলে সমতার পরিবর্তন হয় না<br>
+            iii. উভয় পক্ষকে শূন্য দ্বারা গুণ করলে সমীকরণ অপরিবর্তিত থাকে
+          </div>
+          <p style="margin-bottom: 6px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) i ও ii</div>
+            <div class="mcq-opt">খ) i ও iii</div>
+            <div class="mcq-opt">গ) ii ও iii</div>
+            <div class="mcq-opt">ঘ) i, ii ও iii</div>
+          </div>
+        </div>
+
+        <!-- ৩০ -->
+        <div class="mcq-item">
+          <div class="mcq-stem">৩০. পরিসংখ্যান ও উপাত্তের ক্ষেত্রে—</div>
+          <div class="mcq-roman">
+            i. প্রাথমিক উপাত্ত মাধ্যমিক উপাত্ত অপেক্ষা অধিক নির্ভরযোগ্য<br>
+            ii. উপাত্তের প্রচুরক একাধিক হতে পারে<br>
+            iii. উপাত্তের ক্রমবিন্যাস ছাড়া সরাসরি মধ্যক নির্ণয় করা যায়
+          </div>
+          <p style="margin-bottom: 6px; color: #cbd5e1;">নিচের কোনটি সঠিক?</p>
+          <div class="mcq-options">
+            <div class="mcq-opt">ক) i ও ii</div>
+            <div class="mcq-opt">খ) i ও iii</div>
+            <div class="mcq-opt">গ) ii ও iii</div>
+            <div class="mcq-opt">ঘ) i, ii ও iii</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== সংক্ষিপ্ত প্রশ্ন ==================== -->
+    <div id="sec-songkhipto" class="section-wrap" style="display: none;">
+      <div class="section-title-wrap">
+        <h2 class="section-title">অংশ—খ: সংক্ষিপ্ত উত্তর প্রশ্ন</h2>
+      </div>
+
+      <section class="cq-box">
+        <div class="short-q-list">
+          <!-- ১ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">১.</span>
+              <span>লঘু অনুপাত কাকে বলে?</span>
+            </div>
+          </div>
+
+          <!-- ২ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">২.</span>
+              <span>250 গ্রাম এবং 1 কেজির অনুপাত নির্ণয় করো।</span>
+            </div>
+          </div>
+
+          <!-- ৩ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">৩.</span>
+              <span>সদৃশ পদ কাকে বলে? উদাহরণ দাও।</span>
+            </div>
+          </div>
+
+          <!-- ৪ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">৪.</span>
+              <span><span class="var">x</span> = 3 হলে, 4<span class="var">x</span><sup>2</sup> এর মান কত?</span>
+            </div>
+          </div>
+
+          <!-- ৫ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">৫.</span>
+              <span>সরল সমীকরণ কাকে বলে?</span>
+            </div>
+          </div>
+
+          <!-- ৬ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">৬.</span>
+              <span><span class="var">y</span> / 3 = 4 সমীকরণের বীজ নির্ণয় করো।</span>
+            </div>
+          </div>
+
+          <!-- ৭ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">৭.</span>
+              <span>বিপ্রতীপ কোণ কাকে বলে?</span>
+            </div>
+          </div>
+
+          <!-- ৮ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">৮.</span>
+              <span>কোনো রেখাংশের লম্বসমদ্বিখণ্ডক ওই রেখাংশের সাথে কত ডিগ্রি কোণ উৎপন্ন করে?</span>
+            </div>
+          </div>
+
+          <!-- ৯ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">৯.</span>
+              <span>অবিন্যস্ত উপাত্ত কাকে বলে?</span>
+            </div>
+          </div>
+
+          <!-- ১০ -->
+          <div class="short-item">
+            <div class="short-top">
+              <span class="short-no">১০.</span>
+              <span>6, 8, 10, 12, 14 উপাত্তগুলোর মধ্যক কত?</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <script>
+    // সেকশন সুইচার ফাংশন (exam-of-jabir এর অনুরূপ)
+    function setSection(sec) {
+      const srijonshil = document.getElementById('sec-srijonshil');
+      const bohunirbachoni = document.getElementById('sec-bohunirbachoni');
+      const songkhipto = document.getElementById('sec-songkhipto');
+
+      // বাটনগুলোর অ্যাক্টিভ স্টেট রিসেট
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
+
+      if (sec === 'srijonshil') {
+        srijonshil.style.display = 'flex';
+        bohunirbachoni.style.display = 'none';
+        songkhipto.style.display = 'none';
+        document.getElementById('btn-srijonshil')?.classList.add('active');
+      } else if (sec === 'bohunirbachoni') {
+        srijonshil.style.display = 'none';
+        bohunirbachoni.style.display = 'flex';
+        songkhipto.style.display = 'none';
+        document.getElementById('btn-bohunirbachoni')?.classList.add('active');
+      } else if (sec === 'songkhipto') {
+        srijonshil.style.display = 'none';
+        bohunirbachoni.style.display = 'none';
+        songkhipto.style.display = 'flex';
+        document.getElementById('btn-songkhipto')?.classList.add('active');
+      } else if (sec === 'all') {
+        srijonshil.style.display = 'flex';
+        bohunirbachoni.style.display = 'flex';
+        songkhipto.style.display = 'flex';
+        document.getElementById('btn-all')?.classList.add('active');
+      }
+
+      // হেডার পার হয়ে স্ক্রোল
+      const header = document.querySelector('.exam-header');
+      if (header) {
+        const y = header.getBoundingClientRect().bottom + window.pageYOffset - 16;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
