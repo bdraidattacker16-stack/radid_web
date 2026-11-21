@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ষষ্ঠ শ্রেণি — গণিত: ফাইনাল টাচ (Final Touch) | radid.cyou</title>
   <meta name="title" content="ষষ্ঠ শ্রেণি — গণিত: ফাইনাল টাচ (Final Touch) | radid.cyou" />
-  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত বার্ষিক মূল্যায়নের ফাইনাল টাচ ও শেষ মুহূর্তের প্রস্তুতি — ৩০টি গুরুত্বপূর্ণ বহুনির্বাচনী প্রশ্ন, ব্যাখ্যা ও সৃজনশীল সংকলন।" />
+  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত বার্ষিক মূল্যায়নের ফাইনাল টাচ ও শেষ মুহূর্তের প্রস্তুতি — ৩টি সৃজনশীল প্রশ্ন এবং ৩০টি গুরুত্বপূর্ণ বহুনির্বাচনী প্রশ্ন।" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a0e17" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -232,64 +232,6 @@
       pointer-events: none;
     }
 
-    /* কুইক OMR আনসার গ্রিড */
-    .quick-mcq-box {
-      background: rgba(18, 24, 38, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      backdrop-filter: blur(8px);
-    }
-
-    .quick-mcq-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #e2e8f0;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .quick-mcq-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
-      gap: 6px;
-    }
-
-    .quick-pill {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 6px;
-      padding: 4px 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      text-decoration: none;
-      transition: all 0.15s ease;
-    }
-
-    .quick-pill:hover {
-      background: rgba(56, 189, 248, 0.15);
-      border-color: var(--accent-blue);
-      transform: translateY(-1px);
-    }
-
-    .quick-q-num {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    .quick-ans {
-      font-size: 13px;
-      font-weight: 700;
-      color: #34d399;
-    }
-
     /* সেকশন কার্ড */
     .section-wrap {
       display: flex;
@@ -313,58 +255,111 @@
       color: #ffffff;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .sec-badge {
+    /* হাইলাইট চিপ */
+    .cq-highlight-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(217, 119, 6, 0.3));
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #fbbf24;
+      padding: 3px 12px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.15);
+    }
+
+    /* প্রশ্ন কাউন্টার ব্যাজ */
+    .cq-counter-badge {
+      display: inline-flex;
+      align-items: center;
       background: rgba(56, 189, 248, 0.12);
       border: 1px solid rgba(56, 189, 248, 0.35);
-      color: var(--accent-blue);
+      color: #38bdf8;
+      font-size: 12.5px;
+      font-weight: 600;
       padding: 3px 10px;
       border-radius: 9999px;
-      font-size: 13px;
-      font-weight: 600;
+      letter-spacing: 0.3px;
     }
 
-    /* প্লেসহোল্ডার / টেক্সট রেডি সেকশন */
-    .text-card {
+    /* সৃজনশীল প্রশ্নের বক্স */
+    .cq-box {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 14px;
-      padding: 22px;
+      padding: 20px;
       backdrop-filter: blur(8px);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
     }
 
-    .ready-placeholder-box {
-      border: 1px dashed rgba(56, 189, 248, 0.35);
-      background: rgba(56, 189, 248, 0.03);
-      border-radius: 12px;
-      padding: 24px 20px;
-      text-align: center;
+    .cq-header {
+      margin-bottom: 10px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
-    .ready-icon {
-      font-size: 32px;
-    }
-
-    .ready-title {
-      font-size: 18px;
+    .cq-title {
+      font-size: 17px;
       font-weight: 700;
       color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .ready-desc {
-      color: var(--text-muted);
-      font-size: 14px;
-      max-width: 540px;
+    .stem-desc {
+      color: #e2e8f0;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 14px 0;
+    }
+
+    .q-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .q-item {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .q-left {
+      display: flex;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .q-no {
+      font-weight: 600;
+      white-space: nowrap;
+      font-family: inherit;
+      color: var(--accent-blue);
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .q-text {
+      color: #f1f5f9;
+      font-size: 15px;
       line-height: 1.6;
     }
 
@@ -507,11 +502,11 @@
         padding: 0 !important;
       }
 
-      .ambient-bg, .ambient-grid, .nav-bar, .search-box, .quick-mcq-box {
+      .ambient-bg, .ambient-grid, .nav-bar, .search-box {
         display: none !important;
       }
 
-      .header-card, .text-card, .mcq-card {
+      .header-card, .cq-box, .mcq-card {
         background: none !important;
         border: 1px solid #ccc !important;
         box-shadow: none !important;
@@ -558,20 +553,20 @@
       <div class="meta-pills">
         <span class="meta-pill">শ্রেণি: ষষ্ঠ</span>
         <span class="meta-pill">বিষয়: গণিত</span>
-        <span class="meta-pill highlight">🔘 ৩০টি বহুনির্বাচনী প্রশ্ন (উত্তর ও ব্যাখ্যাসহ)</span>
-        <span class="meta-pill highlight">📝 সৃজনশীল ও গুরুত্বপূর্ণ অংশ</span>
+        <span class="meta-pill highlight">✨ ৩টি সৃজনশীল প্রশ্ন</span>
+        <span class="meta-pill highlight">🔘 ৩০টি বহুনির্বাচনী প্রশ্ন</span>
         <span class="meta-pill">NCTB কারিকুলাম ২০২৬</span>
       </div>
 
       <!-- সেকশন ফিল্টার বাটনস -->
       <nav class="nav-bar">
         <button type="button" class="nav-btn active" id="btn-all" onclick="setSection('all')">
-          <span>📋 সবগুলো সেকশন</span>
+          <span>📋 সবগুলো প্রশ্ন</span>
         </button>
-        <button type="button" class="nav-btn" id="btn-text" onclick="setSection('text')">
-          <span>📝 ফাইনাল টাচ নোট ও সৃজনশীল</span>
+        <button type="button" class="nav-btn" id="btn-srijonshil" onclick="setSection('srijonshil')">
+          <span>📝 সৃজনশীল প্রশ্নাবলি (১–৩)</span>
         </button>
-        <button type="button" class="nav-btn" id="btn-mcq" onclick="setSection('mcq')">
+        <button type="button" class="nav-btn" id="btn-bohunirbachoni" onclick="setSection('bohunirbachoni')">
           <span>🔘 বহুনির্বাচনী প্রশ্নাবলি (১–৩০)</span>
         </button>
       </nav>
@@ -579,191 +574,126 @@
       <!-- কুইক সার্চ ইনপুট -->
       <div class="search-box">
         <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" class="search-input" placeholder="যেকোনো প্রশ্ন, বিষয় বা সমাধান খুঁজুন (যেমন: সূক্ষ্মকোণ, রম্বস, ট্রাপিজিয়াম, কোণ)..." oninput="handleSearch(this.value)">
+        <input type="text" id="search-input" class="search-input" placeholder="যেকোনো প্রশ্ন বা বিষয় খুঁজুন (যেমন: শতকরা, শ্রমিক, রাস্তা, কোণ, ত্রিভুজ)..." oninput="handleSearch(this.value)">
       </div>
     </header>
 
-    <!-- ==================== বহুনির্বাচনী দ্রুত উত্তর গ্রিড ==================== -->
-    <section id="quick-mcq-wrap" class="quick-mcq-box">
-      <div class="quick-mcq-title">
-        <span>⚡ বহুনির্বাচনী দ্রুত উত্তরমালা (OMR / দ্রুত মূল্যায়ন সহায়িকা):</span>
-      </div>
-      <div class="quick-mcq-grid" id="quick-grid">
-<a href="#mcq-1" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-2" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-3" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৩:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-4" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৪:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-5" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৫:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-6" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৬:</span>
-      <span class="quick-ans">ক</span>
-    </a>
-  
-    <a href="#mcq-7" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৭:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-8" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৮:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-9" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৯:</span>
-      <span class="quick-ans">ক</span>
-    </a>
-  
-    <a href="#mcq-10" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১০:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-11" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১১:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-12" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১২:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-13" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১৩:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-14" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১৪:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-15" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১৫:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-16" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১৬:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-17" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১৭:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-18" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১৮:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-19" class="quick-pill quick-key-item">
-      <span class="quick-q-num">১৯:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-20" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২০:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-21" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২১:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-22" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২২:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-23" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২৩:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-24" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২৪:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-25" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২৫:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-26" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২৬:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-27" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২৭:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-  
-    <a href="#mcq-28" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২৮:</span>
-      <span class="quick-ans">ঘ</span>
-    </a>
-  
-    <a href="#mcq-29" class="quick-pill quick-key-item">
-      <span class="quick-q-num">২৯:</span>
-      <span class="quick-ans">খ</span>
-    </a>
-  
-    <a href="#mcq-30" class="quick-pill quick-key-item">
-      <span class="quick-q-num">৩০:</span>
-      <span class="quick-ans">গ</span>
-    </a>
-      </div>
-    </section>
-
-    <!-- ==================== ফাইনাল টাচ টেক্সট ও সৃজনশীল সেকশন ==================== -->
-    <section id="sec-text" class="section-wrap">
+    <!-- ==================== ১. সৃজনশীল প্রশ্নাবলি ==================== -->
+    <section id="sec-srijonshil" class="section-wrap">
       <div class="sec-head">
-        <h2 class="sec-title">📝 ফাইনাল টাচ: গুরুত্বপূর্ণ প্রশ্নাবলি ও আলোচনা</h2>
-        <span class="sec-badge">প্রস্তুতি ফরম্যাট রেডি</span>
+        <h2 class="sec-title">
+          ১. সৃজনশীল প্রশ্নাবলি
+          <span class="cq-highlight-chip">মোট ৩টি</span>
+        </h2>
       </div>
 
-      <div class="text-card" id="text-content-area">
-        <div class="ready-placeholder-box">
-          <span class="ready-icon">🚀</span>
-          <div class="ready-title">টেক্সট ফরম্যাটিং সম্পূর্ণ প্রস্তুত!</div>
-          <p class="ready-desc">
-            আপনি টেক্সট বা প্রশ্ন দিলেই তাৎক্ষণিকভাবে সুবিন্যস্ত কাঠামো, পরিষ্কার টাইপোগ্রাফি এবং গাণিতিক সমীকরণসহ এই অংশে যুক্ত করে পুশ করা হবে।
-          </p>
+      <!-- ১ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-1" data-search="১ বিদ্যালয় ষষ্ঠ শ্রেণি ২৫০ শিক্ষার্থী ২০% অনুপস্থিত ১৫% ভগ্নাংশ দশমিক উপস্থিত ৩ : ২ ছাত্র ছাত্রী সংখ্যা">
+        <div class="cq-header">
+          <div class="cq-title">১ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ১ / ৩</span>
         </div>
-      </div>
+        <p class="stem-desc">
+          একটি বিদ্যালয়ের ষষ্ঠ শ্রেণিতে মোট ২৫০ জন শিক্ষার্থী রয়েছে। কোনো একদিন প্রতিকূল আবহাওয়ার কারণে ২০% শিক্ষার্থী অনুপস্থিত ছিল।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">১৫% কে সাধারণ ভগ্নাংশ ও দশমিকে প্রকাশ করো।</span>
+            </div>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">ওই দিন বিদ্যালয়ে মোট কতজন শিক্ষার্থী উপস্থিত ছিল তা নির্ণয় করো।</span>
+            </div>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">উপস্থিত শিক্ষার্থীদের মধ্যে ছাত্র ও ছাত্রীর অনুপাত ৩ : ২ হলে, উপস্থিত ছাত্র ও ছাত্রীর সংখ্যা আলাদাভাবে বের করো।</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ২ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-2" data-search="২ উন্নয়ন প্রকল্প ৭ জন পুরুষ ১০ জন বালক ২১ দিন ৮ জন লোক ৬ দিন ১৪ জন পুরুষ ৮ জন পুরুষ ১০ জন বালক">
+        <div class="cq-header">
+          <div class="cq-title">২ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ২ / ৩</span>
+        </div>
+        <p class="stem-desc">
+          একটি উন্নয়ন প্রকল্পের কাজে ৭ জন পুরুষ বা ১০ জন বালক একটি কাজ ২১ দিনে শেষ করতে পারে।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">৮ জন লোক একটি কাজ ৬ দিনে করতে পারলে, ১ জন লোক ওই কাজ কত দিনে করতে পারবে?</span>
+            </div>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">১৪ জন পুরুষের কাজ কতজন বালকের কাজের সমান তা নির্ণয় করো।</span>
+            </div>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">ওই কাজটি ৮ জন পুরুষ ও ১০ জন বালক একত্রে কত দিনে সম্পন্ন করতে পারবে?</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- ৩ নং প্রশ্ন -->
+      <article class="cq-box" id="cq-3" data-search="৩ ঠিকাদার ১০০ কিলোমিটার রাস্তা ২০ দিন চুক্তি ২৫০ জন শ্রমিক ১০ দিন ৬২.৫০% প্রথম রাশি দ্বিতীয় রাশি ১৫ দিন ৪ দিন আগে">
+        <div class="cq-header">
+          <div class="cq-title">৩ নং প্রশ্ন</div>
+          <span class="cq-counter-badge">প্রশ্ন ৩ / ৩</span>
+        </div>
+        <p class="stem-desc">
+          একজন ঠিকাদার ১০০ কিলোমিটার রাস্তা ২০ দিনে সম্পন্ন করে দেওয়ার জন্য চুক্তি করলেন। ২৫০ জন শ্রমিক নিয়োগ করে ১০ দিনে রাস্তার ৬২.৫০% সম্পন্ন করলেন।
+        </p>
+
+        <div class="divider"></div>
+
+        <ul class="q-list">
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">ক)</span>
+              <span class="q-text">প্রথম রাশি দ্বিতীয় রাশির ৬২.৫০% হলে, দ্বিতীয় রাশি : প্রথম রাশি = কত?</span>
+            </div>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">খ)</span>
+              <span class="q-text">যদি ১০০ জন শ্রমিক নিয়োগ করা হতো, তাহলে ১৫ দিনে কত কিলোমিটার রাস্তা তৈরি করা যেত?</span>
+            </div>
+          </li>
+          <li class="q-item">
+            <div class="q-left">
+              <span class="q-no">গ)</span>
+              <span class="q-text">অবশিষ্ট কাজের ক্ষেত্রে দেখাও যে, কাজটি নির্দিষ্ট সময়ের ৪ দিন আগেই সম্পন্ন হবে।</span>
+            </div>
+          </li>
+        </ul>
+      </article>
     </section>
 
-    <!-- ==================== বহুনির্বাচনী প্রশ্নাবলি (১ থেকে ৩০) ==================== -->
+    <!-- ==================== ২. বহুনির্বাচনী প্রশ্নাবলি (১ থেকে ৩০) ==================== -->
     <section id="sec-bohunirbachoni" class="section-wrap">
       <div class="sec-head">
-        <h2 class="sec-title">🔘 বহুনির্বাচনী প্রশ্নাবলি ও পূর্ণাঙ্গ ব্যাখ্যা</h2>
-        <span class="sec-badge">মোট ৩০টি প্রশ্ন</span>
+        <h2 class="sec-title">২. বহুনির্বাচনী প্রশ্নাবলি (মোট ৩০টি)</h2>
       </div>
 
       <div id="mcq-container" style="display: flex; flex-direction: column; gap: 14px;">
@@ -1925,22 +1855,18 @@
       const activeBtn = document.getElementById('btn-' + type);
       if (activeBtn) activeBtn.classList.add('active');
 
-      const secText = document.getElementById('sec-text');
+      const secCQ = document.getElementById('sec-srijonshil');
       const secMCQ = document.getElementById('sec-bohunirbachoni');
-      const quickMCQ = document.getElementById('quick-mcq-wrap');
 
       if (type === 'all') {
-        secText.style.display = 'flex';
+        secCQ.style.display = 'flex';
         secMCQ.style.display = 'flex';
-        quickMCQ.style.display = 'flex';
-      } else if (type === 'text') {
-        secText.style.display = 'flex';
+      } else if (type === 'srijonshil') {
+        secCQ.style.display = 'flex';
         secMCQ.style.display = 'none';
-        quickMCQ.style.display = 'none';
-      } else if (type === 'mcq') {
-        secText.style.display = 'none';
+      } else if (type === 'bohunirbachoni') {
+        secCQ.style.display = 'none';
         secMCQ.style.display = 'flex';
-        quickMCQ.style.display = 'flex';
       }
     }
 
