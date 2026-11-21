@@ -2,6 +2,21 @@
 node_modules/
 package-lock.json
 
+# Secrets, Service Accounts & API Keys (Critical Security Protection)
+*.env
+*.env.*
+*.env.local
+service_account*.json
+*service_account*.json
+credentials*.json
+*.pem
+*.key
+*.token
+*.p12
+*.pfx
+mubc/service_account.json
+mubc/history.json
+
 # Operating System
 .DS_Store
 Thumbs.db
