@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ষষ্ঠ শ্রেণি — গণিত: ফাইনাল টাচ (Final Touch) | radid.cyou</title>
+  <meta name="title" content="ষষ্ঠ শ্রেণি — গণিত: ফাইনাল টাচ (Final Touch) | radid.cyou" />
+  <meta name="description" content="ষষ্ঠ শ্রেণির গণিত বার্ষিক মূল্যায়নের ফাইনাল টাচ ও শেষ মুহূর্তের প্রস্তুতি — ৩০টি গুরুত্বপূর্ণ বহুনির্বাচনী প্রশ্ন, ব্যাখ্যা ও সৃজনশীল সংকলন।" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0e17" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self';" />
+  <link rel="canonical" href="https://radid.cyou/final-touch-6/" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+
+  <!-- Google Fonts: Noto Sans Bengali & Fira Code (Authentic Bengali Typography) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ডার্ক সাইবারনেটিক থিম ভেরিয়েবল */
+    :root {
+      --bg-dark: #0a0e17;
+      --card-bg: rgba(18, 24, 38, 0.95);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-blue: #38bdf8;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+      --grid-line: rgba(255, 255, 255, 0.03);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans Bengali', 'SolaimanLipi', 'Kalpurush', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+      padding: 24px 16px 80px 16px;
+    }
+
+    /* ব্যাকগ্রাউন্ড অ্যাম্বিয়েন্ট গ্লো ও দাগকাটা গ্রিড */
+    .ambient-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: 
+        radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(245, 158, 11, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.04) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ambient-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* শীর্ষ হেডার কার্ড */
+    .header-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.28));
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #fbbf24;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      align-self: flex-start;
+      letter-spacing: 0.2px;
+    }
+
+    .page-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+    }
+
+    .page-title span {
+      background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .meta-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .meta-pill.highlight {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.35);
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    /* ফিল্টার নেভিগেশন */
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.07);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .nav-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-blue);
+      color: #ffffff;
+    }
+
+    /* রিয়েলটাইম সার্চ বার */
+    .search-box {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 12px 16px 12px 42px;
+      color: #ffffff;
+      font-size: 14.5px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .search-input::placeholder {
+      color: #64748b;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    /* কুইক OMR আনসার গ্রিড */
+    .quick-mcq-box {
+      background: rgba(18, 24, 38, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      backdrop-filter: blur(8px);
+    }
+
+    .quick-mcq-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .quick-mcq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+      gap: 6px;
+    }
+
+    .quick-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      padding: 4px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+
+    .quick-pill:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-blue);
+      transform: translateY(-1px);
+    }
+
+    .quick-q-num {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .quick-ans {
+      font-size: 13px;
+      font-weight: 700;
+      color: #34d399;
+    }
+
+    /* সেকশন কার্ড */
+    .section-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sec-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sec-badge {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: var(--accent-blue);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* প্লেসহোল্ডার / টেক্সট রেডি সেকশন */
+    .text-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ready-placeholder-box {
+      border: 1px dashed rgba(56, 189, 248, 0.35);
+      background: rgba(56, 189, 248, 0.03);
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ready-icon {
+      font-size: 32px;
+    }
+
+    .ready-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .ready-desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 540px;
+      line-height: 1.6;
+    }
+
+    /* MCQ কার্ড স্টাইল */
+    .mcq-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s ease;
+    }
+
+    .mcq-card:hover {
+      border-color: rgba(56, 189, 248, 0.25);
+    }
+
+    .mcq-q-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    .mcq-q-num {
+      color: var(--accent-blue);
+      margin-right: 4px;
+    }
+
+    .mcq-opts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .mcq-opts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .opt-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .opt-box.correct {
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.45);
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .opt-tag {
+      font-weight: 700;
+      color: var(--accent-blue);
+    }
+
+    .opt-box.correct .opt-tag {
+      color: #34d399;
+    }
+
+    /* ব্যাখ্যা বক্স */
+    .explanation-box {
+      background: rgba(56, 189, 248, 0.05);
+      border-left: 3px solid var(--accent-blue);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .exp-title {
+      font-weight: 700;
+      color: var(--accent-blue);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ভগ্নাংশের ল্যাটেক্স স্টাইল */
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.9em;
+      padding: 0 3px;
+      line-height: 1.1;
+    }
+
+    .frac-top {
+      border-bottom: 1.5px solid currentColor;
+      padding-bottom: 1px;
+    }
+
+    .frac-bottom {
+      padding-top: 1px;
+    }
+
+    /* ফুটার */
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* প্রিন্ট স্টাইল */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 11pt !important;
+        padding: 0 !important;
+      }
+
+      .ambient-bg, .ambient-grid, .nav-bar, .search-box, .quick-mcq-box {
+        display: none !important;
+      }
+
+      .header-card, .text-card, .mcq-card {
+        background: none !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        color: #000 !important;
+        page-break-inside: avoid;
+      }
+
+      .page-title, .sec-title, .mcq-q-title {
+        color: #000 !important;
+      }
+
+      .opt-box {
+        background: none !important;
+        border: 1px solid #ddd !important;
+        color: #000 !important;
+      }
+
+      .opt-box.correct {
+        border-color: #000 !important;
+        font-weight: bold !important;
+      }
+
+      .explanation-box {
+        background: #f8fafc !important;
+        border-left: 3px solid #000 !important;
+        color: #111 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- দাগ কাটা Developer Grid & Ambient Glow ব্যাকগ্রাউন্ড -->
+  <div class="ambient-bg" aria-hidden="true"></div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <main class="container">
+
+    <!-- শীর্ষ হেডার -->
+    <header class="header-card">
+      <div class="header-badge">✨ ফাইনাল টাচ / শেষ মুহূর্তের প্রস্তুতি</div>
+      <h1 class="page-title">ষষ্ঠ শ্রেণি — গণিত: <span>ফাইনাল টাচ (Final Touch)</span></h1>
+      
+      <div class="meta-pills">
+        <span class="meta-pill">শ্রেণি: ষষ্ঠ</span>
+        <span class="meta-pill">বিষয়: গণিত</span>
+        <span class="meta-pill highlight">🔘 ৩০টি বহুনির্বাচনী প্রশ্ন (উত্তর ও ব্যাখ্যাসহ)</span>
+        <span class="meta-pill highlight">📝 সৃজনশীল ও গুরুত্বপূর্ণ অংশ</span>
+        <span class="meta-pill">NCTB কারিকুলাম ২০২৬</span>
+      </div>
+
+      <!-- সেকশন ফিল্টার বাটনস -->
+      <nav class="nav-bar">
+        <button type="button" class="nav-btn active" id="btn-all" onclick="setSection('all')">
+          <span>📋 সবগুলো সেকশন</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-text" onclick="setSection('text')">
+          <span>📝 ফাইনাল টাচ নোট ও সৃজনশীল</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-mcq" onclick="setSection('mcq')">
+          <span>🔘 বহুনির্বাচনী প্রশ্নাবলি (১–৩০)</span>
+        </button>
+      </nav>
+
+      <!-- কুইক সার্চ ইনপুট -->
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="যেকোনো প্রশ্ন, বিষয় বা সমাধান খুঁজুন (যেমন: সূক্ষ্মকোণ, রম্বস, ট্রাপিজিয়াম, কোণ)..." oninput="handleSearch(this.value)">
+      </div>
+    </header>
+
+    <!-- ==================== বহুনির্বাচনী দ্রুত উত্তর গ্রিড ==================== -->
+    <section id="quick-mcq-wrap" class="quick-mcq-box">
+      <div class="quick-mcq-title">
+        <span>⚡ বহুনির্বাচনী দ্রুত উত্তরমালা (OMR / দ্রুত মূল্যায়ন সহায়িকা):</span>
+      </div>
+      <div class="quick-mcq-grid" id="quick-grid">
+<a href="#mcq-1" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-2" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-3" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৩:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-4" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৪:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-5" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৫:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-6" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৬:</span>
+      <span class="quick-ans">ক</span>
+    </a>
+  
+    <a href="#mcq-7" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৭:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-8" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৮:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-9" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৯:</span>
+      <span class="quick-ans">ক</span>
+    </a>
+  
+    <a href="#mcq-10" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১০:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-11" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১১:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-12" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১২:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-13" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৩:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-14" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৪:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-15" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৫:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-16" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৬:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-17" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৭:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-18" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৮:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-19" class="quick-pill quick-key-item">
+      <span class="quick-q-num">১৯:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-20" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২০:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-21" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২১:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-22" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২২:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-23" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৩:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-24" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৪:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-25" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৫:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-26" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৬:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-27" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৭:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+  
+    <a href="#mcq-28" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৮:</span>
+      <span class="quick-ans">ঘ</span>
+    </a>
+  
+    <a href="#mcq-29" class="quick-pill quick-key-item">
+      <span class="quick-q-num">২৯:</span>
+      <span class="quick-ans">খ</span>
+    </a>
+  
+    <a href="#mcq-30" class="quick-pill quick-key-item">
+      <span class="quick-q-num">৩০:</span>
+      <span class="quick-ans">গ</span>
+    </a>
+      </div>
+    </section>
+
+    <!-- ==================== ফাইনাল টাচ টেক্সট ও সৃজনশীল সেকশন ==================== -->
+    <section id="sec-text" class="section-wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">📝 ফাইনাল টাচ: গুরুত্বপূর্ণ প্রশ্নাবলি ও আলোচনা</h2>
+        <span class="sec-badge">প্রস্তুতি ফরম্যাট রেডি</span>
+      </div>
+
+      <div class="text-card" id="text-content-area">
+        <div class="ready-placeholder-box">
+          <span class="ready-icon">🚀</span>
+          <div class="ready-title">টেক্সট ফরম্যাটিং সম্পূর্ণ প্রস্তুত!</div>
+          <p class="ready-desc">
+            আপনি টেক্সট বা প্রশ্ন দিলেই তাৎক্ষণিকভাবে সুবিন্যস্ত কাঠামো, পরিষ্কার টাইপোগ্রাফি এবং গাণিতিক সমীকরণসহ এই অংশে যুক্ত করে পুশ করা হবে।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== বহুনির্বাচনী প্রশ্নাবলি (১ থেকে ৩০) ==================== -->
+    <section id="sec-bohunirbachoni" class="section-wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">🔘 বহুনির্বাচনী প্রশ্নাবলি ও পূর্ণাঙ্গ ব্যাখ্যা</h2>
+        <span class="sec-badge">মোট ৩০টি প্রশ্ন</span>
+      </div>
+
+      <div id="mcq-container" style="display: flex; flex-direction: column; gap: 14px;">
+<article class="sol-card mcq-card" id="mcq-1" data-search="১ যে ত্রিভুজের প্রত্যেকটি কোণ ৯০° অপেক্ষা কম, তাকে কী বলে? যে কোণের পরিমাপ ৯০° অপেক্ষা কম তাকে সূক্ষ্মকোণ বলে। কোনো ত্রিভুজের তিনটি কোণই সূক্ষ্মকোণ হলে তাকে সূক্ষ্মকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১.</span>
+        যে ত্রিভুজের প্রত্যেকটি কোণ ৯০° অপেক্ষা কম, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সরলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) সূক্ষ্মকোণী ত্রিভুজ</strong> — যে কোণের পরিমাপ ৯০° অপেক্ষা কম তাকে সূক্ষ্মকোণ বলে। কোনো ত্রিভুজের তিনটি কোণই সূক্ষ্মকোণ হলে তাকে সূক্ষ্মকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-2" data-search="২ বাহুভেদে ত্রিভুজ কত প্রকার? বাহুর দৈর্ঘ্য অনুসারে ত্রিভুজ তিন প্রকার: সমবাহু ত্রিভুজ, সমদ্বিবাহু ত্রিভুজ এবং বিষমবাহু ত্রিভুজ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২.</span>
+        বাহুভেদে ত্রিভুজ কত প্রকার?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>২ প্রকার</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>৩ প্রকার</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৪ প্রকার</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৫ প্রকার</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ৩ প্রকার</strong> — বাহুর দৈর্ঘ্য অনুসারে ত্রিভুজ তিন প্রকার: সমবাহু ত্রিভুজ, সমদ্বিবাহু ত্রিভুজ এবং বিষমবাহু ত্রিভুজ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-3" data-search="৩ পাঠ্যবই অনুযায়ী, প্রত্যেক রম্বস একটি— রম্বসের বিপরীত বাহুগুলো পরস্পর সমান্তরাল হওয়ায় প্রত্যেক রম্বসই মূলত একটি বিশেষ ধরনের সামান্তরিক।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৩.</span>
+        পাঠ্যবই অনুযায়ী, প্রত্যেক রম্বস একটি—
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সামান্তরিক</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>আয়ত</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>বর্গ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সামান্তরিক</strong> — রম্বসের বিপরীত বাহুগুলো পরস্পর সমান্তরাল হওয়ায় প্রত্যেক রম্বসই মূলত একটি বিশেষ ধরনের সামান্তরিক।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-4" data-search="৪ যে ত্রিভুজের একটি কোণ সমকোণ, তাকে কী বলে? যে ত্রিভুজের একটি কোণ এক সমকোণ বা ৯০°, তাকে সমকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৪.</span>
+        যে ত্রিভুজের একটি কোণ সমকোণ, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমকোণী ত্রিভুজ</strong> — যে ত্রিভুজের একটি কোণ এক সমকোণ বা ৯০°, তাকে সমকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-5" data-search="৫ তিনটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে? তিনটি সরলরেখাংশ দ্বারা সীমাবদ্ধ সমতল ক্ষেত্র বা চিত্রকে ত্রিভুজ (Triangle) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৫.</span>
+        তিনটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>চতুর্ভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>কোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সরলরেখা</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ত্রিভুজ</strong> — তিনটি সরলরেখাংশ দ্বারা সীমাবদ্ধ সমতল ক্ষেত্র বা চিত্রকে ত্রিভুজ (Triangle) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-6" data-search="৬ একটি ত্রিভুজে সর্বোচ্চ কয়টি স্থূলকোণ থাকা সম্ভব? ত্রিভুজের তিন কোণের সমষ্টি ১৮০°। স্থূলকোণ ৯০° এর বড় হওয়ায় দুটি স্থূলকোণ থাকলে সমষ্টি ১৮০° অতিক্রম করবে, যা অসম্ভব। তাই সর্বোচ্চ ১টি স্থূলকোণ থাকতে পারে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৬.</span>
+        একটি ত্রিভুজে সর্বোচ্চ কয়টি স্থূলকোণ থাকা সম্ভব?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box correct">
+        <span class="opt-tag">ক)</span>
+        <span>১টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>২টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>একটিও না</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>ক) ১টি</strong> — ত্রিভুজের তিন কোণের সমষ্টি ১৮০°। স্থূলকোণ ৯০° এর বড় হওয়ায় দুটি স্থূলকোণ থাকলে সমষ্টি ১৮০° অতিক্রম করবে, যা অসম্ভব। তাই সর্বোচ্চ ১টি স্থূলকোণ থাকতে পারে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-7" data-search="৭ যে ত্রিভুজের তিনটি বাহুই পরস্পর সমান, তাকে কী বলে? যে ত্রিভুজের তিনটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমবাহু ত্রিভুজ বলে। এর প্রতিটি কোণের মান ৬০°।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৭.</span>
+        যে ত্রিভুজের তিনটি বাহুই পরস্পর সমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমবাহু ত্রিভুজ</strong> — যে ত্রিভুজের তিনটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমবাহু ত্রিভুজ বলে। এর প্রতিটি কোণের মান ৬০°।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-8" data-search="৮ একটি চতুর্ভুজে কয়টি কর্ণ থাকে? যেকোনো চতুর্ভুজের বিপরীত শীর্ষবিন্দু জোড়ার সংযোগকারী রেখাংশকে কর্ণ বলে। একটি চতুর্ভুজে মোট ২টি কর্ণ থাকে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৮.</span>
+        একটি চতুর্ভুজে কয়টি কর্ণ থাকে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>১টি</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>২টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪টি</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ২টি</strong> — যেকোনো চতুর্ভুজের বিপরীত শীর্ষবিন্দু জোড়ার সংযোগকারী রেখাংশকে কর্ণ বলে। একটি চতুর্ভুজে মোট ২টি কর্ণ থাকে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-9" data-search="৯ একটি ত্রিভুজে সর্বোচ্চ কয়টি সমকোণ থাকতে পারে? দুটি সমকোণের সমষ্টিই ১৮০° হয়ে যায়; তাই তৃতীয় কোণ সম্ভব হতো না। ফলে যেকোনো ত্রিভুজে কেবল ১টি সমকোণ থাকতে পারে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৯.</span>
+        একটি ত্রিভুজে সর্বোচ্চ কয়টি সমকোণ থাকতে পারে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box correct">
+        <span class="opt-tag">ক)</span>
+        <span>১টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>২টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪টি</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>ক) ১টি</strong> — দুটি সমকোণের সমষ্টিই ১৮০° হয়ে যায়; তাই তৃতীয় কোণ সম্ভব হতো না। ফলে যেকোনো ত্রিভুজে কেবল ১টি সমকোণ থাকতে পারে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-10" data-search="১০ যে ত্রিভুজের একটি কোণ স্থূলকোণ, তাকে কী বলে? যে ত্রিভুজের একটি কোণের মান ৯০° অপেক্ষা বড় এবং ১৮০° অপেক্ষা ছোট, তাকে স্থূলকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১০.</span>
+        যে ত্রিভুজের একটি কোণ স্থূলকোণ, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) স্থূলকোণী ত্রিভুজ</strong> — যে ত্রিভুজের একটি কোণের মান ৯০° অপেক্ষা বড় এবং ১৮০° অপেক্ষা ছোট, তাকে স্থূলকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-11" data-search="১১ কোণভেদে ত্রিভুজকে কত ভাগে ভাগ করা যায়? কোণের পরিমাপ অনুসারে ত্রিভুজ তিন প্রকার: সূক্ষ্মকোণী ত্রিভুজ, সমকোণী ত্রিভুজ এবং স্থূলকোণী ত্রিভুজ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১১.</span>
+        কোণভেদে ত্রিভুজকে কত ভাগে ভাগ করা যায়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>২ ভাগে</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>৩ ভাগে</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৪ ভাগে</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৫ ভাগে</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ৩ ভাগে</strong> — কোণের পরিমাপ অনুসারে ত্রিভুজ তিন প্রকার: সূক্ষ্মকোণী ত্রিভুজ, সমকোণী ত্রিভুজ এবং স্থূলকোণী ত্রিভুজ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-12" data-search="১২ যে ত্রিভুজের দুইটি বাহু পরস্পর সমান, তাকে কী বলে? যে ত্রিভুজের যেকোনো দুটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমদ্বিবাহু ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১২.</span>
+        যে ত্রিভুজের দুইটি বাহু পরস্পর সমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সূক্ষ্মকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমদ্বিবাহু ত্রিভুজ</strong> — যে ত্রিভুজের যেকোনো দুটি বাহুর দৈর্ঘ্য পরস্পর সমান, তাকে সমদ্বিবাহু ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-13" data-search="১৩ সামান্তরিকের বিপরীত বাহু ও বিপরীত কোণগুলো কেমন হয়? সামান্তরিকের বৈশিষ্ট্য অনুযায়ী এর বিপরীত বাহুদ্বয় পরস্পর সমান ও সমান্তরাল এবং বিপরীত কোণগুলো পরস্পর সমান।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৩.</span>
+        সামান্তরিকের বিপরীত বাহু ও বিপরীত কোণগুলো কেমন হয়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>অসমান</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>পরস্পর সমান</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>পূরক কোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) পরস্পর সমান</strong> — সামান্তরিকের বৈশিষ্ট্য অনুযায়ী এর বিপরীত বাহুদ্বয় পরস্পর সমান ও সমান্তরাল এবং বিপরীত কোণগুলো পরস্পর সমান।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-14" data-search="১৪ যেকোনো ত্রিভুজের তিন কোণের সমষ্টি কত সমকোণ? জ্যামিতির মৌলিক উপপাদ্য অনুসারে, যেকোনো ত্রিভুজের তিনটি অভ্যন্তরীণ কোণের পরিমাপের সমষ্টি ১৮০° বা ২ সমকোণ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৪.</span>
+        যেকোনো ত্রিভুজের তিন কোণের সমষ্টি কত সমকোণ?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>১ সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>২ সমকোণ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৩ সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪ সমকোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ২ সমকোণ</strong> — জ্যামিতির মৌলিক উপপাদ্য অনুসারে, যেকোনো ত্রিভুজের তিনটি অভ্যন্তরীণ কোণের পরিমাপের সমষ্টি ১৮০° বা ২ সমকোণ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-15" data-search="১৫ একটি চতুর্ভুজের মোট কয়টি বাহু ও কয়টি শীর্ষবিন্দু থাকে? চারটি রেখাংশ দ্বারা গঠিত আবদ্ধ চিত্রের ৪টি বাহু ও ৪টি কোণ সংলগ্ন শীর্ষবিন্দু থাকে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৫.</span>
+        একটি চতুর্ভুজের মোট কয়টি বাহু ও কয়টি শীর্ষবিন্দু থাকে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>৩টি বাহু ও ৩টি শীর্ষবিন্দু</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>৪টি বাহু ও ৪টি শীর্ষবিন্দু</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>৪টি বাহু ও ২টি শীর্ষবিন্দু</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৪টি বাহু ও ৬টি শীর্ষবিন্দু</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) ৪টি বাহু ও ৪টি শীর্ষবিন্দু</strong> — চারটি রেখাংশ দ্বারা গঠিত আবদ্ধ চিত্রের ৪টি বাহু ও ৪টি কোণ সংলগ্ন শীর্ষবিন্দু থাকে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-16" data-search="১৬ যে চতুর্ভুজের বিপরীত বাহুগুলো পরস্পর সমান্তরাল, তাকে কী বলে? যে চতুর্ভুজের উভয় জোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে সামান্তরিক (Parallelogram) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৬.</span>
+        যে চতুর্ভুজের বিপরীত বাহুগুলো পরস্পর সমান্তরাল, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সামান্তরিক</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বৃত্ত</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সামান্তরিক</strong> — যে চতুর্ভুজের উভয় জোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে সামান্তরিক (Parallelogram) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-17" data-search="১৭ পাঠ্যবই অনুযায়ী "বর্গ একটি রম্বস"—এর মূল কারণ কোনটি? রম্বসের মৌলিক শর্ত হলো এর চারটি বাহুর দৈর্ঘ্য সমান হতে হবে। যেহেতু বর্গেরও চারটি বাহুই সমান, তাই বর্গ একটি বিশেষ রম্বস।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৭.</span>
+        পাঠ্যবই অনুযায়ী "বর্গ একটি রম্বস"—এর মূল কারণ কোনটি?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বর্গের বিপরীত কোণ অসমান</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>বর্গের বাহুগুলো সব সমান</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বর্গের কর্ণদ্বয় অসমান</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>বর্গের কোণগুলো স্থূলকোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) বর্গের বাহুগুলো সব সমান</strong> — রম্বসের মৌলিক শর্ত হলো এর চারটি বাহুর দৈর্ঘ্য সমান হতে হবে। যেহেতু বর্গেরও চারটি বাহুই সমান, তাই বর্গ একটি বিশেষ রম্বস।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-18" data-search="১৮ একটি ত্রিভুজের একটি কোণ সমকোণ এবং দুইটি বাহু পরস্পর সমান হলে, তাকে কী ধরনের ত্রিভুজ বলা হয়? একটি কোণ ৯০° এবং সমকোণ সংলগ্ন দুটি বাহুর দৈর্ঘ্য সমান হলে তাকে সমদ্বিবাহু সমকোণী ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৮.</span>
+        একটি ত্রিভুজের একটি কোণ সমকোণ এবং দুইটি বাহু পরস্পর সমান হলে, তাকে কী ধরনের ত্রিভুজ বলা হয়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমদ্বিবাহু সমকোণী ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>স্থূলকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমদ্বিবাহু সমকোণী ত্রিভুজ</strong> — একটি কোণ ৯০° এবং সমকোণ সংলগ্ন দুটি বাহুর দৈর্ঘ্য সমান হলে তাকে সমদ্বিবাহু সমকোণী ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-19" data-search="১৯ যে ত্রিভুজের তিনটি বাহুই পরস্পর অসমান, তাকে কী বলে? যে ত্রিভুজের তিনটি বাহুর একটির দৈর্ঘ্যও অপরটির সমান নয়, তাকে বিষমবাহু ত্রিভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">১৯.</span>
+        যে ত্রিভুজের তিনটি বাহুই পরস্পর অসমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সমদ্বিবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>সমবাহু ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>বিষমবাহু ত্রিভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>সমকোণী ত্রিভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) বিষমবাহু ত্রিভুজ</strong> — যে ত্রিভুজের তিনটি বাহুর একটির দৈর্ঘ্যও অপরটির সমান নয়, তাকে বিষমবাহু ত্রিভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-20" data-search="২০ যে আয়তের দুইটি সন্নিহিত বাহু সমান, তাকে কী বলে? আয়তের কোণগুলো সমকোণ। এর সন্নিহিত বাহু দুটি সমান হলে চার বাহুই সমান হয়ে যায়, ফলে তা বর্গে পরিণত হয়।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২০.</span>
+        যে আয়তের দুইটি সন্নিহিত বাহু সমান, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সামান্তরিক</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>বর্গ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) বর্গ</strong> — আয়তের কোণগুলো সমকোণ। এর সন্নিহিত বাহু দুটি সমান হলে চার বাহুই সমান হয়ে যায়, ফলে তা বর্গে পরিণত হয়।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-21" data-search="২১ চারটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে? চারটি সরলরেখাংশ দ্বারা সীমাবদ্ধ ক্ষেত্রকে চতুর্ভুজ বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২১.</span>
+        চারটি রেখাংশ দ্বারা আবদ্ধ জ্যামিতিক চিত্রকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ত্রিভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>চতুর্ভুজ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>বহুভুজ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>কোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) চতুর্ভুজ</strong> — চারটি সরলরেখাংশ দ্বারা সীমাবদ্ধ ক্ষেত্রকে চতুর্ভুজ বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-22" data-search="২২ সমকোণী ত্রিভুজের সমকোণ ছাড়া অপর কোণ দুইটি কেমন? সমকোণ ৯০° হওয়ায় অপর দুই কোণের সমষ্টি ৯০° (১৮০° − ৯০° = ৯০°)। ফলে উভয় কোণই অবশ্যই সূক্ষ্মকোণ (৯০° এর কম) হতে হয়।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২২.</span>
+        সমকোণী ত্রিভুজের সমকোণ ছাড়া অপর কোণ দুইটি কেমন?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>উভয়েই সমকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>উভয়েই স্থূলকোণ</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>উভয়েই সূক্ষ্মকোণ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>একটি স্থূলকোণ ও একটি সূক্ষ্মকোণ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) উভয়েই সূক্ষ্মকোণ</strong> — সমকোণ ৯০° হওয়ায় অপর দুই কোণের সমষ্টি ৯০° (১৮০° − ৯০° = ৯০°)। ফলে উভয় কোণই অবশ্যই সূক্ষ্মকোণ (৯০° এর কম) হতে হয়।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-23" data-search="২৩ একটি ত্রিভুজের মোট কয়টি বাহু ও কোণ (উপাদান) রয়েছে? একটি ত্রিভুজে ৩টি বাহু এবং ৩টি কোণ—মোট ৬টি প্রধান উপাদান থাকে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৩.</span>
+        একটি ত্রিভুজের মোট কয়টি বাহু ও কোণ (উপাদান) রয়েছে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>৩টি</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>৪টি</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>৬টি</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৯টি</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) ৬টি</strong> — একটি ত্রিভুজে ৩টি বাহু এবং ৩টি কোণ—মোট ৬টি প্রধান উপাদান থাকে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-24" data-search="২৪ যে সামান্তরিকের প্রত্যেকটি কোণ সমকোণ, তাকে কী বলে? যে সামান্তরিকের একটি (বা প্রত্যেকটি) কোণ এক সমকোণ বা ৯০°, তাকে আয়ত (Rectangle) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৪.</span>
+        যে সামান্তরিকের প্রত্যেকটি কোণ সমকোণ, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>আয়ত</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>বিষমবাহু চতুর্ভুজ</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) আয়ত</strong> — যে সামান্তরিকের একটি (বা প্রত্যেকটি) কোণ এক সমকোণ বা ৯০°, তাকে আয়ত (Rectangle) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-25" data-search="২৫ চতুর্ভুজের বিপরীত শীর্ষবিন্দুদ্বয়ের সংযোগকারী রেখাংশকে কী বলে? চতুর্ভুজের মুখোমুখি অবস্থিত দুটি বিপরীত শীর্ষবিন্দু যোগ করলে কর্ণ গঠিত হয়।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৫.</span>
+        চতুর্ভুজের বিপরীত শীর্ষবিন্দুদ্বয়ের সংযোগকারী রেখাংশকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বাহু</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>মধ্যমা</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>কর্ণ</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>উচ্চতা</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) কর্ণ</strong> — চতুর্ভুজের মুখোমুখি অবস্থিত দুটি বিপরীত শীর্ষবিন্দু যোগ করলে কর্ণ গঠিত হয়।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-26" data-search="২৬ একটি ত্রিভুজের বাহু তিনটির দৈর্ঘ্যের সমষ্টিকে কী বলে? যেকোনো বহুভুজের সীমানা নির্দেশক বাহুগুলোর মোট দৈর্ঘ্যকে তার পরিসীমা (Perimeter) বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৬.</span>
+        একটি ত্রিভুজের বাহু তিনটির দৈর্ঘ্যের সমষ্টিকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>ক্ষেত্রফল</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>পরিসীমা</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>মধ্যমা</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>উচ্চতা</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) পরিসীমা</strong> — যেকোনো বহুভুজের সীমানা নির্দেশক বাহুগুলোর মোট দৈর্ঘ্যকে তার পরিসীমা (Perimeter) বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-27" data-search="২৭ চতুর্ভুজের চার কোণের পরিমাপের সমষ্টি কত ডিগ্রি? চতুর্ভুজকে একটি কর্ণ দ্বারা দুটি ত্রিভুজে ভাগ করা যায়। প্রতিটি ত্রিভুজের ১৮০° করে দুই ত্রিভুজের মোট ১৮০° × ২ = ৩৬০° বা ৪ সমকোণ।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৭.</span>
+        চতুর্ভুজের চার কোণের পরিমাপের সমষ্টি কত ডিগ্রি?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>১৮০°</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>২৭০°</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>৩৬০°</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>৫৪০°</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) ৩৬০°</strong> — চতুর্ভুজকে একটি কর্ণ দ্বারা দুটি ত্রিভুজে ভাগ করা যায়। প্রতিটি ত্রিভুজের ১৮০° করে দুই ত্রিভুজের মোট ১৮০° × ২ = ৩৬০° বা ৪ সমকোণ।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-28" data-search="২৮ যে চতুর্ভুজের কেবল একজোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে কী বলে? যে চতুর্ভুজের কেবল এক জোড়া বিপরীত বাহু সমান্তরাল এবং অপর জোড়া অসমান্তরাল, তাকে ট্রাপিজিয়াম বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৮.</span>
+        যে চতুর্ভুজের কেবল একজোড়া বিপরীত বাহু পরস্পর সমান্তরাল, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>সামান্তরিক</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>আয়ত</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>রম্বস</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">ঘ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>ঘ) ট্রাপিজিয়াম</strong> — যে চতুর্ভুজের কেবল এক জোড়া বিপরীত বাহু সমান্তরাল এবং অপর জোড়া অসমান্তরাল, তাকে ট্রাপিজিয়াম বলে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-29" data-search="২৯ সামান্তরিকের কর্ণ দুইটি তাদের ছেদবিন্দুতে কী হয়? সামান্তরিকের একটি মৌলিক বৈশিষ্ট্য হলো—এর কর্ণদ্বয় পরস্পরকে তাদের ছেদবিন্দুতে সমান দুই ভাগে বিভক্ত (সমদ্বিখণ্ডিত) করে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">২৯.</span>
+        সামান্তরিকের কর্ণ দুইটি তাদের ছেদবিন্দুতে কী হয়?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>অসমান থাকে</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">খ)</span>
+        <span>সমদ্বিখণ্ডিত হয়</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">গ)</span>
+        <span>সমকোণে ছেদ করে</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>একটি অপরটির দ্বিগুণ হয়</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>খ) সমদ্বিখণ্ডিত হয়</strong> — সামান্তরিকের একটি মৌলিক বৈশিষ্ট্য হলো—এর কর্ণদ্বয় পরস্পরকে তাদের ছেদবিন্দুতে সমান দুই ভাগে বিভক্ত (সমদ্বিখণ্ডিত) করে।
+      </div>
+    </article>
+  
+    <article class="sol-card mcq-card" id="mcq-30" data-search="৩০ যে চতুর্ভুজের চারটি বাহুই সমান কিন্তু কোণগুলো সমকোণ নয়, তাকে কী বলে? চারটি বাহু সমান এবং বিপরীত কোণগুলো সমান কিন্তু কোনো কোণই সমকোণ নয়—এমন চতুর্ভুজকে রম্বস বলে।">
+      <div class="mcq-q-title">
+        <span class="mcq-q-num">৩০.</span>
+        যে চতুর্ভুজের চারটি বাহুই সমান কিন্তু কোণগুলো সমকোণ নয়, তাকে কী বলে?
+      </div>
+      <div class="mcq-opts-grid">
+        
+      <div class="opt-box ">
+        <span class="opt-tag">ক)</span>
+        <span>বর্গ</span>
+        
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">খ)</span>
+        <span>আয়ত</span>
+        
+      </div>
+    
+      <div class="opt-box correct">
+        <span class="opt-tag">গ)</span>
+        <span>রম্বস</span>
+        <span style="margin-left: auto; color: #34d399; font-weight: bold;">✓</span>
+      </div>
+    
+      <div class="opt-box ">
+        <span class="opt-tag">ঘ)</span>
+        <span>ট্রাপিজিয়াম</span>
+        
+      </div>
+    
+      </div>
+      <div class="explanation-box">
+        <span class="exp-title">💡 সঠিক উত্তর ও ব্যাখ্যা:</span>
+        <strong>গ) রম্বস</strong> — চারটি বাহু সমান এবং বিপরীত কোণগুলো সমান কিন্তু কোনো কোণই সমকোণ নয়—এমন চতুর্ভুজকে রম্বস বলে।
+      </div>
+    </article>
+      </div>
+    </section>
+
+    <!-- ফুটার -->
+    <footer class="footer">
+      <p>ষষ্ঠ শ্রেণি — গণিত: ফাইনাল টাচ | NCTB প্রমিত কারিকুলাম</p>
+      <p>© ২০২৬ <a href="https://radid.cyou/">radid.cyou</a> • সর্বস্বত্ব সংরক্ষিত</p>
+      <p><a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">⬆️ পেজের শীর্ষে যান</a></p>
+    </footer>
+
+  </main>
+
+  <script>
+    // সেকশন ফিল্টার সুইচ
+    function setSection(type) {
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-' + type);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const secText = document.getElementById('sec-text');
+      const secMCQ = document.getElementById('sec-bohunirbachoni');
+      const quickMCQ = document.getElementById('quick-mcq-wrap');
+
+      if (type === 'all') {
+        secText.style.display = 'flex';
+        secMCQ.style.display = 'flex';
+        quickMCQ.style.display = 'flex';
+      } else if (type === 'text') {
+        secText.style.display = 'flex';
+        secMCQ.style.display = 'none';
+        quickMCQ.style.display = 'none';
+      } else if (type === 'mcq') {
+        secText.style.display = 'none';
+        secMCQ.style.display = 'flex';
+        quickMCQ.style.display = 'flex';
+      }
+    }
+
+    // রিয়েলটাইম লাইভ সার্চ
+    function handleSearch(query) {
+      query = query.trim().toLowerCase();
+      const allCards = document.querySelectorAll('[data-search]');
+      
+      if (!query) {
+        allCards.forEach(c => c.style.display = '');
+        return;
+      }
+
+      allCards.forEach(c => {
+        const text = c.getAttribute('data-search').toLowerCase();
+        if (text.includes(query)) {
+          c.style.display = '';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

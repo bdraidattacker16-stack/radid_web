@@ -32,3 +32,13 @@ desktop.ini
 *.log
 .cache/
 scratch/
+
+# Internal Security Audits & Private Notes
+*security_audit*.md
+Don't Read.md
+*.bat
+
+# Internal Local Dev Portals & Bridge Servers
+mubc/
+shikho_portal/
+
